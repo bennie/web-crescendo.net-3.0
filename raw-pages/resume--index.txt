@@ -1,0 +1,17 @@
+<h2>The R&eacute;sum&eacute;</h2>
+<p>My resume as of Jan 2014 is available are below in MS Word, PDF and D&#038;D format. If you&#8217;re interested, ping me. Also, I&#8217;m updating the software section of this site to bring it current. Thanks!</p>
+<table>
+<tr>
+<td><a href="http://old.crescendo.net/resume/2014-02-ppollard.pdf"><img alt="[ resume ]" border="0" hspace="10" width="128" height="162" src="http://old.crescendo.net/resume/resume.gif" /></a></td>
+<td><a href="http://old.crescendo.net/resume/2014-02-ppollard.docx"><img alt="[ resume ]" border="0" hspace="10" width="128" height="162" src="http://old.crescendo.net/resume/resume.gif" /></a></td>
+</tr>
+<tr>
+<td align="center"><a href="http://old.crescendo.net/resume/2014-02-ppollard.pdf">PDF version</a></td>
+<td align="center"><a href="http://old.crescendo.net/resume/2014-02-ppollard.docx">Word version</a></td>
+</tr>
+<tr>
+<td colspan=2 align="center"><a href="http://old.crescendo.net/resume/2012-09-ppollard.jpg"><img alt="[ char sheet resume ]" border="0" hspace="10" width="206" height="162" src="http://old.crescendo.net/resume/charsheet.gif" /></a></td>
+<tr>
+<td colspan=2 align="center"><a href="http://old.crescendo.net/resume/2012-09-ppollard.jpg">D&amp;D Character Sheet version</a></td>
+</tr>
+</table>
