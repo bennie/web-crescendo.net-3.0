@@ -1,50 +1,68 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <title><tmpl_var name="title"></title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-
-    <title><tmpl_var name="title"></title>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <style>
+	.navbar-custom {
+            background-color: lightgreen;
+    }
+    .navbar-custom .navbar-brand, .navbar-custom .navbar-text {
+            color: green;
+    }
+    .primary-nav {
+      padding-left: 5px;
+    }
+    .footer {
+      font-size: 11.9px;
+      line-height: 145%;
+      margin-top: 20px;
+      padding: 15px 0;
+      border-top: 1px solid #efefef;
+    }
+    .footer a {
+      color: #777777;
+      display: inline-block;
+      margin-left: 6px;
+    }
+    .footer .copyright {
+      display: inline-block;
+      margin: 0 6px;
+      color: #777777;
+    }
+    .footer strong {
+      display: inline-block;
+      margin-left: 6px;
+    }
+    .single-column  {
+      padding-left: 6px;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    </style>
   </head>
-  <body>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <body class="navbar-fixed-offset">
+<nav class="navbar navbar-custom navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Crescendo.Net</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link active" aria-current="page" href="/resume/">The R&eacute;sum&eacute;</a>
         </li>
       </ul>
-      <form class="d-flex">
+<!--      <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      </form>-->
     </div>
   </div>
 </nav>
