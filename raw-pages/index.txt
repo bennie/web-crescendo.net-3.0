@@ -1,1 +1,33 @@
-<h1>Hello World!</h1>
+<p align="center"><font size="5">Crescendo Communications</font><br />
+<i>A little more sound with every beat.</i></p>
+
+<p>Crescendo communications is a small technological services company 
+located in northern California. We offer a wide variety of ... why are 
+you still reading this paragraph?</p>
+
+<p>No really? Why are you reading this? For heaven's sake, I used the 
+term "we" in some sort of pretentious way to pretend that this page is 
+anything more than a personal company reflecting my hopes and dreams 
+that I've nursed and grown since college.</p>
+
+<p>There used to be a bunch of froo-froo business text here talking about 
+all the services I offer as a consultant. I laid it on heavy here at one 
+point so I could obtain a merchant services account. For years, I left 
+it up here and would tweak it when I wanted to update my <a 
+href="/resume/">resume</a> for a different day job.</p>
+
+<p>So what happened? I gave up on caring about a pretentious tone of 
+voice on this page. As a technologist, where so many questions are 
+trusted to so few, I've steadily grown stronger in my opinion that 
+honesty in speech is a facet of the integrity that I admire in people 
+and aspire to have.</p>
+
+<p>That and I realized the text on this page was worthless when I found 
+a rather glaring typo that had been here for about 5 years. <i>I</i> 
+hadn't even bothered to read this page enough to spot it.</p>
+
+<p>So this place is me. If you're interested in me or what I do, check 
+out the links on the right. (On the right? Yeah. At one point I tried to 
+see if I could make a right-biased design. It kinda works, but not 
+really. I'll probably slap it back over to a standard left-biased design 
+one of these days.)</p>

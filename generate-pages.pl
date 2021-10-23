@@ -12,6 +12,8 @@ my $force = $ARGV[0] ?1:0;
 
 my %title;
 $title{'index.txt'} = 'Crescendo.net';
+$title{'code--index.txt'} = 'Code';
+$title{'fun-stuff--index.txt'} = 'Fun Stuff';
 $title{'resume--index.txt'} = 'The Resume';
 
 my $tmpl_dir = 'templates';

@@ -1,0 +1,82 @@
+	<h2 id="single-title" class="post-title page-title">
+			Code		</h2>
+				<p><img src="/images/cake.jpg" alt="Mom" align="right" /><b><i>Software just like mom made</i></b></p>
+<p>The following pieces of software are created and/or maintained by Phillip Pollard. Unless specifically stated otherwise they are licensed under the <a href="/software/gnu.html">GNU public license</a> or the Artistic License 2.0.</p>
+<hr noshade />
+<h2>Perl Modules</h2>
+<p>General info: <br />
+<a href="http://cpants.cpanauthors.org/author/BENNIE">http://cpants.cpanauthors.org/author/BENNIE</a><br />
+<a href="https://github.com/bennie/">https://github.com/bennie/</a></p>
+<ul>
+<li>
+<p>CPAN: <a href="http://search.cpan.org/dist/ACME-KeyboardMarathon/"><b>ACME::KeyboardMarathon</b></a><br />
+Github: <a href="https://github.com/bennie/perl-ACME-KeyboardMarathon">https://github.com/bennie/perl-ACME-KeyboardMarathon</a></p>
+<p>How far have your fingers moved? You know, there is a distance your fingers move to type. Have you coded a whole marathon? Module and example script for analyzing and calculating this important statistic.</p>
+<li>
+<p>CPAN: <b><a href="http://search.cpan.org/dist/ACME-Umlautify/">Acme::Umlautify</a></b><br />
+Github: <a href="https://github.com/bennie/perl-ACME-Umlautifty">https://github.com/bennie/perl-ACME-Umlautify</a></p>
+<p>This module, part of the humor Acme namespace, will add Umlauts to about anything it can.</p>
+<li>
+<p>CPAN: <b><a href="http://search.cpan.org/dist/Cache-Bounded/">Cache::Bounded</a></b></a> &#8211; registered<br />
+Github: <a href="https://github.com/bennie/perl-Cache-Bounded">https://github.com/bennie/perl-Cache-Bounded</a></p>
+<p>A size-aware cache that is designed for speed-of-write and with minimal measurement-overhead.</p>
+<li>
+<p>CPAN: <b><a href="http://search.cpan.org/dist/Rcs-Parser/">Rcs::Parser</a></b><br />
+Github: <a href="https://github.com/bennie/perl-Rcs-Parser">https://github.com/bennie/perl-Rcs-Parser</a></p>
+<p>Directly parse and read RCS files without needing a binary version of RCS.</p>
+<li>
+<p>CPAN: <b><a href="http://search.cpan.org/dist/Term-Activity/">Term::Activity</a></b><br />
+Github: <a href="https://github.com/bennie/perl-Term-Activity">https://github.com/bennie/perl-Term-Activity</a></p>
+<p>A module used for terminal display of non-bounded processing. It is speed-aware to keep from flooding the terminal, but still show activity.</p>
+<li>
+<p>CPAN: <b><a href="http://search.cpan.org/dist/Text-Delimited/">Text::Delimited</a></b><br />
+Github: <a href="https://github.com/bennie/perl-Text-Delimited">https://github.com/bennie/perl-Text-Delimited</a></p>
+<p>A module for iterative parsing of character delimited files.</p>
+<li>
+<p>CPAN: <a href="http://search.cpan.org/dist/Text-TabFile/"><b>Text::TabFile</b></a><br />
+Github: <a href="https://github.com/bennie/perl-Text-TabFile">https://github.com/bennie/perl-Text-TabFile</a></p>
+<p>A module for dynamic iteritive parsing of tab delimited files.</p>
+<li>
+<p>CPAN: <a href="http://search.cpan.org/dist/Tkx-Login/"><b>Tkx::Login</b></a><br />
+Github: <a href="https://github.com/bennie/perl-Tkx-Login">https://github.com/bennie/perl-Tkx-Login</a></p>
+<p>Tkx::Login provides a simple login interface for Tkx applications. Given a window value to extend, it opens a new window, queries for username and password and returns the values.</p>
+<li>
+<p>CPAN: <a href="http://search.cpan.org/dist/VMware-API-LabManager/"><b>VMware::API::LabManager</b></a><br />
+Github: <a href="https://github.com/bennie/perl-VMware-API-LabManager">https://github.com/bennie/perl-VMware-API-LabManager</a></p>
+<p>This module provides a Perl interface to VMware&#8217;s Labmanager SOAP interface. It has a one-to-one mapping for most of the commands exposed in the external API as well as a many commands exposed in the internal API.</p>
+<li>
+<p>CPAN: <a href="http://search.cpan.org/dist/VMware-vCloud/"><b>VMware::vCloud</b></a><br />
+Github: <a href="https://github.com/bennie/perl-VMware-vCloud">https://github.com/bennie/perl-VMware-vCloud</a></p>
+<p>Beta module. Looking to have the same sort of coverage as I had with  VMware::API::LabManager. This version the auth and read-only portions are functioning. More soon!</p>
+</ul>
+<hr noshade />
+<center><i>Here there be dragons!</i><br />
+Below this point, the code is getting a bit old. Be warned!</center></p>
+<hr noshade />
+<h2>Other Items:</h2>
+<ul>
+<li>
+<p><b><a href="/software/irc">irclogger.pl</a></b><br />
+<br />NV (21 Feb 2010)</p>
+<p>A simple IRC bot in perl. It was designed to join multiple channels on a server, log all public actions to seperate channel logs, and to handle a few direct commands.</p>
+<li>
+<p><b><a href="http://horus.crescendo.net/">Horus</a></b><br />
+<br />v0.9b (Dec 7, 2009)</p>
+<p>Horus is a server change management and asset control system. Originally written to gain control of an unmanaged and chaotic data center, it performs passive checks for changes on servers and tracks them over time. Think of it as a reverse puppet: it watches and tracks changes, as opposed to steamrolling systems to look alike.</p>
+<li>
+<p><b><a href="/software/phpbb-bot-sniffer">phpBB Bot Sniffer</a></b><br />v1.15 (23 May 2006)</p>
+<p>Currently, many phpBB installs are being attacked by link bots and post bots. There are several measures you can take to slow or prevent their access. This script is designed to use semantic tests to detect bots, link spammers and inactive accounts and delete them.</p>
+<li>
+<p><b><a href="/software/phpbb-ignore">phpBB User Ignore Mod</a></b><br />v1.2.1 (26 Sep 2004)</p>
+<p>A phpBB user mod that allows the ignoring of other users posts.</p>
+<li>
+<p><b><a href="/software/cvs">CVS Utilities</a></b><br />alpha (2002)</p>
+<p>A collection of CVS utilties for display and analysis of software development projects.</p>
+<li>
+<p><b><a href="/software/dirindex">Dir Index</a></b><br />(2002)</p>
+<p>A reduced version of the thumbnails idea created to be used in cron jobs for web directories of images.</p>
+<li>
+<p><b><a href="/software/thumbnails">Thumbnails</a></b><br />v1.0.0 (2002)</p>
+<p>A handy command-line tool for indexing directories of images.</p>
+					
+	
