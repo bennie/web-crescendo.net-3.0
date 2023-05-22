@@ -13,6 +13,7 @@ my $force = $ARGV[0] ?1:0;
 my %title;
 $title{'index.txt'} = 'Crescendo.net';
 $title{'code--index.txt'} = 'Code';
+$title{'consulting.txt'} = 'Consulting';
 $title{'fun-stuff--index.txt'} = 'Fun Stuff';
 $title{'resume--index.txt'} = 'The Resume';
 
@@ -103,4 +104,4 @@ for my $next_trick (@files) {
   print "--> done!\n";
 }
 
-print `s3cmd sync www.crescendo.net/ s3://www.crescendo.net/`;
+print `rsync -av www.crescendo.net/ \${MY_WEBUSER}\@\${MY_WEBHOST}:/var/www/crescendo.net/www`;
