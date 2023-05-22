@@ -1,0 +1,135 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.03.20.15.34.52;	author bennie;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.03.18.21.50.42;	author panther;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Fixing runtime errors.
+@
+text
+@#*************************************************************************
+
+=head1 Bills.pm  (PerlServer::Bills)
+
+=head1
+
+=head2 GENERAL INFO:
+
+Core PerlServer Engine
+
+  SYSTEM:      PerlServer Bills handler
+  SUBSYSTEM:   Collections
+  COPYRIGHT:   (C) 2002 - $Date: 2002/04/20 19:09:38 $
+               Diversified Consulting, Inc. 
+
+=cut
+
+#*************************************************************************
+
+=head1 METHODS:
+
+=cut
+
+use strict;
+
+package PerlServer::Bills;
+$PerlServer::Bills::VERSION='$Revision: 1.1 $';
+
+#require PerlServer::Bills::Generic;
+
+# Create the constructor
+
+sub new { # Generic / Heritable
+    my $class = shift @@_;
+    my $self  = {};
+    bless ( $self, $class );
+    $self->_init(@@_);  # Call initialization routine with remains
+    $self->custominit(@@_); #More Remains
+    return $self;
+}
+
+
+sub _init { # Perform initialization 
+  my $self = shift @@_;
+  our $log = $self->{pointers}->{Log};
+  #my $self->{view} = new PerlServer::Views::Generic($self->{pointers});
+}
+
+sub _untaint {
+	my $self = shift @@_;
+	my $view = shift @@_;
+	my $err   = 1;
+	my $obj   = $self->{view};
+	
+	eval "require PerlServer::Bills::$view";
+	
+	if($@@){
+		$err = 0;
+	}
+	else {
+		my $nline = "new PerlServer::Bills::$view" . '($self->{pointers})'; 
+		$obj = eval $nline;
+	}
+	
+	return $err, $obj;
+}
+
+sub AUTOLOAD {
+	my $self = shift @@_;
+	my $name = our $AUTOLOAD;
+	   $name =~ s/.*:://;
+	
+	return eval "$self->{view}->$name" . '(@@_)';
+}
+
+sub set_bill {
+	my $self = shift @@_;
+	(my $err, $self->{view}) = $self->_untaint(shift @@_);
+
+	return $err;
+}
+
+
+1;@
+
+
+1.1
+log
+@Generic bill style thingy...and stuff...yeah...
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d26 2
+a27 2
+package PerlServer::Bills
+$PerlServer::Bills::VERSION='$Revision: 1.1 $';
+d29 1
+a29 1
+require PerlServer::Bills::Generic;
+a44 1
+  
+d46 1
+a46 1
+  my $self->{view} = new PerlServer::Views::Generic($self->{pointers});
+@
+

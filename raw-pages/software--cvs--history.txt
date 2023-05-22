@@ -1,0 +1,66 @@
+<div id="main"><div class="boxen">
+<div class="c1"><div class="c2"><div class="c3"><div class="c4">
+
+<font size="5">CVS Utilities Project History:</font>
+
+<hr noshade />
+
+<p>CVS, the Concurrent Versions System, (<a href="http://www.cvshome.org/">CVS 
+homepage</a>) is probably one of the most unsung tools in the repoitoire of the 
+programmer. This single application almost single handedly took over versioning 
+of both the corporate and non-corporate worlds. Even the best versioning 
+software products available commercially are usually nothing more that 
+hacked and enbuzzed variations on the old standby of CVS.</p>
+
+<p>Versioning is one of those heavily desired and dreadfully boring 
+fields. Most programmers, when forced into using versioning systems for 
+the first time tend to fight it, but after their butt has been saved a few 
+times by that roll-back feature, tend to like it. On the other hand,
+managers find that trying to use CVS to actually understand the status of 
+their products is less enjoyable than clawing their own eyes out. No one 
+wants to try to do analysis of cvs archives and submits.</p>
+
+<p>Spurred by the wonderful use of use of <a 
+href="http://freshmeat.net/projects/cvsweb/">cvsweb.cgi</a> and by looking at 
+occasional good ideas such as <a 
+href="http://freshmeat.net/projects/cvsstat/">cvsstat</a> and <a 
+href="http://freshmeat.net/projects/cvsgraph/">cvsgraph</a>, I decided to 
+work on expanding things into a more helpful package.</p>
+
+<p>The trouble with most of these products is that they rely on command-line
+tools to parse the files and get information from them. This is, at the least,
+annoying. A good look at the code of cvsweb.cgi will send even the most
+hardend programmer screaming, or at least looking for some spaghetti sauce.</p>
+
+<p>CVS files are stored in the older RCS format. RCS (<a 
+href="http://www.gnu.org/software/rcs/">GNU project page</a>, <a href="http://www.cs.purdue.edu/homes/trinkle/RCS/">Perdue Homepage</a>) is
+an older versioning software that CVS packaged at the project level to form
+a more versitile tool. The format is thinly documented. The only information
+I could find was the man page (rcsfile(5)) and reverse engineering.</p>
+
+<p>So why bother parsing the files? Because it is important. If you are 
+tracing information on who owned each line of code and from which version 
+it was submitted in, you should be able to do so by processing the direct 
+deltas within the RCS files. If you checkout the two versions and do a diff, 
+you may end up with different labelings of ownership based upon the 
+optimization of the diff for recognizing block movement within the text. 
+This concern was a major part of the early discussions of version control 
+and can be read up on in <i>Software Practices & Experience</i> (July 1985 - 
+available on the <a href="http://www.cs.purdue.edu/homes/trinkle/RCS/">Perdue 
+Homepage</a>), the paper that the concept of RCS was defined in. In short,
+I realized that for each step where you use command-line and other
+non-direct tools, you introduce a layer of entropy. The only acceptable
+statistical path is to parse directly and obtain the same information as
+was originally written upon storage.</p>
+
+<p>I was amazed that though there were several module libraries availble for
+parsing RCS with perl, they all shelled out to use the same command line tools.
+So the first step, was to develop a <a href="http://cvs.crescendo.net/index.cgi/cvsutils-dev/lib/RCS.pm">module 
+to parse RCS files while retaining statistical information</a>.</p>
+
+<hr noshade />
+
+[ <a href="index.html">Back</a> ]
+
+
+</div></div></div></div></div></div>

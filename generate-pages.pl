@@ -16,6 +16,14 @@ $title{'code--index.txt'} = 'Code';
 $title{'consulting.txt'} = 'Consulting';
 $title{'fun-stuff--index.txt'} = 'Fun Stuff';
 $title{'resume--index.txt'} = 'The Resume';
+$title{'software-cvs--example.txt'} = 'Software - CVS Utils - Example Output';
+$title{'software-cvs--history.txt'} = 'Software - CVS Utils - Project History';
+$title{'software-cvs--index.txt'} = 'Software - CVS Utils';
+$title{'software-japh.txt'} = 'Software - The JAPH Log';
+$title{'software-phpbb-bot-sniffer--index.txt'} = 'Software - phpBB "Bot" Sniffer';
+$title{'software-phpbb-bot-sniffer--spambots.txt'} = 'Software - phpBB Spambots';
+$title{'software-phpbb-ignore--index.txt'} = 'Software - phpBB User Ignore Mod';
+
 
 my $tmpl_dir = 'templates';
 my $file_dir = 'raw-pages';
@@ -104,4 +112,4 @@ for my $next_trick (@files) {
   print "--> done!\n";
 }
 
-print `rsync -av www.crescendo.net/ \${MY_WEBUSER}\@\${MY_WEBHOST}:/var/www/crescendo.net/www`;
+print `rsync -av --exclude='.git/' --delete www.crescendo.net/ \${MY_WEBUSER}\@\${MY_WEBHOST}:/var/www/crescendo.net/www`;

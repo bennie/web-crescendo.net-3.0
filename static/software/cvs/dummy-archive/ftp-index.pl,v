@@ -1,0 +1,1505 @@
+head	1.9;
+access;
+symbols
+	site:1.1.1.1 macrophile:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.9
+date	2001.10.24.16.16.21;	author binky;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.03.27.20.19.41;	author binky;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.03.12.20.01.00;	author binky;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.03.09.05.35.06;	author binky;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.03.08.01.24.11;	author binky;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.03.07.23.24.07;	author binky;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.03.05.21.32.17;	author binky;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.02.02.22.47.39;	author binky;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.02.02.22.29.35;	author binky;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.02.02.22.29.35;	author binky;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@Directory change
+@
+text
+@#!/usr/bin/perl -I/home/httpd/html/macrophile.com/code
+#
+# ftp-index.pl is (c) 2001 by Phillip Pollard
+#
+# This program is designed to generate a set of web pages to preview an
+# FTP site. It creates thumbnails of images and makes them 'purty'.
+#
+#### Confuscate ################################################################
+
+# This is the configuration section. You should really not edit anything
+# else in this file.
+
+my $db_table = 'ftp';
+
+my $indir    = '/home/ftp/pub/';
+my $outdir   = '/home/httpd/html/macrophile.com/ftp/cache/';
+
+my $linkdir  = '/ftp/ftp-link/';
+my $urldir   = '/ftp/cache/';
+
+my $icondir  = '/home/httpd/html/macrophile.com/code/ftp/icons';
+my $iconurl  = '/ftp/icons/';
+
+my $thumbsize = 200;
+
+my $debug = 1;
+
+### Pragmata ###################################################################
+
+use HTML::Template;
+use Image::Magick;
+use Macro;
+use strict;
+
+### Bootstrap ##################################################################
+
+if (!-d $outdir) { die "ERROR: No output directory: $outdir\n" }
+if (!-d $indir ) { die "ERROR: No input directory: $indir\n"   }
+
+my $macro = new Macro;
+my $cgi   = $macro->{'cgi'};
+my $dbh   = $macro->{'dbh'};
+
+my $table = $macro->get_config($db_table);
+my $tmpl  = $macro->get_raw_text('main-template');
+my $time  = scalar localtime(time);
+
+my @@months = ('Jan','Feb','Mar','Apr','May','Jun',  # used by dates
+              'Jul','Aug','Sep','Oct','Nov','Dec');
+
+### Debug Preety ###############################################################
+
+my $debug_line;
+for (my $c=0;$c<70;$c++) {$debug_line .= '-';}
+
+my $debug_header = "/$debug_line\\\n|         Filename         |   Start "
+                 . " Size   |    End Size    | Status |\n|---------------"
+                 . "-----------|-----------------|----------------|------"
+                 . "--|\n";
+
+$debug && do { # Single character STDOUT output isn't very STD (Thanks Larry!)
+  select((select(STDOUT),$|=1)[0]);
+};
+
+### Beguine ####################################################################
+
+$debug && do { print "Debug on...\n"; };
+
+### Load up icons
+my %icons = &grab_icons($icondir);
+$debug && do { print "--> ", scalar(keys %icons), " icons loaded.\n"; };
+
+### Prep the DB
+my $start = &db_prep;
+$debug && do { print "--> $start rows currently in the table.\n"; };
+
+&make_index('/');
+
+my $end = &db_clean;
+
+sub make_index {
+  my $dir     = &clean(shift @@_    );
+  my $in_dir  = &clean($indir,$dir );
+  my $out_dir = &clean($outdir,$dir);
+
+  $debug && do { print "$debug_header| $dir\n|$debug_line|\n"; };
+
+  ### First read the files in the directory
+  my ($files, $subdirs) = &grab_dir($in_dir);
+  my @@subdirs  = sort @@{ $subdirs };
+  my @@files    = sort @@{ $files   };
+
+  ### Check the cache directory
+  my $mkdir = $out_dir;
+  if (! -d $mkdir) {
+    $debug && do { print "| Makeing DIR $mkdir\n"; };
+    mkdir $mkdir; 
+  } else {
+    $debug && do { print "| Useing DIR $mkdir\n"; };
+  }
+
+  ### Create the thumbnails and HTML
+  $debug && do { 
+    print '| ';
+    printf "%68.68s", &clean($urldir,$dir,'/index.html');
+    print " |\n| ";
+    printf "%68.68s", scalar(@@subdirs).' subdirs';
+    print " |\n";
+  };
+
+  # Assemble HTML chunks, subdirs first
+  push my @@subdir_chunks, &chunk_subdirs($dir,@@subdirs);
+
+  # Get file info
+  my %info = %{ &get_fileinfo($in_dir,$out_dir,$dir,@@files) };
+
+  # Create page(s)
+
+  # Sorted by date
+  my $line = $cgi->Tr(
+               $cgi->td({-colspan=>3,-align=>'right'},
+                 '[ sort by date |',
+                 $cgi->a({-href=>'alpha.html'},'sort by name'),
+                 ']'
+               )
+             );
+  my @@keys = sort { # Sort by date, then name 
+               $info{$b}{'mtime'} cmp $info{$a}{'mtime'} 
+               || $a cmp $b
+               || $info{$a}{'size'} cmp $info{$b}{'size'}
+             } keys %info;
+  my @@file_chunks = &chunk_files(\@@keys,\%info);
+  if (@@file_chunks < 1) { $line = ''; }
+  my $html = &clean($outdir,$dir,'/index.html');
+  &make_page($html,$dir,$line,@@subdir_chunks,@@file_chunks);
+
+  # Sorted by alpha
+  $line = $cgi->Tr(
+            $cgi->td({-colspan=>3,-align=>'right'},
+              '[',
+              $cgi->a({-href=>'index.html'},'sort by date'),
+              '| sort by name ]'
+            )
+          );
+  @@keys = sort { lc($a) cmp lc($b) } keys %info;
+  @@file_chunks = &chunk_files(\@@keys,\%info);
+  if (@@file_chunks < 1) { $line = ''; }
+  $html = &clean($outdir,$dir,'/alpha.html');
+  &make_page($html,$dir,$line,@@subdir_chunks,@@file_chunks);
+
+  # Undefine outstanding variables to make the recusion less memory
+  # intensive
+
+  undef $in_dir, $out_dir, $mkdir;     # Directory info
+  undef @@files;                        # Sub files
+  undef @@subdir_chunks, @@file_chunks,  # File info and HTML
+        %info, @@keys, $html;
+  
+  $debug && do { print "\\$debug_line/\n\n"; };
+
+  # Institute recursion
+  for my $recursion_trick (@@subdirs) {
+    # Go boom here
+    &make_index(&clean($dir,$recursion_trick));
+  }
+}
+
+### Submarines #################################################################
+
+### clean : Assembles and returns a clean FS handle. (slashes squashed)
+
+sub clean { 
+  my $dir = join '/', @@_;
+     $dir =~ s/\/\/+/\//g;
+  return $dir;
+}
+
+### clean_date : Returns a preety date from a raw UTC date
+
+sub clean_date {
+    my @@time = localtime(shift @@_);
+    my $month = $months[$time[4]];
+    my $year  = $time[5] + 1900;
+    return "$month $time[3], $year";
+}
+
+### clean_size : returns a preety version of size given an input in bytes
+
+sub clean_size {
+  my $bytes = shift @@_;
+  my $out;
+
+  if ($bytes < 1024) {
+    $out = "$bytes bytes";
+  } elsif ($bytes < 1024 * 1024) {
+    $out = ( int( ( $bytes * 100 ) / ( 1024               ) ) / 100 ) . ' K';
+  } elsif ($bytes < 1024 * 1024 * 1024) {
+    $out = ( int( ( $bytes * 100 ) / ( 1024 * 1024        ) ) / 100 ) . ' Mb';
+  } else {
+    $out = ( int( ( $bytes * 100 ) / ( 1024 * 1024 * 1024 ) ) / 100 ) . ' Gb';
+  }
+
+  return $out;
+}
+
+### chunk_files : takes information from %info and returns HTML chunks
+
+sub chunk_files {
+  my @@keys = @@{ shift @@_ };
+  my %info = %{ shift @@_ };
+
+  my @@chunks;
+  for my $file (@@keys) {
+    my $text = $cgi->a({-href=>$info{$file}{'link'}},
+                 $cgi->img({-border => 0,
+                           -height  => $info{$file}{'thumb_height'},
+                           -width   => $info{$file}{'thumb_width'},
+                           -src     => $info{$file}{'thumb'}
+                          })
+               )
+             . $cgi->br;
+
+    # Assemble the tag line with the right data
+
+    my $tag = $info{$file}{'date'};
+    if ($info{$file}{'orig_width'} && $info{$file}{'orig_height'}) {
+      $tag .= ' - ' 
+           .  $info{$file}{'orig_width'}
+           .  ' x '
+           .  $info{$file}{'orig_height'};
+    }
+    $tag .= ' - '
+         .  $info{$file}{'size'};
+
+    $tag =~ s/ /&nbsp;/g;
+
+    # attach it
+
+    $text .= $cgi->font({-size=>1,-face=>'Arial'},
+               $tag,
+               $cgi->br,
+               $cgi->a({-href=>$info{$file}{'link'}},$file)
+             );
+          
+    push @@chunks, $text;
+  }
+
+  return @@chunks;
+}
+
+### chunk_subdirs : returns HTML chunks for subdirectories
+
+sub chunk_subdirs {
+  my $dir     = shift @@_;
+  my @@subdirs =       @@_;
+  my @@chunks;
+
+  foreach my $sub (@@subdirs) {
+    my ($icon,$width,$height) = &iconify('directory');
+    my $text = 
+        $cgi->a({-href=>&link($urldir,$dir,$sub)},
+          $cgi->img({-height=>$height,-width=>$width,-border=>0,
+                     -src=>&link($icon)
+                   })
+        )
+      . $cgi->br
+      . $cgi->a({-href=>&link($urldir,$dir,$sub)},$sub);
+    push @@chunks, $text;
+
+  }
+
+  return @@chunks;
+}
+
+### db_clean : removes all lines marked to remove from the DB
+
+sub db_clean {
+  my $sql = "delete from $table where remove = 'T'";
+  my $sth = $dbh->prepare($sql);
+  my $ret = $sth->execute;
+            $sth->finish;
+
+  return $ret
+}
+
+### db_prep : marks all lines in the DB for removal. As each file is
+###           examined, they are marked individually to be kept
+
+sub db_prep {
+  my $sql = "update $table set remove = 'T'";
+  my $sth = $dbh->prepare($sql);
+  my $ret = $sth->execute;
+            $sth->finish;
+  return $ret;
+}
+
+### db_put : put a files information into the DB
+
+sub db_put {
+  my $file        = $dbh->quote(shift @@_);
+  my $orig_height = $dbh->quote(shift @@_);
+  my $orig_width  = $dbh->quote(shift @@_);
+  my $height      = $dbh->quote(shift @@_);
+  my $width       = $dbh->quote(shift @@_);
+  my $mtime       = $dbh->quote(shift @@_);
+  my $size        = $dbh->quote(shift @@_);
+  my $href        = $dbh->quote(shift @@_);
+  my $src         = $dbh->quote(shift @@_);
+  my $remove      = $dbh->quote(shift @@_);
+
+  my $sql = "select * from $table where file = $file";
+  my $sth = $dbh->prepare($sql);
+  my $ret = $sth->execute;
+  
+  if ($sth->rows) {
+    $sql = "update $table set orig_height = $orig_height, orig_width = "
+         . "$orig_width, height = $height, width = $width, mtime = $mtime, "
+         . "size = $size, href = $href, src = $src, remove = 'F' "
+         . "where file = $file";
+  } else {
+    $sql = "insert into $table (file,orig_height,orig_width,height,width,"
+         . "mtime,size,href,src,remove) values ($file, $orig_height,"
+         . "$orig_width, $height, $width, $mtime, $size, $href, $src, "
+         . "'F')";
+  }
+
+  $sth->finish;  
+
+  $sth = $dbh->prepare($sql);
+  $ret = $sth->execute;
+         $sth->finish;
+
+  return $ret;
+}
+
+### get_fileinfo : retrieves file information via stat and assembles %info
+
+sub get_fileinfo {
+  my $in_dir  = shift @@_;
+  my $out_dir = shift @@_;
+  my $dir     = shift @@_;
+  my @@files   =       @@_;
+
+  my %info;
+
+  # Now files
+  foreach my $file (@@files) {
+    my $namefile   = $file;
+
+    my $sourcefile = &clean($in_dir,$file);
+    my $thumbfile  = &clean($out_dir,$file);
+
+   # Read file size and moified time
+
+    my @@fileinfo = stat $sourcefile;
+
+    $info{$file}{'date'}  = &clean_date($fileinfo[9]);
+    $info{$file}{'mtime'} = $fileinfo[9];
+    $info{$file}{'size'}  = &clean_size($fileinfo[7]);
+
+    $info{$file}{'link'} = &link($linkdir,$dir,$file);
+
+    ### If you can make a thumbnail, do so and record info
+    
+    if ( $sourcefile =~ /.bmp$/i ||
+         $sourcefile =~ /.gif$/i || 
+         $sourcefile =~ /.jpg$/i || 
+         $sourcefile =~ /.png$/i || 
+         $sourcefile =~ /.psd$/i    ) {
+
+      if ($thumbfile =~ /.psd$/i || $thumbfile =~ /.bmp$/i) { 
+        $namefile  .= '.jpg'; 
+        $thumbfile .= '.jpg'; 
+      }
+
+      ($info{$file}{'thumb_width'}, $info{$file}{'thumb_height'},
+       $info{$file}{'orig_width'},  $info{$file}{'orig_height'}
+      ) = &makethumb($namefile,$sourcefile,$thumbfile);
+
+      if ($info{$file}{'thumb_width'}  == 0 &&
+          $info{$file}{'thumb_height'} == 0
+      ) { next; }
+ 
+      $info{$file}{'thumb'} = &link($urldir,$dir,$namefile);
+      
+    } else { 
+
+      ### If unknown file type, use the appropriate icon
+
+      $file =~ /\.(\w+)$/;
+
+      (my $icon, $info{$file}{'thumb_width'}, $info{$file}{'thumb_height'}
+      ) = &iconify($1);
+
+      $info{$file}{'orig_width'}  = 0;
+      $info{$file}{'orig_height'} = 0;
+      $info{$file}{'thumb'}       = &link($icon);
+    }
+
+    # Db test
+
+    my $filehandle  = &clean($dir,$file);
+    my $orig_height = $info{$file}{'orig_width'};
+    my $orig_width  = $info{$file}{'orig_height'};
+
+    my $height      = $info{$file}{'thumb_height'};
+    my $width       = $info{$file}{'thumb_width'};
+
+    my $mtime       = $macro->db_time($fileinfo[9]);
+    my $size        = $fileinfo[7];
+
+    my $href        = $info{$file}{'link'};
+    my $src         = $info{$file}{'thumb'};
+
+    my $remove      = 'N';
+
+    my $ret = &db_put($filehandle, $orig_height, $orig_width, $height,
+                      $width, $mtime, $size, $href, $src, $remove);
+
+  }
+
+  return \%info;
+}
+
+### get_image_size : returns an images size via Image Magick routines.
+
+sub get_image_size {
+  my $file   = shift @@_;
+  my $image  = Image::Magick->new;
+  my $ret    = $image->Read($file);
+     warn      "$ret\n" if $ret;
+  my $width  = $image->Get('width' );
+  my $height = $image->Get('height');
+     return    ($width, $height);
+}
+
+#####> GRAB_DIR
+#> Returns files and subdirs.
+
+sub grab_dir {
+  my $dir = shift @@_;
+  opendir INDIR, $dir;
+
+  my @@files;
+  my @@subdirs;
+
+  foreach my $meta (readdir INDIR) {
+    next if $meta =~ /^\./;
+
+    my $full = &clean($dir,$meta);
+    if (-d $full && -r $full) {
+      
+      if ($meta eq 'wcotp') { 
+        warn "Skipping directory $meta";
+        next;
+      };
+
+      push @@subdirs, $meta;
+    } elsif (-r $full) {
+      push @@files, $meta;
+    } elsif (-d $full) {
+      print "| private directory: $full\n";
+    } else {
+      warn "Unknown: $full\n";
+    }
+  }
+  closedir INDIR;
+
+  return \@@files, \@@subdirs;
+}
+
+#####> GRAB_ICONS
+#> Grabs all the information and names of icons loaded in the icon
+#> directory.
+
+# This will be used later by the 'iconify' routine to post icons for
+# non-image files. Rather than checking size on every pass, a single
+# pass builds a handy reference hash and thus saves CPU cycles. Icons are
+# named on extension keyed (IE the icon for mp3s is 'mp3.gif') Gifs only
+# at the moment. They are the optimized icon size. Icons larger than
+# default thumbnail sizes look really stupid but can be used.
+
+sub grab_icons {
+  my $icondir = shift @@_;
+
+  my %icons;
+
+  opendir ICONDIR, $icondir;
+  foreach my $icon (readdir ICONDIR) {
+    next unless $icon =~ /\.gif$/i;
+    my ($width,$height) = &get_image_size(&clean($icondir,$icon));
+    $icon =~ /^(.*)\.gif$/;
+    $icons{$1}= [ $width,$height ];
+  }
+  closedir ICONDIR;
+
+  return %icons;
+}
+
+#####> ICONIFY
+#> Returns a URL directory, height and width of the appropriate icon for
+#> the submitted directory extension. ('directory' and 'unknown' are
+#> special cases.
+
+sub iconify {
+  my $type = shift @@_;
+  my $test = &clean($icondir,$type.'.gif');
+     $type = 'unknown' unless -r $test;
+  return &clean($iconurl,$type.'.gif'), @@{ $icons{$type} };
+  # previous line is an ugly form of: return $icon,$width,$height
+}
+
+######> LINK
+
+sub link {
+  my $out =  &clean(@@_);
+     $out =~ s/ /%20/g;
+  return $out;
+}
+
+#####> MAKE_PAGE 
+#> Given an output location, filetree location (for title and headers),
+#> and "chunks" of HTML code representing thumbnails and icons, this 
+#> routine assembles and writes the corresponding HTML directory index.
+
+sub make_page {
+  my $html   = shift @@_;
+  my $dir    = shift @@_;
+  my $line   = shift @@_;
+  my @@chunks =       @@_;
+
+  $debug && do { 
+    print '| ';
+    printf "%25.25s", $html;
+    print  ' | ';
+    printf "%14.14s", 'N/A'; 
+    print  ' | ';
+    printf "%14.14s", 'N/A'; 
+    print  ' | ';
+  };
+
+  # Assemble the chunks into a table
+ 
+  my $tabletext;
+  while (@@chunks) {
+    my $line = $cgi->td({-align=>'center',-width=>250}, shift @@chunks );
+
+    if (@@chunks) {
+      $line .= $cgi->td({-align=>'center',-width=>250}, shift @@chunks );
+    } else {
+      $line .= $cgi->td({-align=>'center',-width=>250},'&nbsp;');
+    }
+
+    if (@@chunks) {
+      $line .= $cgi->td({-align=>'center',-width=>250}, shift @@chunks );
+    } else {
+      $line .= $cgi->td({-align=>'center',-width=>250},'&nbsp;');
+    }
+
+    $tabletext .= $cgi->Tr($line);
+  }
+
+  # Assemble the body
+
+  my $body = $macro->{'start_table'}
+           . $cgi->Tr(
+               $cgi->td({-bgcolor=>'#003300'},
+                 $cgi->font({-face=>'Arial',-color=>'#FFFFFF',-size=>5},
+                   "FTP Index - $dir"
+                 ),
+               )
+             )
+           . $cgi->Tr(
+               $cgi->td({-bgcolor=>'#FFFFFF'},
+                 $cgi->table({-bgcolor=>'#999999',-cellspacing=>5,-cellpadding=>5},
+                   $line,
+                   $tabletext
+                 )
+               )
+             )
+           . $macro->{'end_table'};
+
+  # Load it into the template
+
+  my $meta = HTML::Template->new(
+             die_on_bad_params => 0,
+             scalarref => \$tmpl
+           );
+
+  $meta->param(
+    title        => "Macrophile FTP Index - $dir",
+    body         => $body,
+
+    time         => "Last generated $time",
+
+    html_prefix  => $macro->{'html_prefix'},
+    image_prefix => $macro->{'image_prefix'},
+    start_table  => $macro->{'start_table'},
+    end_table    => $macro->{'end_table'}
+  );
+
+  # Fire it out
+
+  open OUTFILE, ">$html";
+  print OUTFILE $meta->output;
+  close OUTFILE;
+
+  $debug && do { print " done! |\n"; };
+
+  return 1;
+}
+
+#####> MAKETHUMB
+#> Given a reference name, input image file, and output filename, this
+#> creates and writes the thumbnail as constrained by $thumbsize,
+#> returning the thumbnails width and height. Note that it skips
+#> actually creating the thumbnail if the thumbnail file already exists,
+#> only measuring and returning the width and height. (Gotta be
+#> consistent, eh?)
+
+sub makethumb {
+  my $name = shift @@_;
+  my $file = shift @@_;
+  my $thumbfile = shift @@_;
+
+  $debug && do { 
+    print  '| ';
+    printf "%25.25s", $name;
+    print  ' | '; 
+  };
+
+
+  # Faster? (skip routine)
+  if (-r $thumbfile) { 
+    print " EXISTS! \n"; 
+    return &get_image_size($thumbfile), &get_image_size($file);
+  }
+
+  my $image = Image::Magick->new;
+  my $ret = $image->Read($file);
+
+  if ($ret) {
+    warn "\n|\n| $ret\n|\n";
+    return ('0','0');
+  }
+ 
+  my $width  = $image->Get('width' );
+  my $height = $image->Get('height');
+
+  $debug && do {
+    printf "%14.14s", "$width x $height"; 
+    print  ' | ';
+  };
+
+  if ($height > $thumbsize || $width > $thumbsize ) {
+    if ($height > $width) {
+      my $newwidth = int (($thumbsize / $height) * $width);
+      $image->Scale(height=>$thumbsize,width=>$newwidth);
+    } else {
+      my $newheight = int (($thumbsize / $width) * $height);
+      $image->Scale(height=>$newheight,width=>$thumbsize);
+    }
+  }
+
+  my $new_width  = $image->Get('width' );
+  my $new_height = $image->Get('height');
+
+  $debug && do { 
+    printf "%14.14s", "$new_width x $new_height"; 
+    print  ' | '; 
+  };
+
+  $image->Write($thumbfile);
+  
+  $debug && do { print " done! |\n"; };
+
+  return ($new_width, $new_height, $height, $width);
+}
+
+#####> RELATIVE_DIR
+#> Given an absolute directory string, it returns the relative part of the
+#> tree structure under which everything is keyed.
+
+sub relative_dir {
+  my $dir =  shift @@_;
+     $dir =~ /$indir(.*)$/;
+  my $out = '/' . $1 . '/';
+     $out = &clean($out);
+  return $out;
+}
+@
+
+
+1.8
+log
+@Fixed some title stuff. Also added a message in the template. And added
+a dynamic 'changelog' back in.
+@
+text
+@d1 1
+a1 1
+#!/usr/bin/perl -I/home/httpd/html/macro/code
+d16 1
+a16 1
+my $outdir   = '/home/httpd/html/macro/ftp/cache/';
+d21 1
+a21 1
+my $icondir  = '/home/httpd/html/macro/code/ftp/icons';
+@
+
+
+1.7
+log
+@Small changes here and there :)
+@
+text
+@d111 2
+a112 1
+  push my @@chunks, &chunk_subdirs($dir,@@subdirs);
+d114 2
+a115 1
+  my %info = %{ &chunk_files($in_dir,$out_dir,$dir,@@files) };
+d117 97
+a213 1
+  for my $file (sort { lc($a) cmp lc($b) } keys %info) {
+d225 1
+a225 1
+    my $tag = $info{$file}{'mtime'};
+d248 62
+a309 2
+  my $html = &clean($outdir,$dir,'/index.html');
+  &make_page($html,$dir,@@chunks);
+d311 3
+a313 3
+  undef $in_dir, $out_dir, $mkdir;
+  undef @@files;
+  undef @@chunks, %info, $html;
+d315 17
+a331 1
+  $debug && do { print "\\$debug_line/\n\n"; };
+d333 1
+a333 5
+  # Institute recursion
+  for my $recursion_trick (@@subdirs) {
+    # Go boom here
+    &make_index(&clean($dir,$recursion_trick));
+  }
+d336 1
+a336 1
+### Submarines #################################################################
+d338 1
+a338 1
+sub chunk_files {
+d357 2
+a358 1
+    $info{$file}{'mtime'} = &clean_date($fileinfo[9]);
+d425 1
+a425 123
+sub chunk_subdirs {
+  my $dir     = shift @@_;
+  my @@subdirs =       @@_;
+  my @@chunks;
+
+  foreach my $sub (@@subdirs) {
+    my ($icon,$width,$height) = &iconify('directory');
+    my $text = 
+        $cgi->a({-href=>&link($urldir,$dir,$sub)},
+          $cgi->img({-height=>$height,-width=>$width,-border=>0,
+                     -src=>&link($icon)
+                   })
+        )
+      . $cgi->br
+      . $cgi->a({-href=>&link($urldir,$dir,$sub)},$sub);
+    push @@chunks, $text;
+
+  }
+
+  return @@chunks;
+}
+
+#####> CLEAN
+#> Assembles and returns a clean FS handle. (slashes squashed)
+
+sub clean { 
+  my $dir = join '/', @@_;
+     $dir =~ s/\/\/+/\//g;
+  return $dir;
+}
+
+#####> CLEAN_DATE
+
+sub clean_date {
+    my @@time = localtime(shift @@_);
+    my $month = $months[$time[4]];
+    my $year  = $time[5] + 1900;
+    return "$month $time[3], $year";
+}
+
+#####> CLEAN_SIZE
+#>
+
+sub clean_size {
+  my $bytes = shift @@_;
+  my $out;
+
+  if ($bytes < 1024) {
+    $out = "$bytes bytes";
+  } elsif ($bytes < 1024 * 1024) {
+    $out = ( int( ( $bytes * 100 ) / ( 1024               ) ) / 100 ) . ' K';
+  } elsif ($bytes < 1024 * 1024 * 1024) {
+    $out = ( int( ( $bytes * 100 ) / ( 1024 * 1024        ) ) / 100 ) . ' Mb';
+  } else {
+    $out = ( int( ( $bytes * 100 ) / ( 1024 * 1024 * 1024 ) ) / 100 ) . ' Gb';
+  }
+
+  return $out;
+}
+
+#####> DB CLEAN
+
+sub db_clean {
+  my $sql = "delete from $table where remove = 'T'";
+  my $sth = $dbh->prepare($sql);
+  my $ret = $sth->execute;
+            $sth->finish;
+
+  return $ret
+}
+
+#####> DB_PREP
+
+sub db_prep {
+  my $sql = "update $table set remove = 'T'";
+  my $sth = $dbh->prepare($sql);
+  my $ret = $sth->execute;
+            $sth->finish;
+  return $ret;
+}
+
+#####> DB_PUT
+
+sub db_put {
+  my $file        = $dbh->quote(shift @@_);
+  my $orig_height = $dbh->quote(shift @@_);
+  my $orig_width  = $dbh->quote(shift @@_);
+  my $height      = $dbh->quote(shift @@_);
+  my $width       = $dbh->quote(shift @@_);
+  my $mtime       = $dbh->quote(shift @@_);
+  my $size        = $dbh->quote(shift @@_);
+  my $href        = $dbh->quote(shift @@_);
+  my $src         = $dbh->quote(shift @@_);
+  my $remove      = $dbh->quote(shift @@_);
+
+  my $sql = "select * from $table where file = $file";
+  my $sth = $dbh->prepare($sql);
+  my $ret = $sth->execute;
+  
+  if ($sth->rows) {
+    $sql = "update $table set orig_height = $orig_height, orig_width = "
+         . "$orig_width, height = $height, width = $width, mtime = $mtime, "
+         . "size = $size, href = $href, src = $src, remove = 'F' "
+         . "where file = $file";
+  } else {
+    $sql = "insert into $table (file,orig_height,orig_width,height,width,"
+         . "mtime,size,href,src,remove) values ($file, $orig_height,"
+         . "$orig_width, $height, $width, $mtime, $size,$ href, $src, "
+         . "'F')";
+  }
+
+  $sth->finish;  
+
+  $sth = $dbh->prepare($sql);
+  $ret = $sth->execute;
+         $sth->finish;
+
+  return $ret;
+}
+
+#####> GET_IMAGE_SIZE
+#> Given an image file, this returns the images corresponding width and
+#> height via Image Magick routines.
+d529 1
+d534 1
+a534 1
+    printf "%25.25s", 'index.html';
+d576 1
+a690 2
+
+
+@
+
+
+1.6
+log
+@Working on the new FTP indexer.
+@
+text
+@d35 4
+a38 1
+### Beguine ####################################################################
+d44 1
+d51 10
+d65 3
+a67 1
+### Precache image sizes on the icons.
+d69 1
+d71 1
+d73 3
+a75 2
+$debug && do { print "\n--> ", scalar(keys %icons), " icons
+loaded.\n"; };
+d77 1
+a77 15
+### Check cache setup
+
+# Should eventuall set up auto-creating and clearing and synching and all
+# that fancy stuff.
+
+if (!-d $outdir) { die "ERROR: No output directory: $outdir\n" }
+if (!-d $indir ) { die "ERROR: No input directory: $outdir\n"  }
+
+# Set root to the working directory
+
+$debug && do { # Ain't ASCII purty?
+  print "/---------------------------------------------------------------------\\\n";
+  print "|         Filename         |   Start Size   |    End Size    | Status |\n";
+  print "|--------------------------|----------------|----------------|--------|\n";
+};
+d79 1
+a79 1
+&make_index('/');
+d86 1
+a86 5
+  $debug && do { 
+    print "|-----------------------------------------------------------------",
+          "-----|\n| $dir\n|-------------------------------------------------",
+          "---------------------|\n"; 
+  };
+d115 1
+a115 1
+  for my $file (sort keys %info) {
+d157 2
+a165 6
+### Fine
+
+$debug && do {
+  print "\\---------------------------------------------------------------------/\n\n";
+};
+
+d238 1
+a238 1
+    my $mtime       = &mysql_datetime($fileinfo[9]);
+a248 1
+    print "$mtime - $ret\n"; 
+d289 1
+a289 1
+    my $month = $months[$time[4]-1];
+d317 1
+a317 3
+  my $ftp = $macro->get_config($db_table);
+
+  my $sql = "delete from $ftp where remove = 'Y'";
+d325 10
+d349 1
+a349 3
+  my $ftp = $macro->get_config($db_table);
+
+  my $sql = "select * from $ftp where file = $file";
+d354 1
+a354 1
+    $sql = "update $ftp set orig_height = $orig_height, orig_width = "
+d356 1
+a356 1
+         . "size = $size, href = $href, src = $src, remove = 'N' "
+d359 1
+a359 1
+    $sql = "insert into $ftp (file,orig_height,orig_width,height,width,"
+d362 1
+a362 1
+         . "'N')";
+d400 1
+d403 6
+a467 3
+
+  warn "SPACE IN NAME" if $out =~ / /;;
+
+a468 1
+
+a626 21
+}
+
+#####> MYSQL_DATETIME
+
+sub mysql_datetime {
+  my @@time = localtime(shift @@_);
+
+  my $year  = &ten( $time[5] + 1900 );
+  my $month = &ten( $time[4] + 1    );
+  my $day   = &ten( $time[3]        ); 
+  my $hour  = &ten( $time[2]        );
+  my $min   = &ten( $time[1]        );
+  my $sec   = &ten( $time[0]        );
+
+  return "$year-$month-$day $hour:$min:$sec";
+}
+
+sub ten {
+  my $in = shift @@_;
+  if ($in < 10) { $in = '0'.$in; }
+  return $in
+@
+
+
+1.5
+log
+@Now fixed to deal with bitmaps as well as spaces in file names.
+@
+text
+@d13 2
+d39 1
+d44 3
+d110 38
+a147 2
+  push my @@chunks, &chunk_subdirs($dir,@@subdirs),
+                   &chunk_files($in_dir,$out_dir,$dir,@@files);
+d152 3
+d177 1
+a177 4
+  my @@months = ('Jan','Feb','Mar','Apr','May','Jun',
+                'Jul','Aug','Sep','Oct','Nov','Dec');
+
+  my @@chunks;
+d182 1
+d186 2
+a188 4
+    my @@mtime = localtime($fileinfo[9]);
+
+    my $month = $months[$mtime[4]-1];
+    my $year  = $mtime[5] + 1900;
+d190 2
+a191 2
+    my $mtime = "$month $mtime[3], $year";
+    my $size  = &clean_size($fileinfo[7]);
+d193 1
+a193 1
+    my $text;
+d195 2
+d204 1
+a204 1
+        $file      .= '.jpg'; 
+d208 18
+a225 1
+      my ($width, $height, $orig_height, $orig_width) = &makethumb($namefile,$sourcefile,$thumbfile);
+d227 4
+a230 1
+      if ($width == 0 && $height == 0) { next; }
+d232 1
+a232 8
+      $text = $cgi->a({-href=>&link($linkdir,$dir,$file)},
+                 $cgi->img({-width=>$width,-height=>$height,-border=>0,
+                            -src=>&link($urldir,$dir,$file)})
+              )
+            . $cgi->br
+            . $cgi->font({-size=>1},
+                "$mtime&nbsp;-&nbsp;$orig_height&nbsp;x&nbsp;$orig_width&nbsp;-&nbsp;$size"
+              );
+d234 3
+a236 3
+    } else { # unknown file type: use appropriate icon
+      $file =~ /\.(\w+)$/;
+      my ($icon,$width,$height) = &iconify($1);
+d238 2
+a239 8
+      $text = $cgi->a({-href=>&link($linkdir,$dir,$file)},
+                $cgi->img({-height=>$height,-width=>$width,-border=>0,
+                           -src=>&link($icon)})
+              )
+            . $cgi->br
+            . $cgi->font({-size=>1},
+                "$mtime&nbsp;-&nbsp;$size"
+              );
+d241 2
+d244 2
+a245 1
+    }
+d247 1
+a247 4
+    $text .= $cgi->br
+          .  $cgi->small(
+               $cgi->a({-href=>&link($linkdir,$dir,$file)},$file)
+             );
+d249 2
+a250 1
+    push @@chunks, $text; 
+d252 1
+d255 1
+a255 1
+  return @@chunks;
+d289 9
+d318 54
+d622 21
+@
+
+
+1.4
+log
+@FTP index now works without File::Find and is visually integrated.
+@
+text
+@d131 4
+d143 23
+a165 4
+    if ($sourcefile =~ /.gif$/i || $sourcefile =~ /.jpg$/i || 
+        $sourcefile =~ /.png$/i || $sourcefile =~ /.psd$/i) {
+      if ($thumbfile =~ /.psd$/i) { $thumbfile .= '.jpg'; }
+      my ($width, $height) = &makethumb($namefile,$sourcefile,$thumbfile);
+d169 8
+a176 9
+      my $text = $cgi->a({-href=>&clean($linkdir,$dir,$file)},
+                   $cgi->img({-width=>$width,-height=>$height,-border=>0,
+                              -src=>&clean($urldir,$dir,$file)
+                            })
+                 )
+               . $cgi->br
+               . $cgi->small(
+                   $cgi->a({-href=>&clean($linkdir,$dir,$file)},$file)
+                 );
+a177 1
+      push @@chunks, $text; 
+d181 11
+a191 9
+      my $text = 
+          $cgi->a({-href=>&clean($linkdir,$dir,$file)},
+            $cgi->img({-height=>$height,-width=>$width,-border=>0,
+                       -src=>&clean($icon)
+                     })
+          )
+        . $cgi->br
+        . $cgi->a({-href=>&clean($linkdir,$dir,$file)},$file);
+      push @@chunks, $text;
+d193 8
+d214 1
+a214 1
+        $cgi->a({-href=>&clean($urldir,$dir,$sub)},
+d216 1
+a216 1
+                     -src=>&clean($icon)
+d220 1
+a220 1
+      . $cgi->a({-href=>&clean($urldir,$dir,$sub)},$sub);
+d237 20
+d340 12
+d465 1
+a465 1
+    return &get_image_size($thumbfile);
+d494 2
+a495 2
+  $width  = $image->Get('width' );
+  $height = $image->Get('height');
+d498 1
+a498 1
+    printf "%14.14s", "$width x $height"; 
+d506 1
+a506 1
+  return ($width, $height);
+@
+
+
+1.3
+log
+@Adatped to work in the new directory. Now live.
+@
+text
+@d1 1
+a1 1
+#!/usr/bin/perl -w
+d28 3
+a30 5
+# The following modules are used throughout the program. Bear in mind that the
+# JPEG libraries must be compiled into the Magick libraries. Also, due to the
+# nature of the strict module, you generally won't get away with modules that
+# compiled with significant errors.
+
+a31 3
+use CGI qw/all -noDebug/;
+use File::Find;
+use Image::Magick;
+d33 1
+a33 2
+#use Term::Query qw(query); # I'll eventually get around to querying for
+                            # defaults.
+d35 2
+a36 1
+### Beguine ####################################################################
+d38 2
+a39 1
+my $cgi = new CGI;
+d45 7
+d60 1
+a60 67
+### Precache image sizes on the icons.
+
+# This will be used later by the 'iconify' routine to post icons for
+# non-image files. Rather than checking size on every pass, a single
+# pass builds a handy reference hash and thus saves CPU cycles. Icons are
+# named on extension keyed (IE the icon for mp3s is 'mp3.gif') Gifs only
+# at the moment. They are the optimized icon size. Icons larger than
+# default thumbnail sizes look really stupid but can be used.
+
+my %icons;
+opendir ICONDIR, $icondir;
+foreach my $icon (readdir ICONDIR) {
+  next unless $icon =~ /\.gif$/i;
+  my ($width,$height) = &get_image_size(&clean_dir($icondir .'/'. $icon));
+  $icon =~ /^(.*)\.gif$/;
+  $icons{$1}= [ $width,$height ];
+}
+closedir ICONDIR;
+
+print scalar(keys %icons), " icons found.\n";
+
+### Walk the file system and grab readable files and viewable directories
+
+# The File::Find performs a relatively simple task with a rather laborious
+# (read: stupid) way of interfacing it's routines. However it is fast,
+# checks for infinite file recursion (thanks to symbolic links) and is
+# multiplatform capable. 
+#
+# Considering that Image::Magick throws multiplatform concerns out the
+# window and that I am already recursively walking the data output I
+# probably should just write the file searches myself and be done with
+# it. Maybe later.
+#
+# The 'wanted' subroutine is only used by the File::Find module and is
+# thusly included here in the code and not in the appended subroutines. I
+# probably could have used an anonymous routine, but it's already ahrd
+# enough to read.
+#
+# File information is stored in hashes for speed via the autoincrement
+# routine. Fast, clever, and unreadable. Oh well. you can't win them
+# all. 
+
+my %dirs;
+my %files;
+my %subdirs;
+
+$dirs{&relative_dir($indir)}++;
+
+&find({ wanted => \&wanted, follow => 1 }, $indir);
+
+sub wanted { 
+  return if $_ =~ /^\./; # Skip anything starting with a period
+
+  # Avert thine eyes.
+
+  if (-d $File::Find::name && -r $File::Find::name) {
+    $dirs{    &relative_dir( $File::Find::name) }++;
+    $subdirs{ &relative_dir( $File::Find::dir ) }{$_}++;
+  } elsif (-r $_) {
+    $files{   &relative_dir( $File::Find::dir ) }{$_}++;
+  } else {
+    warn "Unknown file: $File::Find::dir/$_ \n";
+  }    
+
+}
+
+### Create the cache/index
+d68 1
+a68 5
+# Due to the recusion I have again included the routines inline as opposed
+# to later. Purists may not like the for loop in the middle of recursion,
+# but they can stuff it. 
+
+&make_index(&relative_dir($indir));
+d71 3
+a73 1
+  my $dir = shift @@_;
+d81 13
+a93 9
+  # Create the directory
+  my $mkdir = &clean_dir($outdir.'/'.$dir);
+  mkdir $mkdir;
+
+  # Create the thumbnails and HTML
+  my @@subdirs  = sort { $a cmp $b } keys %{ $subdirs{$dir} };
+  my @@files    = sort { $a cmp $b } keys %{ $files{$dir}   };
+
+  my $html     = &clean_dir($outdir .'/'. $dir .'/index.html');
+d95 1
+d98 1
+a98 1
+    printf "%68.68s", &clean_dir($urldir .'/'. $dir .'/index.html');
+d104 5
+a108 14
+  my @@chunks; # Each chunk is a square on the page
+ 
+  # Directories first
+  foreach my $sub (@@subdirs) {
+    my ($icon,$width,$height) = &iconify('directory');
+    my $text = 
+        $cgi->a({-href=>&clean_dir($urldir.'/'.$dir.'/'.$sub)},
+          $cgi->img({-height=>$height,-width=>$width,-border=>0,
+                     -src=>&clean_dir($icon)
+                   })
+        )
+      . $cgi->br
+      . $cgi->a({-href=>&clean_dir($urldir.'/'.$dir.'/'.$sub)},$sub);
+    push @@chunks, $text;
+d110 5
+d116 16
+d136 2
+a137 2
+    my $sourcefile = &clean_dir($indir  .'/'. $dir .'/'. $file);
+    my $thumbfile  = &clean_dir($outdir .'/'. $dir .'/'. $file);
+d146 1
+a146 1
+      my $text = $cgi->a({-href=>&clean_dir($linkdir.'/'.$dir.'/'.$file)},
+d148 6
+a153 6
+                              -src=>&clean_dir($urldir.'/'.$dir.'/'.$file)
+                            }),
+                   $cgi->br,
+                   $cgi->small(
+                     $file
+                   )
+d155 1
+d161 1
+a161 1
+          $cgi->a({-href=>&clean_dir($linkdir.'/'.$dir.'/'.$file)},
+d163 1
+a163 1
+                       -src=>&clean_dir($icon)
+d167 1
+a167 1
+        . $cgi->a({-href=>&clean_dir($linkdir.'/'.$dir.'/'.$file)},$file);
+d172 1
+a172 7
+  &make_page($html,$dir,@@chunks);
+  
+  # Institute recursion
+  for my $recursion_trick (@@subdirs) {
+    # Go boom here
+    &make_index($dir . $recursion_trick . '/');
+  }
+d175 16
+a190 1
+### Fine
+d192 1
+a192 3
+$debug && do {
+  print "\\---------------------------------------------------------------------/\n\n";
+};
+d194 2
+a195 1
+### Submarines #################################################################
+d197 2
+a198 2
+#####> CLEAN_DIR
+#> Returns a given string with duplicate slashes squashed together
+d200 2
+a201 2
+sub clean_dir { 
+  my $dir = shift @@_;
+a202 1
+  #1 while $dir =~ s/\/\//\//;
+d220 56
+d283 1
+a283 1
+  my $test = &clean_dir($icondir .'/'. $type .'.gif');
+d285 1
+a285 1
+  return &clean_dir($iconurl.'/'.$type.'.gif'), @@{ $icons{$type} };
+d309 2
+d330 15
+a344 7
+  my $page = $cgi->start_html({-bgcolor=>'#CCCCCC',
+                               -title=>"Macrophile FTP index - $dir"})
+           . $cgi->font({-size=>5},$dir)
+           . $cgi->hr({-noshade=>0})
+           . $cgi->center(
+               $cgi->table(
+                 $tabletext
+d346 23
+a368 1
+             );
+d371 1
+a371 1
+  print OUTFILE $page;
+d421 8
+a428 6
+  if ($height > $width) {
+    my $newwidth = int (($thumbsize / $height) * $width);
+    $image->Scale(height=>$thumbsize,width=>$newwidth);
+  } else {
+    my $newheight = int (($thumbsize / $width) * $height);
+    $image->Scale(height=>$newheight,width=>$thumbsize);
+d454 1
+a454 1
+     $out = &clean_dir($out);
+@
+
+
+1.2
+log
+@Trying to fix the new directory structure and preview the new button.
+@
+text
+@d14 1
+a14 1
+my $outdir   = '/home/httpd/html/macro-new/ftp/cache/';
+d19 1
+a19 1
+my $icondir  = '/home/httpd/html/macro-new/code/ftp/icons';
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d14 1
+a14 1
+my $outdir   = '/home/httpd/html/macro-new/output/ftp/cache/';
+d19 1
+a19 1
+my $icondir  = '/home/httpd/html/macro-new/output/code/ftp/icons';
+@
+
+
+1.1.1.1
+log
+@Initial import of new design
+@
+text
+@@

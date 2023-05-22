@@ -1,0 +1,1024 @@
+head	1.24;
+access;
+symbols
+	initial:1.1.1.1 DCI:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.24
+date	2002.02.04.18.41.00;	author bear;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.01.30.17.05.22;	author bennie;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.01.23.20.52.31;	author bennie;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.01.23.00.43.49;	author bear;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.12.13.20.32.47;	author bear;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.12.07.20.52.55;	author bear;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.11.06.20.13.45;	author binky;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.11.05.21.28.51;	author binky;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.11.05.20.19.44;	author binky;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.11.05.17.43.02;	author binky;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.10.26.19.21.55;	author binky;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.10.09.18.16.24;	author bear;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.09.21.15.17.12;	author panther;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.08.09.20.12.32;	author binky;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.08.09.19.57.29;	author binky;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.08.06.20.29.20;	author binky;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.07.20.17.59.13;	author binky;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.06.27.20.01.25;	author binky;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.06.19.20.40.34;	author binky;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.06.19.16.50.04;	author binky;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.06.18.19.34.39;	author binky;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.06.13.19.31.36;	author binky;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.06.13.18.40.38;	author binky;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.31.14.26.18;	author bear;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.05.31.14.26.18;	author bear;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.24
+log
+@Giant commit that fixes so many bugs, that enumerating them would require lots of
+space, but... here goes:
+
+Numerous scalar/array problems in SQL.pm
+Import of updated site from Karim
+Changes to the styles.
+@
+text
+@#*************************************************************************
+
+=head1 Log.pm (PerlServer::Log)
+
+=head1
+
+=head2 GENERAL INFO:
+
+Core PerlServer Engine
+
+  SYSTEM:      PerlServer Logging Core
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+ 
+=cut
+
+#*************************************************************************
+
+package PerlServer::Log;
+
+use Fcntl qw(:flock);
+use IO::File;
+use strict;
+
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; 
+
+=head1 USAGE:
+
+=head2 Creation
+
+Instancing a log object is a normal process.
+
+  my $log = new PerlServer::Log;
+
+When instanced, the Logging engine creates a file on /tmp filespace to which
+it will log the variety of messages sent to it. Currently the format of the
+filename is /tmp/PS.username.log.txt where the username is replaced by the 
+username of the process owner.
+
+Due to the use of flock and other safe routines, multiple Log instances can
+occur to the same file safely. However, since Log is typically instaned by the 
+server you should use that one to reduce code duplication.
+
+=cut
+
+sub new { # Generic / Heritable
+    my $class    = shift @@_;
+    my $pointers = shift @@_;
+    my $self     = { };
+
+    bless ( $self, $class );
+    $self->{pointers} = $pointers;
+    
+    our $logfile  = '/tmp/PS.' . (getpwuid($<))[0] . '.log.txt';
+    our $loglevel = 100;
+
+    our %logcats;
+    
+    $logcats{0}{name} = 'No Logging';
+    $logcats{1}{name} = 'Standard Production Logging';
+    $logcats{2}{name} = 'ERROR';
+    $logcats{3}{name} = 'VIEW';
+    $logcats{4}{name} = 'STYLE';
+    $logcats{5}{name} = 'ROUTE';
+    $logcats{6}{name} = 'SQL';
+    $logcats{7}{name} = 'DEBUG';
+
+    return $self;
+}
+
+=head2 Sending basic messages
+
+There are currently three methods of sending infomation to the Log object. They
+are presented here in order of preference:
+
+=item debug()
+
+The Debug method is the most verbose of the logging methods. It introspects 
+where the call has come from and catopgorizes the message based upon this 
+ownership and content. This allows for selective logging. YOU SHOULD USE 
+DEBUG FOR ALMOST ALL LOGGING.
+
+=cut
+
+sub debug { # Same as log, but more verbose
+  my $self   = shift     @@_;
+  my $output = join ' ', @@_;
+ 
+  my @@call   = caller();
+
+  my ( $l, $out );
+  
+  if    ( $call[0] eq 'PerlServer::SQL'                                     ) 
+        { $l = 6; $out = "SQL   : $output";                                 }
+  elsif ( $call[0] eq 'PerlServer::Display' && $output =~ /^AUTOLOAD (.*)$/ )
+        { $l = 5; $out = "ROUTE : $1";                                      }
+  elsif ( $call[0] eq 'PerlServer::Display'                                 ) 
+        { $l = 3; $out = "VIEW  : $output";                                 } 
+  elsif ( $call[0] =~ /^PerlServer::Display::Style::(.*)$/                  ) 
+        { $l = 4; $out = "STYLE : $1.pm ($call[2]) - $output";              }
+  else  { $l = 7; $out = "DEBUG : $call[0].pm ($call[2]) - $output";        }
+    
+  $self->_filter($l,$out);
+  return 1;
+}
+
+=item error()
+
+This method is a call for specifically when something has blown up. This is
+used almost exclusively by the SQL object for bad returns on queries. This is
+for actual errors, not warnings.
+
+=cut
+
+sub error {
+	my ($self,$text) = @@_;
+	$self->_filter(2,"ERROR: $text");	  
+}         
+
+=item log()
+
+The log routine is the most basic output to the logfile. There is no analysis
+of location or category. There is no timestamp. Use VERY sparingly and only for
+the most terminal of messages. (IE: "Server going down...")
+
+=cut
+
+sub log {
+  my $self = shift @@_;
+  $self->_filter(1,shift @@_);
+}
+
+=head2 Sending complex messages
+
+=item array_log($label,\$array)
+
+Seperates the contents of the given array reference and logs them individually though the
+debug() routine.
+
+=cut
+
+sub array_log {
+	my $self  = shift @@_ || return(undef);
+	my $label = shift @@_ || '';
+	my $ar    = shift @@_ || [];
+	my $str = "$label: ";
+	
+	my @@temp = @@{$ar}; #defensive copy
+	
+	#my @@binds=map((defined($_))? $_ : '', @@temp); # clear uninited values
+	#$str.=join ',',map {tr/\n//;} @@binds;
+	#$self->debug($str);
+	
+	$self->debug($str." - ".join(',',@@temp));
+	
+	return 1;	
+}
+
+=item debughash()
+
+This routine takes a hash reference and disassembles the keys and values of the 
+hash directly into the log. Handy for testing memory structure (like 
+$self->{pointers}) however it is bad form for this call to be used in 
+production code.
+
+=cut
+
+sub debughash {
+	my $self = shift @@_;
+	my $ohash = shift @@_;
+	map { $self->debug(" HASH Key: ". $_); $self->debug(" HASH Value: ". $ohash->{$_});} keys %{$ohash};	
+	return 1;
+}
+
+=head2 Setting Logging Verbosity
+
+Currently the following numeric levels are available:
+
+ 0 : No Loggin
+ 1 : Standard Production Logging
+ 2 : ERROR
+ 3 : VIEW
+ 4 : STYLE
+ 5 : ROUTE
+ 6 : SQL
+ 7 : DEBUG
+
+The levels are currently a progressive selection. For example:
+
+  $log->set_level(3);
+  
+Would give you VIEW messages, as well as ERROR and Standard Production messages.
+
+This function also takes a second message to supress output of the changing of loglevel.
+An example of this use:
+
+  my $level = $log->check_level;
+  $log->set_level(1,0) if $level == 0;
+  $log->log('Sneaking my message through the quiet flag.');
+  $log->set_level(0,0) if $level == 0;
+  
+=cut
+
+sub set_level {
+  my $self = shift @@_;
+  my $level = shift @@_;
+  my $msg  = shift @@_ || 1;  
+
+  return 0 if $level !~ /^\d+$/;
+
+  our $loglevel = $level;
+  $self->log("\n\nSetting logging to level $loglevel\n\n\n") if $loglevel > 0 && $msg > 0;
+
+  return 1;
+}
+
+=head2 Checking the  Logging Verbosity
+
+  $log->check_level;
+  
+This method returns the current numeric logging level.
+
+=cut
+
+sub check_level {
+  return our $loglevel;
+}
+
+=head2 Internal Routines (AKA Under the hood)
+
+=item _filter()
+
+Given a numberic level input and a message, it inspects the current logging
+level to decide if it should be logged to the file via the _write() routine.
+
+=cut
+
+sub _filter {
+  my $self  = shift @@_;
+  my $level = shift @@_;
+  my $out   = shift @@_;
+  our $loglevel;
+  
+  $self->_write($out) if $level <= $loglevel;
+  
+  return 1;  
+}
+
+=item _time()
+
+Timestamp used by the _write() routine to mark logging times.
+
+=cut
+
+sub _time {
+  my @@timestamp = split ' ', scalar localtime;
+  return "$timestamp[0] $timestamp[3]";
+}
+
+=item _write()
+
+Takes a message, time and userid stamps it, and using flock, writes it to the
+chosen file.
+
+=cut
+
+sub _write {
+  my $self    = shift @@_;
+  my $output  = shift @@_;  
+  our $logfile;
+  # open the file
+  if (my $file_ptr = IO::File->new(">>$logfile")) {
+    # Lock the file so no one else is using it
+    flock ($file_ptr,LOCK_EX);
+    print  $file_ptr "[$$] : ", $self->_time, " : $output\n";
+    # unlock the file
+    flock ($file_ptr,LOCK_UN);
+    undef  $file_ptr;
+  } else {
+    $self->{pointers}->{apache_ref}->log_error("Unable to open $logfile");
+  }
+}
+
+1;
+
+__END__
+
+=head1 Documentation Author:
+
+ Phillip Pollard <binky@@bears.org>
+ Last edited 01/23/2002
+@
+
+
+1.23
+log
+@We now handle compile time errors approrpiately.
+@
+text
+@d12 1
+a12 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d24 1
+a24 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; 
+d144 1
+a144 1
+	my $ar    = shift @@_ || ();
+d146 9
+a154 3
+	my @@binds=map((defined($_))? $_ : '', @@{$ar}); # clear uninited values
+	$str.=join ',',map {tr/\n//;} @@binds;
+	$self->debug($str);
+@
+
+
+1.22
+log
+@Log now has better documentation and can be set to numeric level.
+@
+text
+@d12 1
+a12 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d24 1
+a24 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; 
+d168 1
+a168 1
+=head2 Setting Loggin Verbosity
+d185 1
+a185 1
+Would five you VIEW messages, as well as ERROR and Standard Production messages.
+d187 8
+d199 21
+a219 2
+  our $loglevel = shift @@_;
+  $self->log("\n\nSetting logging to level $loglevel\n\n\n") if $loglevel > 0;
+@
+
+
+1.21
+log
+@Cleaned up some code, minor refactors
+@
+text
+@d3 1
+a3 1
+=head1 Log.pm
+d12 1
+a12 2
+  SUBSYSTEM:   Web Pages
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+a13 6
+
+=head2 MODIFICATION HISTORY:
+
+  VERSION    DATE          NAME      COMMENTS
+  1.00       08-27-2000    garyc     Initial Creation
+
+d18 5
+a22 1
+=head1 METHODS:
+d24 1
+a24 1
+=cut
+d26 1
+a26 2
+# Basic Pragmas
+use strict;
+d28 1
+a28 1
+package PerlServer::Log;
+d30 1
+a30 3
+# Import file locking 
+use Fcntl qw(:flock);
+use IO::File;
+d32 1
+a32 2
+# Set Versioning Information
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d34 4
+a37 1
+# Create the constructor
+d39 3
+a41 1
+=item new()
+a51 1
+    $self->{spew}     = 1;
+d53 14
+d70 4
+d77 5
+d90 11
+a100 18
+  #my $global = $self->{debug} ? 'T' : 'F';
+  #my $local  = eval "$PerlServer::handler::debug > 0" ? 'T' : 'F' ;
+
+  if ($self->{pointers}->{debug}) { 
+    if ( $call[0] eq 'PerlServer::SQL' ) {
+      $self->log("SQL   : $output");
+    } elsif ( $call[0] eq 'PerlServer::Display' ) {
+      if ( $output =~ /^AUTOLOAD (.*)$/ ) {
+        $self->log("ROUTE : $1");
+      } else {
+        $self->log("VIEW  : $output");
+      }
+    } elsif ( $call[0] =~ /^PerlServer::Display::Style::(.*)$/ ) {
+      $self->log("STYLE : $1.pm ($call[2]) - $output");
+    } else {
+      $self->log("DEBUG : $call[0].pm ($call[2]) - $output");
+    }
+  }
+d102 1
+d105 1
+a105 1
+                           
+d108 3
+a110 1
+Log something as an error, as opposed to a warning, or an informational message
+d116 4
+a119 5
+	$self->log("ERROR: $text");	  
+} 
+                           
+                           
+=item debughash()
+d121 3
+a123 2
+This provides the functionality of log but made to work to view hash contents
+good for what ails ya and to look at the contents of {pointers}
+d127 3
+a129 7
+sub debughash {
+	my $self = shift @@_;
+	my $ohash = shift @@_;
+	
+	map {$self->log("Key: ". $_); $self->log("Value: ". $ohash->{$_});} keys %{$ohash};
+	
+	return 1;
+d132 2
+d136 2
+a137 1
+Log the contents of an array...
+d152 15
+a166 1
+# This package provides code to log to a text file
+d168 62
+a229 1
+=item log()
+d233 1
+a233 1
+sub log {
+d236 1
+a236 4
+  my $logfile = '/tmp/PS.' . (getpwuid($<))[0] . '.log.txt';
+
+  return if $self->{spew} == 0; # AKA "Shut the fuck up"
+
+a238 1
+
+d241 1
+a241 2
+    print  $file_ptr "[$$] : ", $self->time, " : $output\n";
+
+a244 1
+
+a249 10
+=item time()
+
+=cut
+
+sub time {
+  my @@timestamp = split ' ', scalar localtime;
+  return "$timestamp[0] $timestamp[3]";
+}
+
+# The requisite true
+d257 1
+a257 1
+ Last edited 11/06/2001
+@
+
+
+1.20
+log
+@Modifications to remove 'strict' errors, also fixes to the login code to
+ensure correctness.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d39 1
+a39 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d91 2
+d94 10
+@
+
+
+1.19
+log
+@Fixes for login and names.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d39 1
+a39 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d108 1
+a108 1
+=item array_log()
+d115 7
+a121 5
+	my $self = shift @@_ || return(undef);
+	my $ar   = shift @@_ || ();
+	my $str = "Values: ";
+	$str.=join ',',@@{$ar};
+	$self->log($str);
+@
+
+
+1.18
+log
+@Fixed the autho line and the FUNCTIONS name in the POD.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d39 1
+a39 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+a90 2
+#this provides the functionality of log but made to work to view hash contents
+#good for what ails ya and to look at the contents of {pointers}
+d94 3
+d108 1
+a108 1
+# Log the contents of an array...
+d110 1
+a110 1
+=item array_log()
+a151 1
+
+a162 1
+
+@
+
+
+1.17
+log
+@End token for everything in POD as well as full docs for Display.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d25 1
+a25 1
+=head1 FUNCTIONS:
+d39 1
+a39 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d167 1
+a167 1
+=pod
+d169 2
+a170 1
+Documentation last edited 11/05/2001 by Phil
+@
+
+
+1.16
+log
+@Functions are now PODed
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d39 1
+a39 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d163 7
+@
+
+
+1.15
+log
+@Perldoc Flowerboxes.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d25 4
+d39 1
+a39 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d42 5
+d59 5
+d93 5
+d108 5
+d123 5
+d150 5
+@
+
+
+1.14
+log
+@Annoying apache loop is now solved!
+@
+text
+@d2 21
+a22 17
+#*
+#* FILE:        Log.pm
+#*
+#* DESCRIPTION: Core PerlServer Engine
+#*
+#* SYSTEM:      PerlServer Logging Core
+#*
+#* SUBSYSTEM:   Web Pages
+#*
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+#*
+#* MODIFICATION HISTORY:
+#*
+#* VERSION    DATE          NAME      COMMENTS
+#*
+#* 1.00       08-27-2000    garyc     Initial Creation
+#*
+d35 1
+a35 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+@
+
+
+1.13
+log
+@First pass security update manager, now needs to grab and send proper coding.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d31 1
+a31 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d41 2
+a42 1
+
+d99 2
+@
+
+
+1.12
+log
+@Log got a little facelift by getting the debughash routine.
+BTest just tests the new log stuff
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d31 1
+a31 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d81 10
+@
+
+
+1.11
+log
+@Style cleanup.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d31 1
+a31 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d71 10
+@
+
+
+1.10
+log
+@Now the summary page cleanly handles agents.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d31 1
+a31 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+a49 1
+  my $who    = "$call[0].pm ($call[2])";
+d63 2
+d66 1
+a66 1
+      $self->log("DEBUG : $who - $output");
+@
+
+
+1.9
+log
+@Property is now actually displayed. Next to add util info. Log slightly reorganized. Big time cleanup of logging and general text layout of SQL.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d31 1
+a31 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d57 1
+a57 1
+      $self->log("SQL     : $output");
+d59 5
+a63 1
+      $self->log("DISPLAY : $output");
+d65 1
+a65 1
+      $self->log("DEBUG   : $who - $output");
+@
+
+
+1.8
+log
+@Widgets work now.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d31 1
+a31 1
+$PerlServer::Log::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d56 7
+a62 1
+    $self->log("DEBUG: $who - $output");
+@
+
+
+1.7
+log
+@The debug methodology now automatically check the named pointer debug to see if it should indeed output any information. This makes the clucnky logic checks ( $debug && do { $log->debug() } ). Now just call the debug routine and it will sort itself out.
+
+If you wish to have debug on globally, set it so in the definition of debug in PerlServer.pm. If you only wish it for an area, turn the pointer on and off around that area.
+
+Simple. Good. Likeable. Lickable.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 
+d31 1
+a31 1
+$PerlServer::Log::VERSION=1.0; # Sent out by Exporter
+@
+
+
+1.6
+log
+@Thanks to G the debug routine knows where it was called.
+@
+text
+@d52 7
+a58 1
+  $self->log("DEBUG: $who - $output");
+@
+
+
+1.5
+log
+@Whoops. Poor quoting. Bad programmer. Bad. Stay! Staaaaay.
+@
+text
+@d46 5
+a50 3
+  my $self   = shift @@_;
+  my $who    = shift @@_;
+  my $output = shift @@_;
+@
+
+
+1.4
+log
+@The first step in a migration is to be backwards compatible. East your heart out Microsoft. New page display method along with the old. Nothing should bear. Also the start of a debugger code. Durn I wished there was an easy $0 or ref($parent) I could put into it rather than naming debug manually.
+@
+text
+@d77 1
+a77 1
+  my @@timestamp = split / /, scalar localtime;
+@
+
+
+1.3
+log
+@Set the error to reflect new filenames. Made it purty too.
+@
+text
+@d20 1
+a21 1
+
+d45 1
+a45 2
+# This package provides code to log to a text file
+sub log {
+d47 1
+d50 8
+a57 1
+  my $now     = scalar localtime;
+d65 1
+a65 1
+    print  $file_ptr "[$$]:$now:$output\n";
+d74 5
+@
+
+
+1.2
+log
+@Logfile is now PS.username.txt -- easier to read.
+@
+text
+@d35 7
+a41 5
+    my $class=shift;
+    my $pointers=shift;
+    my $self ={};
+    bless ($self,$class);
+    $self->{pointers}=$pointers;
+d47 6
+a52 3
+  my ($self,$output)=(shift,shift);
+  # Build data used in the output
+  my $now=scalar localtime;
+d54 2
+a55 1
+  if (my $file_ptr = IO::File->new(">>/tmp/PS.".(getpwuid($<))[0].".log.txt")) {
+d58 2
+a59 1
+    print $file_ptr "[$$]:$now:$output\n";
+d62 2
+a63 1
+    undef $file_ptr;
+d65 1
+a65 1
+    $self->{pointers}->{apache_ref}->log_error("Unable to open /tmp/PerlServer.log.txt");
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d49 1
+a49 1
+  if (my $file_ptr = IO::File->new(">> /tmp/PS.".$<.".log.txt")) {
+@
+
+
+1.1.1.1
+log
+@Initial import of repository
+@
+text
+@@

@@ -1,0 +1,47 @@
+<div id="main"><div class="boxen">
+<div class="c1"><div class="c2"><div class="c3"><div class="c4">
+
+<img height="200" width="160" hpsace="3" align="right"
+src="/images/canning.jpg" />
+
+<p><font size="5">Perl Modules</font><br />
+<i>Giving Back</i></p>
+
+<p><b>Project Summary:</b></p>
+
+<p>Under the username of <b>BENNIE</b> I have several modules published 
+and available on CPAN. Full details can be found <a 
+href="http://search.cpan.org/~bennie/">in my account on CPAN</a>, but 
+here is a brief summary:</p>
+
+<hr noshade />
+
+<ul>
+
+<li> <p><b><a href="http://search.cpan.org/~bennie/Text-TabFile-1.10/">Text::TabFile</a></b> v1.10 (Aug 2, 2006)</p>
+<p>A module for dynamic iteritive parsing of tab delimited files.</p>
+
+<li> <p><b><a 
+href="http://search.cpan.org/~bennie/Text-Delimited-2.00/">Text::Delimited</a></b> v2.00 (Jul 31, 2006)</p>
+<p>A module for dynamic iteritive parsing of character delimited files.</p>
+
+<li> <p><b><a href="http://search.cpan.org/~bennie/Term-Activity-1.06/">Term::Activity</a></b> v1.06 (Sep 10, 2004) - registered</p>
+<p>A module used for terminal display of non-bounded processing. Speed 
+aware to keep from flooding the terminal, but still show activity.</p>
+
+<li> <p><b><a href="http://search.cpan.org/~bennie/Acme-Umlautify-1.01/">Acme::Umlautify</a></b> v1.01 (Apr 7, 2004) - registered</p>
+<p>This module, part of the humor Acme namespace, will add Umlauts to 
+about anything it can.</p>
+
+<li> <p><b><a href="http://search.cpan.org/~bennie/Cache-Bounded-1.03/">Cache::Bounded</a></b> v1.03 (Apr 6, 2004) - registered</p>
+<p>A size aware cache that is designed for speed of write and minimal 
+measurement overheads</p>
+
+<li> <p><b><a href="http://search.cpan.org/~bennie/Rcs-Parser-0.02/">Rcs::Parser</a></b> v0.02 (Apr 2, 2004)</p>
+<p>Directly parse and read RCS files without needing a binary version of 
+RCS.</p>
+
+</ul>
+
+
+</div></div></div></div></div></div>

@@ -1,0 +1,64 @@
+head	1.2;
+access;
+symbols
+	one:1.1.1.1 project:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.04.09.15.35.25;	author derik;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.04.09.15.27.38;	author phil;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2002.04.09.15.27.38;	author phil;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@This has new lines.
+@
+text
+@This is a starting block of code that was originally created on import
+This is a starting block of code that was originally created on import
+This is a starting block of code that was originally created on import
+This is a starting block of code that was originally created on import
+This is a starting block of code that was originally created on import
+
+These lines were added.
+These lines were added.
+These lines were added.
+These lines were added.
+These lines were added.
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d7 6
+@
+
+
+1.1.1.1
+log
+@Initial import test.
+@
+text
+@@

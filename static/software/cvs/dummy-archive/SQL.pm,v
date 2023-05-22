@@ -1,0 +1,5292 @@
+head	1.92;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.92
+date	2002.03.22.02.34.08;	author bear;	state Exp;
+branches;
+next	1.91;
+
+1.91
+date	2002.03.20.17.40.29;	author bear;	state Exp;
+branches;
+next	1.90;
+
+1.90
+date	2002.03.20.16.56.58;	author bennie;	state Exp;
+branches;
+next	1.89;
+
+1.89
+date	2002.03.12.20.36.28;	author bear;	state Exp;
+branches;
+next	1.88;
+
+1.88
+date	2002.03.08.22.25.59;	author bear;	state Exp;
+branches;
+next	1.87;
+
+1.87
+date	2002.03.08.21.23.57;	author bear;	state Exp;
+branches;
+next	1.86;
+
+1.86
+date	2002.03.08.21.06.12;	author bear;	state Exp;
+branches;
+next	1.85;
+
+1.85
+date	2002.03.08.20.33.50;	author panther;	state Exp;
+branches;
+next	1.84;
+
+1.84
+date	2002.03.06.21.10.19;	author bear;	state Exp;
+branches;
+next	1.83;
+
+1.83
+date	2002.03.05.20.53.37;	author bear;	state Exp;
+branches;
+next	1.82;
+
+1.82
+date	2002.03.05.20.32.51;	author panther;	state Exp;
+branches;
+next	1.81;
+
+1.81
+date	2002.03.05.19.33.48;	author bennie;	state Exp;
+branches;
+next	1.80;
+
+1.80
+date	2002.03.05.18.03.48;	author bear;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2002.03.04.21.46.26;	author bear;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2002.03.04.21.09.55;	author panther;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2002.03.01.02.55.48;	author panther;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2002.02.27.18.44.20;	author bennie;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2002.02.27.17.47.45;	author bear;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2002.02.22.22.02.30;	author bear;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2002.02.19.22.41.17;	author bear;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2002.02.18.18.32.46;	author bear;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2002.02.15.20.36.57;	author bear;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2002.02.08.14.57.04;	author bear;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2002.02.04.18.41.00;	author bear;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2002.01.31.21.46.47;	author bear;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2002.01.30.21.03.04;	author bear;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2002.01.29.21.16.44;	author bear;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2002.01.25.21.40.43;	author bennie;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2002.01.24.23.28.32;	author bennie;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2002.01.23.00.43.49;	author bear;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2001.12.27.22.22.07;	author bear;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2001.12.19.22.22.25;	author bear;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2001.12.13.21.43.59;	author bear;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2001.12.13.20.32.47;	author bear;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2001.12.12.22.20.10;	author bear;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2001.12.12.21.48.06;	author bear;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2001.12.12.21.26.08;	author bear;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2001.12.07.20.52.55;	author bear;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2001.12.07.17.24.52;	author bear;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2001.12.07.16.01.15;	author bear;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2001.12.06.21.50.01;	author bear;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2001.12.06.21.40.03;	author bear;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2001.12.06.20.33.08;	author bear;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2001.12.06.19.50.51;	author bear;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2001.12.06.17.33.43;	author bear;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2001.12.06.16.20.14;	author bear;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2001.12.06.16.18.59;	author bear;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2001.12.06.16.09.28;	author bear;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2001.12.05.21.45.04;	author bear;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2001.12.05.20.45.31;	author bear;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2001.12.04.20.59.22;	author bear;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2001.12.03.22.04.21;	author bear;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2001.12.03.21.57.10;	author bear;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2001.12.03.21.47.19;	author bear;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2001.12.03.21.37.10;	author bear;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2001.12.03.21.27.30;	author bear;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2001.11.28.21.05.12;	author bear;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2001.11.26.20.52.06;	author binky;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2001.11.21.19.03.21;	author bear;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2001.11.16.22.00.03;	author bear;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2001.11.13.19.43.28;	author bear;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2001.11.06.20.13.45;	author binky;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.11.05.21.28.51;	author binky;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.11.05.20.19.44;	author binky;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.11.05.17.43.02;	author binky;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.10.17.15.29.41;	author binky;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.10.09.20.12.21;	author bear;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.10.09.18.16.24;	author bear;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.10.02.16.41.48;	author bear;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.09.25.03.46.45;	author bear;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.09.13.22.15.18;	author bear;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.08.24.16.26.33;	author binky;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.08.22.18.49.36;	author binky;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.08.06.20.29.20;	author binky;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.08.01.21.19.27;	author bear;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.07.20.17.59.13;	author binky;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.07.16.20.22.17;	author binky;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.07.11.15.58.42;	author bear;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.07.09.16.56.59;	author bear;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.07.05.19.19.38;	author binky;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.07.05.17.46.45;	author binky;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.07.03.01.34.56;	author bear;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.06.27.20.22.24;	author binky;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.06.19.13.56.32;	author bear;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.06.18.19.35.42;	author binky;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.06.18.18.34.52;	author bear;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.06.18.17.06.16;	author bear;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.06.18.01.13.08;	author bear;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.06.13.20.32.22;	author bear;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.06.12.23.03.57;	author bear;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.06.12.18.57.12;	author bear;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.06.11.20.54.14;	author bear;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.92
+log
+@DANGEROUS CODE DANGEROUS CODE (INELEGANT!)
+* quick hack to provide for Jim-requested modifications to verification display
+@
+text
+@#*************************************************************************
+
+=head1 SQL.pm (PerlServer::SQL)
+
+=head1
+
+=head2 GENERAL INFO:
+
+Main PerlServer Engine
+
+  SYSTEM:      SQL Module
+  SUBSYSTEM:   Web Pages
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+ 
+=cut
+
+#*************************************************************************
+
+=head1 USAGE:
+
+The SQL object handles all SQL code in the PerlServer core.  This object creates a connection
+and manages it through the life of the request.  Connections are cached using Apache::DBI and
+are built on an as needed basis.
+
+=head1 METHODS:
+
+=cut
+
+use strict;
+
+package PerlServer::SQL;
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+
+use Apache;
+use Date::Manip;
+use DBI;
+use POSIX qw(strftime);
+
+=item new()
+
+This function is a staple of all objects.  It is passed the traditional 'pointers' hash
+which is normally created in the PerlServer.pm module, but which can be created manually 
+and passed.  Typically, new is invoked as:
+
+my $sql = new SQL($pointers);
+
+=cut
+
+sub new { # Generic / Heritable
+    my $class=shift @@_;
+    my $self ={};
+    bless ($self,$class);
+    $self->_init(@@_);  # Call initialization routine with remains
+    return $self;
+}
+
+
+=item _init()
+
+=cut
+
+sub _init {
+    my $self = shift @@_;
+    
+    $self->{pointers} = shift @@_;
+    
+    $self->{sth}      = undef;
+
+    our $log = $self->{pointers}->{Log};
+
+    # Build connection to the database and store in the object
+    our $dbh = $self->connection_cache();
+}
+
+# Grab a connection from the cache
+
+=item connection_cache()
+
+=cut
+
+sub connection_cache {
+	my $self = shift @@_ || return (undef);
+	my ( $database, $username, $password );
+	
+	my $connection = undef; 
+	
+	our $log->debug("Getting a DB connection");		
+	
+	if ( $self->{pointers}->{library} ) {
+      		$database = $self->{pointers}->{library}->{database};
+      		$username = $self->{pointers}->{library}->{username};
+      		$password = $self->{pointers}->{library}->{password};
+    	} else {
+      		my $s            = $self->{pointers}->{s};
+      		my $lib          = $self->{pointers}->{library} = {};
+          $lib->{database} = $database = $s->dir_config('DBName');
+      		$lib->{username} = $username = $s->dir_config('UName');
+      		$lib->{password} = $password = $s->dir_config('PWord');
+    	}
+	
+	$connection = $self->{dbh} = DBI->connect("DBI:mysql:database=$database;host=localhost",$username,$password,{ RaiseError => 1 } ) 
+              	               or die "Connecting: $DBI::errstr";
+                               	                
+  return $connection;
+}
+
+
+# The destructor
+
+=item finalize()
+
+Shut down the connection to the database represented by this object.
+
+=cut
+
+sub finalize {
+    my $self = shift @@_;
+    our $log->debug("Finishing DB connection");
+    $self->{sth}->finish if ($self->{sth});
+    delete $self->{sth};
+    delete $self->{dbh};
+}
+
+####################################################
+# CONSTANTS                                        #
+####################################################
+
+# referenced constants
+my %dbi_type_map = (
+ '1'  => 'SQL_CHAR',
+ '2'  => 'SQL_NUMERIC',
+ '3'  => 'SQL_DECIMAL',
+ '4'  => 'SQL_INTEGER',
+ '5'  => 'SQL_SMALLINT',
+ '6'  => 'SQL_FLOAT',
+ '7'  => 'SQL_REAL',
+ '8'  => 'SQL_DOUBLE',
+ '9'  => 'SQL_DATE',
+ '10' => 'SQL_TIME',
+ '11' => 'SQL_TIMESTAMP',
+ '12' => 'SQL_VARCHAR',
+ '-1' => 'SQL_LONGVARCHAR',
+ '-2' => 'SQL_BINARY',
+ '-3' => 'SQL_VARBINARY',
+ '-4' => 'SQL_LONGVARBINARY',
+ '-5' => 'SQL_BIGINT',
+ '-6' => 'SQL_TINYINT',
+ '-7' => 'SQL_BIT',
+ '-8' => 'SQL_WCHAR',
+ '-9' => 'SQL_WVARCHAR',
+ '-10'=> 'SQL_WLONGVARCHAR'
+);
+
+# This is automatically generated (current_db_structure.pl)
+# AUTOGENERATED TAG: DO NOT CHANGE ANYTHING BY HAND BETWEEN HERE-->
+my %expected_tables = (
+  'ERTs' => {'primarykey'=>'id','maptable'=>'ERTs','fields'=>['id','meterid','ertnumber','ertmanufacturer','ertdateinstalled','ertdateremoved','priorertnumber']},
+  'accountmap' => {'primarykey'=>'id','maptable'=>'accountmap','fields'=>['id','aid','mid']},
+  'accounts' => {'primarykey'=>'id','maptable'=>'accounts','fields'=>['id','propertyid','accountnumber','createdate','master','description','billingfrequency','billratecode','providerid','supplierid','latepenalty','servicedescription','rateinfo','utilityservicerate','latepaymentpenalty','meterid','ertid']},
+  'agentmap' => {'primarykey'=>'id','maptable'=>'agentmap','fields'=>['id','originalid','mappedid']},
+  'billconcept' => {'primarykey'=>'id','maptable'=>'billconcept','fields'=>['id','providerid','description','shortname','template','modified']},
+  'billingfrequency' => {'primarykey'=>'id','maptable'=>'billingfrequency','fields'=>['id','name']},
+  'billinstance' => {'primarykey'=>'id','maptable'=>'billinstance','fields'=>['id','billstatusid','billconceptid','providerid','supplierid','billingdate','duedate','prevbalance','prevbalancedue','amountdue','totalbalance','invoiceid','sourceformat','paymentadj','financecharge','fcbasis','providercharges','suppliercharges','intangibles','accountid','financechargep','distcharges','transcharges','custcharges','newcharges']},
+  'billmodules' => {'primarykey'=>'name','maptable'=>'billmodules','fields'=>['name','code','modified']},
+  'billstatus' => {'primarykey'=>'id','maptable'=>'billstatus','fields'=>['id','description']},
+  'config' => {'primarykey'=>'configid','maptable'=>'config','fields'=>['configid','configvalue']},
+  'configurablefields' => {'primarykey'=>'id','maptable'=>'configurablefields','fields'=>['id','billinstanceid','fieldname','description']},
+  'contacts' => {'primarykey'=>'id','maptable'=>'contacts','fields'=>['id','firstname','middleinitial','lastname','title','department','responsibility','phonenumber','faxnumber','pagernumber','primaryemail','secondaryemail','createdate']},
+  'customercontactmap' => {'primarykey'=>'id','maptable'=>'customercontactmap','fields'=>['id','originalid','mappedid']},
+  'customerprovidermap' => {'primarykey'=>'id','maptable'=>'customerprovidermap','fields'=>['id','originalid','mappedid']},
+  'customers' => {'primarykey'=>'id','maptable'=>'customers','fields'=>['industryid','name','division','mailingaddressone','mailingaddresstwo','city','zip','ein','costcustomercode','supercustomer','logo','stateid','createdate','id','total','agent','owner','customertype']},
+  'datatypes' => {'primarykey'=>'id','maptable'=>'datatypes','fields'=>['id','name','description']},
+  'datavalues' => {'primarykey'=>'id','maptable'=>'datavalues','fields'=>['id','fieldid','billid','typeid','dvalue','type']},
+  'dictionary' => {'primarykey'=>'id','maptable'=>'dictionary','fields'=>['id','word']},
+  'formats' => {'primarykey'=>'id','maptable'=>'formats','fields'=>['id','description','type']},
+  'industries' => {'primarykey'=>'industryid','maptable'=>'industries','fields'=>['industryid','industryname','industrydescription','total']},
+  'logins' => {'primarykey'=>'id','maptable'=>'logins','fields'=>['id','userid','loginname','password','active','lastlogin']},
+  'matrix' => {'primarykey'=>'id','maptable'=>'matrix','fields'=>['id','utilityid','customerid','ps','prosuppid']},
+  'meterreadings' => {'primarykey'=>'id','maptable'=>'meterreadings','fields'=>['id','billid','meterid','fromreading','toreading','fromdate','todate','fromreadingest','toreadingest']},
+  'meters' => {'primarykey'=>'id','maptable'=>'meters','fields'=>['id','utility_type_id','meterid','metermanufacturer','metersize','meterdateinstalled','meterdateremoved','priormeterid','units']},
+  'pagetext' => {'primarykey'=>'name','maptable'=>'pagetext','fields'=>['name','template','modified']},
+  'passwords' => {'primarykey'=>'id','maptable'=>'passwords','fields'=>['id','loginid','plaintext','source']},
+  'permanentconfigurablefields' => {'primarykey'=>'id','maptable'=>'permanentconfigurablefields','fields'=>['id','fieldname','description']},
+  'permanentmessage' => {'primarykey'=>'id','maptable'=>'permanentmessage','fields'=>['id','fieldname','providertext','bcid']},
+  'permissions' => {'primarykey'=>'id','maptable'=>'permissions','fields'=>['id','sid','uid']},
+  'preferences' => {'primarykey'=>'id','maptable'=>'preferences','fields'=>['id','userid','HTMLEmail']},
+  'properties' => {'primarykey'=>'id','maptable'=>'properties','fields'=>['id','customerid','name','addressone','addresstwo','city','stateid','zip','dateacquired','createdate','buildingnumber']},
+  'propertyattributemap' => {'primarykey'=>'id','maptable'=>'propertyattributemap','fields'=>['id','originalid','mappedid']},
+  'providersupplier' => {'primarykey'=>'id','maptable'=>'providersupplier','fields'=>['id','stateid','name','division','mailingaddressone','mailingaddresstwo','city','zip','attention','ein','createdate','category','pscnum']},
+  'providersuppliercontactmap' => {'primarykey'=>'id','maptable'=>'providersuppliercontactmap','fields'=>['id','originalid','mappedid']},
+  'sainstance' => {'primarykey'=>'id','maptable'=>'sainstance','fields'=>['id','said','value']},
+  'security' => {'primarykey'=>'id','maptable'=>'security','fields'=>['id','name','description']},
+  'sessions' => {'primarykey'=>'id','maptable'=>'sessions','fields'=>['id','a_session','created']},
+  'specialattributes' => {'primarykey'=>'id','maptable'=>'specialattributes','fields'=>['id','name','type','description']},
+  'states' => {'primarykey'=>'state_value','maptable'=>'states','fields'=>['state_value','state_name']},
+  'tableconfig' => {'primarykey'=>'name','maptable'=>'tableconfig','fields'=>['name','table_name','description','updated']},
+  'transientmessage' => {'primarykey'=>'id','maptable'=>'transientmessage','fields'=>['id','fieldname','providertext','billid']},
+  'users' => {'primarykey'=>'id','maptable'=>'users','fields'=>['id','customerid','firstname','middleinitial','lastname','eidnumber','title','department','responsibility','phonenumber','pagernumber','faxnumber','primaryemail','secondaryemail','costusercode','createdate']},
+  'utility_types' => {'primarykey'=>'id','maptable'=>'utility_types','fields'=>['id','type','total']},
+  'weblog' => {'primarykey'=>'id','maptable'=>'weblog','fields'=>['id','referer','webpage','work_duration','errors','bytes_sent','query','sid','remote_addr','http_user_agent']},
+);
+# <-- and here!
+
+######################################################################
+### Database primitives ##############################################
+######################################################################
+## These functions interact with and return DB primitives. They do  ##
+## not return finished data sets, nor process an SQL query.         ##
+######################################################################
+
+# Execute
+
+=item execute(@@params)
+
+Facade for DBI::execute
+
+=cut
+
+sub execute {
+    my $self   = shift @@_;
+    my @@params = @@_;
+    my $result = undef;
+    my $sth    = $self->{sth};
+
+    our $log;
+
+    if (defined $params[0]) {
+      $result=$sth->execute(@@params) || $log->error("SQL ERROR: ".$sth->errstr);
+    } else {
+      $result=$sth->execute()        || $log->error("SQL ERROR: ".$sth->errstr);
+    }
+
+    $log->array_log("execute($result)->",\@@params);
+
+    return $result;
+}
+
+=item fetchrow_hashref()
+
+=cut
+
+sub fetchrow_hashref {
+  my $self = shift @@_;
+  my $fth = $self->{sth}->fetchrow_hashref();
+  our $log->debug("fetchrow_hashref()");
+  return $fth;
+}
+
+=item fetchrow_array()
+
+=cut
+
+sub fetchrow_array {
+  my $self = shift @@_;
+  my @@fth = $self->{sth}->fetchrow_array();
+  our $log->debug('fetchrow_array() - ' . scalar(@@fth) . ' elements');
+  return @@fth;
+}
+
+=selectcol_arrayref($statement)
+
+=cut
+
+sub selectcol_arrayref {
+	my $self = shift @@_ || return(undef);
+	my $statement = shift @@_ || "SELECT 1";
+	
+	our $log->debug("selectcol_arrayref($statement)");
+	return $self->{dbh}->selectcol_arrayref($statement);	
+}
+
+=item get_handle()
+
+Give back the current database handle
+
+=cut
+
+sub get_handle {
+    my $self = shift @@_;
+    our $log->debug("get_handle()");
+    return $self->{dbh};
+}
+
+=item neat()
+
+=cut
+
+sub neat {
+  my ($self,$text,$len)=@@_;
+  return DBI::neat($text,$len);
+}
+
+=item prepare($query)
+
+Prepare
+
+=cut
+
+sub prepare {
+    my $self  = shift @@_;
+    my $query = shift @@_ || "SELECT 1";
+
+    our $log->debug("prepare($query)");
+    return $self->{sth}=$self->{dbh}->prepare($query);
+}
+
+=item rows()
+
+Return number of rows in a statement handle
+
+=cut
+
+sub rows {
+  my $self = shift @@_;
+  our $log->debug("rows()");
+  return $self->{sth}->rows;
+}
+
+
+
+=item run_query()
+
+This one will prepare and execute a SQL statement and return the statement handle
+
+=cut
+
+sub run_query {
+    my $self   = shift @@_ || return (undef);
+    my $query  = shift @@_ || "SELECT 1";
+    my $params = shift @@_ || undef;
+    
+    $self->prepare($query);
+    $self->execute($params);
+    
+    our $log->debug("run_query($query):$params");
+    
+    return $self->{sth};
+}
+
+
+=item table_id($table)
+
+Return the most recently inserted autoincrement ID in table $table.
+
+=cut
+
+sub table_id {
+	my $self  = shift @@_ || return (undef);
+	my $table = shift @@_ || return (undef);
+	
+	my $id =$self->{dbh}->selectrow_array("SELECT LAST_INSERT_ID() FROM $table");
+  our $log->debug("table_id($table->$id)");
+        
+  return $id;
+}
+
+=item _prepare_execute($query,@@params)
+
+Prepare a query and then execute it, returning the statement handle.
+
+=cut
+
+sub _prepare_execute {
+	my $self   = shift @@_ || return (undef);
+	my $query  = shift @@_;
+	my @@params = @@_;
+		
+	our $log->array_log("_prepare_execute($query):",\@@params);
+	
+  my $sth = $self->{sth} = our $dbh->prepare($query);
+  $self->execute(@@params);
+  		
+	return $sth;
+}
+
+# Transactional Stuff
+
+=item commit
+
+=cut
+
+sub commit {
+	my $self   = shift @@_ || return (undef);
+	$self->{dbh}->commit();
+}	
+
+=item rollback
+
+=cut
+
+sub rollback {
+	my $self   = shift @@_ || return (undef);
+	$self->{dbh}->rollback();
+}
+
+
+######################################################################
+## Misc DB Utils #####################################################
+######################################################################
+## Utilities to gather information on and about the DB itself.      ##
+######################################################################
+
+
+=item total_table($table,$whereclause,@@params)
+
+=cut
+
+sub total_table { # Return the total number of entries in a given table...
+  my ($self,$table,$whereclause,@@params) = (shift @@_, shift @@_ || '',shift @@_ || '',@@_);
+ 
+  our $log->debug("total_table($table)");
+  my $query = "SELECT COUNT(*) FROM $table";
+     $query.= " WHERE $whereclause" if ($whereclause);
+
+  return $self->{dbh}->selectrow_array($query,undef,@@params);
+}
+
+=item all_tables()
+
+This subroutine returns a list of all ACTUAL tables in the database
+
+=cut
+
+sub all_tables {
+	my $self = shift @@_ || return (undef);
+	my $dbh = $self->{dbh};  # Expects a copy of the database handle
+	my @@tables = ();
+	my $table_sth = $dbh->table_info();
+	while (my ($qual,$owner,$name,$type,$remarks) = $table_sth->fetchrow_array()) {
+			push @@tables,$name;
+	}
+	return @@tables;
+}
+
+=item known_match($table_name)
+
+This checks against the list of expected tables, and reports two things... firstly, is the table known,
+and secondly what is the name in the mapping table.  If undef is reported, the table is neither known,
+nor mapped... and finally $rmapped... is it /really/ in the DB.
+
+=cut 
+
+sub known_match {
+	my $self  = shift @@_ || return (undef);
+	my $table = shift @@_ || return (undef);
+
+	my ($known,$mapped,$rmapped) = (1,1);
+
+  if (exists $expected_tables{$table}) {
+  	$mapped = $expected_tables{$table}->{'maptable'};
+  } else {
+  	$known  = 0;
+  	$mapped = undef;
+  }
+  
+  $rmapped = $self->name_table($table);
+  
+  return ($known,$mapped,$rmapped);
+}
+
+=item believed_columns($table)
+
+Returns an array of the columns BELIEVED to be in this table
+
+=cut
+
+sub believed_columns {
+	my $self = shift @@_ || return (undef);
+	
+	return ();
+}
+
+=item table_name($table)
+
+This is a subroutine to figure out which table to actually use given the 'generic'
+name...
+
+=cut
+
+sub table_name {
+	my $self  = shift @@_ || return (undef);
+	my $table = shift @@_ || return (undef);
+	my $table_name = 'unknown';
+  ($table_name) = $self->{dbh}->selectrow_array('SELECT table_name FROM tableconfig WHERE name=?',undef,$table);
+	return $table_name;
+}
+
+=item name_table($table)
+
+This is a subroutine to figure out which generic table maps to the real table
+
+=cut
+
+sub name_table {
+	my $self  = shift @@_ || return (undef);
+	my $table = shift @@_ || return (undef);
+	my $table_name = 'unknown';
+  ($table_name) = $self->{dbh}->selectrow_array('SELECT name FROM tableconfig WHERE table_name=?',undef,$table);
+	return $table_name;
+}
+
+=item eat_entire_table($table)
+
+Given a database reference and tablename, return a hash of array 
+references to an entire table
+
+=cut
+
+sub eat_entire_table {
+	my $self = shift @@_ || return (undef);
+	my $temp_table = shift @@_;
+	my $dbh        = $self->{dbh};
+	my %analysis   = undef;     
+  my %backmap    = undef;
+  my @@list       = undef;  
+	my $id_exists  = 1;  #There is no ID field... yet...  
+	
+	my $table = $temp_table; 
+ 
+  my $maptable = $self->name_table($temp_table);
+        
+	# Analyze the structure of the table...
+	
+	# Firstly, run a 'pointless' query in order to generate the metadata in the first place
+	my $sth = $dbh->prepare("SELECT * FROM $table");
+	$sth->execute();
+  
+  my $columns = $sth->{NUM_OF_FIELDS};
+		
+	for (my $i = 0; $i < $columns; $i++) {
+		my $name = $sth->{NAME}->[$i]; # get the name of the field
+		my $type = $dbi_type_map{$sth->{TYPE}->[$i]};
+		my $nullable = $sth->{NULLABLE}->[$i];
+		my $scale = $sth->{SCALE}->[$i];
+		my $prec  = $sth->{PRECISION}->[$i];
+		$analysis{$i}={'name'=>$name,'type'=>$type,'nullable'=>$nullable,'scale'=>$scale,'prec'=>$prec};
+		$backmap{$name}=$i;
+		push @@list, $name;
+	}
+ 
+  @@list = grep {defined $_} @@list;
+  
+  # Build SQL query that matches those numbers to the fields proper, and does a full query...
+  my $sql = "SELECT ".join (',',@@list)." FROM $table";
+  
+  my $back_values = $dbh->selectall_arrayref($sql);
+  my $rows = 0;
+  
+  my %uidmap=();
+  
+  # Create a pointer from UID to the the array that it matches
+  for my $next_trick (@@{$back_values}) {
+  	$uidmap{@@{$next_trick}[$id_exists]}=$next_trick;
+  	$rows++;
+  }
+
+  # Now, grab index information
+  my $indexen = $dbh->selectall_arrayref("SHOW INDEX FROM $table");
+  
+  my $primarykey = '<unknown>';
+  
+  for my $next_trick (@@{$indexen}) {
+  	my $keyname = @@{$next_trick}[2];
+    $primarykey = @@{$next_trick}[4] if $keyname eq 'PRIMARY';   
+  }
+  
+  # Build a more complete system for representing a table's FULL spectrum of data for later use, a cache within a cache  
+  my %table_complete = ('metadata'=>\%analysis,
+                        'data'=>$back_values,
+                        'idfield'=>$backmap{$primarykey},
+                        'backmap'=>\%backmap,
+                        'table'=>$table,
+                        'colnames'=>\@@list,
+                        'columns'=>$columns,
+                        'rows'=>$rows,
+                        'uidmap'=>\%uidmap,
+                        'tableconfig'=>$maptable,
+                        'primarykey'=>$primarykey);
+    
+	return \%table_complete;
+}
+
+######################################################################
+## Batch Queries #####################################################
+######################################################################
+## I/O functions to process mass queries.                           ##
+######################################################################
+
+# This is to bring it more in line with the way of things
+
+=item do()
+
+=cut
+
+sub do {
+  my $self  = shift @@_ || return (undef);
+  my $query = shift @@_ || return (undef);
+  
+  my @@binds=map((defined($_))? $_ : '', @@_); # Clear the unitialized to avoid compiler errors.
+  
+  our $log->debug("do('$query'):".join(',',@@binds));
+  if (scalar @@binds) {
+     return $self->{dbh}->do($query,undef,@@binds);
+  } else {
+     return $self->{dbh}->do($query);
+  }
+}
+
+=item mass_query()
+
+Process block of local queries
+
+=cut
+
+sub mass_query {
+  my ($self,@@query)=@@_;
+  our $log->debug("mass_query(".scalar @@query.")");
+  # Use the power of Perl
+  grep $self->do($_),@@query;
+}
+
+######################################################################
+## Generic I/O functions #############################################
+######################################################################
+## Functions that when given a certain type of query return data in ##
+## their own "special" way.                                         ##
+######################################################################
+
+=item array_query()
+
+Return a gigantic array
+
+=cut
+
+sub array_query {
+  my $self   = shift @@_ || return (undef);
+  my $query  = shift @@_ || "SELECT 1";
+  my @@params = @@_;
+
+  our $log->debug("array_query($query)");
+
+  my $sth = $self->_prepare_execute($query,@@params);
+
+  return $sth->fetchrow_array();
+}
+
+=item column_query()
+
+Return an array of a column
+
+=cut
+
+sub column_query {
+  my $self   = shift @@_ || return (undef);
+  my $query  = shift @@_ || 'select 1'    ;
+  my @@params =       @@_                  ;
+  my @@ret    = ();
+  
+  our $log->debug("column_query($query):".join(',',@@params));
+  
+  return $self->{dbh}->selectcol_arrayref($query,undef,@@params);
+}
+  
+=item get_single_result($variable,$table,$where)
+
+Quick system single results
+
+=cut
+
+sub get_single_result {
+  my $self     = shift @@_;
+  my $variable = shift || "";
+  my $table    = shift || "";
+  my $where    = shift || "";
+  my @@params   = @@_;
+
+  my $query = "SELECT $variable FROM $table WHERE $where";
+  our $log->debug("get_single_result('$query'):".join(',',@@params));
+
+  my $sth = $self->{sth} = $self->_prepare_execute($query,@@params);
+
+  my $ref = $sth->fetchrow_hashref();
+  return $ref->{$variable};
+}
+
+# Another version of getting a single result
+
+=item single_fast_query()
+
+=cut
+
+sub single_fast_query {
+    my $self  = shift @@_;
+    my $query = shift @@_ || '';
+    my @@params = @@_;
+    
+    our $log->debug("single_fast_query('$query'):".join(',',@@params));
+    
+    my $answer='';
+    
+    if ($query) {
+			$answer = $self->{dbh}->selectrow_array($query,undef,@@params);
+    }
+    
+    return $answer;
+}
+
+######################################################################
+## Sepcific I/O functions ############################################
+######################################################################
+## Functions that return data in their own "special" way but are    ##
+## tied to a specific table and use.                                ##
+######################################################################
+
+# These two functions are complementary, they're used to read/write data
+# from the configuration table... used to dynamically change the configuration
+
+=item get_config($attribute)
+
+Return a configuration $attribute from the config table
+
+=cut
+
+sub get_config {
+    my $self     = shift @@_;
+    my $variable = shift @@_;
+    
+    our $log->debug("get_value($variable)");
+
+    return $self->get_value("config","configid","configvalue",$variable);
+}
+
+=item set_config($attribute,$value)
+
+Alter a configuration $attribute in the config table, setting it
+to $value.
+
+=cut
+
+sub set_config {
+    my $self      = shift @@_ || return(undef);
+    my $attribute = shift @@_ || return(undef);
+    my $value     = shift @@_ || return(undef);
+
+    our $log->debug("set_config($attribute,$value)");
+    
+    return $self->set_value("config","configid","configvalue",$attribute,$value);
+}
+
+=item get_value($table,$idfield,$namefield,$attribute)
+
+Return a the value of the $namefield from the $table
+where $idfield is equal to $attribute
+
+=cut
+
+sub get_value {
+	my $self      = shift @@_ || return(undef);
+  my $table     = shift @@_ || return(undef);
+  my $idfield   = shift @@_ || return(undef);
+  my $namefield = shift @@_ || return(undef);
+  my $attribute = shift @@_ || return(undef);
+  
+  my $sr = scalar $self->{dbh}->selectrow_array("SELECT $namefield FROM $table WHERE $idfield=?",undef,$attribute);
+	
+	our $log->debug("get_value($table,$idfield,$namefield,$attribute):$sr");
+	
+	return $sr;
+}
+
+=item set_value($table,$idfield,$namefield,$attribute,$value)
+
+Alter an $attribute in $table, setting it to $value.
+
+=cut
+
+sub set_value {
+    my $self      = shift @@_ || return(undef);
+    my $table     = shift @@_ || return(undef);
+    my $idfield   = shift @@_ || return(undef);
+    my $namefield = shift @@_ || return(undef);
+    my $attribute = shift @@_ || return(undef);
+    my $value     = shift @@_ || return(undef);
+
+    our $log->debug("set_query($table,$idfield,$namefield,$attribute,$value)");
+
+    my $test = $self->get_value($table,$idfield,$namefield,$attribute);
+
+    my $query = ($test->rows())?
+                "UPDATE $table SET $namefield=? WHERE $idfield=?":
+                "INSERT INTO $table (configvalue,configid) VALUES (?,?)";
+
+    $self->{dbh}->do($query,undef,$attribute,$value);
+
+    return 1;
+}
+
+# Special features unique to COST
+
+=item industrylist()
+
+Return a pointer to a hash of industryIDs and their associated industryNames.
+
+=cut
+
+sub industrylist {
+	my $self = shift @@_ || return (undef);
+	our $log->debug("industrylist()");
+	return $self->table_hash("industries","industryid","industryname");
+}
+
+=item statelist()
+
+return a pointer to a hash of stateids and their associated statenames
+
+=cut
+
+sub statelist {
+	my $self = shift @@_ || return (undef);
+	our $log->debug("statelist()");
+	return $self->table_hash("states","state_value","state_name");
+}
+
+=item table_hash ($table,$idfield,$descfield)
+
+Given a $table, an $idfield, and a $descfield, query the database and return a
+hash with $idfield containing the keys, and $descfield being the values.
+
+=cut
+
+sub table_hash {
+  my $self      = shift @@_ || return (undef);
+  my $table     = shift @@_ || return (undef);
+  my $idfield   = shift @@_ || return (undef);
+  my $descfield = shift @@_ || return (undef);
+
+  my %array;
+	
+  my $sth = $self->_prepare_execute("SELECT $idfield,$descfield FROM $table");
+    	
+  while (my @@row=$sth->fetchrow_array) {
+    $array{$row[0]}=$row[1];
+  }	
+	
+  our $log->debug("table_hash('$table','$idfield','$descfield') => ".scalar keys %array);
+	
+  return \%array;
+}
+
+=item weblog()
+
+This function takes a \%ENV, a $interval, and a list of errors, and puts the current
+data, mostly pulled from the $pointers, into the weblogging database for future tracking.
+
+=cut
+
+sub weblog {
+	my $self         = shift @@_ || return (undef);
+	my $env          = shift @@_;
+	# Report total processing time
+  my $interval     = shift @@_ || 0;
+  my $errors	 = shift @@_ || "<none>";
+  	
+	my $r            = $self->{pointers}->{apache_ref};
+	my $log          = $self->{pointers}->{Log};
+	my $current_page = $self->{pointers}->{current_page};
+	# Now, dump everything into the database
+  my $total_bytes  = $r->bytes_sent || "0";
+  my $user_agent   = $env->{HTTP_USER_AGENT} || "<unknown>";
+  my $referer      = $env->{HTTP_REFERER} || "<none>";
+  my $cgiquery     = $self->{pointers}->{CGI}->query_string;
+  my $remote_host  = $r->get_remote_host;
+  my $page_request = $r->the_request;
+	my $sid          = $self->{pointers}->{sid};
+
+  $log->log("Displayed $page_request ($current_page) for $remote_host [$sid] (time: $interval)");
+  $log->log("Errors:$errors") if ($errors);
+
+  my $query="INSERT INTO weblog (remote_addr,http_user_agent,referer,webpage,work_duration,errors,bytes_sent,query,sid) VALUES (?,?,?,?,?,?,?,?,?)";
+  my @@binds=($remote_host,$user_agent,$referer,$page_request,$interval,$errors,$total_bytes,$cgiquery,$sid);
+
+  $self->do($query,@@binds);
+}
+
+=item store_login ($userid,$username,$cypheredpassword)
+
+Update or create the database $username and $password for $userid
+
+=cut
+
+sub store_login {
+	my $self             = shift @@_ || return (undef);
+	my $userid           = shift @@_ || return (undef);
+	my $username         = shift @@_ || return (undef);
+	my $password         = shift @@_ || return (undef);
+	
+	my @@values = ($username,$password);
+	
+	our $log->debug("store_login($userid,$username,$password)");
+	
+	# Does the userid exist in the users' table?
+	if ($self->total_table('logins','userid=?',$userid)) { #update
+    		return $self->do("update logins set loginname=?,password=? where userid=?",(@@values,$userid));
+  	} else { # Insert
+    		return $self->do("insert into logins (userid,loginname,password) values (?,?,?)",($userid,@@values));
+  	}
+}
+
+=item cache_password($lid,$password,$source)
+
+Source needs to be "I", for initial, or "F" for forgotten... if it isn't... "I" will be assumed
+Returns the ID of the cached location.
+
+=cut
+
+sub cache_password {
+	my $self             = shift @@_ || return (undef);
+	my $loginid          = shift @@_ || return (undef);
+	my $password         = shift @@_ || return (undef);
+	my $source           = shift @@_ || return (undef);
+	
+	my @@values = ($password,$source);
+	
+	our $log->debug("cache_password($loginid,<password>,$source");
+	
+	# Does the loginid exist in the users' table?
+	if ($self->total_table('passwords','loginid=?',$loginid)) { #update
+    		$log->debug("$loginid has already been cached! This is bad!");
+  	} else { # Insert
+    		return $self->do("insert into passwords (loginid,plaintext,source) values (?,?,?)",($loginid,@@values));
+  	}
+}
+
+=item set_flag($table,$uid,$flag,$value,($field))
+
+This method sets the $flag in $table to the requested $value.  
+($value can be '1/Y' or '0/N') for $uid.  Optionally can be used with
+fields other than 'id'
+
+=cut
+
+sub set_flag {
+	my $self  = shift @@_ || return (undef);
+	my $table = shift @@_ || return (undef);
+	my $uid   = shift @@_ || return (undef);
+	my $flag  = shift @@_ || return (undef);
+	my $value = shift @@_ || return (undef);
+	my $field = shift @@_ || 'id';
+
+	$value = $self->yorn($value);
+
+	our $log->debug("set_flag('$table',$uid,$flag,($field)):".$value);
+	$self->do("UPDATE $table SET $flag=? WHERE $field=?",$value,$uid);
+	return 1;
+}
+
+=item check_flag($table,$id,$flag,($field))
+
+This returns the current truth setting of the flag, 0 if 'N' and 1 if 'Y'
+for the uniquely id'd line of $id.
+
+=cut
+
+sub check_flag {
+	my $self  = shift @@_ || return (undef);
+	my $table = shift @@_ || return (undef);
+	my $uid   = shift @@_ || return (undef);
+	my $flag  = shift @@_ || return (undef);
+	my $field = shift @@_ || 'id';
+	
+	our $log->debug("check_flag('$table',$uid,$flag,($field))");
+	return $self->single_fast_query("SELECT $flag FROM $table WHERE $field=?",$uid)?1:0;
+}
+
+=item map_add($table,$originalid,$mappedid)
+
+This is used by COST::objects to add entries to the tables used for mapping
+relationships.  Return the ID of the relationship, given a $table,
+the $originalid of the object being mapped TO, and the $mappedid of the object
+being mapped from.  For instance:  The Customer would be the $originalid, and the
+Contact would be the $mappedid.
+
+=cut
+
+sub map_add {
+	my $self        = shift @@_ || return (undef);
+	my $table       = shift @@_ || return (undef);
+	my $originalid  = shift @@_ || return (undef);
+	my $mappedid    = shift @@_ || return (undef);
+        			
+	$self->do("INSERT INTO $table (originalid,mappedid) VALUES (?,?)",($originalid,$mappedid));
+	my $idback = $self->table_id($table);
+	our $log->debug("map_add($table map $originalid to $mappedid):$idback");
+	
+	return $idback;
+}
+
+=item map_remove($table,$originalid,$mappedid)
+
+Given an entry in a mapping $table, remove the entry which ties
+$originalid to $mappedid.  If you wish to attack an $id of a 
+mapping which you already know... use id_remove($id)
+
+=cut
+
+sub map_remove {
+	my $self        = shift @@_ || return (undef);
+	my $table       = shift @@_ || return (undef);
+	my $originalid  = shift @@_ || return (undef);
+	my $mappedid    = shift @@_ || return (undef);
+	
+	# Figure out what the ID is of the current mapping
+	my $id = $self->get_single_result('id',$table,'originalid=? AND mappedid=?',($originalid,$mappedid));
+	
+	our $log->debug("map_remove($table map $originalid to $mappedid)");
+	
+	return $self->id_remove($id);
+}
+
+=item id_remove($table,$id)
+
+Delete the mapping entry in $table with an id of $id.  Return the $id of the 
+deleted map entry.
+
+=cut
+
+sub id_remove {
+	my $self  = shift @@_ || return (undef);
+	my $table = shift @@_ || return (undef);
+	my $id    = shift @@_ || return (undef);
+	
+	our $log->debug("id_remove($table,$id)");
+	
+	$self->do("DELETE FROM $table WHERE id=?",shift @@_);
+
+	return $id;
+}
+
+=item map_list($table,$originalid)
+
+Given an $table and an $originalid, return a reference to a hash of the $table ids and the 
+mappedids that correspond.
+
+=cut
+
+sub map_list {
+	my $self       = shift @@_ || return (undef);
+	my $table      = shift @@_ || return (undef);
+	my $originalid = shift @@_ || return (undef);
+
+    	my %mapdata = ();
+  	  	
+  	$self->prepare("select id,originalid,mappedid from $table where originalid=?");
+  	$self->execute($originalid);
+
+	our $log->debug("map_list($table,$originalid)");
+
+  	while (my $object = $self->fetchrow_hashref()) {
+    		$mapdata{$object->{'mappedid'}}=$object->{'id'};
+  	}
+
+	return \%mapdata;
+}
+
+=input map_count($table,$originalid)
+
+Given a $table and an $originalid, return the total number of mapped elements in the table
+
+=cut
+
+sub map_count {
+	my $self       = shift @@_ || return (undef);
+	my $table      = shift @@_ || return (undef);
+	my $originalid = shift @@_ || return (undef);	
+
+	my $tally      = $self->map_list($table,$originalid);
+	my %hash       = %{$tally};
+	return scalar keys %hash;
+}
+
+=item get_contact_map ($table,$customerid)
+
+Given a table and an id, this method returns a hash of
+$hash{id}="full name"
+
+=cut
+
+sub get_contact_map {
+	my $self   = shift @@_ || return (undef);
+	my $table  = shift @@_ || return (undef);
+	my $cust   = shift @@_ || return (undef);
+
+	my %list = ();
+	
+	my $query = "select a.id,a.firstname,a.middleinitial,a.lastname "
+	           ."from contacts a,$table b WHERE a.id=b.originalid AND b.mappedid=?";
+	
+	our $log->debug("get_contact_map('$table',$cust)");
+	
+	if ($self->run_query($query,$cust)) {
+  		while (my @@object = $self->{sth}->fetchrow_array()) {
+    			$list{$object[0]}= $self->full_name($object[1],$object[2],$object[3]);
+  		};
+	}
+
+	return \%list;
+}
+
+#########################################################################
+# User Validation Stuff                                                 #
+#########################################################################
+
+=item get_user_map ($customerid)
+
+Given a $customerid, this method returns a hash of $hash{uids}="full name"
+
+=cut
+
+sub get_user_map {
+	my $self     = shift @@_ || return (undef);
+	my $custid   = shift @@_ || return (undef);
+
+	my %list = ();
+	
+	my $query = "select a.id,a.firstname,a.middleinitial,a.lastname "
+	           ."from users a,customers b WHERE a.customerid=b.id AND b.id=?";
+	
+	our $log->debug("get_user_map('$custid')");
+	
+	if ($self->run_query($query,$custid)) {
+  		while (my @@object = $self->{sth}->fetchrow_array()) {
+    			$list{$object[0]}= $self->full_name($object[1],$object[2],$object[3]);
+  		};
+	}
+
+	return \%list;
+}
+
+=item get_usernames
+
+Return a hash ref of a id and username with the fiven constrains.
+
+=cut
+
+sub get_usernames {
+	my $self = shift @@_ || return (undef);
+	my $rest = shift @@_ || return (undef);
+
+	my %list = ();
+	
+	my $where = 'WHERE '.$rest if $rest;
+	my $query = "select userid, loginname FROM logins $where";
+	
+	our $log->debug("get_usernames('$rest')");
+	
+	if ($self->run_query($query)) {
+  		while (my @@object = $self->{sth}->fetchrow_array()) {
+    			$list{$object[0]}= $object[1];
+  		};
+	}
+
+	return \%list;
+}
+
+=item check_password ($username,$password)
+
+Given a username and a password, return the userid or 0
+
+=cut
+
+sub check_password {
+	my $self     = shift @@_ || return (undef);
+	my $username = shift @@_ || '';
+	my $password = shift @@_ || '';
+
+   	my $passed  = 0; # Assume they fail
+	my $query   = "select userid,password from logins where loginname=? and active='Y'";
+   	
+   	our $log;
+   	
+   	$log->debug("check_password('$username','$password'):$passed");
+   	
+   	$self->_prepare_execute($query,$username);
+   	
+   	my @@row=$self->{sth}->fetchrow_array();
+	
+	my $tid = $row[0] || '';
+	my $cpw = $row[1] || '';	
+
+   	if (crypt($password,$cpw) eq $cpw) { # update lastlogin
+     		$self->do("update logins set lastlogin=now() where userid=?",$passed=$tid);
+   	} 
+   	   	   	
+	$log->debug("check_password('$username','$password'):$passed");
+
+	return $passed;
+}
+
+=item make_password () 
+
+select a pair of random words from the database and return them, along with digits.
+
+=cut
+
+sub make_password {
+	my $self     = shift @@_ || return (undef);
+	
+	my $pwd      = "";
+	my $word     = "";
+	
+	
+	our $log->debug("Making Password!");
+	
+	my $all = $self->selectcol_arrayref("select word from dictionary");
+		
+	#Now, grab some random
+	$pwd  = $all->[rand @@{$all}];
+	$word = $all->[rand @@{$all}];
+	
+	my $size = length($pwd)+length($word);
+	$size %= 9;
+	
+	$pwd.=$size.$word;
+	
+	return $pwd;	
+}
+
+
+#########################################################################
+# Property Stuff                                                        #
+#########################################################################
+
+=item get_property_map ($customerid)
+
+Given a $customerid, this method returns a hash of $hash{uids}="property name"
+
+=cut
+
+sub get_property_map {
+	my $self     = shift @@_ || return (undef);
+	my $custid   = shift @@_ || return (undef);
+
+	my %list = ();
+	
+	my $query = "SELECT id,name FROM properties WHERE customerid=?";
+	
+	our $log->debug("get_property_map('$custid')");
+	
+	if ($self->run_query($query,$custid)) {
+  		while (my @@object = $self->{sth}->fetchrow_array()) {
+    			$list{$object[0]} = $object[1];
+  		};
+	}
+
+	return \%list;
+}
+
+#########################################################################
+# Account stuff                                                         #
+#########################################################################
+
+=item get_list_of_accounts ($customerid,$propertyid)
+
+Get a list of all of the accounts 
+
+=cut
+
+sub get_list_of_accounts {
+	my $self       = shift @@_ || return (undef);
+	my $customerid = shift @@_ || return (undef);
+	my $propertyid = shift @@_ || 0;	
+	
+	my %list = ();
+
+	my $query = "SELECT a.id,a.accountnumber FROM accounts a, properties b WHERE a.propertyid=b.id ";
+	   $query.= $propertyid?"AND b.customerid=? AND a.propertyid=?":"AND b.customerid=?";
+
+	my @@params = ($customerid);
+	push (@@params,$propertyid) if ($propertyid);
+	
+	if ($self->_prepare_execute($query,@@params)) {
+  		while (my @@object = $self->fetchrow_array()) {
+    			$list{$object[0]} = $object[1];
+  		};
+	}
+
+	our $log->debug("get_list_of_accounts($query)");
+	return \%list;
+}
+
+#########################################################################
+# ProviderSupplier stuff                                                #
+#########################################################################
+
+=item ps_list (($utilitytype))
+
+Returns a hash of those providerids who match a specific utilitytype.
+
+if $utilitytype is not undef, this will restrict it's search to only those providers and suppliers of a
+specific utility.
+
+=cut
+
+sub ps_list {
+	my $self   = shift @@_ || return (undef);
+	my $utype  = shift @@_ || undef;
+	
+	my %goback = ();
+	
+	my $query = "SELECT id,name FROM providersupplier";
+	   $query.= ($utype)?' WHERE category=?':'';
+	 
+	$self->prepare($query); 
+	$self->execute($utype);   
+	
+	while (my $bhash = $self->fetchrow_hashref()) {
+    		$goback{$bhash->{id}}=$bhash->{name};
+  	}
+	
+	our $log->debug("ps_list(".$utype."):".length keys %goback);
+	
+	return \%goback;  
+}
+
+######################################################################
+# Matrix stuff                                                       #
+######################################################################
+
+######################################################################
+# Attribute stuff                                                    #
+######################################################################
+ 
+=item itexists($table,$queryfield,$queryvalue)
+
+Assumes the name of the id field is... id.
+Returns the id of the attribute or 0 if the value doesn't exist
+
+=cut
+
+sub itexists {
+	my $self       = shift @@_ || return (undef);
+	my $table      = shift @@_ || "";
+	my $queryfield = shift @@_ || "";
+	my $queryvalue = shift @@_ || "";
+	
+	my $res = $self->get_single_result("id",$table,"$queryfield=?",$queryvalue);
+	our $log->debug("itexists($table,$queryfield,$queryvalue):$res");
+	return ($res ne "0E0")?$res:0;
+}
+	 
+=item add_attribute_value($attributetable,$valuetable,$attribute,$value)
+
+Given an attribute, and the tables it is part of, add the value to the table,
+and return it's unique ID.  Returs 0 if it fails
+
+=cut
+
+sub add_attribute_value {
+	my $self           = shift @@_ || return (undef);
+	my $attributetable = shift @@_ || "";
+	my $valuetable     = shift @@_ || "";
+	my $attribute      = shift @@_ || "";
+	my $value          = shift @@_ || "";
+	
+	our $log->debug("add_attribute_value($attributetable,$valuetable,$attribute,$value)");
+	
+	my $aid = $self->itexists($attributetable,'name',$attribute);
+	do {
+		$log->debug("Failure! $aid");
+		return 0;
+	} unless $aid;
+	$self->do("insert into $valuetable (said,value) values (?,?)",$aid,$value);
+	return $self->table_id($valuetable);	
+}
+
+######################################################################
+## Utilities / Data Manipulation Functions ###########################
+######################################################################
+## Functions that purely manipulate data for preparation of entry   ##
+## or reading from the DB.                                          ##
+######################################################################
+
+# This function changes the potentially SQL hazardous entries in
+# a string to SQL friendly ones using DBI function
+
+=item quote()
+
+=cut
+
+sub quote {
+  my ($self,$string)=@@_;
+  our $log->debug("quote()");
+  return $self->{dbh}->quote($string);
+}
+
+# Take an input string, and properly commafy it (Perl Cookbook pg. 64)
+
+=item commafy()
+
+=cut
+
+sub commafy {
+  my $self = shift @@_;
+  my $text = reverse shift @@_;
+  our $log->debug("commafy()");
+  $text=~s/(\d\d\d)(?=\d)(?!\d*\.)/$1,/g;
+  return scalar reverse $text;
+}
+
+=item only_numbers($number)
+
+This code takes a $number, and pulls every non-numeric thing from it
+with the exception of a decimal point
+
+=cut
+
+sub only_numbers {
+  my ($self,$incoming)=@@_;
+  our $log->debug("only_numbers($incoming)");
+  # If something isn't a number or ., make it go away
+  $incoming=~s/[^\d\.]//g;
+  # Give that back
+  return $incoming;
+}
+
+=item full_name ($first,$middle,$last)
+
+Given the components of someone's name, return the merged
+parts of it.
+
+=cut
+
+sub full_name {
+	my $self   = shift @@_ || return (undef);
+	my $first  = shift @@_ || '';
+	my $middle = shift @@_ || '';
+	my $last   = shift @@_ || '';
+	
+	my $output = $first." ";
+	
+	$middle="$middle." if (length $middle == 1);
+	
+	$output.=($middle)?$middle." ":'';
+	$output.=$last;
+	
+	return $output;
+}
+
+=item quickseek(\$array,$value)
+
+Given a value, and an array, report if the value is part of the array...
+
+=cut
+
+sub quickseek {
+	my $self   = shift @@_ || return (undef);
+	my $array  = shift @@_ || [];
+	my $value  = shift @@_ || 0;
+	my $result = 0;
+	my $count  = 0;
+
+	for my $next_trick (@@{$array}) {
+		$count++;
+		$result=$count if ($next_trick eq $value);
+        }
+        
+	return $result;
+}
+
+=item yes_or_no($value)
+
+This returns the proper thing to put into a Y/N enum in the database for the $value
+
+=cut
+
+sub yes_or_no {
+	my $self = shift @@_ || return (undef);
+	my $yorn = shift @@_ || return (undef);
+	
+	$yorn = 'Y' if ($yorn == 1);
+	$yorn = 'N' if ($yorn == 0);
+	
+	return $yorn;
+}
+
+####################################################
+# Date manipulation and comparison functions       #
+####################################################
+
+sub _date_untaint {
+  my $self = shift @@_ || return (undef);
+  my $command = shift @@_ || return (undef);
+  
+  my $expression = 'do { local %ENV; $ENV{PATH} = ""; &Date_Init("TZ=EST");'.$command.'};';
+  $expression=~m/(.*)/;
+  my $result = eval $1;
+  our $log->debug("$expression : $result");
+  return $result;
+}
+
+=item date_convert($randomdateformat)
+
+Given a date in any format, return it as a valid date for the SQL system.  
+Returns undef if it has trouble.
+
+=cut
+
+sub date_convert {
+	my $self = shift @@_ || return (undef);	
+	my $randomdate = shift @@_ || return (undef);
+	$randomdate=~s/\"/\\\"/g;
+	$randomdate=~tr/\-/\//;
+  return $self->_date_untaint("&UnixDate(\"$randomdate\",\"%Y%m%d%H%M%S\");");
+}
+
+
+=item is_future($randomdateformat)
+
+Given a date in any format, find out if it's, uh, not happened yet.  If you get back true, the event
+is IN the future.
+
+=cut
+
+sub is_future {
+	my $self = shift @@_ || return (undef);	
+	my $randomdate = shift @@_ || return (undef);
+	
+	return $self->date1_before_date2('today',$randomdate);
+}
+
+=item date1_before_date2($randomdateformat1,$randomdateformat2)
+
+compare two dates, if the first one is before the second, you'll get a 1, elsewise 0.
+
+=cut
+
+sub date1_before_date2 {
+	my $self = shift @@_ || return (undef);	
+	my $randomdate1 = shift @@_ || return (undef);
+	my $randomdate2 = shift @@_ || return (undef);
+	
+	$randomdate1 =~ s/\"/\\\"/g;
+	$randomdate1 =~ tr/\-/\//;
+	$randomdate2 =~ s/\"/\\\"/g;
+	$randomdate2 =~ tr/\-/\//;
+	
+	my $date1 = $self->_date_untaint("&ParseDate(\"$randomdate1\")");
+	my $date2 = $self->_date_untaint("&ParseDate(\"$randomdate2\")");
+	my $flag  = $self->_date_untaint("&Date_Cmp(\"$date1\",\"$date2\")");
+	
+	if ($flag<0) {
+		return 1; # Date one is sooner
+	} else {
+		return 0; # Date one is later
+	}
+}
+
+=item today_string
+
+Give back a string of the format daystring, month day, fullyear
+
+=cut
+
+sub today_string {
+	my $self = shift @@_ || return (undef);
+	return $self->_date_untaint("&UnixDate(\"today\",\"%A, %B %e, %Y\");");
+}
+
+####################################################
+#Stuff added by Panther for his own devious ends.  #
+#This Code is not FDA approved or BATF approved.   #
+####################################################
+
+sub insert_or_update {
+	my $self   = shift @@_;
+	my $table  = shift @@_;
+	my $fphash = shift @@_;
+	my $dbid   = shift @@_ || -1;
+	
+	#Build the query.
+	
+	my $query;
+	my $update;
+	if($dbid != -1){
+		$query = "update $table set ";
+		$update = 1;
+	}
+	else {
+		$query = "insert into $table (";
+		$update = 0;
+	}
+	
+	my @@params;
+	my $values = "VALUES (";
+	for my $nifty_trick (keys %{$fphash}){
+		push @@params, $fphash->{$nifty_trick};
+		if($update == 1){
+			$query .="$nifty_trick = ?, ";	
+		}
+		else{
+			$query .="$nifty_trick, ";
+			$values .="?, ";
+		}	
+	}
+	
+	#Sanityfy
+	
+	if($update == 1){
+		$query =~ s/, $/ /;
+		$query .= "where id = ?";
+		push @@params, $dbid;
+	}
+	else {
+		$query =~ s/, $/\) /;
+		$values =~ s/, $/\)/;
+		$query .= $values;
+	}	
+	
+	$self->_prepare_execute($query, @@params) || return undef;
+	
+	return 1;
+}
+
+#simple joined query
+sub join_query {
+	my $self       = shift @@_;
+	my $thash      = shift @@_;
+	my $jhash      = shift @@_;
+	my $delimiters = shift @@_;
+	my $params     = shift @@_;
+	
+	my $query = "select ";
+	
+	for my $cheap_trick (keys %{$jhash}){
+		#the keythingies...start your queries.
+		foreach my $tiny_trick (@@{$jhash->{$cheap_trick}}){
+			$query .= "$cheap_trick.$tiny_trick, ";
+		}
+	}
+	
+	$query =~ s/, $/ /;
+	$query .= "from ";
+	
+	for my $pony_trick (keys %{$thash}){
+		$query .= "$thash->{$pony_trick} $pony_trick, ";
+	}
+	
+	$query =~ s/, $/ /;
+	$query .= "where ";
+
+	$query .= $delimiters;
+	
+	$self->_prepare_execute($query, @@{$params}) || return undef;
+	
+	my @@gob;
+	while (my $object = $self->fetchrow_hashref()) {
+		push (@@gob, $object);
+	}
+	
+	return \@@gob;
+}
+
+#rather simple delimited query builder and handler.  Returns a single result.
+sub delimited_query {
+	my $self = shift @@_;
+	my $table = shift @@_;
+	my $fields = shift @@_;
+	my $delimiters = shift @@_;
+	my $dvals = shift @@_;
+	
+	my $query = "select ";
+	
+	for my $neat_trick (@@{$fields}){
+		$query .= "$neat_trick, ";
+	}
+	
+	$query =~ s/, $/ /;
+	$query .= "from ";
+	
+	$query .= $table;
+	
+	$query .= " where ";
+	
+	$query .= join '=? AND ', @@{$delimiters};
+	
+	$query .= "=?";
+	
+	$self->run_query($query, @@{$dvals}) || return undef;
+	
+	return $self->fetchrow_hashref;
+}
+
+1;
+
+__END__
+
+=head1 Documentation Author:
+
+ Phillip Pollard <binky@@bears.org>
+ Last edited 11/06/2001
+@
+
+
+1.91
+log
+@Performance improvement refactor and additions for username
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d832 4
+a835 4
+	my $self      = shift @@_ || return (undef);
+	my $table     = shift @@_ || return (undef);
+	my $idfield   = shift @@_ || return (undef);
+	my $descfield = shift @@_ || return (undef);
+d837 1
+a837 1
+	my %array;
+d839 1
+a839 1
+	my $sth = $self->_prepare_execute("SELECT $idfield,$descfield FROM $table");
+d842 1
+a842 1
+		$array{$row[0]}=$row[1];
+d845 1
+a845 1
+	our $log->debug("table_hash('$table','$idfield','$descfield') => ".scalar keys %array);
+d847 1
+a847 1
+	return \%array;
+@
+
+
+1.90
+log
+@The beginning work of a change-password page.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d94 1
+a94 1
+      		my $s            = Apache->server;
+d124 80
+d215 2
+d244 1
+a244 1
+  my $fth = $self->{sth}->fetchrow_hashref() || ();
+d272 1
+a272 1
+# Give back the current database handle
+d274 1
+a274 1
+=item get_handle()
+a283 2
+# Another DBI thing
+
+d293 1
+a293 1
+# Prepare...
+d295 1
+a295 1
+=item prepare()
+d307 1
+a307 1
+# Return number of rows in a statement handle
+d309 1
+a309 1
+=item rows()
+d319 1
+a319 2
+# This one will prepare and execute a SQL statement
+# and return the statement handle
+d323 2
+d351 2
+a352 2
+	my $id =$self->single_fast_query("SELECT LAST_INSERT_ID() FROM $table");
+        our $log->debug("table_id($table->$id)");
+d367 1
+a367 3
+	
+	#my $query = shift @@params;
+	
+d370 2
+a371 3
+  	my $sth = $self->{sth} = our $dbh->prepare($query);
+  
+  	$self->execute(@@params);
+d415 166
+a580 1
+  return $self->single_fast_query($query,@@params);
+a661 6
+  
+  #my $sth = $self->_prepare_execute($query,@@params);
+  #while ( my @@row = $sth->fetchrow_array() ) {
+  #	push @@ret, $row[0];
+  #}
+  #return \@@ret
+d702 1
+a702 2
+	my $sth = $self->{sth} = $self->_prepare_execute($query,@@params);
+	($answer) = $sth->fetchrow_array();
+d758 11
+a768 10
+    my $self      = shift @@_ || return(undef);
+    my $table     = shift @@_ || return(undef);
+    my $idfield   = shift @@_ || return(undef);
+    my $namefield = shift @@_ || return(undef);
+    my $attribute = shift @@_ || return(undef);
+    
+    our $log->debug("get_value($table,$idfield,$namefield,$attribute)");
+
+    my $sth = $self->_prepare_execute("SELECT $namefield FROM $table WHERE $idfield=?",$attribute);
+    return $sth->fetchrow_array;
+d841 1
+a841 1
+    	while (my @@row=$sth->fetchrow_array) {
+d843 1
+a843 1
+    	}	
+d861 2
+a862 2
+  	my $interval     = shift @@_ || 0;
+  	my $errors	 = shift @@_ || "<none>";
+d868 6
+a873 6
+  	my $total_bytes  = $r->bytes_sent || "0";
+  	my $user_agent   = $env->{HTTP_USER_AGENT} || "<unknown>";
+  	my $referer      = $env->{HTTP_REFERER} || "<none>";
+  	my $cgiquery     = $self->{pointers}->{CGI}->query_string;
+  	my $remote_host  = $r->get_remote_host;
+  	my $page_request = $r->the_request;
+d876 2
+a877 2
+  	$log->log("Displayed $page_request ($current_page) for $remote_host [$sid] (time: $interval)");
+  	$log->log("Errors:$errors") if ($errors);
+d879 2
+a880 2
+  	my $query="INSERT INTO weblog (remote_addr,http_user_agent,referer,webpage,work_duration,errors,bytes_sent,query,sid) VALUES (?,?,?,?,?,?,?,?,?)";
+  	my @@binds=($remote_host,$user_agent,$referer,$page_request,$interval,$errors,$total_bytes,$cgiquery,$sid);
+d882 1
+a882 1
+  	$self->do($query,@@binds);
+d1556 11
+@
+
+
+1.89
+log
+@More of the context bug
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d896 26
+@
+
+
+1.88
+log
+@Dashes Slashes Smashes
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d173 1
+a173 1
+  my @@fth = $self->{sth}->fetchrow_array() || ();
+@
+
+
+1.87
+log
+@QUOTEMETA sucks... now I just quote the quotes, and if it don't like it... it can suck...
+@
+text
+@d1249 1
+d1279 4
+a1282 2
+	$randomdate1 =~s/\"/\\\"/g;
+	$randomdate2 =~s/\"/\\\"/g;
+@
+
+
+1.86
+log
+@Time/Date fixes for meter validation.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d1248 2
+a1249 2
+	$randomdate=quotemeta($randomdate);
+	return $self->_date_untaint("&UnixDate(\"$randomdate\",\"%Y%m%d%H%M%S\");");
+d1278 2
+a1279 2
+	$randomdate1 = quotemeta($randomdate1);
+	$randomdate2 = quotemeta($randomdate2);
+a1292 1
+#Automagic query building routines                 #
+@
+
+
+1.85
+log
+@bugfixes and updates to billconcept
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d96 1
+a96 1
+            $lib->{database} = $database = $s->dir_config('DBName');
+a1262 4
+	$randomdate=quotemeta($randomdate);
+	my $date1 = $self->_date_untaint("&ParseDate('today')");
+	my $date2 = $self->_date_untaint("&ParseDate(\"$randomdate\")");
+	my $flag  = $self->_date_untaint("&Date_Cmp(\"$date1\",\"$date2\")");
+d1264 1
+a1264 5
+	if ($flag<0) {
+		return 1; # The date is in the future!
+	} else {
+		return 0; # Rock on, the date isn't in the future
+	}
+d1277 7
+a1283 4
+	no strict;
+	my $date1 = $self->_date_untaint("&ParseDate($randomdate1)");
+	my $date2 = $self->_date_untaint("&ParseDate($randomdate2)");
+	my $flag  = $self->_date_untaint("&Date_Cmp($date1,$date2)");
+@
+
+
+1.84
+log
+@Fixes to the SQL.pm module for untainting date data
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d1249 1
+a1249 1
+  return $self->_date_untaint("&UnixDate(\"$randomdate\",\"%Y%m%d%H%M%S\");");
+d1298 1
+@
+
+
+1.83
+log
+@Fixed the shifty @@_
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d1228 8
+a1235 4
+  my $self = shift @@_ || return (undef);	
+  local %ENV;
+  $ENV{PATH} = '';
+  return do { shift @@_ };
+d1248 2
+a1249 1
+  return $self->_date_untaint("&UnixDate($randomdate,\"%Y%m%d%H%M%S\");");
+d1263 1
+a1263 1
+	no strict;
+d1265 2
+a1266 2
+	my $date2 = $self->_date_untaint("&ParseDate($randomdate)");
+	my $flag  = $self->_date_untaint("&Date_Cmp($date1,$date2)");
+@
+
+
+1.82
+log
+@Bugfixen
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d1228 1
+d1244 1
+a1244 1
+    return $self->_date_untaint("&UnixDate($randomdate,\"%Y%m%d%H%M%S\");");
+@
+
+
+1.81
+log
+@Now we are temporarily untainting the path value for Date::Manip routines to pass any untaint errors.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d1406 3
+a1408 1
+	$query .= join ' AND ', @@{$delimiters};
+@
+
+
+1.80
+log
+@Date_Init Test
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+a28 2
+# Set Pragmas and import utilities
+
+a30 1
+# Define Package Namespace
+d32 1
+d34 2
+a37 7
+use Apache;
+use Date::Manip;
+
+# Versioning information
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+
+# Create the constructor
+d1227 6
+d1243 1
+a1243 2
+	&Date_Init("TZ=GMT");
+        return &UnixDate($randomdate,"%Y%m%d%H%M%S");
+d1246 1
+d1257 4
+a1260 4
+	&Date_Init("TZ=GMT");
+	my $date1 = &ParseDate('today');
+	my $date2 = &ParseDate($randomdate);
+	my $flag=&Date_Cmp($date1,$date2);
+d1279 4
+a1282 4
+	&Date_Init("TZ=GMT");
+	my $date1 = &ParseDate($randomdate1);
+	my $date2 = &ParseDate($randomdate2);
+	my $flag=&Date_Cmp($date1,$date2);
+@
+
+
+1.79
+log
+@Date function implementation
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d1244 1
+d1258 1
+a1258 1
+	
+d1280 1
+a1280 1
+	
+@
+
+
+1.78
+log
+@Built new functions for sql query generation, used in utility types and billingfrequency they make things a little more sane and eliminate use of sql within the actual cost objects, once again pushing it all back to SQL.pm
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d39 1
+a39 1
+use Date::Calc qw(:all);
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d1230 4
+d1236 2
+a1237 1
+Given a date in any format, return it as a valid date for the SQL system
+d1243 8
+d1252 4
+d1257 15
+d1273 1
+a1273 1
+        my ($year,$month,$day) = Decode_Date_US($randomdate);
+d1275 14
+a1288 1
+	return $year.$month.$day."000000";
+@
+
+
+1.77
+log
+@Something got stomped something got broken.  Something hopefully works now...
+
+Efrain...in virginia
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d1338 28
+@
+
+
+1.76
+log
+@With new minty verification pages.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d1244 94
+@
+
+
+1.75
+log
+@Addition of humantext() human readable fieldname generator
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d103 1
+a103 1
+          $lib->{database} = $database = $s->dir_config('DBName');
+@
+
+
+1.74
+log
+@Updates to support eventual changes in the handling of passwords.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d311 5
+d319 6
+@
+
+
+1.73
+log
+@FIXED! Logins now properly propagate, along with generated passwords.
+Recommendation: shorten the generated passwords.... also, generated
+passwords DO NOT presently cache.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d654 1
+a654 1
+	my $cypheredpassword = shift @@_ || return (undef);
+d656 3
+a658 1
+	my @@values = ($username,$cypheredpassword);
+d665 25
+@
+
+
+1.72
+log
+@The generic mapping tools now exist!  And funtion for Property!
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d185 11
+d327 1
+a327 1
+  my ($self,$table,$whereclause,@@params) = (shift @@_, shift @@_ || '',shift @@_ || '',@@_ || undef);
+d329 1
+a329 1
+  our $log->debug("total_table()");
+d412 1
+a412 1
+  our $log->debug("column_query($query)");
+d414 1
+a414 5
+  my $sth = $self->_prepare_execute($query,@@params);
+  
+  while ( my @@row = $sth->fetchrow_array() ) {
+  	push @@ret, $row[0];
+  }
+d416 5
+a420 1
+  return \@@ret
+d453 2
+a454 2
+    my $query = shift || '';
+    my @@params=@@_;
+a914 1
+	my @@row      = ();
+d917 1
+d920 5
+a924 7
+	$self->prepare("select word from dictionary order by rand() limit 1");
+	$self->execute();
+	@@row = $self->fetchrow_array();
+	$pwd = $row[0];
+	$self->execute();
+	@@row = $self->fetchrow_array();
+	$word = $row[0];
+@
+
+
+1.71
+log
+@Updates to support the start of arbitrary property data
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d1069 1
+a1069 1
+	$self->do("insert into $valuetable (siad,value) values (?,?)",$aid,$value);
+@
+
+
+1.70
+log
+@Update!
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d711 1
+a711 2
+        
+	our $log->debug("map_add($table map $originalid to $mappedid)");		
+d713 4
+a716 2
+
+	return $self->table_id($table);
+d894 32
+d1026 3
+d1030 42
+@
+
+
+1.69
+log
+@Giant commit that fixes so many bugs, that enumerating them would require lots of
+space, but... here goes:
+
+Numerous scalar/array problems in SQL.pm
+Import of updated site from Karim
+Changes to the styles.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d255 1
+d293 10
+@
+
+
+1.68
+log
+@Fixes.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d152 1
+a152 1
+    if (length @@params) {
+d245 2
+a246 3
+    my $params = shift @@_ || "";
+
+    our $log->debug("run_query($query):$params");
+d249 3
+a251 1
+
+d266 1
+a266 1
+  our $log->debug("table_id($table->$id)");
+d278 5
+a282 2
+	my $self = shift @@_ || return (undef);
+	my ($query,@@params) = (shift @@_ || return (undef),@@_);
+d284 1
+a284 1
+	our $log->debug("_prepare_execute($query)");
+d288 2
+a289 6
+  	if (@@params) {
+    		$sth->execute(@@params) || $log->error("SQL ERROR: ".$sth->errstr);
+  	} else {
+    		$sth->execute()        || $log->error("SQL ERROR: ".$sth->errstr);
+  	}
+	
+d862 5
+a866 1
+   	$self->run_query($query,$username);
+d877 1
+a877 1
+	our $log->debug("check_password('$username','<password>'):$passed");
+@
+
+
+1.67
+log
+@Updates to the hash referencews in provider suppliers
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d965 2
+a966 2
+	while (my ($id,$name) = $self->fetchrow_array()) {
+    		$goback{$id}=$name;
+@
+
+
+1.66
+log
+@Added requested $utilityid calls
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d946 1
+a946 1
+Returns an array of those providerids who match a specific utilitytype.
+d957 1
+a957 1
+	my @@goback = ();
+d959 1
+a959 1
+	my $query = "SELECT id FROM providersupplier";
+d965 2
+a966 2
+	while (my ($object) = $self->fetchrow_array()) {
+    		push @@goback,$object;
+d969 1
+a969 1
+	our $log->debug("ps_list($utype):".length @@goback);
+d971 1
+a971 1
+	return \@@goback;  
+@
+
+
+1.65
+log
+@Fixed the error in table_list() in SQL. I discovered that an equivalent function was available as table_hash() and it functioned without error. :) All appearences of table_list have been converted.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d938 34
+@
+
+
+1.64
+log
+@We've noew fixed the old COST::UtilityTypes to work.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d181 1
+a181 1
+  our $log->debug("fetchrow_array()");
+a1071 31
+
+#########################################################################
+# Additional mapping stuff                                              #
+#########################################################################
+
+#########################################################################
+# Group Table Selects                                                   #
+#########################################################################
+
+=item table_list ($table,$keyfield,$valuefield)
+
+Given a table, and key and value fields, returns the result of a tablescan
+as a hash of $hash{$keyfield}=$valuefield.
+
+=cut
+
+sub table_list {
+	my $self       = shift @@_ || return (undef);
+	my $table      = shift @@_ || return (undef);
+	my $keyfield   = shift @@_ || return (undef);
+	my $valuefield = shift @@_ || return (undef);
+	my %list;
+
+  	$self->prepare("select $keyfield, $valuefield from $table");
+  	my $ret = $self->{pointers}->{SQL}->execute();
+  	while ( my ($key,$value) = $self->fetchrow_array ) { $list{$key} = $value; };
+
+	return \%list;
+}
+
+# The Obligatory One
+@
+
+
+1.63
+log
+@Cleaned up some code, minor refactors
+@
+text
+@d3 1
+a3 1
+=head1 SQL.pm
+d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+a14 6
+
+=head2 MODIFICATION HISTORY:
+
+  VERSION    DATE          NAME      COMMENTS
+  1.00       08-27-2000    garyc     Initial Creation
+
+d42 1
+a42 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d1093 1
+a1093 4
+	my %list = ();
+
+  	$self->prepare("select $keyfield,$valuefield from $table");
+  	my $result = $self->{pointers}->{SQL}->execute();
+d1095 3
+a1097 3
+  	while (my $object = $self->fetchrow_arrayref) {
+    		$list{@@$object[0]}= @@$object[1];
+	};
+@
+
+
+1.62
+log
+@Addition of first pass date handling functions to allow for ANY 'American'
+date format to be used.
+SQL::date_convert function.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d48 1
+a48 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d109 1
+a109 1
+                $lib->{database} = $database = $s->dir_config('DBName');
+d115 1
+a115 1
+              	                     or die "Connecting: $DBI::errstr";
+d117 1
+a117 1
+        return $connection;
+d161 1
+a161 1
+      $result=$sth->execute() || $log->error("SQL ERROR: ".$sth->errstr);
+d271 1
+a271 1
+        our $log->debug("table_id($table->$id)");
+d273 1
+a273 1
+        return $id;
+d293 1
+a293 1
+    		$sth->execute() || $log->error("SQL ERROR: ".$sth->errstr);
+d474 1
+a474 1
+    return get_value("config","configid","configvalue",$variable);
+d945 5
+@
+
+
+1.61
+log
+@Updates for documetnation, and additional informative methods for
+administrative and other pages
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d45 1
+d48 1
+a48 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d1056 17
+@
+
+
+1.60
+log
+@Modifications for statistics on properties.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d47 1
+a47 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+a167 2
+# Return a hash of the data
+
+d179 12
+d911 34
+@
+
+
+1.59
+log
+@Modifications to remove 'strict' errors, also fixes to the login code to
+ensure correctness.
+@
+text
+@d873 29
+@
+
+
+1.58
+log
+@Serious modifications for purpose of fixing up the security issues.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d47 1
+a47 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d154 1
+a156 2
+    $log->debug("execute(".join(',',@@params).")");
+
+d163 1
+a163 1
+    $log->debug("Executing on ".join(',',@@params)." got $result");
+d212 1
+a212 1
+    my $query = shift @@_;
+d238 3
+a240 3
+    my $self = shift @@_;
+    my $query=shift @@_;
+    my $params = shift @@_ || undef;
+d243 1
+a243 1
+    my $sth = $self->prepare($query);
+d246 1
+a246 1
+    return $sth;
+d590 2
+a591 2
+	my $self = shift @@_;
+	my $env  = shift @@_;
+d593 2
+a594 2
+  	my $interval     = shift @@_;
+  	my $errors	 = shift @@_;
+d596 2
+a597 2
+	my $r    = $self->{pointers}->{apache_ref};
+	my $log  = $self->{pointers}->{Log};
+d600 3
+a602 3
+  	my $total_bytes  = $r->bytes_sent;
+  	my $user_agent   = $env->{HTTP_USER_AGENT};
+  	my $referer      = $env->{HTTP_REFERER};
+a855 1
+   	our $log;
+d859 4
+a862 3
+   	my @@row=map((defined($_))? $_ : '', $self->{sth}->fetchrow_array());
+
+   	$passed=$row[0] if (crypt($password,$row[1]) eq $row[1]);
+d864 2
+a865 2
+   	if ($passed) { # update lastlogin
+     		$self->do("update logins set lastlogin=now() where userid=?",$passed);
+d867 2
+a868 2
+   	
+	$log->debug("check_password('$username','<password>'):$passed [".$row[0].",".$row[1]."]");
+a872 2
+
+
+d916 1
+a916 1
+  our $log->debug("only_numbers()");
+d924 3
+@
+
+
+1.57
+log
+@Updates for visibility
+@
+text
+@d150 4
+a153 4
+    my $self = shift @@_;
+    my @@params = @@_ || undef;
+    my $result=undef;
+    my $sth = $self->{sth};
+d155 2
+@
+
+
+1.56
+log
+@Security Updates
+@
+text
+@d151 1
+a151 1
+    my @@params = @@_;
+d855 1
+d865 3
+a867 5
+   	} else {
+     		$passed=0;
+   	}
+
+	our $log->debug("check_password('$username','<password>'):$passed");
+@
+
+
+1.55
+log
+@Fixes for login and names.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d47 1
+a47 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d145 1
+a145 1
+=item execute()
+d213 1
+a213 1
+    our $log->debug("prepare() : $query");
+d264 22
+d324 1
+a324 1
+  my @@binds=map((defined($_))? $_ : '', @@_); # Clear the unitialized
+d327 1
+a327 1
+  if (length @@binds) {
+d334 1
+d336 1
+a336 3
+# Process block of local queries
+
+=item mass_query()
+d342 1
+a342 1
+  our $log->debug("mass_query()");
+a346 1
+
+d354 1
+a354 1
+# Return a gigantic array
+d356 1
+a356 1
+=item array_query()
+d365 1
+a365 1
+  our $log->debug("array_query() : $query");
+d367 1
+a367 6
+  my $sth = our $dbh->prepare($query);
+  if (@@params) {
+    $sth->execute(@@params);
+  } else {
+    $sth->execute();
+  }
+d372 1
+a372 1
+# Return an array of a column
+d374 1
+a374 1
+=item column_query()
+d382 5
+a386 2
+
+  our $log->debug("column_query() : $query");
+a387 8
+  my $sth = our $dbh->prepare($query);
+  if (@@params) {
+    $sth->execute(@@params);
+  } else {
+    $sth->execute();
+  }
+
+  my @@ret;
+d389 1
+a389 1
+    push @@ret, $row[0];
+d392 1
+a392 1
+  return @@ret
+d395 1
+a395 1
+# Quick system single results
+d397 1
+a397 1
+=item get_single_result()
+d411 1
+a411 7
+  my $sth = $self->{sth} = $self->{dbh}->prepare($query);
+
+     if (@@params) {
+     	$sth->execute(@@params);
+     } else {
+	$sth->execute();
+     }
+d433 1
+a433 9
+	
+	my $sth = $self->{sth} = $self->{dbh}->prepare($query);
+	
+	if (@@params) {
+	    $sth->execute(@@params);
+	} else {
+	    $sth->execute();
+	}
+	
+d450 3
+a452 1
+=item get_value()
+d456 1
+a456 1
+sub get_value {
+d462 2
+a463 3
+    my $sth = $self->{dbh}->prepare("SELECT configvalue FROM config WHERE configid=?");
+    $sth->execute(($variable));
+    my ($value) = $sth->fetchrow_array;
+d465 15
+a479 1
+    return $value;
+d482 1
+d484 2
+a485 1
+=item set_value()
+d489 8
+a496 4
+sub set_value {
+    my $self     = shift @@_;
+    my $variable = shift @@_;
+    my $value    = shift @@_;
+d498 3
+a500 1
+    our $log->debug("set_query($variable)");
+d502 1
+a502 1
+    my $test = $self->{dbh}->prepare("SELECT configid FROM config WHERE configid=?");
+d504 1
+a504 2
+    $test->execute(($variable));
+    $test->fetchall_arrayref();
+d506 1
+a506 1
+    my $query="";
+d508 15
+a522 7
+    if ($test->rows()) {
+        $query = "UPDATE config SET configvalue=? WHERE configid=?";
+    } else {
+        $query = "INSERT INTO config (configvalue,configid) VALUES (?,?)";
+    }
+
+    $test->finish;
+d524 1
+a524 1
+    my $sth = $self->{dbh}->do($query,undef,($value,$variable));
+d533 1
+a533 1
+return a pointer to a hash of industryIDs and their associated industryNames.
+d570 2
+a571 3
+	my $sth = $self->{dbh}->prepare("SELECT $idfield,$descfield FROM $table");
+    	$sth->execute();
+
+@
+
+
+1.54
+log
+@Patches for Provider/Supplier
+@
+text
+@d299 5
+a303 2
+  my $self = shift @@_;
+  my ($query,@@binds) = @@_;
+d909 2
+a910 1
+	my $output = '';
+d914 2
+a915 1
+	$output="$first ".$middle?$middle:''." $last";
+@
+
+
+1.53
+log
+@Fixed the password checking routines
+@
+text
+@d610 1
+a610 1
+=item set_flag($table,$uid,$flag,$value)
+d613 2
+d624 1
+d626 4
+a629 2
+	our $log->debug("set_flag('$table',$uid,$flag):".$value);
+	$self->do("UPDATE $table SET $flag");
+d633 1
+a633 1
+=item check_flag($table,$flag)
+d635 2
+a636 1
+This returns the current setting of the flag, 0 if 'N' and 1 if 'Y'
+d643 1
+d645 4
+a648 3
+
+	our $log->debug("check_flag('$table',$flag)");
+	return $self->single_fast_query("SELECT $flag FROM $table")?1:0;
+d840 2
+d934 16
+@
+
+
+1.52
+log
+@Advancing the progress of science, by removing a BOATLOAD of code.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d47 1
+a47 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d776 4
+d805 31
+@
+
+
+1.51
+log
+@Documentation and functional code now match.
+@
+text
+@a868 29
+=item two_to_hash()
+
+Given a reference to a hash, and two fields, key, and value
+Build up the hash as a hash of arrays, where each key, is associated
+with a group of values...
+
+=cut
+
+sub two_to_hash {
+	my $self  = shift @@_ || return (undef);
+	my $hash  = shift @@_ || return (undef);
+	my $key   = shift @@_ || return (undef);
+	my $value = shift @@_ || return (undef);
+	
+	my $arrref = undef;
+		
+	if (exists $hash->{$key}) {
+		$arrref=$hash->{$key};
+	} else {
+		$arrref=$hash->{$key}=[];
+	}	
+		
+	push @@{$arrref},$value;	
+		
+	return $hash;
+}
+
+
+# 
+@
+
+
+1.50
+log
+@Documentation, beginnings of passwords
+@
+text
+@a501 96
+=item two_list($table,$id,$name)
+
+This routine does a complete query of a table, pulling out the ID and NAME fields
+requested.  It then returns a pointer to an array of hashes with ID and NAME 
+populated.
+
+=cut
+
+sub two_list {
+    my $self  = shift @@_ || return (undef);
+    my $table = shift @@_ || return (undef);
+    my $id    = shift @@_ || return (undef);
+    my $name  = shift @@_ || return (undef);
+    
+    my $query = "SELECT $id,$name FROM $table";
+    our $log->debug("two_list($query)");
+
+    my @@array = ();
+
+    my $sth = $self->{dbh}->prepare($query);
+    $sth->execute();
+
+    while (my @@row=$sth->fetchrow_array) {
+	push @@array,{'ID'=>$row[0] || 'undefined','NAME'=>$row[1] || 'undefined'};
+        
+    }
+
+    return \@@array;
+}
+
+
+=item customer_list()
+
+=cut
+
+sub customer_list {
+    my ($self,$option)=(shift,shift || '');
+    our $log->debug("customer_list()");
+
+    my $output = qq{<option value="--">Please Choose an Company};
+    my $sth = $self->{dbh}->prepare("SELECT id,name,costcustomercode FROM customers");
+    $sth->execute();
+
+    while (my @@row=$sth->fetchrow_array) {
+	my ($id,$name,$ccc)=($row[0] || '', $row[1] || '', $row[2] || '');
+	$output.="<option ";
+	$output.="selected " if ($id eq $option);
+	$name.=" ($ccc)" if ($ccc);
+	$output.=qq{value="$id">$name};
+    }
+
+    return $output;
+}
+
+
+=item user_list()
+
+=cut
+
+sub user_list {
+    my ($self,$option) = (shift,shift || '');
+    our $log->debug("user_list()");
+
+    my $output = qq{<option value="--">Please Choose a User};
+    my $sth=$self->{dbh}->prepare("SELECT id,firstname,middleinitial,lastname,eidNumber FROM users");
+    $sth->execute();
+
+    while (my @@row=$sth->fetchrow_array) {
+        my ($id,$fn,$mi,$ln,$eid) = ($row[0] || '', $row[1] || '',
+                                     $row[2] || '', $row[3] || '', $row[4] || '');
+        $fn.=" $mi." if ($mi);
+        $fn.=" $ln";
+        $fn.=" ($eid)" if ($eid);
+
+        $output.=$self->_make_list($id,$option,$fn);
+     }
+
+    return $output;
+}
+
+=item _make_list() 
+
+=cut
+
+sub _make_list {
+	my $self   = shift @@_;
+	my $id     = shift @@_;
+	my $option = shift @@_;
+	my $text   = shift @@_;
+	
+	my $output = "<option ";
+	$output.="selected " if ($id eq $option);
+	$output.=qq{value="$id">$text\n};
+	return $output;
+}
+
+d534 3
+a536 3
+	my $self  = shift @@_ || return (undef);
+	my $table = shift @@_ || return (undef);
+	my $idfield = shift @@_ || return (undef);
+a552 4
+
+
+
+
+d588 22
+d648 1
+a648 1
+being mapped from.  for instance:  The Customer would be the $originalid, and the
+d776 26
+a835 2
+
+
+a949 37
+}
+
+#########################################################################
+# P/S Matrix utilities                                                  #
+#########################################################################
+
+=item set_matrix ($customerid,\@@utilityids,\@@providers,\@@suppliers)
+
+=cut
+
+sub set_matrix {
+	my $self       = shift @@_ || return (undef);
+	my $customerid = shift @@_ || return (undef);
+	my $utilityids = shift @@_ || return (undef);
+	my $providers  = shift @@_ || return (undef);
+	my $suppliers  = shift @@_ || return (undef);
+	
+	# Convert references into full-blown arrays
+	my @@utilityids = @@{$utilityids};
+	my @@providers  = @@{$providers};
+	my @@suppliers  = @@{$suppliers};
+	
+}
+
+=item get_matrix ($customerid) returns (\@@utilities,\@@providers,\@@suppliers)
+
+=cut
+
+sub get_matrix {
+	my $self       = shift @@_ || return (undef);
+	my $customerid = shift @@_ || return (undef);
+
+	my @@utilityids = ();
+	my @@providers  = ();
+	my @@suppliers  = ();
+	
+	return (\@@utilityids,\@@providers,\@@suppliers);
+@
+
+
+1.49
+log
+@Start of User Code
+@
+text
+@d272 1
+a272 1
+=item total_table()
+d277 1
+a277 1
+  my ($self,$table,$whereclause) = (shift @@_, shift @@_ || '',shift @@_ || '');
+d283 1
+a283 1
+  return $self->single_fast_query($query);
+@
+
+
+1.48
+log
+@Fixes for Phil.
+@
+text
+@a263 49
+######################################################################
+## Utilities / Data Manipulation Functions ###########################
+######################################################################
+## Functions that purely manipulate data for preparation of entry   ##
+## or reading from the DB.                                          ##
+######################################################################
+
+# This function changes the potentially SQL hazardous entries in
+# a string to SQL friendly ones using DBI function
+
+=item quote()
+
+=cut
+
+sub quote {
+  my ($self,$string)=@@_;
+  our $log->debug("quote()");
+  return $self->{dbh}->quote($string);
+}
+
+# Take an input string, and properly commafy it (Perl Cookbook pg. 64)
+
+=item commafy()
+
+=cut
+
+sub commafy {
+  my $self = shift @@_;
+  my $text = reverse shift @@_;
+  our $log->debug("commafy()");
+  $text=~s/(\d\d\d)(?=\d)(?!\d*\.)/$1,/g;
+  return scalar reverse $text;
+}
+
+# This code takes a number, and pulls every non-numeric thing from it
+# with the exception of a decimal point
+
+=item only_numbers()
+
+=cut
+
+sub only_numbers {
+  my ($self,$incoming)=@@_;
+  our $log->debug("only_numbers()");
+  # If something isn't a number or ., make it go away
+  $incoming=~s/[^\d\.]//g;
+  # Give that back
+  return $incoming;
+}
+a648 8
+# 2 to hash routine
+# Given a reference to a hash, and two fields, key, and value
+# Build up the hash as a hash of arrays, where each key, is associated
+# with a group of values...
+
+=item two_to_hash()
+
+=cut
+a649 18
+sub two_to_hash {
+	my $self  = shift @@_ || return (undef);
+	my $hash  = shift @@_ || return (undef);
+	my $key   = shift @@_ || return (undef);
+	my $value = shift @@_ || return (undef);
+	
+	my $arrref = undef;
+		
+	if (exists $hash->{$key}) {
+		$arrref=$hash->{$key};
+	} else {
+		$arrref=$hash->{$key}=[];
+	}	
+		
+	push @@{$arrref},$value;	
+		
+	return $hash;
+}
+a650 2
+# Quickseek
+# Given a value, and an array, report if the value is part of the array...
+a651 18
+=item quickseek()
+
+=cut
+
+sub quickseek {
+	my $self   = shift @@_ || return (undef);
+	my $array  = shift @@_ || [];
+	my $value  = shift @@_ || 0;
+	my $result = 0;
+	my $count  = 0;
+
+	for my $next_trick (@@{$array}) {
+		$count++;
+		$result=$count if ($next_trick eq $value);
+        }
+        
+	return $result;
+}
+d854 51
+a904 3
+#########################################################################
+# Misc. Utilities                                                       #
+#########################################################################
+d917 2
+d923 50
+d984 1
+a984 1
+Given a table, and a list of fields, returns the result of a tablescan
+@
+
+
+1.47
+log
+@Bugfixes
+@
+text
+@d153 2
+d157 1
+a157 1
+      $result=$self->{sth}->execute(@@params);
+d159 1
+a159 1
+      $result=$self->{sth}->execute;
+d162 1
+a162 1
+    our $log->debug("Executing on ".@@params);
+d239 1
+d241 3
+a243 3
+    our $log->debug("run_query() : $query");
+    my $sth = $self->{sth} = $self->{dbh}->prepare($query);
+    $sth->execute();
+d936 9
+a944 10
+	           ."from contacts a,$table b WHERE a.id=b.mappedid AND b.originalid=?";
+
+  	$self->prepare($query);
+  	my $result = $self->execute($cust);
+
+  	while (my $object = $result->fetchrow_arrayref) {
+    		$list{@@$object[0]}= $self->full_name(@@$object[1],@@$object[2],@@$object[3]);
+  	};
+
+	our $log->debug("get_contact_map('$table',$cust):".scalar keys %list);
+@
+
+
+1.46
+log
+@Bugfixes
+@
+text
+@d938 1
+a938 1
+  	while (my $object = $self->fetchrow_arrayref) {
+@
+
+
+1.45
+log
+@Updates for contact map...
+@
+text
+@d929 1
+a929 1
+	
+d933 1
+a933 1
+	           ."from contacts a,$table b WHERE a.id=b.cid AND b.originalid=?";
+d941 2
+@
+
+
+1.44
+log
+@Fixes, and updates for Phil
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d47 1
+a47 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d918 1
+a918 1
+=item get_contact_map ($type,$customerid)
+d920 2
+a921 2
+Given a type (1->customer,2->provider/supplier) and an id, this method returns an
+array of the contacts associated with them in the form of hashes, id,firstname,middlename,lastname
+d926 3
+a928 3
+	my $self  = shift @@_ || return (undef);
+	my $type  = shift @@_ || return (undef);
+	my $cust  = shift @@_ || return (undef);
+d930 1
+a930 1
+	my @@result_array = ();
+a931 6
+        if ($type==1) {
+    		$type="customercontactmap";
+  	} elsif ($type==2) {
+    		$type="providersuppliercontactmap";
+  	}
+
+d933 1
+a933 1
+	           ."from contacts a,$type b WHERE a.id=b.cid AND b.mapid=?";
+d938 10
+a947 1
+  	while (my $object = $self->fetchrow_hashref) {
+d949 3
+a951 7
+    		my $userhash={};
+    		$userhash->{'id'}= $object->{'id'};
+    		$userhash->{'firstname'}     = $object->{'firstname'};
+    		$userhash->{'middleinitial'} = $object->{'middleinitial'};
+    		$userhash->{'lastname'}      = $object->{'lastname'};
+    		push(@@result_array,$userhash);
+  	};
+d953 10
+a962 1
+	return \@@result_array;
+@
+
+
+1.43
+log
+@Sync with Phil!
+@
+text
+@d961 3
+d965 23
+@
+
+
+1.42
+log
+@Fixes
+@
+text
+@d780 1
+a780 1
+=item set_flag($table,$flag,$value)
+d782 1
+a782 1
+This method sets the $flag in $table to the requested $value.
+d789 1
+d792 4
+d808 3
+@
+
+
+1.41
+log
+@Fix of multiple statelist() methods.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d47 1
+a47 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+a81 1
+        $log->debug("Getting a DB connection");
+d98 3
+a100 1
+			
+d106 2
+a107 2
+      		my $s     = Apache->server;
+      		my $lib   = $self->{pointers}->{library} = {};
+d347 1
+a347 1
+  our $log->debug("do()");
+d439 1
+d442 1
+a442 1
+  our $log->debug("get_single_result() : $query");
+d444 1
+a444 4
+  my $sth = $self->{sth} = $self->{dbh}->prepare("$query");
+     $sth->execute();
+  my $ref = $sth->fetchrow_hashref;
+  my $result = $ref->{$variable};
+d446 5
+a450 2
+  undef $ref;
+  undef $sth;
+d452 2
+a453 1
+  return $result;
+a464 3
+
+    our $log->debug("single_fast_query() : $query");
+
+d466 3
+d470 1
+d472 1
+d474 1
+d480 1
+d483 1
+a547 29
+=item xlist()
+
+This is a generic, in theory private, function for creating a dropdown 
+list from a database query.  It expects the current $item, the $query
+to call out of the database, and the $option that is selected by default.
+
+=cut
+
+sub xlist {
+    my $self  = shift @@_ || return (undef);
+    my $item  = shift @@_ || return (undef);
+    my $table = shift @@_ || return (undef);
+    my $id    = shift @@_ || return (undef);
+    my $name  = shift @@_ || return (undef);
+    my $option= shift @@_ || "--";
+    
+    our $log->debug("xlist($item,$table,$id,$name,$option)");
+
+    my $output = qq{<option value="--">Please Choose a $item};
+
+    my @@array = @@{$self->two_list($table,$id,$name)};
+
+    while (my $row = shift @@array) {
+	$output.=$self->_make_list($row->{'ID'},$option,$row->{'NAME'});
+    }
+
+    return $output;
+}
+
+d805 1
+a805 1
+=item map_add()
+d808 4
+a811 1
+relationships.  Return the ID of the relationship.
+d821 1
+a821 1
+	$self->{pointers}->{Log}->debug("map_add($table map $originalid to $mappedid)");		
+d827 1
+a827 1
+=item map_remove() / id_remove()
+d829 3
+a831 1
+Given an entry in a mapping table, remove the entry
+d836 11
+a846 2
+	my $self = shift @@_ || return (undef);
+	$self->id_remove(@@_);
+d849 7
+d861 2
+d864 2
+a946 53
+}
+
+=item attach ($type,$customerid,$contactid)
+
+Given a type (1->customer,2->provider/supplier), a customerid, 
+and a contactid, this method attaches a customer with a contactid
+
+=cut
+
+sub attach {
+	my $self  = shift @@_ || return (undef);
+	my $type  = shift @@_ || return (undef);
+	my $cust  = shift @@_ || return (undef);
+	my $cont  = shift @@_ || return (undef);
+	
+	if ($type==1) {
+    		$type="customercontactmap";
+  	} elsif ($type==2) {
+    		$type="providersuppliercontactmap";
+  	}
+
+	our $log->debug("attach('$type',$cust,$cont)");
+
+  	
+}
+
+=item is_attached ($type,$customerid,$contactid)
+
+Test to see if the described mapping exists, return 0 if not, 1 if so
+
+=cut
+
+sub is_attached {
+	my $self  = shift @@_ || return (undef);
+	my $type  = shift @@_ || return (undef);
+	my $cust  = shift @@_ || return (undef);
+	my $cont  = shift @@_ || return (undef);
+	
+	if ($type==1) {
+    		$type="customercontactmap";
+  	} elsif ($type==2) {
+    		$type="providersuppliercontactmap";
+  	}
+
+	my $query = "SELECT b.id FROM contacts a,$type b WHERE a.id=b.cid AND b.mapid=? AND b.cid=?";
+	$self->prepare($query);
+	my $result=$self->execute($cust); 
+	if ($result->rows()) {
+		return 1;
+	} else {
+		return 0;
+	}
+	
+@
+
+
+1.40
+log
+@STatelist
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d47 1
+a47 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+a538 9
+
+=item statelist()
+
+=cut
+
+sub statelist {
+    my ($self,$option)=(shift, shift || '');
+    return $self->xlist("State","states","state_value","state_name",$option);
+}
+@
+
+
+1.39
+log
+@Renamed industry return function
+@
+text
+@d674 24
+a723 13
+
+=item industrylist()
+
+return a pointer to a hash of industryIDs and their associated industryNames.
+
+=cut
+
+sub industrylist {
+	my $self = shift @@_ || return (undef);
+	our $log->debug("industrylist()");
+	return $self->table_hash("industries","industryid","industryname");
+}
+
+@
+
+
+1.38
+log
+@Changed the format.
+@
+text
+@a548 9
+=item industrylist()
+
+=cut
+
+sub industrylist {
+    my ($self,$option)=(shift,shift || '');
+    return $self->xlist("Industry","industries","industryid","industryname",$option);
+}
+
+a688 2
+	our $log->debug("table_hash('$table','$idfield','$descfield')");
+	
+d696 2
+d701 3
+a703 1
+=item industryarray()
+d707 1
+a707 1
+sub industryarray {
+d709 1
+@
+
+
+1.37
+log
+@Updates to match docs.
+@
+text
+@d685 3
+d696 3
+a698 1
+	my @@array = ();
+d704 1
+a704 1
+		push @@array,('ID'=>$row[0] || '','DESC'=>$row[1] || '');
+d707 1
+a707 1
+	return \@@array;
+@
+
+
+1.36
+log
+@Continued Synchronization and Documentation
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d47 1
+a47 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+a548 1
+
+d683 31
+d727 1
+a727 1
+	my $key   = shift @@_ || returm (undef);
+d943 59
+@
+
+
+1.35
+log
+@With this commit, the choice of databases is now modularized. This will break
+all dev instances! You need to put a PerlSetVal for DBName into your code
+with costdev as the instance for development.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d47 1
+a47 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d106 4
+a109 3
+                $database = $s->dir_config('DBName');
+      		$username = $s->dir_config('UName');
+      		$password = $s->dir_config('PWord');
+d123 2
+d130 1
+a130 1
+    $self->{sth}->finish     if ($self->{sth});
+d132 1
+d721 3
+a723 3
+	my $self  = shift @@_ || return (undef);
+	my $array = shift @@_ || [];
+	my $value = shift @@_ || 0;
+d725 1
+d728 2
+a729 1
+		$result=1 if ($next_trick eq $value);
+d779 2
+d789 6
+d873 76
+@
+
+
+1.34
+log
+@Initial Modifications to make IA true.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d47 1
+a47 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d96 1
+a96 1
+	my ( $username, $password );
+d101 1
+d106 1
+d111 1
+a111 1
+	$connection = $self->{dbh} = DBI->connect('DBI:mysql:database=costdev;host=localhost',$username,$password,{ RaiseError => 1 } ) 
+@
+
+
+1.33
+log
+@Refactor, documentation...
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d47 1
+a47 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d238 16
+d762 82
+a843 2
+# The Obligatory One
+1;
+d845 1
+d847 1
+d849 4
+d854 7
+@
+
+
+1.32
+log
+@Giving you some refactoring, and slowly moving SQL into SQL.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+a44 1
+use Apache::DBI;
+d47 1
+a47 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d524 1
+a524 1
+    return $self->xlist("State","SELECT state_value,state_name FROM states",$option);
+d534 60
+a593 1
+    return $self->xlist("Industry","SELECT industryid,industryname FROM industries",$option);
+d614 1
+a614 1
+	$output.=qq{value="$id">$name\n};
+a661 27
+# xlist routine, takes a query
+
+=item xlist()
+
+This is a generic, in theory private, function for creating a dropdown 
+list from a database query.  It expects the current $item, the $query
+to call out of the database, and the $option that is selected by default.
+
+=cut
+
+sub xlist {
+    my ($self,$item,$query,$option)=(shift, shift || '',shift,shift || "--");
+    our $log->debug("xlist($item) via $query");
+
+    my $output = qq{<option value="--">Please Choose a $item};
+
+    my $sth = $self->{dbh}->prepare($query);
+
+    $sth->execute();
+
+    while (my @@row=$sth->fetchrow_array) {
+	my ($id,$name)=($row[0] || '', $row[1] || '');
+        $output.=$self->_make_list($id,$option,$name);
+    }
+
+    return $output;
+}
+@
+
+
+1.31
+log
+@Fixed the autho line and the FUNCTIONS name in the POD.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d25 6
+d45 1
+d48 1
+a48 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d54 6
+d77 1
+a77 2
+
+    my ( $username, $password );
+a78 9
+
+    if ( $self->{pointers}->{library} ) {
+      $username = $self->{pointers}->{library}->{username};
+      $password = $self->{pointers}->{library}->{password};
+    } else {
+      my $s     = Apache->server;
+      $username = $s->dir_config('UName');
+      $password = $s->dir_config('PWord');
+    }
+d83 1
+a83 1
+        $log->debug("Creating DB connection");
+d86 1
+a86 2
+    our $dbh = $self->{dbh} = DBI->connect('DBI:mysql:database=costdev;host=localhost',$username,$password,{ RaiseError => 1 } ) 
+                              or die "Connecting: $DBI::errstr";
+d89 28
+d119 1
+a119 1
+=item DESTROY()
+d123 1
+a123 1
+sub DESTROY {
+d125 1
+a125 1
+    our $log->debug("Destroying DB connection");
+a126 1
+    $self->{dbh}->disconnect if (defined $self->{dbh});
+a127 1
+    delete $self->{dbh};
+a577 3
+        $output.="<option ";
+        $output.="selected " if ($id eq $option);
+
+d582 1
+a582 1
+        $output.=qq{value="$id">$fn\n};
+d588 16
+d608 4
+d626 1
+a626 3
+        $output.="<option ";
+        $output.="selected " if ($id eq $option);
+	$output.=qq{VALUE="$id">$name\n};
+d678 35
+@
+
+
+1.30
+log
+@End token for everything in POD as well as full docs for Display.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d25 1
+a25 1
+=head1 FUNCTIONS:
+d41 1
+a41 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d646 1
+a646 1
+=pod
+d648 2
+a649 1
+Documentation last edited 11/05/2001 by Phil
+@
+
+
+1.29
+log
+@Functions are now PODed
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d41 1
+a41 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d642 7
+@
+
+
+1.28
+log
+@Perldoc Flowerboxes.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d25 4
+d41 1
+a41 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d44 5
+d57 5
+d88 5
+d110 5
+d132 5
+d145 5
+d157 5
+d168 5
+d182 5
+d195 5
+d220 5
+d232 5
+d247 5
+d267 5
+d289 5
+d307 5
+d328 5
+d351 5
+d379 5
+d405 5
+d439 5
+d457 5
+d490 5
+d500 5
+d510 5
+d534 5
+d564 5
+d593 5
+d619 5
+@
+
+
+1.27
+log
+@Changes. Small. Unknown. Perfunctory.
+@
+text
+@d2 21
+a22 17
+#*
+#* FILE:        SQL.pm
+#*
+#* DESCRIPTION: Main PerlServer Engine
+#*
+#* SYSTEM:      SQL Module
+#*
+#* SUBSYSTEM:   Web Pages
+#*
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+#*
+#* MODIFICATION HISTORY:
+#*
+#* VERSION    DATE          NAME      COMMENTS
+#*
+#* 1.00       08-27-2000    garyc     Initial Creation
+#*
+d37 1
+a37 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+@
+
+
+1.26
+log
+@Amazing Security Database updates
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d33 1
+a33 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d47 2
+a48 3
+    my $s        = Apache->server;
+    my $username = $s->dir_config('UName');
+    my $password = $s->dir_config('PWord');
+d50 9
+a58 1
+    $self->{pointers} = shift @@_;
+@
+
+
+1.25
+log
+@First pass security update manager, now needs to grab and send proper coding.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d33 1
+a33 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d437 38
+@
+
+
+1.24
+log
+@Massive code paring down, and preparations to continue back on the Security
+code.  Modifications to have the Pages::_preparations for setup and initial
+functions.  Addition of /SessionDebug page to show data contained in Session.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d33 1
+a33 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d91 2
+d99 1
+d101 1
+a101 1
+  return $self->{sth}->fetchrow_hashref;
+@
+
+
+1.23
+log
+@Significant changes, related to persistence of bills... inserted bills, while not validated yet, ARE persistent, so that changes stick.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d33 1
+a33 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d120 1
+a120 3
+    my $result = $self->{sth}=$self->{dbh}->prepare($query);
+
+    return $result;
+a171 1
+  my $original=$incoming;
+d185 2
+a186 3
+  my ($self,$table) = (shift @@_, shift @@_ || '');
+  my $whereclause   = shift @@_ || '';
+
+d189 1
+a189 1
+     $query.= "WHERE $whereclause" if ($whereclause);
+@
+
+
+1.22
+log
+@Updates for drop-downs for billing, and template updates, and refactoring of some methods in SQL.pm
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d33 1
+a33 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d368 1
+a368 1
+    return $self->xlist($option,"State","SELECT state_value,state_name FROM states");
+d373 1
+a373 1
+    return $self->xlist($option,"Industry","SELECT industryid,industryname FROM industries");
+d421 2
+a422 2
+    my ($self,$option,$item,$query)=(shift, shift || '',shift);
+    our $log->debug("xlist($item)");
+@
+
+
+1.21
+log
+@Prosupp is now created to list a summary of bills by a provider/supplier to a specific property. Also, the dollar widget is created.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d33 1
+a33 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d368 1
+a368 16
+    our $log->debug("statelist()");
+
+    my $output = qq{<OPTION VALUE="--">Please Choose a State};
+
+    my $sth = $self->{dbh}->prepare("SELECT state_value,state_name FROM states");
+
+    $sth->execute();
+
+    while (my @@row=$sth->fetchrow_array) {
+	my ($stateid,$statename)=($row[0] || '', $row[1] || '');
+        $output.="<OPTION ";
+        $output.="SELECTED " if ($stateid eq $option);
+	$output.=qq{VALUE="$stateid">$statename\n};
+    }
+
+    return $output;
+d373 1
+a373 17
+    our $log->debug("industrylist()");
+
+    my $output = qq{<OPTION VALUE="--">Please Choose an Industry};
+
+    my $sth = $self->{dbh}->prepare("SELECT industryid,industryname FROM industries");
+
+    $sth->execute();
+
+    while (my @@row=$sth->fetchrow_array) {
+	my ($id,$name)=($row[0] || '', $row[1] || '');
+	$output.="<OPTION ";
+
+	$output.="SELECTED " if ($id eq $option);
+	$output.=qq{VALUE="$id">$name\n};
+    }
+
+    return $output;
+d415 21
+@
+
+
+1.20
+log
+@It now recognizes suppliers. Whee.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d33 1
+a33 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d119 1
+a119 1
+    our $log->debug("prepare()");
+@
+
+
+1.19
+log
+@Property is now actually displayed. Next to add util info. Log slightly reorganized. Big time cleanup of logging and general text layout of SQL.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d33 1
+a33 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d241 1
+a241 1
+  my $sth = $self->{dbh}->prepare($query);
+d249 7
+d257 15
+d273 1
+a273 1
+
+@
+
+
+1.18
+log
+@Beginning of Security related changes.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d33 1
+a33 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d46 2
+a47 1
+    my $s = Apache->server;
+d50 7
+a56 2
+    $self->{pointers}=shift || undef;
+    $self->{sth}=undef;
+d58 2
+a59 1
+    $self->{dbh} = DBI->connect('DBI:mysql:database=costdev;host=localhost',$username,$password,{ RaiseError => 1 } ) or die "Connecting: $DBI::errstr";
+d65 2
+a66 1
+    $self->{sth}->finish if ($self->{sth});
+d72 9
+a80 4
+# Functions vs the database
+# This one will prepare and execute a SQL statement
+# and return the statement handle
+sub run_query {
+d82 2
+a83 1
+    my $query=shift @@_;
+d85 5
+a89 2
+    my $sth = $self->{sth} = $self->{dbh}->prepare($query);
+    $sth->execute();
+d91 1
+a91 13
+    return $sth;
+}
+
+# Give back the current database handle
+sub get_handle {
+    my $self = shift @@_;
+    return $self->{dbh};
+}
+
+# Return number of rows in a statement handle
+sub rows {
+  my $self = shift @@_;
+  return $self->{sth}->rows;
+d97 1
+d101 2
+a102 24
+# Quick system single results
+sub get_single_result {
+  my $self     = shift @@_;
+  my $variable = shift || "";
+  my $table    = shift || "";
+  my $where    = shift || "";
+
+  my $query    = "SELECT $variable FROM $table WHERE $where";
+
+  $self->{pointers}->{Log}->debug("SQL single query: $query");
+
+  my $sth = $self->{sth} = $self->{dbh}->prepare("$query");
+  $sth->execute();
+  my $ref = $sth->fetchrow_hashref;
+  my $result = $ref->{$variable};
+
+  undef $ref;
+  undef $sth;
+
+  return $result;
+}
+
+# Another version of getting a single result
+sub single_fast_query {
+d104 2
+a105 13
+    my $query=shift || '';
+    my @@params=@@_;
+    my $answer='';
+    if ($query) {
+	my $sth = $self->{sth} = $self->{dbh}->prepare($query);
+	if (@@params) {
+	    $sth->execute(@@params);
+	} else {
+	    $sth->execute();
+	}
+	($answer) = $sth->fetchrow_array();
+    }
+    return $answer;
+d108 4
+a111 15
+# Return a gigantic array
+sub array_query {
+  my $self   = shift @@_ || return (undef);
+  my $query  = shift @@_ || "SELECT 1";
+  my @@params = @@_;
+
+  my $sth = $self->{dbh}->prepare($query);
+  if (@@params) {
+    $sth->execute(@@params);
+  } else {
+    $sth->execute();
+  }
+
+  return $sth->fetchrow_array();
+
+d119 1
+d125 2
+a126 16
+sub execute {
+    my $self = shift @@_;
+    my @@params = @@_;
+    my $result=undef;
+
+    if (length @@params) {
+      $result=$self->{sth}->execute(@@params);
+    } else {
+      $result=$self->{sth}->execute;
+    }
+
+    return $result;
+}
+
+# This is to bring it more in line with the way of things
+sub do {
+d128 2
+a129 6
+  my ($query,@@binds)=@@_;
+  if (length @@binds) {
+     return $self->{dbh}->do($query,undef,@@binds);
+  } else {
+     return $self->{dbh}->do($query);
+  }
+d132 5
+a136 5
+# Another DBI thing
+sub neat {
+  my ($self,$text,$len)=@@_;
+  return DBI::neat($text,$len);
+}
+d138 3
+a140 3
+# Process block of local queries
+sub mass_query {
+    my ($self,@@query)=@@_;
+d142 1
+a142 2
+    # Use the power of Perl
+    grep $self->do($_),@@query;
+d145 6
+a150 1
+# Utilities / Data Manipulation Functions
+d156 1
+d163 2
+a164 1
+  my $text=reverse shift @@_;
+d173 1
+d181 120
+d304 4
+a307 2
+    my $self = shift @@_;
+    my $variable=shift @@_;
+d317 5
+a321 3
+    my $self = shift @@_;
+    my $variable=shift @@_;
+    my $value=shift @@_;
+d346 1
+d366 1
+d387 1
+d406 1
+a425 10
+}
+
+sub total_table { # Return the total number of entries in a given table...
+  my ($self,$table) = (shift @@_, shift @@_ || '');
+  my $whereclause   = shift @@_ || '';
+
+  my $query = "SELECT COUNT(*) FROM $table";
+     $query.= "WHERE $whereclause" if ($whereclause);
+
+  return $self->single_fast_query($query);
+@
+
+
+1.17
+log
+@Widgets work now.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d33 1
+a33 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+d52 1
+a52 1
+    $self->{dbh} = DBI->connect('DBI:mysql:database=costdev;host=localhost',$username,$password,{ RaiseError => 1 } ) or die "Connecting: $DBI::errstr"; 
+d198 1
+a198 1
+    grep $self->do($_),@@query; 
+d270 2
+a271 2
+    
+    my $output = qq{<OPTION VALUE="--">Please Choose a State}; 
+d282 1
+a282 1
+    }	
+d285 1
+a285 1
+}   
+d289 1
+a289 1
+    
+d302 1
+a302 1
+    }	
+d305 1
+a305 1
+}   
+d309 1
+a309 1
+    
+d320 1
+a320 1
+    }	
+d353 1
+a353 1
+     $query.= "WHERE $whereclause" if ($whereclause); 
+@
+
+
+1.16
+log
+@A few updates for the version number to be automagically populated via
+rcs/cvs.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 Diversified Consulting, Inc.
+d33 1
+a33 1
+$PerlServer::SQL::VERSION='$Revision: 1.1 $';
+@
+
+
+1.15
+log
+@The first step of agent code is to get if a customer is an agent or not...
+
+if customer->{fields}->{agent} is Y, then they are an agent.
+@
+text
+@d33 1
+a33 1
+$PerlServer::SQL::VERSION=1.0;
+@
+
+
+1.14
+log
+@Added array_querying function...
+@
+text
+@d19 1
+a19 1
+#*************************************************************************      
+d105 1
+a105 1
+  
+@
+
+
+1.13
+log
+@get_page() is now in the display object. Will set it up to populate colors and font names eventually.
+
+there was a bug in sharedloader.pl ... fixed
+@
+text
+@d135 16
+@
+
+
+1.12
+log
+@Obfuscate.pm lives again.
+@
+text
+@a341 11
+
+# Used to grab page information from the page_text table
+
+sub get_page {
+  my $self = shift @@_;
+  my $name = shift @@_;
+  $self->{pointers}->{Log}->debug("Getting pagetext - $name");
+  return $self->get_single_result('body','pagetext',"name='$name'");
+}
+
+
+@
+
+
+1.11
+log
+@Added non-functional sort routine to Customer.pm (Phil, you know about this stuff, I'll beg info of you tomorrow :) ) as well as added WHERE support to the table counting features of the SQL.pm object.  The new Pages objects aren't presently functional, but are added as placeholders, they are purely copies of CustAdmin.pm
+@
+text
+@d342 11
+@
+
+
+1.10
+log
+@I haven't a clue what's modified, but it is.
+@
+text
+@d333 7
+a339 2
+  my ($self,$table) = (shift, shift || '');
+  return $self->single_fast_query("SELECT COUNT(*) FROM $table");
+@
+
+
+1.9
+log
+@Improved debugging in PerlServer.pm to catch errors in page creation (SQL/HTML::Template bugs / Runtime)
+@
+text
+@d104 2
+@
+
+
+1.8
+log
+@Tiny changes that keep conflicting. Should merge them in.
+@
+text
+@a52 2
+
+    DBI->trace(9,"/tmp/dbi.bear.trace");
+@
+
+
+1.7
+log
+@Added pragma no-cache to the header output in PerlServer, and it seems to have fixed the behavior on all browsers but Conqueror...
+
+Additionally, Logout now works, by simply destroying the userid in the session... the session itself persists.
+@
+text
+@d37 1
+a37 1
+    my $class=shift;
+d45 1
+a45 1
+    my $self=shift;
+d59 1
+a59 1
+    my $self=shift;
+d70 2
+a71 2
+    my $self=shift;
+    my $query=shift;
+d81 1
+a81 1
+    my $self=shift;
+d87 1
+a87 1
+  my $self=shift;
+d93 1
+a93 1
+  my $self=shift;
+d99 1
+a99 1
+  my $self     = shift;
+d119 1
+a119 1
+    my $self=shift;
+d138 2
+a139 2
+    my $self=shift;
+    my $query=shift;
+d147 1
+a147 1
+    my $self=shift;
+d162 1
+a162 1
+  my $self=shift;
+d196 2
+a197 2
+  my $self=shift;
+  my $text=reverse shift;
+d216 2
+a217 2
+    my $self=shift;
+    my $variable=shift;
+d227 3
+a229 3
+    my $self=shift;
+    my $variable=shift;
+    my $value=shift;
+@
+
+
+1.6
+log
+@Logins actually affect the main page now, showing you who you are and your
+COST USER CODE... prepping to add logout and session demolition
+@
+text
+@d159 1
+a159 1
+    
+@
+
+
+1.5
+log
+@I'm totally nutty, I should be committed.
+@
+text
+@d3 1
+a3 1
+#* FILE:        Data.pm
+d53 2
+d141 3
+a143 1
+    return $self->{sth}=$self->{dbh}->prepare($query);
+d149 2
+d152 1
+a152 1
+	return $self->{sth}->execute(@@params);
+d154 1
+a154 1
+	return $self->{sth}->execute;
+d156 2
+@
+
+
+1.4
+log
+@Fixes...
+@
+text
+@d50 1
+d58 1
+a58 1
+    $self->{STH}->finish if ($self->{STH});
+d60 1
+a60 1
+    delete $self->{STH};
+d71 1
+a71 1
+    my $sth = $self->{dbh}->prepare($query);
+a72 1
+    $self->{STH}=$sth;
+d85 2
+a86 2
+	my $self=shift;
+	return $self->{STH}->rows;
+d92 1
+a92 1
+  return $self->{STH}->fetchrow_hashref;
+d104 2
+a105 2
+  my $sth = $self->{dbh}->prepare("$query");
+  $sth->execute;
+a120 1
+
+d122 1
+a122 1
+	my $sth=$self->{dbh}->prepare($query);
+a129 1
+
+d139 1
+a139 1
+    return $self->{STH}=$self->{dbh}->prepare($query);
+d146 1
+a146 1
+	return $self->{STH}->execute(@@params);
+d148 1
+a148 1
+	return $self->{STH}->execute;
+d157 1
+a157 1
+     $self->{dbh}->do($query,undef,@@binds);
+d159 1
+a159 1
+     $self->{dbh}->do($query);
+d286 1
+a286 1
+    my $output = qq{<OPTION VALUE="--">Please Choose an Company};
+d292 2
+a293 2
+	$output.="<OPTION ";
+	$output.="SELECTED " if ($id eq $option);
+d295 1
+a295 1
+	$output.=qq{VALUE="$id">$name\n};
+d301 23
+d328 1
+@
+
+
+1.3
+log
+@Addition of User object
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 1999 Efirms, Inc.
+a16 1
+#* 1.10       09-20-2000    garyc     Renamed from SQL.pm
+a178 16
+sub get_two_array { # Return a hash representing a ID,VAL type table
+  my ($self,$statement)=@@_;
+  my %hashref=();
+  
+  # Query the database
+  my $query = $self->run_query($statement);
+
+  # Build hash of data from the database
+  while (my ($id,$cat)=$query->fetchrow_array) {
+    $hashref{$id}=$cat;
+  }
+
+  # Spit it back
+  return %hashref;
+}
+
+d289 1
+a289 1
+    my $sth = $self->{dbh}->prepare("SELECT id,name,division FROM customers");
+d293 1
+a293 1
+	my ($id,$name,$division)=($row[0] || '', $row[1] || '', $row[2] || '');
+d296 1
+a296 1
+	$name.=" ($division)" if ($division);
+d301 1
+a301 1
+}   
+d303 4
+@
+
+
+1.2
+log
+@You can now insert customers into the database... minus locking, but for the moment, I doubt we'll be inserting more than one customer at a time.
+@
+text
+@d302 6
+d309 10
+@
+
+
+1.1
+log
+@Okay, this is the working version, migrated to MySQL
+@
+text
+@d115 39
+a301 2
+sub add_customer {
+    my ($self)=shift;
+a302 7
+    my $sth=$self->{dbh}->prepare("INSERT INTO CUSTOMERS (INDUSTRYID,NAME,DIVISION,MAILINGADDRESSONE,MAILINGADDRESSTWO,CITY,STATEID,ZIP,EIN,COSTCUSTOMERCODE,SUPERCUSTOMER,LOGOFILE) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+
+  my ($name,$division,$mailone,$mailtwo,$city,$state,$zip,$ein,$costcode,$supcust,$logofile)=@@_;
+  
+
+
+}
+@
+

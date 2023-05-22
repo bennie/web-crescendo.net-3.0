@@ -1,0 +1,2953 @@
+head	1.69;
+access;
+symbols
+	initial:1.1.1.1 DCI:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.69
+date	2002.03.04.22.42.06;	author bennie;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2002.02.12.22.02.28;	author bennie;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2002.02.11.21.17.22;	author bennie;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2002.02.11.20.26.53;	author bennie;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2002.02.07.20.11.17;	author bear;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2002.02.04.18.41.00;	author bear;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2002.02.01.18.52.10;	author bear;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2002.01.29.17.34.52;	author bear;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2002.01.23.20.52.31;	author bennie;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2002.01.23.19.21.03;	author bear;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2002.01.23.01.02.04;	author bear;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2002.01.23.00.43.49;	author bear;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2002.01.20.04.59.48;	author bear;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2002.01.18.16.46.04;	author bennie;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2002.01.16.23.51.04;	author bear;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2002.01.16.18.11.23;	author bear;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2002.01.15.16.57.33;	author bennie;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2002.01.11.16.41.27;	author bennie;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2002.01.10.19.45.48;	author bennie;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2001.11.16.22.00.03;	author bear;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2001.11.15.21.50.00;	author bear;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2001.11.13.19.43.28;	author bear;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2001.11.06.20.13.45;	author binky;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2001.11.05.21.28.51;	author binky;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2001.11.05.21.25.24;	author binky;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2001.11.05.20.19.44;	author binky;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2001.11.05.17.43.02;	author binky;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2001.11.01.21.41.39;	author binky;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2001.10.16.21.07.12;	author bear;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2001.10.16.16.04.43;	author bear;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2001.09.06.14.25.24;	author bear;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2001.09.04.20.25.19;	author bear;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2001.08.24.15.07.33;	author bear;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2001.08.24.14.48.53;	author bear;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2001.08.23.20.16.43;	author bear;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2001.08.23.16.25.17;	author bear;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2001.08.09.19.57.29;	author binky;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2001.07.20.17.59.13;	author binky;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2001.07.20.17.24.32;	author binky;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.07.20.17.00.46;	author binky;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.07.17.17.49.29;	author binky;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.07.13.15.40.07;	author bear;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.07.12.20.44.37;	author bear;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.07.12.14.52.10;	author bear;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.07.11.17.43.47;	author binky;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.07.11.17.17.27;	author binky;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.07.11.15.58.42;	author bear;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.07.10.21.02.49;	author binky;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.07.10.20.13.07;	author binky;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.07.10.19.41.37;	author binky;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.07.10.15.39.00;	author binky;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.07.10.15.21.19;	author bear;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.07.09.16.29.02;	author binky;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.07.05.20.48.17;	author binky;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.07.05.19.35.36;	author binky;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.07.05.19.19.38;	author binky;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.07.05.19.16.37;	author bear;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.07.05.14.46.02;	author bear;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.07.05.14.29.51;	author binky;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.07.03.18.47.20;	author binky;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.07.03.18.32.48;	author binky;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.06.29.14.36.00;	author bear;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.06.28.21.37.47;	author bear;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.06.28.20.28.47;	author binky;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.06.27.20.22.01;	author binky;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.06.20.18.23.12;	author bear;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.06.20.16.19.04;	author binky;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.06.19.16.48.21;	author binky;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.29.13.03.27;	author bear;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.05.29.13.03.27;	author bear;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.69
+log
+@Now with a non-tempalte login box.
+@
+text
+@#*************************************************************************
+
+=head1 Display.pm (PerlServer::Display)
+
+=head1
+
+=head2 GENERAL INFO:
+
+Core PerlServer Display Engine
+
+  SYSTEM:      PerlServer Page Template Module
+  SUBSYSTEM:   Web Pages
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+               Diversified Consulting, Inc.
+
+=cut
+
+#*************************************************************************
+
+=head1 USAGE:
+
+=head2 Display Creation
+
+The Display obeject is instanced in the usual method of object 
+oriented perl:
+
+  my $display = new Display($pointers);
+  
+Normally in perlserver this is not necessary since the Display is 
+automatically instanced in Pages.pm for all pages. The handles is then stored
+in $self->{display}.
+
+=head2 Display Redirect
+
+One of the two output methods of the Display is to point to another
+location. This parses to a HTTP redirect. Handy for failed logins, etc.
+Syntax is as follows:
+
+  $display->loadnext($where)
+
+$where represents the URL that the browser is directed to.
+
+=head2 Display Output
+
+The main output method is for the progressive assembly and siaply of an output
+page. It is a series of staged commands, summarized:
+
+  $display->prepare($sid)
+  $display->set_style($style)
+  $display->start
+  $display->output || $display->shit_out
+  $display->finish
+
+=item $display->prepare($sid)
+
+This prepares the display object so it can gater pertinant information from
+the session and other locations. (Hence the need for $sid, the session id)
+
+=item $display->set_style($style)
+
+This allows the Display to load one of a number of styles that will change
+the look of the output. You must set a style or a compile error will occur
+on later steps. If you are not sure what to set, use 'Generic' as the style.
+
+=item $display->start
+
+This puts out all headers and other possible display data ahead of the body
+of the page to help in stages output. This is the first function that actually
+deliveres data to the end display.
+
+=item $display->output, $display->shit_out
+
+Both of these functions dump data directly to the display. 
+
+=item $display->finish
+
+Prints all footer information as deemed by the chosen Style and closes the 
+display.
+
+An interesting shortcut is that due to most of the instancing functions being
+called with little or no modification, a subroutine containing all of these
+calls is stored in the pages object for your convienience. Thusly, the 
+following:
+
+  $display->prepare($sid)
+  $display->set_style($style)
+  $display->start
+
+can be replaced with:
+
+  $self->_preparations($style);
+  
+from within any page that instances the Page object.
+  
+=head1 SPOOKY VOODOO STUFF:
+
+=cut
+
+# Basic Pragmas
+use HTML::Template;
+use PerlServer::Display::Widgets;
+use strict;
+
+# Define Package Namespace
+package PerlServer::Display;
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+
+# Create the constructor
+sub new { # Generic / Heritable
+  my $class = shift @@_;
+  my $self  = { };
+  bless ( $self, $class );
+  $self->_init(@@_);  # Call initialization routine with remains
+  return $self;
+}
+
+sub _init { # Perform initialization
+  my $self           = shift @@_;
+  $self->{pointers}  = shift @@_;
+
+  # Update self with local copies from pointers
+  eval &{$self->{pointers}->{name_dump}};
+
+  our $d_input = $self->{display_input} = {};
+  our $d       = $self->{display_vars}  = {};
+
+  $d->{color}->{hue1} = '#3366CC';
+
+  $d->{color}->{table}->{border}         = '#000000';
+  $d->{color}->{table}->{cell}           = '#FFFFFF';
+  $d->{color}->{table}->{header}         = '#999999';
+  $d->{color}->{table}->{title}->{cell}  = '#000000';
+  $d->{color}->{table}->{title}->{text}  = '#FFFFFF';
+  $d->{color}->{accounting}->{negative}  = '#FF0000';
+  $d->{color}->{accounting}->{posative}  = '#000000';
+  
+  # Colors for encasement tables, menustyles, and other things
+  # bear's color stuff
+  $d->{color}->{table}->{encase_bgcolor} = '#CCCCCC'; 
+  $d->{color}->{menubar}->{lowlight}     = '#CCCCCC';
+  $d->{color}->{menubar}->{highlight}    = '#EEEEEE';        
+  $d->{color}->{messages}->{error}       = '#FF0000'; 
+
+  $d->{image_prefix} = '/images/';
+  $d->{css_prefix}   = '/styles/';
+  
+  # export the populated $self to $display
+  
+  $self->{pointers}->{display} = $self;
+
+  our $format  = new PerlServer::Display::Format  ($self->{pointers});
+  our $utils   = new PerlServer::Display::Utils   ($self->{pointers});
+  our $widgets = new PerlServer::Display::Widgets ($self->{pointers});
+
+  $d->{start_table} = $self->start_table;
+  $d->{end_table}   = $self->end_table;
+
+  # Bear's miraculous autoindenting output
+  $self->{autoindent}    = 0;
+  $self->{currentindent} = 0;
+}
+
+# The destructor
+sub DESTROY {
+    my $self = shift @@_;
+}
+
+# Voodoo here
+
+=item AUTOLOAD()
+
+The Display object has a lot of handy dandy functions for the visual format
+and manipulation of data. They do not exist in the actual Display.pm.
+Calls for them are captured via the AUTOLOADER construct and are are 
+routed to Display::Widgets. For more information on those utils, perldoc
+the Widgets module.
+
+=cut
+
+sub AUTOLOAD {
+  my $self = shift @@_;
+  my $name = our $AUTOLOAD;
+     $name =~ /.*::(.*?)$/;
+
+  our $log->debug("AUTOLOAD Captured call for $1 ($name)");
+
+  my $params = \@@_;
+  my $err    = "\n";
+
+  my $ret = undef;
+  my $val = undef;  
+  
+  ($ret,$val) = $self->_method_test( 'Style Module',    '$self->{sub_module}', $1, $params );
+  if ( $ret == 1 ) { return $self->_parse($val) } else { $err .= $val };
+  
+  ($ret,$val) = $self->_method_test( 'Display::Format', 'our $format',         $1, $params );
+  if ( $ret == 1 ) { return $self->_parse($val) } else { $err .= $val };
+
+  ($ret,$val) = $self->_method_test( 'Display::Utils',  'our $utils',          $1, $params );
+  if ( $ret == 1 ) { return $self->_parse($val) } else { $err .= $val };
+ 
+  ($ret,$val) = $self->_method_test('Display::Widgets', 'our $widgets',        $1, $params );
+  if ( $ret == 1 ) { return $self->_parse($val) } else { $err .= $val };
+  
+  $log->debug("AUTOLOAD ROUTING FAILED! $err");
+  die "No where to Autoload call for $1 ($name)";
+}
+
+sub _method_test {
+  my $self   = shift @@_;
+  my $name   = shift @@_;
+  my $ref    = shift @@_;
+  my $call   = shift @@_;
+  my $params = shift @@_;
+
+  our $log->debug("AUTOLOAD trying: eval ". $ref.'->'.$call.'(@@$params)');
+  my @@ret = ( eval $ref.'->'.$call.'(@@$params)' );
+
+  return ( 0, "$name : $@@\n" ) if $@@;
+
+  $log->debug("AUTOLOAD Sent to $name");
+  return ( 1, \@@ret );
+}
+
+sub _parse {
+  my $self = shift @@_;
+  my $ref  = shift @@_;
+
+  if ( scalar(@@$ref) < 2 ) {
+    return @@$ref[0] || undef; 
+  } else {
+    return @@$ref;
+  }
+}
+
+###
+### "Exported" Functions
+###
+
+### special case, internal 'redirect'
+
+sub loadnext {
+  my $self = shift @@_;
+  return our $apache_ref->print(
+           our $cgi->redirect(-location=>shift @@_)
+         );
+}
+
+### preps for output
+
+sub prepare {
+  my $self = shift @@_;
+
+  our $sid;
+  our $log->debug("Sending header w/SID of $sid");
+  our $apache_ref->print(our $cgi->header(
+                               -type=>'text/html',
+                               -cookie=>$cgi->cookie(-name=>'sid',-value=>$sid),
+                               -pragma=>'no cache',
+                               -expires=>'now'
+                              )
+                       );
+   return 1;
+}
+
+### sets stylistic parameters
+
+=over
+
+=item set_style()
+
+The ability to set style does some spooky stuff. It evals and instances other
+modules based upon user input. If said input does not match a real module
+or if the module is bad (also known as an "OOPS"), it will instance the
+Generic module.
+
+For more information on each style, perldoc the individual module. They are
+found in the Style subdirectory, IE:
+
+  PerlServer/Display/Style/Generic.pm
+
+=back
+
+=cut
+
+sub set_style {
+  my $self  = shift @@_;
+
+  my @@errors;
+
+  my $default = 'PerlServer::Display::Style::Generic';
+  my $style   = 'PerlServer::Display::Style::'.shift @@_;
+     $style   =~ m/(.*)/; # untaint
+
+  our $log->debug("Testing $1");
+
+  # Voodoo happens here
+  my $module = eval "require $1" ? $1 : $default;
+  push (@@errors,$@@) if $@@; # Bad voodoo - switch failed
+
+  $log->debug("Going with $module - I.E. running new() & pointer_dump()");
+
+  eval "require $module";
+  push ( @@errors, $@@ ) if $@@;
+  eval { $self->{sub_module} = $module->new($self->{pointers}) };
+  push ( @@errors, $@@ ) if $@@;
+  eval { $self->{sub_module}->priv_run(&{$self->{pointers}->{name_dump}}()) };
+  push ( @@errors, $@@ ) if $@@;
+
+  $log->debug(@@errors) if @@errors;
+
+  return 1;
+}
+
+### direct output access
+
+sub output {
+  my $self = shift @@_;
+  return $self->shit_out(@@_);
+}
+
+sub shit_out {
+  my $self = shift @@_;
+  our $log;
+  our $apache_ref;
+  my  @@input  = map((defined($_))? $_ : '', @@_);
+  my  @@output = (); 
+  
+  # Do we use Bear's Miraculous Autoindenter?
+  if ($self->{autoindent}) {
+  	#$log->debug("Bear's Miraculous Autoindenter! is active");
+  	
+  	for my $next_trick (@@input) {    
+  	      $next_trick =~ s/>([^<]*)?</>\n$1\n</g;
+  	      # Modify the input enough to start making it readable 
+  	      for my $other_trick ( split /\n/, $next_trick ) {
+  	      	next unless ($other_trick);
+  	      	
+  	      	if ($other_trick=~/<\/.*?>/ && $other_trick!~/<\/a>/) {
+  	      		$self->{currentindent}--;
+  	      	} 
+  	      	
+  	      	my $indentspace = " " x $self->{currentindent} || "";
+  	        push @@output,$indentspace.$other_trick."\n";	
+  	        
+  	        if ($other_trick=~/<[^\/]*?>/ && 
+  	            $other_trick!~/<[\?\!][^\/]*?>/ && 
+  	            $other_trick!~/<[^\?\!\/]*\/>/) {
+  	        	$self->{currentindent}++;
+  	        }
+  	      
+  	      }
+   	}
+  		
+  } else { # Or not... 
+  	@@output=@@input;
+  }
+
+  return $apache_ref->print(join '',@@output);
+}
+
+###
+### Internal utils (should not be exported eventually)
+###
+
+# Used to grab page information from the page_text table
+
+sub get_page {
+  my $self  = shift @@_;
+  my $name  = shift @@_;
+  my $param = shift @@_ || {};
+  our $d;
+  
+  # Fill out the common page templating variables
+  $param->{image_prefix} = $d->{image_prefix};
+  $param->{css_prefix}   = $d->{css_prefix};
+ 
+  our $log->debug("Getting pagetext - $name");
+  return $self->_get_template ($name,'page',$param);
+}
+
+sub get_template {
+	my $self  = shift @@_;
+	my $name  = shift @@_ || 'error';
+	my $param = shift @@_ || {};
+	
+	our $log->debug("Getting html - $name");
+	return $self->_get_template ($name,'html',$param);
+}
+
+sub get_bill {
+	my $self  = shift @@_;
+	my $name  = shift @@_ || 'error';
+	my $param = shift @@_ || {};
+	
+	our $log->debug("Getting bill template - $name");
+	return $self->_get_template ($name,'display',$param);
+}
+
+# load stated template from the DB
+
+sub _get_template {
+  my $self  = shift @@_;
+  my $name  = shift @@_ || 'error';
+  my $table = shift @@_ || 'page';
+  my $param = shift @@_ || {};
+
+  our $cgi;
+
+  if ($table eq 'bill') {
+  	$table = "bill_templates";
+  } elsif ($table eq 'page') {
+  	$table = 'pagetext';
+  }
+
+  our $log->debug("Getting Template - $table:$name");
+  my  $text = our $sql->get_single_result('template',$table,"name=?",$name);
+
+  if ($param) {
+  	
+  	my $plog = "$name parameters:";
+  	
+  	for my $next_trick ( keys %$param ) {
+  		my $tparam = $param->{$next_trick} || 'unknown';
+  		$plog.="[\"$next_trick\"=>\"$tparam\"] ";	
+  	}
+
+	$log->debug($plog);
+
+  	my $tmpl = new HTML::Template(
+        	die_on_bad_params => 0,
+               	scalarref         => \$text
+        );
+
+        $tmpl->param(%$param);
+        $text = $tmpl->output();
+  }
+
+  return $text || $cgi->center($cgi->p("Sorry, the requested page $name is not available.").$cgi->br());
+}
+
+# The Obligatory One
+1;
+
+__END__
+
+=head1 Documentation Author:
+
+ Phillip Pollard <binky@@bears.org>
+ Last edited 1/10/2001
+@
+
+
+1.68
+log
+@Now with the NEW table routine,
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d410 2
+a411 4
+  if ($table eq 'html') {
+  	$table = "html_templates";
+  } elsif ($table eq 'display') {
+  	$table = 'display_templates';
+@
+
+
+1.67
+log
+@I do believe that Display is properly seperated now.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+a142 5
+         
+  $d->{start_table} = "<table border='0' bgcolor='$d->{color}->{table}->{border}' cellpadding='0' "
+                    . "cellspacing='0'>\n<tr><td>\n<table border='0' "
+                    . "bgcolor='$d->{color}->{table}->{border}' cellpadding='5' cellspacing='1'>\n";
+  $d->{end_table}   = "</table>\n</td></tr>\n</table>\n";
+d154 3
+@
+
+
+1.66
+log
+@New multi-module Display auto loader.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d156 1
+d198 3
+@
+
+
+1.65
+log
+@Lots of stuff... mostly style and summary adjustments, and improvements
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d156 2
+a157 1
+  our $widgets = new PerlServer::Display::Widgets($self->{pointers});
+a184 1
+  my $ret;
+d188 2
+a189 1
+  my $dbg = "AUTOLOAD TestRouting $1 to Style Module:";
+d191 2
+a192 1
+  $ret = eval '$self->{sub_module}->'.$1.'(@@_)';
+d194 2
+a195 1
+  if ( $@@ ) {
+d197 5
+a201 10
+   $log->debug($dbg." Failed ->",$@@);
+   $dbg="AUTOLOAD TestRouting $1 to the widgets:";
+  
+   $ret = eval 'our $widgets->'.$1.'(@@_)';
+  
+   if ( $@@ ) {
+     $log->debug($dbg." Failed ->".$@@);
+   } else {
+     $log->debug("AUTOLOAD Widget contained $1 .");
+   }
+d203 26
+d230 2
+a231 6
+  
+   $log->debug($dbg." Done");
+  
+  } 
+   
+  return $ret;
+@
+
+
+1.64
+log
+@Giant commit that fixes so many bugs, that enumerating them would require lots of
+space, but... here goes:
+
+Numerous scalar/array problems in SQL.pm
+Import of updated site from Karim
+Changes to the styles.
+@
+text
+@d159 1
+a159 1
+  $self->{autoindent}    = 1;
+@
+
+
+1.63
+log
+@Updates for styles/widgets testing.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d397 1
+a397 1
+  my  $text = our $sql->get_single_result('template',$table,"name='$name'");
+@
+
+
+1.62
+log
+@Addition of the PSC contacts
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d159 1
+a159 1
+  $self->{autoindent}    = 0;
+d188 1
+a188 7
+  if ( $1 eq 'start' || $1 eq 'finish' ) {
+
+    $log->debug("AUTOLOAD Routing $1 to style module.");
+    $ret = eval '$self->{sub_module}->'.$1.'(@@_)';
+    if ($@@) {
+      $log->debug("AUTOLOAD go boom:",$@@);
+    }
+d190 15
+d206 6
+a211 9
+
+    $log->debug("AUTOLOAD Routing $1 to the widgets.");
+    $ret = eval 'our $widgets->'.$1.'(@@_)';
+    if ($@@) {
+      $log->debug("AUTOLOAD Widget load failed: ",$@@,'???');
+    }
+
+  }
+  return $ret
+d312 1
+d314 1
+a314 1
+  	      for my $other_trick ( split /</, $next_trick ) {
+a315 1
+  	      	$other_trick="<".$other_trick;
+d317 1
+a317 1
+  	      	if ($other_trick=~/<\/.*?>/) {
+@
+
+
+1.61
+log
+@Log now has better documentation and can be set to numeric level.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d159 1
+a159 1
+  $self->{autoindent}    = 1;
+@
+
+
+1.60
+log
+@Indenter
+@
+text
+@d3 1
+a3 1
+=head1 Display.pm
+d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d151 3
+a153 1
+
+d303 1
+a303 2
+
+  	$log->debug("Bear's Miraculous Autoindenter! is active");	
+@
+
+
+1.59
+log
+@Fixes, wouldn't compile... stupid laptop ;)
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d301 2
+a302 1
+  	$log->debug("Bear's Miraculous Autoindenter! is active");
+d304 1
+a304 2
+  	for my $next_trick (@@input) {
+  	      
+d306 8
+a313 3
+  	      $next_trick=~s/\>\</\>\n\</g;
+  	      for my $other_trick ( split /\n/, $next_trick ) {
+  	      	$self->{currentindent}-- if ($other_trick=~/<\/.*?>/);
+a315 1
+  	        $self->{currentindent}++ if ($other_trick=~/<[^\/]*?>/);
+d317 6
+d324 1
+a324 2
+ 
+  	}
+@
+
+
+1.58
+log
+@Cleaned up some code, minor refactors
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d139 1
+a139 1
+  $d->{color}->{table}->{encase_bgcolor} = '#CCCCCC'; '
+@
+
+
+1.57
+log
+@The magic indenting output (can be turned off easily, it's in shit_out)
+it is still kinda flakey, but better'n nothing.
+
+Stable INTERNAL.PM style.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d129 15
+a143 8
+  $d->{color}->{table}->{border}        = '#000000';
+  $d->{color}->{table}->{cell}          = '#FFFFFF';
+  $d->{color}->{table}->{header}        = '#999999';
+  $d->{color}->{table}->{title}->{cell} = '#000000';
+  $d->{color}->{table}->{title}->{text} = '#FFFFFF';
+  $d->{color}->{accounting}->{negative} = '#FF0000';
+  $d->{color}->{accounting}->{posative} = '#000000';
+
+@
+
+
+1.56
+log
+@display_input and display_vars have been moved from psession and $self (page) to exist in display. See bug #21 for more information.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d149 3
+d287 28
+a314 1
+  return our $apache_ref->print(join '', map((defined($_))? $_ : '', @@_));
+@
+
+
+1.55
+log
+@Implemented most of the non-logged in website from Karim, including
+External Styles
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d124 2
+a125 1
+  $self->{pointers}->{display_vars}->{color}->{hue1} = '#3366CC';
+d127 1
+a127 1
+  our $d = $self->{pointers}->{display_vars};
+@
+
+
+1.54
+log
+@Migration towards Karim's design, initial splashpage converted.
+@
+text
+@d332 2
+d365 1
+a365 1
+  return $text;
+@
+
+
+1.53
+log
+@New style based titleing through a display_input method in the session that is now auto clearing. Whee!
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d293 9
+a301 3
+  my $self = shift @@_;
+  my $name = shift @@_;
+
+d303 1
+a303 1
+  return $self->_get_template ($name);
+d318 1
+a318 1
+	my $param = shift @@_ || undef;
+d330 1
+a330 1
+  my $param = shift @@_ || undef;
+@
+
+
+1.52
+log
+@Now the sidebar works.
+@
+text
+@d9 1
+a9 1
+Core PerlServer Engine
+d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+@
+
+
+1.51
+log
+@An epiphany!
+
+Any information that would have occurred via the query and set param modules can occur more safely via checks in the session data structure. Thusly these two display steps are depreciated. All of it should be removed and all POD docs updated by this commit.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+a15 5
+=head2 MODIFICATION HISTORY:
+
+  VERSION    DATE          NAME      COMMENTS
+  1.00       06-19-2001    bennie    Based on Pages.pm via the cp utility
+
+d106 1
+a106 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d141 2
+@
+
+
+1.50
+log
+@Refactor, documentation...
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+a54 1
+  $display->set_params( eval $display->query_params )
+a69 5
+=item $display->set_params( eval $display->query_params )
+
+This allows the display object to inspect the local environment variables
+by executing custom code in the current namespace.
+
+a91 1
+  $display->set_params( eval $display->query_params )
+d111 1
+a111 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d178 1
+a178 2
+  if ( $1 eq 'query_params' || $1 eq 'set_params' ||
+       $1 eq 'start'        || $1 eq 'finish' ) {
+d371 1
+a371 1
+ Last edited 11/06/2001
+@
+
+
+1.49
+log
+@Modifications.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d118 1
+a118 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d349 3
+a351 1
+  	$log->debug("$name parameters to follow -->");
+d354 1
+a354 1
+  		$log->debug("$name params: $next_trick is $tparam");
+d356 2
+@
+
+
+1.48
+log
+@Giving you some refactoring, and slowly moving SQL into SQL.
+@
+text
+@d294 1
+a294 1
+  return our $apache_ref->print(join '', @@_);
+d351 2
+a352 1
+    		$log->debug("$name params: $next_trick is $$param{$next_trick}");
+@
+
+
+1.47
+log
+@Fixed the autho line and the FUNCTIONS name in the POD.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+  my $display = new Display;
+d118 1
+a118 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+@
+
+
+1.46
+log
+@End token for everything in POD as well as full docs for Display.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d118 1
+a118 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d371 1
+a371 1
+=pod
+d373 2
+a374 1
+Documentation last edited 11/05/2001 by Phil
+@
+
+
+1.45
+log
+@First pass Doc
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d118 1
+a118 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d371 1
+a371 1
+=pod 
+d373 1
+a373 1
+Documentation last edited 11/5/2001 by Phil@
+
+
+1.44
+log
+@Functions are now PODed
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d25 1
+a25 1
+=head1 FUNCTIONS:
+d27 75
+a101 1
+=cut
+d103 5
+a107 1
+# $obj->loadnext($where)
+d109 1
+a109 7
+# $obj->prepare($sid)
+# $obj->set_style($style)
+# $obj->query_params
+# $obj->set_params
+# $obj->start
+# $obj->output || $obj->shit_out
+# $obj->finish
+d118 1
+a118 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+a120 5
+
+=item new()
+
+=cut
+
+a128 5
+
+=item _init()
+
+=cut
+
+a160 5
+
+=item DESTROY()
+
+=cut
+
+d169 6
+a211 4
+=item loadnext()
+
+=cut
+
+a220 4
+=item prepare()
+
+=cut
+
+d238 2
+d242 12
+a286 4
+=item output()
+
+=cut
+
+a291 4
+=item shit_out()
+
+=cut
+
+a302 4
+=item get_page()
+
+=cut
+
+a310 5
+
+=item get_template()
+
+=cut
+
+a319 5
+
+=item get_bill()
+
+=cut
+
+a330 4
+=item _get_template()
+
+=cut
+
+d366 4
+d371 1
+d373 1
+a373 2
+# The Obligatory One
+1;
+@
+
+
+1.43
+log
+@Perldoc Flowerboxes.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d25 4
+d46 1
+a46 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d49 5
+d62 5
+d99 5
+d109 5
+d148 5
+d161 5
+d182 5
+d217 5
+d226 5
+d241 5
+d254 5
+d268 5
+d283 5
+@
+
+
+1.42
+log
+@New test of Admin stuff.
+@
+text
+@d2 21
+a22 18
+#*
+#* FILE:        Display.pm
+#*
+#* DESCRIPTION: Core PerlServer Engine
+#*
+#* SYSTEM:      PerlServer Page Template Module
+#*
+#* SUBSYSTEM:   Web Pages
+#*
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+#*              Diversified Consulting, Inc.
+#*
+#* MODIFICATION HISTORY:
+#*
+#* VERSION    DATE          NAME      COMMENTS
+#*
+#* 1.00       06-19-2001    bennie    Based on Pages.pm via the cp utility
+#*
+d42 1
+a42 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+@
+
+
+1.41
+log
+@All kinds of stuff... mainly conversion over to the newschool coding.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d39 1
+a39 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d198 2
+a199 2
+	my $self = shift @@_;
+	my $name = shift @@_ || 'error';
+d207 2
+a208 2
+	my $self = shift @@_;
+	my $name = shift @@_ || 'error';
+@
+
+
+1.40
+log
+@Fixes to caching and SIDs
+@
+text
+@d137 1
+a137 1
+                               -pragma=>"no cache",
+@
+
+
+1.39
+log
+@Enjoy!  Bills now largely substitute from database data
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d39 1
+a39 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d137 2
+a138 1
+                               -pragma=>"no cache"
+@
+
+
+1.38
+log
+@Changes to allow eventual caching of descendents of COST::Table, to reduce database access, and to support substitions of bills.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d39 1
+a39 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d66 2
+@
+
+
+1.37
+log
+@I couldn't get enough of that barky,whiny bitch.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d39 1
+a39 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d198 4
+d203 7
+a209 1
+	return $self->_get_template ($name,'html',$param);
+d221 2
+a222 2
+  } elsif ($table eq 'input') {
+  	$table = 'input_templates';
+d242 1
+a242 1
+        $text = $tmpl->output;
+@
+
+
+1.36
+log
+@I pulled my dick out of the pooch.
+@
+text
+@d191 1
+a191 1
+  return our $sql->get_template($name);
+d194 7
+d203 1
+a203 1
+sub get_template {
+d210 1
+a210 1
+  	$table = "html_template";
+d220 10
+a229 12
+#  $log->debug("$name parameters to follow -->");
+#  for my $next_trick ( keys %$param ) {
+#    $log->debug("$name params: $next_trick is $$param{$next_trick}");
+#  }
+#
+#  my $tmpl = new HTML::Template(
+#               die_on_bad_params => 0,
+#               scalarref         => \$text
+#             );
+#
+#         $tmpl->param(%$param);
+#  return $tmpl->output;
+d231 5
+a235 1
+   return $text;
+d237 1
+@
+
+
+1.35
+log
+@Admin bug fixes, start of bill insertion from web client, and initial BillInstance code.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d39 1
+a39 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d199 1
+a199 1
+  my $table = shift @@_ || 'html';
+d206 2
+@
+
+
+1.34
+log
+@Fixed to use the new database fields.
+@
+text
+@d50 1
+a50 1
+sub _init { # Perform initialization 
+d56 1
+a56 1
+  
+d60 1
+a60 1
+  
+d66 1
+a66 1
+  
+d74 1
+a74 1
+  
+d76 1
+a76 1
+  
+d78 1
+a78 1
+  
+d88 2
+a89 2
+     $name =~ /.*::(.*?)$/;  
+  my $ret;  
+d93 3
+a95 3
+  if ( $1 eq 'query_params' || $1 eq 'set_params' || 
+       $1 eq 'start'        || $1 eq 'finish' ) {   
+  
+d101 1
+a101 1
+    
+d109 1
+a109 1
+    
+d129 1
+a129 1
+  
+d131 1
+a131 1
+  our $log->debug("Sending header w/SID of $sid");  
+d144 1
+a144 1
+  
+d150 1
+a150 1
+      
+d152 1
+a152 1
+    
+d154 1
+a154 1
+  my $module = eval "require $1" ? $1 : $default;     
+d158 1
+a158 1
+  
+d165 1
+a165 1
+  
+d191 1
+a191 1
+  return our $sql->get_single_result('body','template',"name='$name'");
+d198 2
+a199 1
+  my $name  = shift @@_;
+d202 4
+a205 6
+  our $log->debug("Getting Template - $name");
+  my $text = our $sql->get_single_result('template','html_templates',"name='$name'");
+  
+  $log->debug("$name parameters to follow -->");
+  for my $next_trick ( keys %$param ) {
+    $log->debug("$name params: $next_trick is $$param{$next_trick}");
+a206 5
+  
+  my $tmpl = new HTML::Template(
+               die_on_bad_params => 0,
+               scalarref         => \$text
+             );
+d208 17
+a224 2
+         $tmpl->param(%$param);  
+  return $tmpl->output;
+@
+
+
+1.33
+log
+@Now the summary page cleanly handles agents.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d39 1
+a39 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d191 1
+a191 1
+  return our $sql->get_single_result('body','pagetext',"name='$name'");
+@
+
+
+1.32
+log
+@Widgets work now.
+@
+text
+@d9 1
+a9 1
+#* SUBSYSTEM:   Web Pages - $Date: 2002/04/20 19:09:38 $
+d11 2
+a12 1
+#* COPYRIGHT:   (C) 2000 
+d39 1
+a39 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d91 1
+a91 1
+  our $log->debug("AUTOLOAD caught call for $1 ($name)");
+d96 1
+a96 1
+    $log->debug("AUTOLOAD is routing $1 to style module.");
+d104 1
+a104 1
+    $log->debug("AUTOLOAD routing $1 to the widgets.");
+d107 1
+a107 1
+      $log->debug("AUTOLOAD widget load failed: ",$@@,'???');
+@
+
+
+1.31
+log
+@Test.
+@
+text
+@d9 1
+a9 1
+#* SUBSYSTEM:   Web Pages - $Date: 2002/04/20 19:09:38 $
+d38 1
+a38 1
+$PerlServer::Display::VERSION = '$Revision: 1.1 $';
+d73 2
+a74 1
+  $self->{widgets} = new PerlServer::Display::Widgets($self->{pointers});
+a80 6
+    # Do everything possible to prevent memory leaks
+    for my $next_trick (@@{$self->{pointers}->{names}}) {
+      delete $self->{$next_trick};
+    }
+    delete $self->{start_table};
+    delete $self->{end_table};
+a85 2
+
+  my $ret;  
+d88 1
+d90 1
+a90 1
+  our $log->debug("AUTOLOAD rerouting call for $1 ($name)");
+d96 1
+a96 1
+    $ret = eval $self->{sub_module}->$1();
+a98 3
+      return 0;
+    } else {
+      return $ret;
+d104 1
+a104 1
+    $ret = eval $self->{widgets}->$1(@@_);
+d106 1
+a106 4
+      $log->debug("AUTOLOAD widget load failed:",$@@);
+      return 0;
+    } else {
+      return $ret;
+d110 1
+@
+
+
+1.30
+log
+@Well. I figured out how to import the our() routines of named pointers. Now to split stuff out to Widget and Utils.
+@
+text
+@d38 1
+a38 1
+$PerlServer::Display::VERSION = '$revision$';
+d54 1
+a54 5
+  for my $next_trick (@@{$self->{pointers}->{names}}) {
+    my $string = 'our $'.lc($next_trick).' = $self->{pointers}->{$next_trick}';
+    eval $string;
+    $self->{pointers}->{Log}->debug("OUR: $string (error:$@@)");
+  }
+d56 3
+a58 3
+  my $d = $self->{pointers}->{display_vars} = {};
+  
+  $d->{color}->{hue1} = '#3366CC';
+@
+
+
+1.29
+log
+@Style is now in it's own tree and loaded cleanly.
+@
+text
+@d9 1
+a9 1
+#* SUBSYSTEM:   Web Pages
+d33 1
+d60 18
+a77 1
+  $self->{color}->{hue1} = '#3366CC';
+a78 10
+  $self->{color}->{table}->{border}        = '#000000';
+  $self->{color}->{table}->{cell}          = '#FFFFFF';
+  $self->{color}->{table}->{header}        = '#999999';
+  $self->{color}->{table}->{title}->{cell} = '#000000';
+  $self->{color}->{table}->{title}->{text} = '#FFFFFF';
+  
+  $self->{start_table} = "<table border='0' bgcolor='$self->{color}->{table}->{border}' cellpadding='0' "
+                       . "cellspacing='0'>\n<tr><td>\n<table border='0' "
+                       . "bgcolor='$self->{color}->{table}->{border}' cellpadding='5' cellspacing='1'>\n";
+  $self->{end_table} = "</table>\n</td></tr>\n</table>\n";
+d95 2
+a96 1
+  
+d98 2
+a99 2
+     $name =~ /.*::(.*?)$/;
+  
+d101 3
+d105 9
+a113 5
+  my $ret = eval $self->{sub_module}->$1();
+  
+  if ($@@) {
+    $log->debug("AUTOLOAD go boom:",$@@);
+    return 0;
+d115 10
+a124 1
+    return $ret;
+d171 1
+a171 1
+  $log->debug("Going with $module");
+d174 5
+a178 3
+  push (@@errors,$@@) if $@@;
+  eval {$self->{sub_module} = $module->new($self->{pointers}) };
+  push (@@errors,$@@) if $@@;
+a231 276
+###
+### Widgets and other visualization dingbats
+###
+
+sub fancy_table {
+  my $self =   shift @@_;
+  my %in   = %{shift @@_};
+
+  our $cgi;
+
+  my $tbcol = $self->{color}->{table};
+  
+  our $log->debug("Building a fancy table...");
+  
+  my $c_border     = $in{color}{border}     ? $in{color}{border}     : $tbcol->{border};
+  my $c_cell       = $in{color}{cell}       ? $in{color}{cell}       : $tbcol->{cell};
+  my $c_header     = $in{color}{header}     ? $in{color}{header}     : $tbcol->{header};
+  my $c_title_cell = $in{color}{title_cell} ? $in{color}{title_cell} : $tbcol->{title}->{cell};
+  my $c_title_text = $in{color}{title_text} ? $in{color}{title_text} : $tbcol->{title}->{text};
+
+  my $columns = $in{columns} ? $in{columns} : 0; # If fales (0) defaults will be used or interpolated
+  my $fancy   = $in{fancy}   ? $in{fancy}   : 1; # Default it true (1) to look preety
+  my $title   = $in{title}   ? $in{title}   : 0; # No title bar if false (0)
+  my $width   = $in{width}   ? $in{width}   : 0; # False (0) means no width setting
+
+  # row subs
+  
+  my $row  = sub { return $cgi->Tr({-valign=>'top',-bgcolor=>$c_border}, @@_) };
+  my $cell = sub { return $cgi->td({-align=>'center',-bgcolor=>$c_cell}, @@_) };
+
+  my $title_row = sub { 
+                    my $cols = shift @@_;
+                    my $text = shift @@_;
+                    return $cgi->Tr({-valign=>'top',-bgcolor=>$c_title_cell},
+                             $cgi->td({-bgcolor=>$c_title_cell},
+                               $cgi->font({-color=>$c_title_text},$text)
+                             )
+                           );
+                  };
+  
+  # Table head
+  
+  $self->output( "<table border='0' bgcolor='$c_border' cellpadding='0' cellspacing='0'>"
+               . "<tr><td><table border='0' bgcolor='$c_border' cellpadding='5' cellspacing='1'"
+               . ( $width ? " width='$width'>" : '>' )
+               );
+  
+  # table body
+  
+  if ( ref($in{data}) eq 'HASH' ) {
+    my %data = %{ $in{data} };
+    
+    if ($columns == 0) {
+      for my $id ( keys %data ) {
+        my $width = scalar @@{$data{$id}};
+        $columns = $width if $width > $columns;
+      }
+    }
+    
+    $self->output(&$title_row($columns,$title)) if $title;  
+
+    for my $id ( sort keys %data ) {
+      my @@cells = map { &$cell($_) } @@{$data{$id}};
+      $self->output(&$row(@@cells));
+    }
+    
+  } elsif ( ref($in{data}) eq 'ARRAY' ) { # Array table output
+    my @@data = @@{$in{data}};
+    $columns = 3 if $columns == 0; # If no column input, make it 3 wide
+
+    $self->output(&$title_row($columns,$title)) if $title;  
+    
+    while (@@data) {
+      push my @@cells, &$cell( shift @@data );
+      for (my $i = 1; $i < $columns; $i++) {
+        push @@cells, &$cell( @@data ? shift @@data : '&nbsp;' );
+      }
+    $self->output(&$row(@@cells));
+    }
+  }
+  
+  # table foot
+  $self->output('</table></td></tr></table>');
+ 
+  return 1;
+}
+
+# Submit button style form
+sub simple_form {
+  my $self = shift @@_;
+  my $url  = shift @@_;
+  my $name = shift @@_ || 'Do';
+  
+  return our $cgi->start_form(-method=>'POST',-action=>$url)
+            .$cgi->submit($name)
+            .$cgi->end_form();
+}
+
+# Old array based table
+sub table {
+  my $self =    shift @@_;
+  my %in   = %{ shift @@_ };
+
+  our $cgi;
+      
+  my $columns = $in{columns} ? $in{columns} : 3;
+  my @@data    = $in{data}    ? @@{$in{data}} : ('No Data', 'No Data', 'No Data');
+  
+  my @@table_rows;
+  while (@@data) {
+    push my @@table_cells, $cgi->td({-align=>'center'}, shift @@data);
+    for (my $i = 1; $i < $columns; $i++) {
+      push @@table_cells, $cgi->td({-align=>'center'},
+       (@@data ? shift @@data : '&nbsp;')
+      );
+    }
+    push @@table_rows, $cgi->Tr(@@table_cells);
+  }
+
+  return $cgi->table(@@table_rows);
+}
+
+
+# Given an array of hash pointers ID and NAME, and a web page, constructs a table with
+# apropriate anchors
+sub table_of_anchors {
+  my $self   = shift @@_;
+  my $anchor = shift @@_ || '/';
+  my $hash   = shift @@_ || [];
+
+  my @@data   = ();
+  our $cgi;
+
+    # Build tables
+  for my $next_trick (@@{$hash}) {
+    my ($id,$name)=($next_trick->{'ID'},$next_trick->{'NAME'});
+    push (@@data,$cgi->a({-href=>"$anchor/$id"},$name));
+  }
+
+  return $self->table( { columns=>4,data=>\@@data } );
+}
+
+###
+### Gary table methods:
+###
+
+# Build a table of modify, manage, and delete entries for a given "root" and name/id hash
+sub mmd_table {
+  my $self = shift @@_ || return (undef);
+  return $self->tri_table("Manage","Modify","Delete",@@_);
+}
+
+sub lmd_table {
+  my $self = shift @@_ || return (undef);
+  return $self->tri_table("Login","Modify","Delete",@@_);
+}
+
+sub cmd_table {
+  my $self = shift @@_ || return (undef);
+  return $self->bi_table("Modify","Delete",@@_);
+}
+
+sub amd_table {
+  my $self = shift @@_ || return (undef);
+  return $self->uni_table("Remove",@@_);
+}
+
+sub tri_table {
+  my $self = shift @@_ || return (undef);
+  my $op1  = shift @@_ || return (undef);
+  my $op2  = shift @@_ || return (undef);
+  my $op3  = shift @@_ || return (undef);
+  my $root = shift @@_ || "";
+  my $cl   = shift @@_ || [];
+  my $form = shift @@_ || $self->simple_form("/$root/AddNew","Add New");
+
+  our $cgi;
+
+  $self->output('<p><center>',$self->{start_table});
+
+  # Create a table to hold the information
+  for my $next_trick (@@{$cl}) {
+    my ($id,$name)=($next_trick->{'ID'},$next_trick->{'NAME'});
+
+    # build manage, modify and delete forms
+    my $first  = $self->simple_form("/$root/$op1/$id",$op1);
+    my $second = $self->simple_form("/$root/$op2/$id",$op2);
+    my $third  = $self->simple_form("/$root/$op3/$id",$op3);
+
+    $self->output(
+      $cgi->Tr(
+        $cgi->th({-bgcolor=>$self->{color}->{table}->{cell}},$name),
+        $cgi->td({-bgcolor=>$self->{color}->{table}->{cell}},$first),
+        $cgi->td({-bgcolor=>$self->{color}->{table}->{cell}},$second),
+        $cgi->td({-bgcolor=>$self->{color}->{table}->{cell}},$third)
+      )
+    );
+  }
+
+  $self->output($self->{end_table},'</center></p>'.$cgi->br());
+
+  # build new form
+  $self->output($cgi->center($form));
+
+  return 1;
+}
+
+sub bi_table {
+  my $self = shift @@_ || return (undef);
+  my $op1  = shift @@_ || return (undef);
+  my $op2  = shift @@_ || return (undef);
+  my $root = shift @@_ || "";
+  my $cl   = shift @@_ || [];
+  our $cgi;
+  
+  $self->output('<p><center>',$self->{start_table});
+
+  # Create a table to hold the information
+  for my $next_trick (@@{$cl}) {
+    my ($id,$name)=($next_trick->{'ID'},$next_trick->{'NAME'});
+
+    # build manage, modify and delete forms
+    my $first  = $self->simple_form("/$root/$op1/$id",$op1);
+    my $second = $self->simple_form("/$root/$op2/$id",$op2);
+
+    $self->output( 
+      $cgi->Tr(
+        $cgi->th({-bgcolor=>$self->{color}->{table}->{cell}},$name),
+        $cgi->td({-bgcolor=>$self->{color}->{table}->{cell}},$first),
+        $cgi->td({-bgcolor=>$self->{color}->{table}->{cell}},$second),
+      )
+    );
+  }
+
+  $self->output($self->{end_table},'</center></p>'.$cgi->br());
+
+    # build new form
+
+  $self->output($cgi->center($self->simple_form("/$root/AddNew","Add New")));
+
+  return 1;
+}
+
+sub uni_table {
+  my $self = shift @@_ || return (undef);
+  my $op1  = shift @@_ || return (undef);
+  my $root = shift @@_ || "";
+  my $cl   = shift @@_ || [];
+  my $form = shift @@_ || $self->simple_form("/$root/AddNew","Add New");
+  our $cgi;
+  
+  $self->output('<p><center>',$self->{start_table});
+
+  # Create a table to hold the information
+  for my $next_trick (@@{$cl}) {
+    my ($id,$name)=($next_trick->{'ID'},$next_trick->{'NAME'});
+
+    # build manage, modify and delete forms
+    my $first  = $self->simple_form("/$root/$op1/$id",$op1);
+
+    $self->output( 
+      $cgi->Tr(
+        $cgi->th({-bgcolor=>$self->{color}->{table}->{cell}},$name),
+        $cgi->td({-bgcolor=>$self->{color}->{table}->{cell}},$first),
+      )
+    );
+  }
+
+  $self->output($self->{end_table},'</center></p>'.$cgi->br());
+
+    # build new form
+
+  $self->output($cgi->center($form));
+
+  return 1;
+}
+@
+
+
+1.28
+log
+@Completed Agent Relationship management code...
+@
+text
+@d37 1
+a37 3
+
+# Set Versioning Information
+$PerlServer::Display::VERSION=1.0; # Sent out by Exporter
+d136 2
+a137 2
+  my $default = 'PerlServer::Display::Generic';
+  my $style   = 'PerlServer::Display::'.shift @@_;
+@
+
+
+1.27
+log
+@Changes to support customer agent administration, now the agent code
+shows a proper list of all addable as well as removable, modifyable, etc.
+code...
+@
+text
+@d371 1
+a371 1
+  return $self->tri_table("Remove","Modify","Delete",@@_);
+d446 34
+@
+
+
+1.26
+log
+@Significant improvements to the Contacts administration
+Changes to the use of templates...
+Fix of the "our" bug in the summary page
+@
+text
+@d378 1
+a378 1
+  my $op3  = shift @@_ || reutnr (undef);
+d381 1
+d384 1
+a384 1
+  
+d408 2
+a409 3
+    # build new form
+
+  $self->output($cgi->center($self->simple_form("/$root/AddNew","Add New")));
+@
+
+
+1.25
+log
+@New simple_table() widget.
+@
+text
+@d369 5
+@
+
+
+1.24
+log
+@New method of passing around parameters via 'our'
+@
+text
+@d56 1
+a56 1
+    my $string = 'our '.lc("\$$next_trick").' = $self->{pointers}->{$next_trick}';
+a170 21
+### Historic?
+###
+
+sub simple_template {
+  my $self = shift @@_;
+  my $file = shift @@_;
+  my %params = %{ shift @@_ } || ();
+  
+  # Go and get a Template of the splashpage
+  my $template = new HTML::Template(
+                   filename=>$file,
+                   die_on_bad_params=>0
+                 );
+
+  $template->param(%params);
+  
+  our $apache_ref->print($template->output);
+  return 1;
+}
+
+###
+d294 12
+d349 4
+d376 1
+d386 3
+a388 9
+    my $first  = $cgi->start_form(-method=>'POST',-action=>"/$root/$op1/$id")
+                .$cgi->submit("$op1")
+                .$cgi->end_form();
+    my $second = $cgi->start_form(-method=>'POST',-action=>"/$root/$op2/$id")
+                .$cgi->submit("$op2")
+                .$cgi->end_form();
+    my $third  = $cgi->start_form(-method=>'POST',-action=>"/$root/$op3/$id")
+                .$cgi->submit("$op3")
+                .$cgi->end_form();
+d404 1
+a404 6
+  $self->output( $cgi->center(
+                      $cgi->start_form(-method=>'POST',-action=>"/$root/AddNew")
+                     .$cgi->submit("Add New")
+                     .$cgi->end_form()
+		    )
+		  );
+d424 2
+a425 6
+    my $first  = $cgi->start_form(-method=>'POST',-action=>"/$root/$op1/$id")
+                .$cgi->submit("$op1")
+                .$cgi->end_form();
+    my $second = $cgi->start_form(-method=>'POST',-action=>"/$root/$op2/$id")
+                .$cgi->submit("$op2")
+                .$cgi->end_form();
+d440 1
+a440 6
+  $self->output( $cgi->center(
+                      $cgi->start_form(-method=>'POST',-action=>"/$root/AddNew")
+                     .$cgi->submit("Add New")
+                     .$cgi->end_form()
+		    )
+		  );
+@
+
+
+1.23
+log
+@The first step of agent code is to get if a customer is an agent or not...
+
+if customer->{fields}->{agent} is Y, then they are an agent.
+@
+text
+@d56 3
+a58 1
+    $self->{$next_trick} = $self->{pointers}->{$next_trick};
+d60 1
+a60 1
+
+a72 1
+
+d93 1
+a93 2
+  my $log  = $self->{Log};
+  $log->debug("AUTOLOAD rerouting call for $1 ($name)");
+d112 2
+a113 2
+  return $self->{apache_ref}->print(
+           $self->{CGI}->redirect(-location=>shift @@_)
+a119 2
+  my $sid  = $self->{sid};
+  my $cgi  = $self->{CGI};
+d121 8
+a128 8
+  $self->{Log}->debug("Sending header w/SID of $sid");
+  
+  $self->{apache_ref}->print($cgi->header(
+                                    -type=>'text/html',
+                                    -cookie=>$cgi->cookie(-name=>'sid',-value=>$sid),
+                                    -pragma=>"no cache"
+                                   )
+                            );
+a134 1
+  my $log   = $self->{Log};
+d142 1
+a142 1
+  $log->debug("Testing $1");
+d167 1
+a167 1
+  return $self->{apache_ref}->print(join '', @@_);
+d187 1
+a187 1
+  $self->{apache_ref}->print($template->output);
+d200 2
+a201 3
+  $self->{Log}->debug("Getting pagetext - $name");
+
+  return $self->{SQL}->get_single_result('body','pagetext',"name='$name'");
+d211 2
+a212 2
+  $self->{Log}->debug("Getting Template - $name");
+  my $text = $self->{SQL}->get_single_result('template','html_templates',"name='$name'");
+d214 1
+a214 1
+  $self->{Log}->debug("$name parameters to follow -->");
+d216 1
+a216 1
+    $self->{Log}->debug("$name params: $next_trick is $$param{$next_trick}");
+d236 2
+a237 2
+  my $cgi   = $self->{CGI};
+  my $log   = $self->{Log};
+d240 1
+a240 1
+  $log->debug("Building a fancy table...");
+d319 2
+a320 2
+  my $cgi = $self->{CGI};
+    
+d347 1
+a347 1
+  my $cgi    = $self->{CGI};
+d381 2
+a382 2
+  my $cgi  = $self->{CGI};
+
+d430 2
+a431 2
+  my $cgi  = $self->{CGI};
+
+@
+
+
+1.22
+log
+@Fancy table now works
+@
+text
+@d225 1
+a225 1
+               scalarref         => \$text                          
+@
+
+
+1.21
+log
+@Login errors functioning again via new style routines in the Login pseudo page.
+@
+text
+@d252 28
+a279 2
+  my $columns = $in{columns} ? $in{columns} : 3;
+  my $fancy   = $in{fancy}   ? $in{fancy}   : 1; 
+d282 8
+d291 8
+a298 1
+  } elsif ( ref($in{data}) eq 'ARRAY' ) {
+d300 3
+d305 1
+a305 1
+      push my @@table_cells, $cgi->td({-align=>'center'}, shift @@data);
+d307 1
+a307 3
+        push @@table_cells, $cgi->td({-align=>'center'},
+         (@@data ? shift @@data : '&nbsp;')
+        );
+d309 1
+a309 1
+    $self->shit_out($cgi->Tr(@@table_cells));
+d312 3
+d316 1
+@
+
+
+1.20
+log
+@Now the summary page actually works correctly. Property now has a preapre() function similar to db_get() on the other COST objects.
+@
+text
+@d113 1
+a113 1
+           $self->{cgi}->redirect(-location=>shift @@_)
+@
+
+
+1.19
+log
+@New property listing methods for Property.pm.
+@
+text
+@d61 5
+a65 3
+  $self->{color}->{table}->{border} = '#000000';
+  $self->{color}->{table}->{cell}   = '#FFFFFF';
+  $self->{color}->{table}->{header} = '#999999';
+d240 30
+a269 1
+  my $cgi = $self->{CGI};
+@
+
+
+1.18
+log
+@Fixes to the missing line, updated Table code, etc...
+@
+text
+@d234 8
+@
+
+
+1.17
+log
+@Menu bar now looks ok.
+@
+text
+@d288 5
+d319 46
+a369 1
+        $cgi->td({-bgcolor=>$self->{color}->{table}->{cell}},$third)
+@
+
+
+1.16
+log
+@Navigable pages. Damn!
+@
+text
+@d63 1
+a63 1
+  $self->{color}->{table}->{header} = '#CCCCCC';
+@
+
+
+1.15
+log
+@Matching the older colors.
+@
+text
+@d59 2
+@
+
+
+1.14
+log
+@get_page() is now in the display object. Will set it up to populate colors and font names eventually.
+
+there was a bug in sharedloader.pl ... fixed
+@
+text
+@d61 2
+a62 1
+
+@
+
+
+1.13
+log
+@Changes required for User Administration
+@
+text
+@d193 11
+@
+
+
+1.12
+log
+@Bugfixes, addition of variables to the Display functions.
+@
+text
+@d271 1
+a271 1
+  return $self->tri_table("Logins","Modify","Delete",@@_);
+@
+
+
+1.11
+log
+@Update?
+@
+text
+@d266 13
+d281 1
+a281 1
+  my $cgi     = $self->{CGI};
+d290 2
+a291 2
+    my $manage = $cgi->start_form(-method=>'POST',-action=>"/$root/Manage/$id")
+                .$cgi->submit("Manage")
+d293 2
+a294 2
+    my $modify = $cgi->start_form(-method=>'POST',-action=>"/$root/Modify/$id")
+                .$cgi->submit("Modify")
+d296 2
+a297 2
+    my $delete = $cgi->start_form(-method=>'POST',-action=>"/$root/Delete/$id")
+                .$cgi->submit("Delete")
+d303 3
+a305 3
+        $cgi->td({-bgcolor=>$self->{color}->{table}->{cell}},$manage),
+        $cgi->td({-bgcolor=>$self->{color}->{table}->{cell}},$modify),
+        $cgi->td({-bgcolor=>$self->{color}->{table}->{cell}},$delete)
+d310 1
+a310 1
+  $self->output($self->{end_table},'</center></p>');
+@
+
+
+1.10
+log
+@Now stuff is actually preety.
+@
+text
+@d115 1
+a115 1
+  my $sid  = shift @@_;
+@
+
+
+1.9
+log
+@Modularized init of sub-modules for display. The Init.pm module is now a shared library. (I didn't share Display because of potential autoloading loops) Also, mm_table is now 'preety'.
+@
+text
+@d59 4
+a62 1
+  $self->{start_table} = "<table border='0' bgcolor='#000000' cellpadding='1' "
+d64 1
+a64 1
+                       . "bgcolor='#FFFFFF' cellpadding='5' cellspacing='1'>\n";
+d287 8
+a294 2
+    $self->output( $cgi->Tr($cgi->th($name),$cgi->td($manage),
+			    $cgi->td($modify),$cgi->td($delete)));
+@
+
+
+1.8
+log
+@Some things are broken, but there was a bug in the last commit.  Customer as an object
+is out of whack at the moment, I'm working on it...
+@
+text
+@d58 6
+d73 2
+d267 1
+a267 1
+  $self->output("<center><table>");
+d288 1
+a288 1
+  $self->output("</table></center><p/>");
+@
+
+
+1.7
+log
+@Correction to the "output" method, was displaying scalar as sent value.
+@
+text
+@d252 42
+@
+
+
+1.6
+log
+@The new tempalte engine is functional. Works on the splash page. New laoder constructed. Templates pre-db go into dbload/tempaltes. Eventually the CoreTemplates directory will go byebye.
+@
+text
+@d150 1
+a150 1
+  return $self->shit_out($self,@@_);
+@
+
+
+1.5
+log
+@Welcome to the new school.
+
+I've got most of the engine running and the tranny too. I'll paint it purty later.
+
+Splash.pm illustrates the new method (albiet poorly). When you are creating a new page, you fondle your display object in the following manner:
+
+(Note that the display object is automagically created in the inherited _init and destroied in the inherited DESTROY functions)
+
+You either tell the display to move on to another module:
+
+  $ret = $self->{display}->loadnext($where_to_go);
+
+or you actually construct a display:
+
+  $ret = $self->{display}->prepare($sid);
+  $ret = $self->{display}->set_style($style);
+  $ret = $self->{display}->query_params;
+  $ret = $self->{display}->set_params;
+  $ret = $self->{display}->start;
+  $ret = $self->{display}->shit_out; # 'output' also functional
+  $ret = $self->{display}->finish;
+
+What they do:
+
+prepare()
+
+The prepare function notifies the browser of an incoming page and sets the $sid informationin a cookie.
+
+set_style()
+
+Set style does a whole bunch of keen stuff. Not the least of which is manipulating color and other stuff I have yet to implement.
+
+What it does do, is it initilizes a related Display submodule of the same name as the style. Said submodule contains the next four commands that are piped through the AUTOLOADER routine in the Display module.
+
+query_params()
+
+I don't have this quite yet. It will either return an array of parameters to be iterated over to grab local memory parameters and returned back via the set_params() function ... OR ... it will return a single anonymous subroutine to be evaled locallay and have output returned through set_params(). I will probably do the latter. At the moment, they do zilch.
+
+set_params()
+
+Takes the output of query_params() and does vodoo in the background. Though I have never been able to sucessfully and completely abstract a display, I kave now at least made it anonymous to the internal code.
+
+start()
+
+Now that the parameter information is loaded, we start the output to the browser. Any visual header is sent in this routine.
+
+shit_out() || output()
+
+A direct out to the browser. Any infomation assembled page-side that is particularly odd or whatnot can be put to the browser with this. Currently it goes directly through the apache handle, however, for future sanity, all output to the display should be through the display, thusly we have the 'shit_out' option.
+
+finish()
+
+This closes all output to the browser and finishes any visualizations that require closure or are footer-stuff.
+
+
+Ordering:
+
+Though I have the functions in a set order, the can be called out of order, mind you that several things are interdependant.
+
+shit_out() can be called at any time without initilization. However, if the prowser has not been prepare()ed, it will get quite confused. Generally if you shit out before you start() or after you finish() you get shit all over the place. Remember folks it's sit, shit, then wipe. There's a reason for the order. But if you really want to crap with your clothing on, go for it.
+
+query_params(), set_params(), start(), and finish() are all dependant on having the style set. Actually, that's an outright lie. If you don't set it, it will you the Generic style, which is the equivalent of getting TAB when you ordered Mt. Dew. So rememeber to do the Dew.
+
+You can skip set_params() and query_params() if you have a very simple page. Technically the most simple output is for you to prepare() the display and then just shit_out() all over it. Hopefully we're a little more civilized than that.
+
+
+More to come.
+@
+text
+@d186 1
+a186 1
+  my %param = %{ shift @@_ } || ();
+d191 5
+d201 1
+a201 1
+         $tmpl->param(%param);  
+@
+
+
+1.4
+log
+@Complete update of how the Admin.pm page works.  The old method was a nightmare of ifs within ifs, this one uses ifs only to call subroutines.  And, all of the variables important to be shared are done through attributes of the object instead of global variables.  Amazing how one's designs interally change to deal with things.
+
+Also added a Display function for automating the creation of the anchor tables using Phil's new table method.  Changed the returns of some of the COST::* utilities methods as well
+@
+text
+@d21 10
+d32 1
+d43 5
+a47 5
+    my $class = shift @@_;
+    my $self  = { };
+    bless ( $self, $class );
+    $self->_init(@@_);  # Call initialization routine with remains
+    return $self;
+d56 1
+a56 1
+      $self->{$next_trick} = $self->{pointers}->{$next_trick};
+d62 1
+a62 1
+    my $self=shift @@_;
+d69 134
+a202 1
+# Utilities functions
+d226 1
+@
+
+
+1.3
+log
+@We now have a simple n-column table utility. Will clean later. It takes a reference to a hash which has options for column and data. It takes the data in chunks in an array and writes it right to left on row after row. Usage is as follows:
+
+my $foo = {
+     columns => 2,
+     data    => [ 'foo','bar','baz','biff','boff' ]
+};
+my $table = $self->{display}->table($foo);
+
+It takes the individual items in the data array and pumps them out, left to right, as it populates the table. It then fills out the last line with spaces.
+
+hopefully I will expand this to allow you to chuck preformatted rows at it, as well as headings.
+@
+text
+@d19 1
+a19 1
+#*************************************************************************      
+d81 19
+@
+
+
+1.2
+log
+@Baby steps ... baby steps.
+@
+text
+@d60 22
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d17 1
+a17 2
+#* 1.10       09-20-2000    ppollard  Renamed from Pages.pm
+#* 1.00       09-21-1999    garyc     Initial Creation
+d22 1
+a22 3
+use CGI;
+use PerlServer::Data;
+use HTML::Template;
+d32 3
+a34 3
+    my $class=shift;
+    my $self ={};
+    bless ($self,$class);
+d40 2
+a41 4
+  my $self=shift;
+  # Store a copy of the current session object
+  $self->{pointers}  = shift;
+  $self->{variables} = ["SQL","Log","CGI","apache_ref","psession","colors","current_page"];
+d44 1
+a44 1
+  for my $next_trick (@@{$self->{variables}}) {
+a46 2
+  
+  $self->{redirect} = ''; # Clear potential redirect
+d51 1
+a51 1
+    my $self=shift;
+d53 1
+a53 1
+    for my $next_trick (@@{$self->{variables}}) {
+a55 36
+    
+    # Nuke the list of variables last
+    delete $self->{variables};
+}
+
+###
+### Page parts in page order.
+###
+
+# Do the template action
+# Takes several parameters, first being the template to retrieve
+# The rest being the associative array of items to substitute
+# SID is automatically subbed
+sub template {
+  my $self     = shift;
+  my $outtext  = "";
+  my $sql      = $self->{SQL};
+  my $pagename = $sql->quote(shift || $self->{current_page});
+  my %params   = @@_;  
+
+  # Grab the template string from the database
+  my $template = $sql->get_single_result("template","pages","page_name=$pagename");
+
+  my $databack = HTML::Template->new_scalar_ref(\$template,
+					        die_on_bad_params=>0);
+  
+  # Now, make sure that the SID gets populated
+  $databack->param(\%params);
+
+  # Complete the substitutions
+  $outtext = $databack->output();
+
+  undef $databack;
+  undef $template;
+
+  return $outtext;
+d58 1
+a59 58
+# Header of the page
+sub header {
+    my $self	 = shift;
+    my $title    = shift || "DataCenterDirect";
+    my $metadata = shift || "";
+    my $script   = shift || $self->template('jstop');
+    my $cgi      = $self->{CGI} || "";
+    
+    # Output the topmost data
+    my $output = $cgi->start_html(-title=>$title,
+				  -author=>'service@@datacenterdirect.com',
+                                  -base=>'true',
+				  -meta=>$metadata,
+				  -script=>{
+					    -language=>'Javascript',
+					    -code=>$script
+					   },
+				  -bgcolor=>$self->{colors}->{pageback},
+				  -background=>'/images/larged5.gif',
+				  -topmargin=>'0',
+				  -leftmargin=>'0',
+				  -marginheight=>'0',
+				  -marginwidth=>'0',
+				  -link=>$self->{colors}->{link},
+				  -vlink=>$self->{colors}->{vlink},
+				  -text=>$self->{colors}->{text}
+				 )."\n";
+    return $output;
+}
+
+
+# Bottom of the page
+sub footer {
+  my $self=shift;
+  my $cgi = $self->{CGI};
+
+  my $outtext =   $cgi->comment("footer")."\n&nbsp;\n"
+		. $cgi->comment("Ta!")
+		. "\n"
+		. $cgi->end_html();
+
+  return $outtext;
+}
+
+# This returns a complete page given very little information
+sub whole_page {
+  my $self=shift;
+  my $template=shift || "Main";
+  my $output="";
+
+  # Build the page from it's components
+  $output=$self->header()
+         .$self->template('leftbar',($template,1))
+         .$self->template($template)
+         .$self->footer();
+
+  return $output;
+}
+@
+
+
+1.1.1.1
+log
+@Initial import of repository
+@
+text
+@@

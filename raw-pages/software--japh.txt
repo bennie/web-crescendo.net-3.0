@@ -1,0 +1,112 @@
+<div id="main"><div class="boxen">
+<div class="c1"><div class="c2"><div class="c3"><div class="c4">
+
+<p><font size="5">The JAPH log</font></p>
+
+<p>Dec 6, 2002</p>
+
+<p>We recently hired a new guy, Chip Salzenberg, who is a perl guru of note. 
+He has a ton of perl shirts, and come to think of it, I've not seen him 
+wear anything else outside of the suit on his interview. anyway, it got me 
+hankering for a another Japh. I tried some fancy stuff, but came up with a 
+nice simple one:</p>
+
+<p align="center"><tt>$a=sub{print(map{$a[$_]}$_[0]=~/(.{2})/g)};@a=(a..z,'<br>
+',' ',A..Z);$_='372018192728131419070417274332453927'<br>
+.'35000210041726';&$a($_);</tt></p>
+
+<hr nosahde />
+
+<p>Jun 17, 2002</p>
+
+<p>I tried compacting Kristy's EVIL JAPH down. I got it three characters
+smaller, but also added more evil with a map statement, and constructs
+like &quot;?$/??$_:&quot; and &quot;/(.{6})/g,$/&quot;
+
+<p align="center"><tt>map{print ?$/??$_:(($",a..z,A..Z)[ord pack B8,"00".$_])}(unpack<br />
+B144,pack H36,"9154d401b38f50815202a7ec9808810cb152")=~/(.{6})/g,$/</tt></p>
+
+<hr noshade />
+
+<p>Jun 14, 2002</p>
+
+<p>Inspired by Eric's use of strict and an urge to keep things at two lines,
+Kristy produced this perl pearl:</p>
+
+<p align="center"><tt>use&nbsp;strict;$_=qq/ozaxycfstydczcmapbe/;y/fmoz/FMOZ/;s/Za/z/;s/d/mb/;<br />
+s/a/fh/;s/c/$"/g;s/Z/UJWQ/;s/b/jw/g;s/e/\n/;y/f-zF-Z/a-uA-U/;print;</tt></p>
+
+<p>Isn't it great how obsessive use of $_ still passes strict?</p>
+
+<hr noshade />
+
+<p>Jun 14, 2002</p>
+
+<p>Now that Eric and Kristy had send JAPHs I felt compelled to add another.
+This one is nice and compact. I love the "print($a[$a+=$_])" construct.</p>
+
+<p align="center"><tt>@a=("\n",'&nbsp;',a..z,A..Z);map{$a{$_}=$c++}reverse(@a);for(map{$_=~/\d/?$_*-1:$a{$_}}<br />
+'o15%2Y20y13Y:U12/3M18j11M6$38r33X`R6M19'=~/([\d+]+|[\w])/g){print($a[$a+=$_])}</tt></p>
+
+<hr noshade />
+
+<p>Jun 14, 2002</p>
+
+<p>Not to be outdone, a good friend of mine, Eric Parkin, felt he add to put in
+his contribution. Not only is this monster a wonderful mind-bend, but it also
+uses the strict pragma:</p>
+
+<p align="center"><tt>use strict;my $j=reverse(unpack('u',"M-S0X-3\@S.#0S,".<br />
+"C8U-S\@W.3\@T-S(V.3\@R,S(X,#8Y.#(W-C,R-S(V-38W-S4V)".<br />
+".3\@R-#8T-C0V"));my $x=0;while($x<=((length($j)))){$x<br />
+==2?print chr(reverse(substr($j, (length($j)-$x),2))):<br />
+reverse(substr($j, (length($j) - ($x-2)),2)==32)?print<br />
+chr (reverse(substr($j, (length ($j)-$x),2))):print lc<br />
+(chr(reverse(substr($j, (length($j)-$x),2)))); $x+=2;}</tt></p>
+
+<p>Ouch.</p>
+
+<hr noshade />
+
+<p>Jun 13, 2002</p>
+
+<p>Kristy got inspired. She was unhappy that in most JAPHs there is a very 
+obvious 23 character data set that is just mogrified back to being the phrase.
+She figured that with the character set represented, you could pack it
+all into a 6-byte space. And that by mis-unpacking that into 8 bytes, get a shorter
+data set:</p>
+
+<p align="center"><tt>for((unpack B144,pack H36,"9154d401b38f50815202a7ec9808810cb152")=~<br />
+/(.{6})/g){print (($",a..z,A..Z)[ord pack B8,"00".$_]);}print "\n";</tt></p>
+
+<p>Truly Evil.</p>
+
+<hr noshade />
+
+<p>Jun 12, 2002</p>
+
+<p>It inspired me to send this mind-screw to several friends. It is based upon 
+a difference pyramid, a geometric number set as I had learned in a historic math 
+class. I believe it is technically a sigma summation:</p>
+
+<p align="center"><tt>for(157876010,85825867,46751460,25361566,13618705,7198697,3727214,1882261,<br />
+923886,439618,202524,90373,39178,16593,6916,2856,1176,492,222,117,69,39,23,<br />
+18){@l2=($_);while(@l1){push(@l2,(pop(@l1)-$l2[$#l2]))}@l1=reverse(@l2)}for<br />
+(' ',a..z,A..Z){$a{$c++}=$_}print map{$a{$_}}@l1; print "\n";</tt></p>
+
+<hr noshade />
+
+<p>Jun 12, 2002</p>
+
+<p>It started with Kristina Davis' sig:</p>
+
+<p align="center"><tt>$_="z jyf FpJtwQmxMw hUsjWy";while ($a=chop){$a[(&a($a{'a'}))%23]=$a;}<br />
+($a=join "","O",@a)=~y/F-Zf-z/A-Ua-u/; print "$a\n"; sub a {$_[0]+=7;}</tt></p>
+
+<p>The beauty of this Japh is it contains and uses: $a, @a, $a[], %a, $a{} and 
+&a.</p>
+
+<p>&nbsp;</p>
+
+
+</div></div></div></div></div></div>

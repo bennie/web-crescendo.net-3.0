@@ -1,0 +1,532 @@
+head	1.11;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.11
+date	2002.02.20.22.12.19;	author bennie;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.11.21.20.40.43;	author panther;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.11.06.20.13.45;	author binky;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.11.05.21.28.51;	author binky;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.11.05.20.19.44;	author binky;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.11.05.17.43.02;	author binky;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.10.19.16.30.58;	author bear;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.10.17.19.49.08;	author panther;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.10.17.18.00.56;	author bear;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.10.17.01.10.46;	author panther;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.10.16.20.15.13;	author panther;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.11
+log
+@We may have 1.0
+@
+text
+@#*************************************************************************
+
+=head1 Collection.pm  (PerlServer::Collection)
+
+=head1
+
+=head2 GENERAL INFO:
+
+Core PerlServer Engine
+
+  SYSTEM:      PerlServer Collection Object Module
+  SUBSYSTEM:   Collections
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+               Diversified Consulting, Inc. 
+
+=cut
+
+#*************************************************************************
+
+=head1 METHODS:
+
+=cut
+
+use strict;
+
+package PerlServer::Collection;
+$PerlServer::Collection::VERSION='$Revision: 1.1 $';
+
+# Create the constructor
+
+=over 4
+
+=item new()
+
+	Creates a new collection object.  If passed an array as an argument it will automatically set it as it's collection.  Otherwise it creates an empty collection object.
+
+=back 
+
+=cut
+
+sub new { # Generic / Heritable
+    my $class = shift @@_;
+    my $self  = {};
+    bless ( $self, $class );
+    $self->_init(@@_);  # Call initialization routine with remains
+    $self->custominit(@@_); #More Remains
+    return $self;
+}
+
+
+sub _init { # Perform initialization 
+  my $self           = shift @@_;
+  $self->{items}  = shift @@_;
+  $self->{in}     = -1;
+  #call custom init with remains
+}
+
+#overloadable virtual custom initialization routine
+
+=item custominit()
+
+	This function can be overloaded in inherited objects if there is a need for extra initialization.
+
+=cut
+
+sub custominit {
+	my $self = shift @@_;
+}
+  
+# The destructor
+
+sub DESTROY {
+    my $self=shift @@_;
+    
+    delete $self->{items};
+}
+
+#set the collection just in case it was not set in the constructor
+
+=item set()
+
+	If the collection is empty you can set the array to be used for this object with this function.
+
+=cut
+
+sub set {
+	my $self = shift @@_;
+	$self->{items} = shift @@_;	
+}
+
+#get the next item in the collection
+
+=item getnext()
+
+	Gets the next item in line from the current index.  If the array is empty or you are trying to get something that is out of bounds it returns undef.
+
+=cut
+
+sub getnext {
+	my $self = shift @@_;
+	return $self->{items}[++$self->{in}] unless (($self->{in} + 1) > scalar @@{$self->{items}});
+	return undef;
+}
+
+#get the previous item in the collection
+
+=item getprev()
+
+	Gets the previous item in line from the current index.  If the array is empty or you are trying to get something that is out of bounds it returns undef.
+
+=cut
+
+sub getprev {
+	my $self = shift @@_;
+	return undef if ($self->{in}<0);
+	return $self->{items}[--$self->{in}] unless (($self->{in} - 1) > scalar @@{$self->{items}});
+	return undef;
+}
+
+# Get total number of elements in the collection
+
+=item total_elements()
+
+	Returns the amount of elements within the collection.
+
+=cut
+
+sub total_elements {
+	my $self = shift @@_ || return (undef);
+	return scalar @@{$self->{items}};
+}
+
+#get a range of items
+#not implemented yet
+#avert your eyes
+
+=item getrange()
+
+	Not yet implemented.
+
+=cut
+
+sub getrange {
+	my $self = shift @@_;
+	my $startr = shift @@_ || 0;
+	my $endr = shift @@_ || return undef;
+	
+	#return an array from the selected range
+}
+
+#get an item from the index
+
+=item getfromindex()
+
+	Returns a specific item from a specified index point.  It returns undef if what you request is out of bounds.
+
+=cut
+
+sub getfromindex {
+	my $self = shift @@_;
+	my $in = shift @@_ || return undef;
+	
+	return $self->{items}[$in] unless $in > scalar @@{$self->{items}};
+	return undef;
+}
+
+#set the thingy to zero
+
+=item rewind()
+
+	Set the index pointer to point at the beginning of the collection.
+
+=cut
+
+sub rewind {
+	my $self = shift @@_;
+	$self->{in} = -1;
+}
+
+
+=item setIndex()
+
+	Set the index pointer to a user determined point within the collection.
+
+=cut
+
+sub setIndex {
+	my $self = shift @@_ || return (undef);
+	return $self->{in}=shift @@_ || -1;
+}
+
+
+=item getIndex()
+
+	Get the current position of the index pointer.
+
+=cut
+
+sub getIndex {
+	my $self = shift @@_ || return (undef);
+	return $self->{in};
+}
+
+#The always expected 1
+1;
+	
+
+
+__END__
+
+=head1 Documentation Author:
+
+ Efrain Klein <efrain@@bogotron.net>
+ Last edited 11/06/2001
+@
+
+
+1.10
+log
+@Docs and whatnot.  Utility tTypes is a more or less support module for usage with provider supplier and others which require utility types
+@
+text
+@d3 1
+a3 1
+=head1 Collection.pm
+d13 2
+a14 7
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+ 
+
+=head2 MODIFICATION HISTORY:
+
+  VERSION    DATE          NAME      COMMENTS
+  1.00       10-16-2001   panther     Initial Creation
+d27 1
+a27 1
+$PerlServer::Collection::VERSION='$Revision: 1.1 $';
+@
+
+
+1.9
+log
+@Fixed the autho line and the FUNCTIONS name in the POD.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+$PerlServer::Collection::VERSION='$Revision: 1.1 $';
+d36 2
+d40 4
+a55 4
+=item _init()
+
+=cut
+
+d67 2
+a76 4
+=item DESTROY()
+
+=cut
+
+d87 2
+d100 2
+d114 2
+d129 2
+d144 2
+d160 2
+d169 1
+d176 2
+d188 2
+d200 2
+d218 1
+a218 1
+ Phillip Pollard <binky@@bears.org>
+@
+
+
+1.8
+log
+@End token for everything in POD as well as full docs for Display.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d25 1
+a25 1
+=head1 FUNCTIONS:
+d32 1
+a32 1
+$PerlServer::Collection::VERSION='$Revision: 1.1 $';
+d197 1
+a197 1
+=pod
+d199 2
+a200 1
+Documentation last edited 11/05/2001 by Phil
+@
+
+
+1.7
+log
+@Functions are now PODed
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d32 1
+a32 1
+$PerlServer::Collection::VERSION='$Revision: 1.1 $';
+d193 7
+@
+
+
+1.6
+log
+@Perldoc Flowerboxes.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d25 4
+d32 1
+a32 1
+$PerlServer::Collection::VERSION='$Revision: 1.1 $';
+d35 5
+d49 5
+d62 5
+d72 5
+d84 5
+d95 5
+d107 5
+d120 5
+d133 5
+d147 5
+d160 5
+d170 5
+d179 5
+@
+
+
+1.5
+log
+@Modifications to use the meters to fill in meter data
+@
+text
+@d2 22
+a23 18
+#*
+#* FILE:        Collection.pm
+#*
+#* DESCRIPTION: Core PerlServer Engine
+#*
+#* SYSTEM:      PerlServer Collection Object Module
+#*
+#* SUBSYSTEM:   Collections
+#*
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+#*
+#* MODIFICATION HISTORY:
+#*
+#* VERSION    DATE          NAME      COMMENTS
+#*
+#* 1.00       10-16-2001   panther     Initial Creation
+#*
+#*************************************************************************      
+d28 1
+a28 1
+$PerlServer::Collection::VERSION='$Revision: 1.1 $';
+d123 1
+a123 1
+	@
+
+
+1.4
+log
+@Collection had errors, Meter had sql errors but they were all fixed after Btest
+was used on 'em.  BillComposite had it's MeterList bits uncommented and tested.
+It all seems to be a okay now
+
+Myah
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d24 1
+a24 1
+$PerlServer::Collection::VERSION='$Revision: 1.1 $';
+a40 2
+  
+  
+d65 1
+d71 1
+d73 7
+d105 10
+@
+
+
+1.3
+log
+@Bugfixes for start.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d24 1
+a24 1
+$PerlServer::Collection::VERSION='$Revision: 1.1 $';
+d38 1
+a38 1
+  $self->{items}  = shift @@_ || undef ;
+@
+
+
+1.2
+log
+@BillComposite was modified to use the MeterList collection object.  The lines for it to work are commented out since I've yet to test it on a live server.  They should work just fine but I'll commit the final addition of the code once I've tested it completely.
+
+MeterList is a Collection object which takes care of gathering meters and handing them out nicely to billcomposite.  This takes away having to kludge different meter objects together.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d24 1
+a24 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d38 2
+a39 2
+  my $self->{items}  = shift @@_ || undef ;
+  my $self->{in}     = -1;
+d60 1
+a60 1
+	my $self->{items} = shift @@_;	
+@
+
+
+1.1
+log
+@Created Collection.pm.  MeterList.pm will be a collection object which handles doing meter stuff automagically for the billing stuff.
+@
+text
+@d32 1
+d40 1
+d42 6
+d66 1
+a66 1
+	return $self->{items}[++$self->{in}] unless ($self->{in} + 1) > scalar @@{$self->{items}};
+d72 1
+a72 1
+	return $self->{items}[--$self->{in}] unless ($self->{in} - 1) > scalar @@{$self->{items}};
+@
+

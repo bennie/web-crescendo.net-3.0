@@ -1,0 +1,40 @@
+<div id="main"><div class="boxen">
+<div class="c1"><div class="c2"><div class="c3"><div class="c4">
+
+<img height="200" width="160" hpsace="3" align="right"
+src="/images/canning.jpg" />
+
+<p><font size="5">CVS Utilities</font><br />
+<i>Software that opens them thar canned fruits</i></p>
+
+<p><b>Project Summary:</b></p>
+
+<p><b>CVS Utilities</b> is my attempt to collect and refine a useful group of
+CVS utilities. Specifically for easy web navigation and statistical evaluation
+if CVS repositories.</p>
+
+<hr noshade />
+
+<center>[ <a href="history.html">Project History</a> 
+| <a href="example.html">Example Output</a> ]</center>
+
+<hr noshade />
+
+<p><b>Current Status</b></p>
+
+<p align="center">Current Release: <a href="alpha.tar.gz">alpha.tar.gz (14k)</a></p>
+
+<p>First a side warning, I lean towards rapid-prototype development, 
+a.k.a. Extreme Programming, a.k.a. whatever. This code is very alpha and 
+very ugly. It is designed to prove functionality. So far it has.</p>
+
+<p>You can watch continued development in the <a 
+href="http://cvs.crescendo.net/index.cgi/cvsutils-dev">CVS utilities 
+development instance</a>.</p>
+
+<p>So far, I have a <a 
+href="http://cvs.crescendo.net/index.cgi/cvsutils-dev/cvsweb/cvsweb.cgi">rough 
+start</a> of a rewrite of cvsweb.cgi.</p>
+
+
+</div></div></div></div></div></div>

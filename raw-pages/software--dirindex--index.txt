@@ -1,0 +1,22 @@
+<div id="main"><div class="boxen">
+<div class="c1"><div class="c2"><div class="c3"><div class="c4">
+
+<p align="center"><font size="5">dirindex</font></center>
+ 
+<p><b>Summary:</b></p>
+
+<p>Dirindex is a simple alteration of the <a href="../thumbnails">thumbnails</a>
+script. It is designed to reduce processing and synchronize a changing set 
+of directories. It can be run regularly from a cron job with command 
+parameters.</p>
+
+<p>This script is currently in beta. More documentation to follow.</p>
+
+<p><b>The code:</b></p>
+
+<p>The script can be found at:</p>
+
+<center><a href="http://cvs.crescendo.net/index.cgi/dirindex/">http://cvs.crescendo.net/index.cgi/dirindex/</a></center>
+
+
+</div></div></div></div></div></div>

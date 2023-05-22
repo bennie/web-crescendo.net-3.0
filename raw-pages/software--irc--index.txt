@@ -1,0 +1,64 @@
+<div id="main"><div class="boxen">
+<div class="c1"><div class="c2"><div class="c3"><div class="c4">
+
+<p><font size="5">irclogger.pl</font></p>
+
+<p><b>Project Summary:</b></p>
+
+<p>irclogger.pl is a simple IRC bot in perl. It was written for usage on a 
+private, internal server. It was designed to join multiple channels on a 
+server, log all public actions, and handle a few direct commands. It's a 
+great starting skeleton to build a more full featured bot, so I figured I 
+should release it.</p>
+
+<p>This is basically a standalone script. The documentation is in the header
+of it and is reproduced below. The script has a config header for you to 
+manipulate settings.</p>
+
+<hr noshade />
+
+<p><b>Current Release:</b></p>
+
+<p align="center">file: <b><a href="irclogger.pl.gz">irclogger.pl.gz</a></b></p>
+
+<small>&copy; 2008-2010 Phil Pollard and FusionOne, Inc. 
+This code is released for usage under the <a href="../gnu.html">GNU Public license</a>.</small>
+
+<hr noshade />
+
+<p><b>Documentation:</b></p>
+
+<pre># This bot is a very simple IRC bot that is designed to log onto multiple 
+# channels on an IRC server and log all public actions onto those channels to
+# individual log files for each channel.
+#
+# The bot rotates logfiles automatically on a daily basis with the date and 
+# channel name being embedded in the file name. On the assumption that the
+# files are available to be viewed via the web, the bot announces to all 
+# arrivals the current URL for the log being used for that channel.
+#
+# The bot also handles a few rudimentary commands:
+#
+# By a user saying or messaging "bot restart" or "bot reload" the script will 
+# attempt to exit and restart itself. This is handy if you are actively editing
+# the bots code with a remote editor and wish to relaunch the bot from within
+# IRC.
+#
+# By a user saying or messaging "clock?" or "time?" the bot responds with the
+# current time (including corrections for daylight savings) for the timezones 
+# listed in the config section. This is handy for international coordination
+# of efforts in a channel.
+#
+# You launch the bot by executing the perl script on the command line. It will
+# automatically daemonize and try to run in the background. (IE: you'll have to
+# check your process list to see if it is running.) On most basic connection 
+# errors it will dump information into the general log and then exit. Also the
+# command line option of '--debug' will dump the log messages to STDERR on the
+# executing shell.
+#
+# This bot does not currently handle managing channel operator status or any 
+# authentication of commands. Though with the event hooks from Net::IRC and
+# some additions to the "Interactions" section of on_msg(), it should be an 
+# easy task to set up. Enjoy!</pre>
+
+</div></div></div></div></div></div>

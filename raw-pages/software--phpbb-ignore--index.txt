@@ -1,0 +1,41 @@
+<div id="main"><div class="boxen">
+<div class="c1"><div class="c2"><div class="c3"><div class="c4">
+
+<img height="200" width="160" hpsace="3" align="right"
+src="/images/canning.jpg" />
+
+<p><font size="5">phpBB User Ignore Mod</font><br />
+<i>Keeping them folks quiet</i></p>
+
+<p><b>Project Summary:</b></p>
+
+<p>The <b>User Ignore Mod</b> is an add-on for the very popular <a 
+href="http://www.phpbb.com/">phpBB</a>. It is a mod that allows users to 
+ignore the post of other users.</p>
+
+<p>Originally this module was put together by GunnerX back in 2002. I took 
+it over to bring it up to being compatible with phpBB v2.0.6-2.0.10 
+security and more friendly with the urrent version of EasyMod. I 
+also added an administrative page for ignore statistics.</p>
+
+<hr noshade />
+
+<p><b>Current Release:</b></p>
+
+<p align="center">file: <b><a href="user_ignore.zip">user_ignore.zip</a></b>
+(16k)<br />2004-09-28 v1.2.1</p>
+
+<p><b>All Releases:</b></p>
+
+<ul>
+
+<li> <p><b>2004-09-28 v1.2.1</b><br />
+     file: <a href="user_ignore.v1.2.1.zip">user_ignore.v1.2.1.zip</a> (16k)</p>
+
+<li> <p><b>2004-09-26 v1.2.0 (Release Candidate)</b><br />
+     file: <a href="user_ignore.v1.2.0.zip">user_ignore.v1.2.0.zip</a> (12k)</p>
+
+</ul>
+
+
+</div></div></div></div></div></div>

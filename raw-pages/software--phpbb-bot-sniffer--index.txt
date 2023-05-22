@@ -1,0 +1,50 @@
+<div id="main"><div class="boxen">
+<div class="c1"><div class="c2"><div class="c3"><div class="c4">
+
+<img hspace="5" width="152" height="200" alt="[ Mom ]" 
+align="right" src="/images/cake.jpg" />
+
+
+<p><font size="5">phpBB &quot;Bot&quot; Sniffer</font><br />
+<i>Mom wants to know who wants spam?</i></p>
+
+<hr noshade />
+
+<p><b>Project Summary:</b></p>
+
+<p>phpBB's are finding themselves under increasing attack from spammers.
+There are various reasons and ways that spammers use phpBB boards to their 
+end and a whole host of methods of trying to prevent them from getting on 
+your board. For a summary of the whole spam problem check the <a 
+href="spambots.html"><u>outline of phpBB spammer tactics and 
+responses</u></a> I tossed together.</p>
+
+<p>Anyway, I, like many phpBB folks found their boards to be infested with
+these guys and needed a reliable way to detect bot accounts so I could remove
+them from my boards. Enter, the bot detector:</p>
+
+<hr noshade />
+
+<p><b>Current Release:</b></p>
+
+<p align="center">file: <b><a href="phpbb-bot-sniffer.tar.bz2">phpbb-bot-sniffer.tar.bz2</a></b> or <b><a href="phpbb-bot-sniffer.zip">phpbb-bot-sniffer.zip</a></b>
+(4k)<br />2006-05-23 v1.15</p>
+
+<p>This is a BETA CODE RELEASE. On the bright side, all this code does is read from your database, 
+analyse the files, and print out a text file. That being said, there is no implied warrenty 
+of any sort, etc. For full details check out the <a
+href="../gnu.html">GNU Public license</a> that this program is released under.</p>
+
+<hr noshade />
+
+<p><b>All Releases:</b></p>
+
+<ul>
+
+<li> <p><b>2006-05-23 v1.15</b><br />
+     file: <a href="phpbb-bot-sniffer-1.15.tar.bz2">phpbb-bot-sniffer-1.15.tar.bz2</a> (4k)</p>
+
+</ul>
+
+
+</div></div></div></div></div></div>

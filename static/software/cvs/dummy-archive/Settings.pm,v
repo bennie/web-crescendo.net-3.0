@@ -1,0 +1,73 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.04.02.19.01.39;	author bennie;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Blank module for eventual settings.
+@
+text
+@#*************************************************************************
+
+=head1 Settings.pm (PerlServer::Settings)
+
+=head1
+
+=head2 GENERAL INFO:
+
+Core PerlServer Engine - Settings and references
+
+  SYSTEM:      PerlServer Settings Module
+  SUBSYSTEM:   Web Pages
+  COPYRIGHT:   (C) 2002 - $Date $
+
+=cut
+
+#*************************************************************************
+
+=head1 METHODS:
+
+=cut
+
+use strict;
+
+package PerlServer::Settings;
+$PerlServer::Settings::VERSION = '$Revision: 1.1 $';
+
+# Create the constructor
+
+sub new { # Generic / Heritable
+    my $class = shift @@_;
+    my $self  = {};
+    bless ( $self, $class );
+    $self->_init(@@_);
+    return $self;
+}
+
+sub _init { # Perform initialization 
+  my $self           = shift @@_;
+  $self->{pointers}  = shift @@_;
+}
+  
+1;
+
+__END__
+
+=head1 Documentation Author:
+
+ Phillip Pollard <binky@@bears.org>
+ Last edited 4/2/2002
+@

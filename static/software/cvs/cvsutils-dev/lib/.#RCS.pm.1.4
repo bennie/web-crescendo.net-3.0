@@ -1,0 +1,368 @@
+#*************************************************************************
+
+=head1 RCS.pm (RCS)
+
+=head1
+
+=head2 GENERAL INFO:
+
+Basic RCS parser. This file does not rely upon any external utilities to
+parse RCS files. Currently it functions with RCS files generate by GNU 
+CVS and as documented by the rcsfile(5) man page. There is an astounding
+lack of good documentation of this format and most of this is reverse
+engineering because I am too lazy to take apart the RCS and CVS code.
+
+=head2 COPYRIGHT: (C) 2001 - $Date: 2002/03/26 21:48:57 $, Phillip Pollard
+- Released under GNU Public License
+
+=cut
+
+#*************************************************************************
+
+=head1 USAGE
+
+my $rcs = new RCS;
+my $ret = $rcs->load($filename);
+
+my $current = $rcs->recent_version;
+
+=cut
+
+package RCS;
+$RCS::Version = '0.01';
+
+use strict;
+
+sub new {
+  my $self = {};
+  bless  $self;
+  $self->{debug} = 0;
+  return $self;
+}
+
+=head1 METHODS
+
+=item author()
+
+my $author = $rcs->author($version);
+
+The author method returns the author name of the given version. If
+no version is given it returns the author of the current loaded version.
+
+=cut
+
+sub author {
+  my $self = shift @_;
+  my $ver  = shift @_ || $self->version;
+  return $self->{rcs}->{$ver}->{author} || undef;
+}
+
+=item date()
+
+my $date = $rcs->date($version);
+
+The date method returns the revision date of the given version. If
+no version is given it returns the date of the current version.
+
+=cut
+
+sub date {
+  my $self = shift @_;
+  my $ver  = shift @_ || $self->recent_version;
+  return $self->{rcs}->{$ver}->{date} || undef;
+}
+
+=item get()
+
+=cut
+
+sub get {
+  my $self = shift @_;
+  my $ver  = shift @_ || $self->recent_version;
+  
+  return undef unless $self->{rcs}->{$ver};
+
+  my @chain = $self->_revision_path($self->{current_document}->{version},$ver);
+
+  for my $version ( @chain ) {
+    $self->_apply_delta($version,$self->{rcs}->{$version}->{text});
+    $self->_sort;
+  }
+
+  return $self->_dump;
+}
+
+=item load()
+
+my $ret = $rcs->load($filename);
+
+The load command reads in and parses the given filename. If the
+file does not exist or is unreadable by the script, undef is 
+returned. Otherwise, 1 is returned upon success.
+
+=cut
+
+sub load {
+  my $self      = shift @_;
+  $self->{file} = shift @_;
+  return undef unless -f $self->{file};
+
+  my $doc_header;
+  $self->{rcs} = {};
+
+  $self->_parse_in_rcs($self->{file},$self->{rcs});
+
+  # populate the current doc
+  
+  $self->{current_document}->{version}          = $self->recent_version;
+  $self->{current_document}->{1}->{new_version} = $self->recent_version;
+
+  for my $line ( split /\n/, $self->{rcs}->{$self->recent_version}->{text} ) {
+    push @{ $self->{current_document}->{1}->{new_lines} }, $self->_unquote($line) . "\n";
+  }
+
+  # resort it
+
+  $self->_sort;
+
+  return 1;
+}
+
+=item notated_get
+
+=cut
+
+sub notated_get {
+  my $self = shift @_;
+  my $ver  = shift @_ || $self->recent_version;
+  
+  return undef unless $self->{rcs}->{$ver};
+
+  my @chain = $self->_revision_path($self->{current_document}->{version},$ver);
+
+  for my $version ( @chain ) {
+    $self->_apply_delta($version,$self->{rcs}->{$version}->{text});
+    $self->_sort;
+  }
+
+  return $self->_dump;
+}
+
+=item recent_version()
+
+This method returns the most current revision of the file.
+
+=cut
+
+sub recent_version {
+  my $self = shift @_;
+  return $self->{rcs}->{header}->{head};
+}
+
+=item version()
+
+This method returns the most current revision of the file.
+
+=cut
+
+sub version {
+  my $self = shift @_;
+  return $self->{current_document}->{version};
+}
+
+####
+
+sub _apply_delta {
+  my $self      = shift @_;
+  my $new_ver   = shift @_;
+  my $raw_delta = shift @_;
+  my $doc       = shift @_ || $self->{current_document};
+
+  $doc->{version} = $new_ver;
+
+  my @deltas = split /\n/, $raw_delta;
+
+  while ( @deltas ) {
+    my $delta = shift @deltas;
+    if ( $delta =~ /^a(\d+) (\d+)$/ ) { 
+      my $line  = $1;
+      my $count = $2;
+      my $test  = 0;
+      
+      $doc->{$line}->{new_version} = $new_ver;
+      for ( my $c = 0; $c < $count; $c++ ) {
+        my $new_line = $self->_unquote( shift @deltas ) . "\n";
+        push @{ $doc->{$line}->{new_lines} }, $new_line;
+        $test++;
+      }
+      #print "added $test lines at $line ($count directed)\n"; 
+ 
+    } elsif ( $delta =~ /^d(\d+) (\d+)$/ ) { 
+
+      my $first_line = $1;
+      my $last_line  = $1 + $2 - 1;
+      for my $line ( $first_line .. $last_line ) {
+        $doc->{$line}->{line} = undef;
+      }
+      #print "deleting lines $first_line through $last_line ($2 directed)\n"; 
+    } else { }# print "ORPHAN DATA!\n"; }
+  }
+  return 1;
+}
+
+sub _debug {
+  my $self = shift @_;
+  my $mesg = shift @_;
+  print "$mesg\n" if $self->{debug} > 0;
+}
+
+sub _dump {
+  my $self = shift @_;
+  my $doc  = shift @_ || $self->{current_document};
+  return join '', map { $doc->{$_}->{line} } sort { $a <=> $b } grep /^\d+$/, keys %$doc;
+}
+
+sub _parse_in_rcs {
+  my $self = shift @_;
+  my $file = shift @_;
+  my $rcs  = shift @_;
+ 
+  open RCSFILE, $file;
+
+  ### Parse in the RCS file header
+
+  my $rcs_header;
+
+  while ( my $line = <RCSFILE> ) {
+    last if $line =~ /^$/;
+    $rcs_header .= $line;
+  }
+
+  for my $chunk ( split /;/, $rcs_header ) {
+    $chunk =~ s/\n//g;
+    $chunk =~ /^\s*(\w+)\s*(.*)$/;
+    $rcs->{header}->{$1} = $2 if $1;
+  }
+
+  $rcs_header = undef;
+
+  ### Parse in the individual version headers
+
+  my $version = 'error';
+  while ( my $line = <RCSFILE> ) {
+    last if $line =~ /^desc$/;
+
+    if ( $line =~ /^([\d|\.]+)/ ) {
+      $version = $1;
+    } else {
+      next if $line =~ /^$/;
+      $rcs->{$version}->{header} .= $line;
+    }
+  }
+
+  my $garbage_double_quote = <RCSFILE>;
+
+  ### Parse in the individual deltas
+
+  $version  = 'error';
+  my $directive = 0;
+  my $quote = 0;
+
+  while ( my $line = <RCSFILE> ) {
+    $version = $1 if $line =~ /^([\d|\.]+)/ && $quote == 0;
+    if ( $line =~ /^\@(?!\@)/ ) { $quote = $quote == 0 ? 1 : 0; }
+    next if $line =~ /^$/ && $quote == 0;
+
+    if ( $quote == 0 ) {
+      $line =~ /^(.+)$/;
+      $directive = $1;
+    } else {
+      $rcs->{$version}->{$directive} .= $line;
+    }
+
+    #$rcs{$version}{raw_text} .= $line;
+  }
+  
+  close RCSFILE;
+
+  ### clean the leftover quoting
+
+  for my $version ( keys %$rcs ) {
+    for my $directive ( keys %{$rcs->{$version}} ) {
+      $rcs->{$version}->{$directive} = $1 if $rcs->{$version}->{$directive} =~ /^\@(.*)$/s;
+      $rcs->{$version}->{$directive} = $1 if $rcs->{$version}->{$directive} =~ /^(.*)\@$/s;
+    }
+  }
+
+  ### disassemble header
+
+  for my $version ( keys %$rcs ) {
+    my @commands = split ';', $rcs->{$version}->{header};
+    for my $command ( @commands ) {
+      chomp $command;
+      $rcs->{$version}->{$1} = $2 if $command =~ /\s*(.+)\s+(.+)$/;
+    }
+  }
+
+  return 1;
+}
+
+sub _revision_path {
+  my $self = shift @_;
+  my $ver  = shift @_ || $self->recent_version;
+  my $stop = shift @_ || undef;
+  
+  return undef unless $self->{rcs}->{$ver};
+
+  #print "Path from $ver to $stop\n";
+
+  my @chain = (); # = ( $ver );
+
+  while ( $ver = $self->{rcs}->{$ver}->{next} ) {
+    push @chain, $ver;
+    last if $stop && $ver eq $stop;
+  }
+  
+  return @chain;
+}
+
+sub _sort {
+  my $self = shift @_;
+  my %copy = %{ $self->{current_document} };
+
+  $self->{current_document} = {};
+  $self->{current_document}->{version} = $copy{version};
+
+  my $count = 1;
+  for my $line_num ( sort { $a <=> $b } grep /^\d+$/, keys %copy ) {
+    # add basic line
+    if ( $copy{$line_num}{line} ) {
+      $self->{current_document}->{$count}->{line}    = $copy{$line_num}{line};
+      $self->{current_document}->{$count}->{version} = $copy{$line_num}{version};
+      $count++;
+    }
+    # add new lines if existant
+    if ( $copy{$line_num}{new_lines} ) {
+      for my $line ( @{ $copy{$line_num}{new_lines} } ) {
+        $self->{current_document}->{$count}->{line}    = $line;
+        $self->{current_document}->{$count}->{version} = $copy{$line_num}{new_version};
+      $count++;
+      }
+    }
+  }
+
+  my %copy = ();
+
+  $self->_debug( "($self->{current_document}->{version}) " . --$count . ' lines sorted...');
+
+  return 1;
+}
+
+sub _unquote {
+  my $self = shift @_;
+  my $in   = shift @_;
+  $in =~ s/\@\@/\@/g;
+  return $in;
+}
+
+1;

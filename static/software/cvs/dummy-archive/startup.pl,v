@@ -1,0 +1,1366 @@
+head	1.35;
+access;
+symbols
+	initial:1.1.1.1 DCI:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.35
+date	2002.03.11.23.21.41;	author bear;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.01.30.17.05.22;	author bennie;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.01.29.21.43.09;	author bennie;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.01.29.01.57.49;	author bennie;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.01.28.21.15.21;	author bennie;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.01.24.21.49.51;	author bennie;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.01.24.19.52.34;	author panther;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.01.17.00.17.14;	author panther;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.11.13.20.00.24;	author binky;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.10.31.22.04.03;	author binky;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.10.31.21.31.09;	author binky;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.10.31.21.23.08;	author binky;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.10.31.21.15.54;	author bear;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.10.29.21.48.31;	author binky;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.10.29.19.03.42;	author binky;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.10.26.20.49.00;	author binky;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.10.26.19.21.55;	author binky;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.10.22.18.55.26;	author binky;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.10.22.18.08.37;	author binky;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.10.22.18.02.55;	author binky;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.10.17.15.30.27;	author binky;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.09.20.16.15.00;	author binky;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.09.20.16.06.51;	author binky;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.09.19.20.40.56;	author binky;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.09.19.20.40.28;	author binky;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.09.19.20.18.22;	author binky;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.09.19.19.50.56;	author binky;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.09.19.19.46.57;	author binky;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.06.28.20.28.47;	author binky;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.06.20.18.23.12;	author bear;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.06.18.01.13.08;	author bear;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.06.13.20.32.22;	author bear;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.06.12.18.57.12;	author bear;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.06.11.20.54.14;	author bear;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.29.18.45.27;	author bear;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.05.29.18.45.27;	author bear;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.35
+log
+@Updates, patches, database modifications, and other assorted bugfixes, needed for
+Monday deployment... oh, and additional progress on the database verification code
+@
+text
+@#*************************************************************************
+
+=head1 startup.pl
+
+=head1
+
+=head2 GENERAL INFO:
+
+The Core PerlServer initialization script
+
+  SYSTEM:      PerlServer Core
+  SUBSYSTEM:   mod_perl apache setup
+  COPYRIGHT:   (C) 2002 - $Date: 2002/04/20 19:09:38 $
+               Diversified Consulting, Inc.
+
+=cut
+
+#*************************************************************************    
+
+### required modules
+
+use Apache;
+use Carp;
+use File::Find;
+use strict;
+use warnings;
+
+### preloaded modules
+
+use Apache::DBI;
+use CGI qw(-compile :all);
+use HTML::Template;
+use URI;
+
+### check that we are mod_perl with vars
+
+my $s = Apache->server;
+my $code_root = $s->dir_config('PSRoot') || die "Unable to load configuration";
+$ENV{GATEWAY_INTERFACE}=~/^CGI-Perl/     || die "GATEWAY_INTERFACE not perl!";
+
+### import perlserver and start the log
+
+push @@INC, "$code_root/main", "$code_root/COST";
+
+require PerlServer;
+require PerlServer::Log;
+require PerlServer::Pages;
+
+my $log = new PerlServer::Log;
+
+### Check if we are actually running
+
+&verify_apache_running;
+
+### Up verbosity
+
+$SIG{__WARN__}=\&Carp::cluck;
+$log->log("Verbose warnings set");
+
+### Load and examine all modules
+
+my $total_size = 0;
+my %module_info;
+
+&load_module_info( 'COST Core'       , 'COST'       , "$code_root/main/COST"       );
+&load_module_info( 'PerlServer Core' , 'PerlServer' , "$code_root/main/PerlServer" );
+
+$log->log("Testing modules for usability");
+$log->log( &evaluate_modules . &scoreboard );
+
+&error_report;
+
+### store said info for later
+
+$PerlServer::module_info = \%module_info; 
+
+#start_mcp("/home/panther/ps/mcp/mcp.pl START");
+
+###
+### Subroutine
+###
+
+sub evaluate_modules {
+  my $totalfiles = scalar keys %module_info;
+  my $errcount   = 0;
+  
+  my $logmsg = "\n\n" . &print_summary_edge('~','/','\\') . "\n" 
+             . &print_summary_line('Module','Size   ','Date','Status','Version')
+             . &print_summary_edge('=') . "\n";
+
+  for my $module ( sort keys %module_info ) {
+
+    eval "require $module";
+
+    if ($@@) {
+      $module_info{$module}{error} = "$@@";
+      $module_info{$module}{version} = 'N/A';
+      $errcount++;
+    } else {
+      my $ver = eval '$'.$module.'::VERSION'; # Try to get  the version
+      unless ( defined $ver ) { $ver = '??????? (no set value for $'.$module.'::VERSION)'; }  # See if we got the version
+      if ( $ver =~ /^\$R{1,1}evision: (.*) \$$/ ) { $ver = $1 }  # Clean up if it is an RCS style version
+      if ( $ver =~ /^(\d+).(\d)$/ ) { $ver = $1.'.0'.$2; }
+      $module_info{$module}{version} = $ver;
+    }
+
+    $logmsg .= &print_summary_line(
+                  $module, 
+                  sprintf("%03.2f", $module_info{$module}{size} ).'k',
+                  ( $module_info{$module}{date} =~ /^\w\w\w (\w\w\w .\d \d\d:\d\d):\d\d/ ? $1 : $module_info{$module}{date} ),
+                  ( $module_info{$module}{error} ? 'KABOOM' : '  OK  ' ),
+                  $module_info{$module}{version}
+               );
+  }
+
+  $logmsg .= &print_summary_edge('=','\\','/');
+
+  # summary tag
+  $logmsg .= "\n\n$errcount modules failed to load. (".(($errcount/($totalfiles?$totalfiles:1))*100)."%)"
+          .  "\nTotal module data loaded: ".sprintf("%04.2f",$total_size)."k ($totalfiles modules)\n";
+
+  return $logmsg
+}
+
+sub error_report {
+  my $self = shift @@_;  
+  my $text = undef;
+  
+  for my $module ( sort keys %module_info ) {
+    if ( $module_info{$module}{error} ) {
+      $text .= "ERROR: $module\n\n$module_info{$module}{error}\n\n";
+    }
+  }
+
+  if ( $text ) {
+    my $level = $log->check_level; 
+    $log->set_level(1,0) if $level == 0;
+    $log->log("COMPILE ERROR:\n\n".$text);
+    $log->set_level(0,0) if $level == 0;
+  }
+}
+
+sub load_module_info {
+  my $name     = shift @@_;
+  my $use_root = shift @@_;
+  my $dir_root = shift @@_;
+  
+  $log->log("Finding $name modules");
+
+  my @@files;
+
+  my $wanted = sub { /^(.*)\.pm$/ && push @@files, $File::Find::name };
+  &find({ wanted => $wanted, untaint => 1 }, $dir_root);
+     
+  for my $file ( @@files ) {
+
+    $file =~ /^(.*)\.pm$/;
+
+    my $module = $1;
+       $module =~ s/^$dir_root//;
+       $module =~ s/\//::/g;
+       $module = $use_root . $module;
+
+    $module_info{$module}{file} = $file;
+
+    my @@file_data                  = stat( $file );
+    $module_info{$module}{size}    = ( $file_data[7] / 1024.0 );
+    $module_info{$module}{date}    = localtime ( $file_data[9] );
+    $module_info{$module}{rawdate} = $file_data[9];
+ 
+    $total_size += $module_info{$module}{size};
+  }
+}
+
+sub print_edge {
+  my $c = shift @@_ || '-';
+  my $l = shift @@_ || '|';
+  my $r = shift @@_ || '|';
+  return $l . $c x '78' . $r . "\n";
+}
+
+sub print_line {
+  my $in1 = shift @@_ || undef;
+  my $in2 = shift @@_ || undef;
+  return "| " . sprintf("%-36.36s",$in1) . " || " . sprintf("%-36.36s",$in2) . " |\n" if $in2;
+  return "| " . sprintf("%-76.76s",$in1) . " |\n";
+}
+
+sub print_summary_edge {
+  my $c = shift @@_ || '-';
+  my $l = shift @@_ || '|';
+  my $r = shift @@_ || '|';
+  return $l . join('|',($c x34),($c x9),($c x14),($c x8),($c x9)) . $r;
+}
+             
+sub print_summary_line {
+  return '| ' . sprintf("%-32.32s", shift @@_) . ' | ' 
+              . sprintf("%7.7s",shift @@_) . ' | '
+              . sprintf("%-12.12s", shift @@_ ) . ' | ' .  ( shift @@_ )  . ' | '
+              . sprintf("%7.7s", shift @@_) . " |\n";
+}
+
+sub scoreboard {
+  my $self = shift @@_;
+  
+  my @@stable = sort { $module_info{$a}{rawdate} <=> $module_info{$b}{rawdate} } keys %module_info;
+  my @@revision = sort { $module_info{$a}{version} <=> $module_info{$b}{version} } map { $module_info{$_}{version} =~ /^\d+\.?\d*$/ ? $_ : () } keys %module_info; 
+
+  my $titlediv = &print_line(' ',' ');
+  $titlediv =~ tr/ /-/;
+
+  my $countout = sub { 
+                   my $ref = shift @@_;
+                   my $out;
+                   for ( my $i=1; $i<6; $i++ ) {
+                     $out .= &print_line("$i. ".shift @@$ref,"$i. ".pop @@$ref);
+                   }
+                   return $out;
+                 };
+
+  return "\n\n"
+       . &print_edge('~','/','\\')
+       . &print_line('Scoreboard')
+       . &print_edge('=')
+       . &print_line('Most Stable: (oldest)','Most Unstable: (newest)')
+       . $titlediv
+       . &$countout(\@@stable)
+       . &print_edge('=') 
+       . &print_line('Most Ignored: (low revision)','Most Edited: (high revision)')
+       . $titlediv
+       . &$countout(\@@revision)
+       . &print_edge('=','\\','/');
+}
+
+sub start_mcp {
+	my $mcp = shift @@_;
+	my $ppid;
+	if($ppid = fork){
+		return $ppid;
+	}
+	elsif (defined $ppid){
+		#exec out the needed module.  This instance is scanner
+		exec $mcp;
+	}
+}
+
+sub verify_apache_running {
+  my $start   = $Apache::Server::Starting;
+  my $restart = $Apache::Server::ReStarting;
+
+  if ( $start == 2 && $restart == 1 ) {
+    $log->log("\n\nStarting PerlServer @@ ".scalar localtime() ." (Start:$start) (Restart:$restart)\n");
+    $log->log("Core Code Directory: $code_root");
+  } else {
+    $log->log("Apache cycling the code (Start:$start) (Restart:$restart)");
+    $log->set_level(0); # stop logging as apache probes the code
+  }
+}
+
+# The requisite true
+1;
+@
+
+
+1.34
+log
+@We now handle compile time errors approrpiately.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+@
+
+
+1.33
+log
+@Now revised to account for non-numeric versions in the scoring
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d71 2
+d85 2
+a86 2
+  my $lfailures  = 0;
+
+a96 1
+      $lfailures++;
+d98 1
+a117 9
+  # report errors
+  if ( $lfailures > 0 ) {
+    for my $module ( sort keys %module_info ) {
+      if ( $module_info{$module}{error} ) {
+        $logmsg .= "ERROR: $module\n\n$module_info{$module}{error}\n\n";
+      }
+    }
+  }
+
+d119 1
+a119 1
+  $logmsg .= "\n\n$lfailures modules failed to load. (".(($lfailures/($totalfiles?$totalfiles:1))*100)."%)"
+d123 18
+@
+
+
+1.32
+log
+@Now with a scoreboard on init.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d196 1
+a196 1
+  my @@revision = sort { $module_info{$a}{version} <=> $module_info{$b}{version} } keys %module_info;
+@
+
+
+1.31
+log
+@Now with subroutines.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d69 1
+a69 1
+$log->log(&evaluate_modules);
+d85 3
+a87 3
+  my $logmsg = "\n\n" . &logedge('~','/','\\') . "\n" 
+             . &logline('Module','Size   ','Date','Status','Version')
+             . &logedge('=') . "\n";
+d101 1
+d105 1
+a105 1
+    $logmsg .= &logline(
+d114 1
+a114 1
+  $logmsg .= &logedge('=','\\','/');
+d164 15
+a178 1
+sub logedge {
+d185 1
+a185 1
+sub logline {
+d190 32
+@
+
+
+1.30
+log
+@Setting up the new ProSupp stuff
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d53 1
+a53 2
+my $start   = $Apache::Server::Starting;
+my $restart = $Apache::Server::ReStarting;
+d55 1
+a55 9
+if ( $start == 2 && $restart == 1 ) {
+  $log->log("\n\nStarting PerlServer @@ ".scalar localtime() ." (Start:$start) (Restart:$restart)\n");
+  $log->log("Core Code Directory: $code_root");
+} else {
+  $log->log("Apache cycling the code (Start:$start) (Restart:$restart)");
+  $log->set_level(0); # stop logging as apache probes the code
+}
+
+### increase warnings
+d65 67
+a131 1
+my $load_module_info = sub {
+d161 1
+a161 1
+};
+d163 6
+a168 18
+&$load_module_info( 'COST Core'       , 'COST'       , "$code_root/main/COST"       );
+&$load_module_info( 'PerlServer Core' , 'PerlServer' , "$code_root/main/PerlServer" );
+
+### Eval modules for errors
+
+my $totalfiles = scalar keys %module_info;
+my $lfailures  = 0;
+
+$log->log("Testing modules for usability");
+
+# Cheesy Format
+
+my $logedge = sub {
+               my $c = shift @@_ || '-';
+               my $l = shift @@_ || '|';
+               my $r = shift @@_ || '|';
+               return $l . join('|',($c x34),($c x9),($c x14),($c x8),($c x9)) . $r;
+             };
+d170 5
+a174 35
+my $logline = sub {
+                return '| ' . sprintf("%-32.32s", shift @@_) . ' | ' 
+                     . sprintf("%7.7s",shift @@_) . ' | '
+                     . sprintf("%-12.12s", shift @@_ ) . ' | ' .  ( shift @@_ )  . ' | '
+                     . sprintf("%7.7s", shift @@_) . " |\n";
+               };
+
+# start probing it all
+
+my $logmsg = "\n\n" . &$logedge('~','/','\\') . "\n" 
+           . &$logline('Module','Size   ','Date','Status','Version')
+           . &$logedge('=') . "\n";
+
+for my $module ( sort keys %module_info ) {
+
+  eval "require $module";
+
+  if ($@@) {
+    $module_info{$module}{error} = "$@@";
+    $lfailures++;
+    $module_info{$module}{version} = 'N/A';
+  } else {
+    my $ver = eval '$'.$module.'::VERSION'; # Try to get  the version
+    unless ( defined $ver ) { $ver = '??????? (no set value for $'.$module.'::VERSION)'; }  # See if we got the version
+    if ( $ver =~ /^\$R{1,1}evision: (.*) \$$/ ) { $ver = $1 }  # Clean up if it is an RCS style version
+    $module_info{$module}{version} = $ver;
+  }
+
+  $logmsg .= &$logline(
+                $module, 
+                sprintf("%03.2f", $module_info{$module}{size} ).'k',
+                ( $module_info{$module}{date} =~ /^\w\w\w (\w\w\w .\d \d\d:\d\d):\d\d/ ? $1 : $module_info{$module}{date} ),
+                ( $module_info{$module}{error} ? 'KABOOM' : '  OK  ' ),
+                $module_info{$module}{version}
+             );
+a176 21
+$logmsg .= &$logedge('=','\\','/');
+
+# report errors
+if ( $lfailures > 0 ) {
+  for my $module ( sort keys %module_info ) {
+    if ( $module_info{$module}{error} ) {
+      $logmsg .= "ERROR: $module\n\n$module_info{$module}{error}\n\n";
+    }
+  }
+}
+
+# summary tag
+$logmsg .= "\n\n$lfailures modules failed to load. (".(($lfailures/($totalfiles?$totalfiles:1))*100)."%)"
+        .  "\nTotal module data loaded: ".sprintf("%04.2f",$total_size)."k ($totalfiles modules)\n";
+
+$log->log($logmsg);
+
+$PerlServer::module_info = \%module_info;
+
+#start_mcp("/home/panther/ps/mcp/mcp.pl START");
+
+d187 13
+@
+
+
+1.29
+log
+@startup.pl fixed to not do nasty things when starting mcp.pl (read: commented out fr your own safety until I have all of it fixed and working).    Bill Validate had a merge beteween validate and universal_validate without breaking compatibility.  scan.pm had stuff fixed for timing and mcp.conf was made to play nicer.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+a15 6
+=head2 MODIFICATION HISTORY:
+	
+  VERSION    DATE          NAME      COMMENTS
+  1.00       06-14-2001    garyc     Initial Creation
+  2.00       09-19-2001    bennie    Refactored
+
+d61 1
+a61 1
+  $log->{spew} = 0; # stop logging as apache probes the code
+@
+
+
+1.28
+log
+@Made MCP work better and removing the scanner.pl module and changing it for an object so it fits better with the rest of the architecture.  Few changes here and there and additions to config file to make sure all this new junk works.
+
+It should start up from startup.pl, but I don't recommend having more than one instance running (just comment out start_mcp() from startup.pl).
+
+myah
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d187 1
+@
+
+
+1.27
+log
+@Fixed the lowercase version of Info. Currently things are case spcific. Eventually this should be fixed to non specific. Too much work for right now. Refactor later.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d186 13
+@
+
+
+1.26
+log
+@Giving a bit more room for the module name in the log table summary.
+@
+text
+@d2 22
+a23 19
+#*
+#* FILE:        startup.pl
+#*
+#* DESCRIPTION: Core PerlServer initialization script
+#*
+#* SYSTEM:      PerlServer Core
+#*
+#* SUBSYSTEM:   mod_perl apache setup
+#*
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+#*              Diversified Consulting, Inc.
+#*
+#* MODIFICATION HISTORY:
+#*
+#* VERSION    DATE          NAME      COMMENTS
+#*
+#* 1.00       06-14-2001    garyc     Initial Creation
+#* 2.00       09-19-2001    bennie    Refactored
+#*
+d37 1
+a37 1
+use CGI qw(-compile :all);;
+@
+
+
+1.25
+log
+@Headings and date cleaned (finally!)
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d125 1
+a125 1
+               return $l . join('|',($c x30),($c x10),($c x17),($c x8),($c x9)) . $r;
+d129 3
+a131 3
+                return '| ' . sprintf("%-28.28s", shift @@_) . ' | ' 
+                     . sprintf("%8.8s",shift @@_) . ' | '
+                     . sprintf("%-15.15s", shift @@_ ) . ' | ' .  ( shift @@_ )  . ' | '
+d138 1
+a138 1
+           . &$logline('Module','Size    ','Date','Status','Version')
+d159 1
+a159 1
+                ( $module_info{$module}{date} =~ /^\w\w\w (.*)/ ? $1 : $module_info{$module}{date} ),
+@
+
+
+1.24
+log
+@Now with sprintf in a neat sub.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d131 1
+a131 1
+                     . sprintf("%15.15s", shift @@_ ) . ' | ' .  ( shift @@_ )  . ' | '
+d138 1
+a138 1
+           . &$logline('Module','Size','Date','Status','Version')
+d159 1
+a159 1
+                $module_info{$module}{date},
+@
+
+
+1.23
+log
+@A small collection of refactors
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d119 3
+a121 1
+my $logline = sub {
+d127 13
+a139 4
+
+my $logmsg = "\n\n" . &$logline('~','/','\\') . "\n"
+           . '| Module' . (' ' x 23) . '|   Size   | Date            | Status | Version |' . "\n"
+           . &$logline('=') . "\n";
+a142 4
+  $logmsg .= '| ' . sprintf("%-28.28s",$module) . ' | '
+          .  sprintf("%7.7s",sprintf("%03.2f",$module_info{$module}{size})) . 'k | '
+          .  sprintf("%15.15s", $module_info{$module}{date}) . ' | ';
+          
+d148 1
+a148 1
+    $logmsg .= "KABOOM |     N/A |\n";
+d153 1
+a153 1
+    $logmsg .= '  OK   | ' . sprintf("%7.7s",$ver) . " |\n";
+d155 8
+d165 1
+a165 1
+$logmsg .= &$logline('=','\\','/');
+@
+
+
+1.22
+log
+@This should not end up getting parsed by RCS anymore. Whee.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d100 4
+a103 3
+    my @@file_data = stat( $file );
+    $module_info{$module}{size} = ( $file_data[7] / 1024.0 );
+    $module_info{$module}{date} = localtime( $file_data[9] );
+@
+
+
+1.21
+log
+@Now with error reporting ... I think
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d144 1
+a144 1
+    if ( $ver =~ /^\$Revision: 1.1 $/ ) { $ver = $1 }  # Clean up if it is an RCS style version
+@
+
+
+1.20
+log
+@Refined test view of modules. Need to trim the date to eliminate the weekday and also show details on the modules that blow up.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d125 1
+a125 1
+my $logmsg = "\n" . &$logline('~','/','\\') . "\n"
+d138 1
+a138 1
+    $module_info{error} = "$@@";
+d144 2
+a145 2
+    if ( $ver =~ /^\$Revision: 1.1 $$/ ) { $ver = $1 }  # Clean up if it is an RCS style version
+    $logmsg .= '  OK   | ' . sprintf("%7.7s",$ver) . " | \n";
+d149 1
+a149 1
+# summarize probing
+d151 8
+a158 3
+$logmsg .= &$logline('=','\\','/')
+        .  "\n\n$lfailures modules failed to load. (".(($lfailures/($totalfiles?$totalfiles:1))*100)."%)"
+        .  "\nTotal module data loaded: ".sprintf("%04.2f",$total_size)."k ($totalfiles modules)";
+d160 3
+a162 1
+#$logmsg .= "      Status  : FAILED\n      Debug   : \n\n$@@\n\n";
+@
+
+
+1.19
+log
+@Annoying apache loop is now solved!
+@
+text
+@d118 11
+d131 4
+a134 2
+  my $logmsg = "Testing: $module\n\n";
+
+d138 1
+a138 1
+    $logmsg .= "      Status  : FAILED\n      Debug   : \n\n$@@\n\n";
+d140 1
+d143 1
+a143 1
+    unless ( defined $ver ) { $ver = '(no set value for $'.$module.'::VERSION)'; }  # See if we got the version
+d145 1
+a145 1
+    $logmsg .= "      Status  : Woot! (success)\n      Version : $ver\n      Date    : $module_info{$module}{date}\n      Size    : ".sprintf("%03.2f",$module_info{$module}{size})."k\n";
+d147 1
+d149 7
+a155 2
+  #$log->log($logmsg);
+}
+d157 1
+a157 2
+$log->log("$lfailures modules failed to load. (".(($lfailures/($totalfiles?$totalfiles:1))*100)."%)");
+$log->log("Total module data loaded: ".sprintf("%04.2f",$total_size)."k ($totalfiles modules)");
+@
+
+
+1.18
+log
+@Some minor versioning error fixes.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d23 1
+a23 1
+# required modules
+d31 1
+a31 1
+# preloaded modules
+d38 2
+d44 2
+d54 14
+a67 3
+# Drop startup info into the log
+$log->log("\n\nStarting PerlServer @@ ".scalar localtime() ."\n");
+$log->log("Core Code Directory: $code_root\n");
+a68 1
+# increase warnings
+a85 3
+  #my $wanted = sub { /^(.*)\.pm$/ && push @@files, $File::Find::name };
+  #&find($wanted,$dir_root);
+
+d128 1
+a128 1
+    my $ver = eval '$'.$module.'::VERSION';              # Try to get  the version
+d130 1
+a130 1
+    if ( $ver =~ /^\$Revision: 1.1 $$/ ) { $ver = $1 }  # Clean up if it is an RCS style version
+d134 1
+a134 1
+  $log->log($logmsg);
+@
+
+
+1.17
+log
+@Fixed a little regex?
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d117 3
+a119 3
+    my $ver = eval "\$".$module.'::VERSION';              # Try to get  the version
+    unless ( defined $ver ) { $ver = '(no set value)'; }  # See if we got the version
+    if ( $ver =~ /^\$Revision: 1.1 $$/ ) { $ver = $1 }    # Clean up if it is an RCS style version
+@
+
+
+1.16
+log
+@Now versioning info is actually used.
+@
+text
+@d119 1
+a119 1
+    if ( $ver =~ /^\$Revision: 1.1 $$/ ) { $ver = $1 }  # Clean up if it is an RCS style version
+@
+
+
+1.15
+log
+@Uhhh.... don't know why it's modified, but it is.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d109 1
+a109 1
+  $log->log("Testing: $module (".sprintf("%03.2f",$module_info{$module}{size})."k) - $module_info{$module}{date}");
+d112 1
+d114 1
+a114 1
+    $log->log("Failed: $module : $@@");
+d116 5
+d122 2
+@
+
+
+1.14
+log
+@Try 2.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d23 2
+a25 1
+use Apache::DBI;
+a26 3
+use CGI qw(-compile :all);
+use DBI;
+use Digest::MD5;
+a27 1
+use MIME::Base64;
+d30 7
+@
+
+
+1.13
+log
+@Now overriding taint on File::Find.
+@
+text
+@d72 1
+a72 1
+  &find({ wanted => $wanted, untaint => 0 }, $dir_root);
+@
+
+
+1.12
+log
+@Er... NOW it's refactored.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d68 3
+d72 1
+a72 1
+  &find($wanted,$dir_root);
+@
+
+
+1.11
+log
+@Nice and refactored.
+@
+text
+@d64 1
+a64 1
+  $log->log("Finding $name");
+@
+
+
+1.10
+log
+@Now with recursion!
+@
+text
+@d12 1
+d19 1
+a22 5
+# Basic Pragmas
+# Tell it to warn us of everything, and use our custom libraries
+use strict;
+use warnings;
+
+a23 16
+
+$PerlServer::cwd=$PerlServer::cwdmain="";
+
+my $s = Apache->server;
+
+$PerlServer::cwd    = $s->dir_config('PSRoot') || '';
+$PerlServer::cwdmain="$PerlServer::cwd/main";
+$PerlServer::cost   ="$PerlServer::cwdmain/COST";
+push @@INC,$PerlServer::cwdmain;
+push @@INC,$PerlServer::cost;
+die "Unable to load configuration" unless $PerlServer::cwd;
+
+# Make sure we are in a sane environment
+$ENV{GATEWAY_INTERFACE}=~/^CGI-Perl/ || die "GATEWAY_INTERFACE not perl!";
+
+# Frequently used modules
+d25 1
+d28 1
+d31 8
+a38 1
+use Digest::MD5;
+a39 1
+# Import the code that really matters
+a43 1
+# Create a Logging object
+d46 1
+a46 1
+# Give the user some information
+d48 1
+a48 1
+$log->log("Core Code Directory: $PerlServer::cwd\n");
+d50 1
+a50 2
+# Tell me more about warnings
+use Carp;
+a51 1
+
+d90 2
+a91 2
+&$load_module_info( 'COST Core'       , 'COST'       , "$PerlServer::cwdmain/COST"       );
+&$load_module_info( 'PerlServer Core' , 'PerlServer' , "$PerlServer::cwdmain/PerlServer" );
+@
+
+
+1.9
+log
+@More of the same. Now to recursion.
+@
+text
+@d79 7
+a85 4
+   
+  opendir ( DIR, $dir_root );
+   
+  for my $file ( grep { /\.pm$/ } readdir (DIR) ) {
+a87 1
+    my $module = $use_root . '::' . $1; 
+d89 4
+a92 1
+    $module_info{$module}{file} = $dir_root .'/'. $file;
+d94 3
+a96 1
+    my @@file_data = stat( $module_info{$module}{file} );
+a101 2
+  
+  closedir (DIR);
+d104 2
+a105 5
+&$load_module_info( 'COST objects'       , 'COST'                       , "$PerlServer::cwdmain/COST"                     );
+&$load_module_info( 'PerlServer Core'    , 'PerlServer'                 , "$PerlServer::cwdmain/PerlServer"               );
+&$load_module_info( 'PerlServer Display' , 'PerlServer::Display'        , "$PerlServer::cwdmain/PerlServer/Display"       );
+&$load_module_info( 'PerlServer Style'   , 'PerlServer::Display::Style' , "$PerlServer::cwdmain/PerlServer/Display/Style" );
+&$load_module_info( 'PerlServer Pages'   , 'PerlServer::Pages'          , "$PerlServer::cwdmain/PerlServer/Pages"         );
+d126 3
+a128 1
+$log->log("Total module data loaded: ".sprintf("%04.2f",$total_size)."k");
+@
+
+
+1.8
+log
+@Temporarily refactored startup eval engine. Now I have to make it recurse.
+@
+text
+@d99 5
+a103 5
+&$load_module_info( 'COST objects',    'COST',       "$PerlServer::cwdmain/COST"       );
+&$load_module_info( 'PerlServer Core', 'PerlServer', "$PerlServer::cwdmain/PerlServer" );
+
+&$load_module_info( 'Display Core','PerlServer::Display',"$PerlServer::cwdmain/PerlServer/Display");
+&$load_module_info( 'PerlServer Pages','PerlServer::Pages',"$PerlServer::cwdmain/PerlServer/Pages");
+@
+
+
+1.7
+log
+@The new tempalte engine is functional. Works on the splash page. New laoder constructed. Templates pre-db go into dbload/tempaltes. Eventually the CoreTemplates directory will go byebye.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001
+a33 1
+$PerlServer::mtmpls ="$PerlServer::cwd/CoreTemplates";
+d46 1
+a61 6
+# Set up the code root
+$PerlServer::coderoot = "$PerlServer::cwdmain/PerlServer";
+
+# Tell the systems admin where we think we are
+$log->log("Setting code root to: ".$PerlServer::coderoot);
+
+d68 1
+a68 1
+### Eval load and loop of Pages heirarchy
+d70 2
+a71 2
+# Now, go to the Pages subdirectory and require each one, reporting on
+# Failures to load properly
+d73 25
+a97 11
+$PerlServer::pagesdirectory = $PerlServer::coderoot."/Pages/";
+
+$log->log("Scanning ".$PerlServer::pagesdirectory." for pages");
+
+# Get a list of the files in the Pages directory and eat the .pm
+opendir (DIR,$PerlServer::pagesdirectory);
+my @@files=grep { /\.pm$/ } readdir(DIR);
+closedir (DIR);
+
+$log->log("Found ".scalar @@files." page objects");
+$log->log("Testing page objects for usability");
+d99 2
+a100 1
+my $lfailures=my $total_size=0;
+d102 2
+a103 3
+# Build, as well, a pointer to the interesting data per file
+my %modules=(module_list=>\@@files);
+my %module_map=();
+d105 1
+a105 3
+# Store them into an area which can be accessed later
+$PerlServer::modules=\%modules;
+$PerlServer::module_map=\%module_map;
+d107 2
+a108 2
+# Now, require them, one at a time, and if they blow up, report the error
+for my $next_trick (@@files) {
+d110 1
+a110 1
+  my $filename=$PerlServer::pagesdirectory."/$next_trick";
+d112 1
+a112 4
+  # Store information for later comparisons
+  my @@file_data=my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,
+                    $mtime,$ctime,$blksize,$blocks)=stat($filename);
+  $modules{$next_trick}=\@@file_data; # store permanent record
+d114 1
+a114 2
+  # Remove the .pm from the end so it has a name
+  $next_trick=~/^(.*)\.pm$/;
+a115 11
+  my $module = "PerlServer::Pages::$1";
+  
+  # Build a mapping of module names to file names
+  $module_map{$module}=$filename;
+
+  my $mod_date=localtime($mtime);
+
+  $total_size+=$size=($size/1024.0); #convert to k
+  $log->log("Testing: $module (".sprintf("%03.2f",$size)."k) - $mod_date");
+
+  # See if it is loadable
+a116 2
+
+  # If it blew up, let the user know
+a120 1
+
+a121 2
+
+my $totalfiles=scalar @@files;
+@
+
+
+1.6
+log
+@Complete update of how the Admin.pm page works.  The old method was a nightmare of ifs within ifs, this one uses ifs only to call subroutines.  And, all of the variables important to be shared are done through attributes of the object instead of global variables.  Amazing how one's designs interally change to deal with things.
+
+Also added a Display function for automating the creation of the anchor tables using Phil's new table method.  Changed the returns of some of the COST::* utilities methods as well
+@
+text
+@d59 1
+a59 1
+$log->log("Starting PerlServer @@ ".scalar localtime);
+@
+
+
+1.5
+log
+@I'm totally nutty, I should be committed.
+@
+text
+@a43 1
+
+a48 1
+#use Apache::Session::Postgres;
+d74 1
+a74 1
+### Eval load and loop of Display heirarchy
+@
+
+
+1.4
+log
+@Fixes...
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000
+d17 1
+a17 1
+#* 1.00       08-27-2000    garyc     Initial Creation
+d24 1
+d124 1
+a124 1
+  $log->log("Loading: $module ($size"."k) - $mod_date");
+d131 1
+a131 1
+    $log->log("Failed Loading: $module : $@@");
+a132 2
+  } else {
+    $log->log("Loaded: $module");
+d140 1
+a140 1
+$log->log("Total module data loaded: $total_size"."k");
+@
+
+
+1.3
+log
+@You can now insert customers into the database... minus locking, but for the moment, I doubt we'll be inserting more than one customer at a time.
+@
+text
+@a52 2
+#use PerlServer::Data;
+#use PerlServer::Display;
+d54 1
+a63 1
+#$PerlServer::coderoot = "/home/garyc/Development/PerlServer";
+@
+
+
+1.2
+log
+@Okay, this is the working version, migrated to MySQL
+@
+text
+@d34 1
+d36 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d26 1
+d28 1
+d30 2
+a31 1
+$PerlServer::cwd = $s->dir_config('PSRoot') || '';
+d33 1
+a33 1
+$PerlServer::mtmpls="$PerlServer::cwd/CoreTemplates";
+@
+
+
+1.1.1.1
+log
+@Initial import of repository
+@
+text
+@@

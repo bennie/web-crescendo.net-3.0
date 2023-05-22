@@ -1,0 +1,186 @@
+<div id="main"><div class="boxen">
+<div class="c1"><div class="c2"><div class="c3"><div class="c4">
+
+<p><font size="5">phpBB Spambots!</font></p>
+
+<hr noshade />
+
+<p><i>This is a discussion of phpBB spammers and their techniques as part of the
+background in building the <a href="index.html">phpBB &quot;Bot&quot; sniffer</a>.
+Check out that link if you are looking for identifying bots on your board.</i></p>
+
+<hr noshade />
+<font size="1">$Revision: 1.3 $ $Date: 2006/05/23 20:57:33 $</font>
+
+<p><b>What is a spammer?</b></p>
+
+<p>In the case of phpBB bulletin boards, or any greater community for that matter, "spammers"
+are parties who wish to use your community for their own financial interest. They may or 
+may not be directly addressing your community to do so.</p>
+
+<p><b>What is a "bot?"</b></p>
+
+<p>Bot is a quick handle for "robot." Very often the term is applied to accounts that have
+been created with automated practices, or could very well have been. I'm fairly sure that there
+are very poor people in Russia, Nigeria and on the south asian rim who have a pulse and physically
+create the accounts. I still call them "bots." Just because world labor makes them cheaper than
+a shell script doesn't diminsh the automated aspect of the attack. That and it's a simple term.
+
+<p><b>What kinds of spammers are there?</b></p>
+
+In order of increasing annoyance and automation.
+
+<ul>
+<li> <p>Direct Spamming Idiot</p>
+ 
+<p>A direct spamming idiot (hereafter DSI) is a person who registers an account on your
+board to specifically hawk their service or fee. Sometimes they are hawking a completeing
+bulletin board. Often these are actual people, and often they are just stupid idiots who
+don't recognize their actions as Spam. This is the natural spammer in the wild. Often
+the community deals with these folks directly and a simple ban is an effective technique.</p>
+
+<li> Direct Spamming Bot
+
+<p>Same idea as a DSI. Except it has been taken to the next level. Either via scripting, or the 
+usage of very cheap labor in questionable nations of origin folks will directly advertise their
+product on your board. Very often the DSB is advertising something that has absolutely NOTHING to
+do with your community. The good ones will post something like "Hey Guys! Check out this cool site 
+that does $spamming_thing over here" and the bad ones can be almost humorous "Want make cum night 
+long all? Viagra we do."
+
+<li> Rank Stuffer Bot
+
+<p>This, in my opinion, is one of the worse spammers. They create accounts whose account information
+are links back to their sites or products. Often their signatures and other information are all 
+keyword grabs. Their action is often very silent and unnoticed by the board at large. So why are they
+the worse? Because they are using the good name of your board to boost their google rank. Your 
+bandwidth and cred gets hijacked while your board gets full of junk accounts.</p>
+
+<li> Super Piggies - DSB + RSB
+
+<p>And this is the king of them all. The guy who's account is a blinking advertisement for his
+snake oil and then he turns around and posts a few happy posts about it to encourage direct
+sales and ranking as well. The worse of these will post long lists of keywords with links. So 
+annoying.</p>
+
+</ul>
+
+<p><b>How do I stop spammers?</b></p>
+
+<p>Double-ought buckshot at close ranges is strongly reccomended. However some of the address
+information on spammers is sketchy at best and airplane fees and court costs make this an untenable
+option for most.</p>
+
+<p>Silliness aside, the sad answer is that you can't stop them. They will figure out new things and
+be annoying as long as it is financially beneficial for them to do so. So at best, the question is
+"how do I slow down the spammers?" and to that, we have some tools at hand.</p>
+
+<p>Short of direct intervention with projectiles, the best thing you can do is to lock down your 
+board a bit to eliminate some common avenues of approach:</p>
+
+<ol>
+<li> <p>Keep PHPbb current!</p>
+
+<p>This is a basic rule of ownership for any product such as phpBB, but it is worth stating. Keep 
+current on your version of phpBB. Get used to package releases and alterations. Be ready to apply them.
+In the past some severe hacking holes have been found and closed. I'm sure that current and future 
+SPAM problems will continue to be addressed in the core code.</p>
+
+
+<p>I find the release notification email is VERY helpful. Sign up for it here:
+<a href="http://www.phpbb.com/downloads.php">http://www.phpbb.com/downloads.php</a>
+
+<li> <p>Enable at least "User" level account activation.</p>
+
+<p>This is another basic rule. In your admin panel, under "Configureation" it needs to be set to 
+either "User" or "Admin." "User" means the user will get an email, and will have to respond to
+it to activate the account. This will shut down a fair amount of DSB's. "Admin" means you will 
+have to visually approve every account. That can be a bit tedious. 
+
+<li> <p>Enable Visual Confirmation.</p>
+
+<p>This is now packaged as a part of phpBB. (since 2.0.18 I believe) You need GD support in PHP for 
+this to work. Get it. What this does is require the user to read a graphic code and type the
+message in to create an account. Again, this will reduce a lot of DSBs.
+
+
+<li> <p>The ban game - Email</p>
+
+<p>With the above settings people need an email to register and become active. That email address
+is the first of several steps of banning common entry points.</p>
+
+<p>If it is highly likely that your subject does not appeal to folks from russia, it's a good step
+to ban "*@mail.ru" and "*@yandex.ru" off the bat. I am assuming some of those purchasable programs
+that spam boards use these as their default mail location. Out of 7k users on one board, I have one
+actual user from mail.ru and have had several hundred bots. This advice will likely change over time 
+as spammers figure out what you are blocking.</p>
+
+<p>If you are lucky enough that you can be picky about user email locations, also ban common free
+email sites such as "*@hotmail.com" and such. Spammers like to use them as they have scripts for such
+sites.</p>
+
+<p>Please note that you cannot ban top level domains such as "*@*.ru" or others. I hope this can 
+change in later versions of phpBB. Outright banning a few countries such as Russia, Romania, and
+Taiwan can trim traffic down.</p>
+
+<li> <p>The ban game - Keywords</p>
+
+<li> <p>The ban game - IPs</p>
+
+<li> <p>Trip the script</p>
+
+<p>Most of the scripts do a direct submit to the code. There is a point in phpBB where you must
+agree to the COPA agreement for the site. The value submitted for this is "agee." Simply making
+this small change to your code will alter that token and choke a few bots out:
+
+...
+
+<li> <p>The hunt - inactive accounts</p>
+
+<li> <p>The hunt - Bot Elimination</p>
+
+<p>All of the steps above, slow down the spammers arriving. But they will arrive. The front lines
+will be breached an you will need to move on to dealing with those who are present. Thus, move on to 
+the next section:</p>
+
+</ol>
+
+<p><b>Identifing the bots on your board</b></p>
+
+<p>Either you started a new board and built up the wall, or you've raised some defenses after the 
+first salvo of viagra ads hit your BB. Now you are looking ar your boards and wondering, how many
+of these people are here to really chat, and who is here to just sell viagra.</p>
+
+<p>As I stated above, the volume of bots that end up on a phpBB system are there to stuff ranks
+and the often do so silently with unactivated accounts on the membership page. Scroll through
+the membership and look at the web links on your BBS. I bet some of them go off to boom.ru or
+some other fun place such as a casino site.</p>
+
+<p>I started noticing paterns in these bots and their methods and I wrote a script to identify
+these bots by their patterns. It is free to anyone who would like it. <a href="index.html">download
+it here</a> and install and run it. Rebiew the output report and delete the offenders.</p>
+
+<p>Happy hunting!</p>
+
+<p><b>Taking the meat out of the SPAM - AKA some minor taste of revenge</b></p>
+
+<ul>
+<li> Stuff This! - No inactive members in the member list
+
+<p>Spammers usually use your to rank stuff. The primary loophole for this is that they can create
+an account, and never activate it, and it shows up on the memberpage. This is the link-back that
+they want. This is the google-hit they desire. So while eliminating these links will not stop the 
+spammer bots from coming it will hit their wallet slightly.</p>
+
+<p>... inactive mod ..</p>
+</ul>
+
+---
+
+<p><b>Issues and questions</b></p>
+
+<p>Why do a lot of solutions reduce DSBs but not RSBs?</p>
+
+
+
+</div></div></div></div></div></div>

@@ -1,0 +1,5 @@
+. Actually parse RCS files
+
+  Currently there is zero-to-no documentation on how to actually parse RCS files
+  beyond the rcsfile(5) man page. All perl modules that interface RCS files
+  (including RCS::Agent) do so via shelling-out to command line. How cheeseball!

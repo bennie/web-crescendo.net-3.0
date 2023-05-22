@@ -1,0 +1,1074 @@
+head	1.35;
+access;
+symbols
+	initial:1.1.1.1 DCI:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.35
+date	2002.02.19.21.13.54;	author bennie;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.02.07.17.41.53;	author bennie;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.02.06.22.39.23;	author bennie;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.02.06.18.17.48;	author bennie;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.02.04.21.25.53;	author bennie;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.01.31.16.51.53;	author bennie;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.01.10.19.45.48;	author bennie;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.12.06.21.50.01;	author bear;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.11.13.21.46.12;	author binky;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.11.06.20.13.45;	author binky;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.11.05.21.28.51;	author binky;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.11.05.20.19.44;	author binky;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.11.05.17.43.02;	author binky;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.10.09.20.12.21;	author bear;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.10.09.18.16.24;	author bear;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.10.02.16.41.48;	author bear;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.07.23.17.08.54;	author binky;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.07.20.17.00.46;	author binky;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.07.16.20.22.17;	author binky;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.07.12.19.16.56;	author binky;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.07.12.16.27.10;	author binky;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.07.11.17.17.27;	author binky;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.07.03.19.28.39;	author binky;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.06.25.22.27.27;	author bear;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.06.25.17.01.52;	author bear;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.06.20.16.19.04;	author binky;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.06.19.18.00.42;	author bear;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.06.19.17.24.35;	author binky;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.06.19.16.40.19;	author binky;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.06.18.22.53.06;	author binky;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.06.18.19.36.15;	author binky;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.06.11.20.54.14;	author bear;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.06.08.18.38.58;	author bear;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.06.07.14.28.14;	author bear;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.29.17.26.22;	author bear;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.05.29.17.26.22;	author bear;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.35
+log
+@Slight reorg of ProSupp.
+@
+text
+@#*************************************************************************
+
+=head1 Pages.pm (PerlServer::Pages)
+
+=head1
+
+=head2 GENERAL INFO:
+
+Core PerlServer Engine
+
+  SYSTEM:      PerlServer Page Template Module
+  SUBSYSTEM:   Web Pages
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+
+=cut
+
+#*************************************************************************
+
+=head1 METHODS:
+
+=cut
+
+use PerlServer::Display;
+use COST::Table;
+use strict;
+
+package PerlServer::Pages;
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+
+# Create the constructor
+
+=item new()
+
+=cut
+
+sub new { # Generic / Heritable
+    my $class = shift @@_;
+    my $self  = {};
+    bless ( $self, $class );
+    $self->_init(@@_);  # Call initialization routine with remains
+    return $self;
+}
+
+
+=item _init()
+
+=cut
+
+sub _init { # Perform initialization 
+  my $self           = shift @@_;
+  $self->{pointers}  = shift @@_;
+
+  # Update self with local copies from pointers
+  for my $next_trick (@@{$self->{pointers}->{names}}) {
+    $self->{$next_trick} = $self->{pointers}->{$next_trick};
+  }
+  
+  $self->{redirect} = ''; # Clear potential redirect
+  $self->{destroyedsession}=''; # Only destroy the session if we log out
+  
+  # Init shared objects
+  $self->{display} = new PerlServer::Display ($self->{pointers});
+  $self->{pointers}->{cost_object_cache} = new COST::ObjectCache($self->{pointers});
+}
+  
+# The destructor
+
+=item DESTROY()
+
+=cut
+
+sub DESTROY {
+    my $self=shift @@_;
+    # Do everything possible to prevent memory leaks
+    for my $next_trick (@@{$self->{pointers}->{names}}) {
+      delete $self->{$next_trick};
+    }
+
+    delete $self->{redirect};
+    delete $self->{display};
+    delete $self->{destroyedsession};
+}
+
+# Execute function
+
+=item execute()
+
+=cut
+
+sub execute {
+  my $self = shift @@_;
+  
+  if ( $self->{psession}->{userid} ) {
+    $self->ShowPage();
+  } else {
+    my $goto = '/Login' . $self->{pointers}->{untouched};
+    $self->{Log}->debug("Not logged in, redirecting to $goto");
+    $self->{display}->loadnext($goto);
+  }
+
+}
+
+# Private methods.
+
+=item _expose_matrix()
+
+=cut
+
+sub _expose_matrix {
+  my $self   = shift @@_;
+  my $matrix = shift @@_;
+  my $cgi    = $self->{CGI};
+  my $log    = $self->{Log};
+    
+  $log->debug('Exposing the Matrix values.');
+
+  my $out = $cgi->p($cgi->b('Exposing Matrix')) . $cgi->start_ul;
+  for my $util ( @@{ $matrix->list_current_utilities } ) {
+    $out .= $cgi->li('Util:',$util) . $cgi->start_ul . $cgi->li('Providers:') . $cgi->start_ul;
+    for my $provider ( @@{ $matrix->list_providers($util) } ) { $out .= $cgi->li($provider) }
+    $out .= $cgi->end_ul . $cgi->li('Suppliers:') . $cgi->start_ul;
+    for my $supplier ( @@{ $matrix->list_suppliers($util) } ) { $out .= $cgi->li($supplier) }
+    $out .= $cgi->end_ul . $cgi->end_ul;
+  }
+  $out .= $cgi->end_ul;
+
+  return $out;
+}
+
+=item _expose_params()
+
+=cut
+
+sub _expose_params {
+  my $self = shift @@_;
+  my $cgi  = $self->{CGI};
+  my $log  = $self->{Log};
+    
+  $log->debug('Exposing CGI Paramters.');
+
+  my $out = $cgi->p($cgi->b('Exposing CGI Params:')) . $cgi->start_ul;
+  for my $key ( $cgi->param ) { $out .= $cgi->li($cgi->b($key.':'),$cgi->param($key)); }
+  $out .= $cgi->end_ul;
+
+  return $out;
+}
+
+=item _preparations()
+
+=cut
+
+sub _preparations {
+	my $self  = shift @@_;
+	my $style = shift @@_ || 'External';
+	
+	my $ret = 1;
+	our $display = $self->{display};
+	
+	$ret = $display->prepare();
+  	$ret = $display->set_style($style);
+   	$ret = $display->start();
+}
+
+sub _simple_page {
+  my $self = shift @@_;
+  my @@body =       @@_;
+
+  my $display = $self->{display};
+ 
+  $self->_preparations;
+  $display->output(@@body);  
+  $display->finish;
+
+  return 1;
+}
+
+1;
+
+__END__
+
+=head1 Documentation Author:
+
+ Phillip Pollard <binky@@bears.org>
+ Last edited 2/6/2002
+@
+
+
+1.34
+log
+@Now with the minty ObjectCache
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d28 1
+a28 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d162 13
+@
+
+
+1.33
+log
+@Account functionality kinda finished. Cost obejct cache developed.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d28 1
+a28 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d60 2
+d63 1
+a103 27
+
+=item _cost_object_cache()
+
+=cut
+
+sub _cost_object_cache {
+  my $self = shift @@_;
+  my $obj  = shift @@_;
+  my $get  = shift @@_ || undef;
+  
+  my $log = $self->{pointers}->{Log};
+  
+  $log->debug("Looking for COST object named $obj");
+
+  return $self->{cost_object_cache}->{$obj} if ref $self->{cost_object_cache}->{$obj};
+  
+  $log->debug("Attempting to create $obj");
+    
+  my $perl_obj =  'COST::'.$obj;
+     $perl_obj =~ m/(.*)/; # UNTAINT!
+     
+  $self->{cost_object_cache}->{$obj} = $1->new($self->{pointers});
+  
+  $self->{cost_object_cache}->{$obj}->db_get($get) if defined $get;
+
+  return $self->{cost_object_cache}->{$obj};
+}
+@
+
+
+1.32
+log
+@Change to array refs in the Matrix. Adding the Account module. Half finished.
+@
+text
+@d3 1
+a3 1
+=head1 Pages.pm
+d13 1
+a13 7
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+ 
+
+=head2 MODIFICATION HISTORY:
+
+  VERSION    DATE          NAME      COMMENTS
+  1.00       09-21-1999    garyc     Initial Creation
+d28 1
+a28 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d102 1
+a102 1
+=item _preparations()
+d106 21
+a126 10
+sub _preparations {
+	my $self  = shift @@_;
+	my $style = shift @@_ || 'External';
+	
+	my $ret = 1;
+	our $display = $self->{display};
+	
+	$ret = $display->prepare();
+  	$ret = $display->set_style($style);
+   	$ret = $display->start();
+d129 1
+a129 1
+=item _expose_params()
+d172 16
+a187 1
+# The Obligatory One
+a189 1
+
+d195 1
+a195 1
+ Last edited 11/06/2001
+@
+
+
+1.31
+log
+@Now with property input
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d34 1
+a34 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d137 1
+a137 1
+  for my $util ( $matrix->list_current_utilities ) {
+d139 1
+a139 1
+    for my $provider ( $matrix->list_providers($util) ) { $out .= $cgi->li($provider) }
+d141 1
+a141 1
+    for my $supplier ( $matrix->list_suppliers($util) ) { $out .= $cgi->li($supplier) }
+@
+
+
+1.30
+log
+@Now with exposure routines and a reorganizes prematrix data structure.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d34 1
+a34 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d128 25
+d154 11
+a164 8
+  my $self    = shift @@_;
+  my $cgi     = $self->{CGI};
+  my $display = $self->{display};
+  $display->output( $cgi->p($cgi->b('Exposing CGI Params:')), $cgi->start_ul );
+  for my $key ( $cgi->param ) {
+    $display->output($cgi->li($cgi->b($key.':'),$cgi->param($key)));
+  }
+  $display->output($cgi->end_ul);
+@
+
+
+1.29
+log
+@An epiphany!
+
+Any information that would have occurred via the query and set param modules can occur more safely via checks in the session data structure. Thusly these two display steps are depreciated. All of it should be removed and all POD docs updated by this commit.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d34 1
+a34 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d122 15
+@
+
+
+1.28
+log
+@Advancing the progress of science, by removing a BOATLOAD of code.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d34 1
+a34 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d121 1
+a121 6
+	
+	my $evalvar = $display->query_params() || ""; # Pass initialization strict test
+  	   $evalvar = $evalvar || "";                 # Completely gay error kludge to untaint
+
+  	$ret = $display->set_params(eval $evalvar);
+  	$ret = $display->start();
+@
+
+
+1.27
+log
+@Login and logout now both work correctly, redirecting you back to the page from which you were called with all of the associated parameters as found in the $self->{pointers}->{untouched} token. If there are no directions, defaults are used.
+This is a slight change in that now the Login and Logout pages are considered part of the Internal design structure so that custom submit locations can be written. The default login box still points to summary as it is called for in the External style module.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d34 1
+a34 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+a126 27
+}
+
+# Handy Utilities Methods
+
+# Parse a matrix of the form check#x# into a hash of arrays...
+
+=item matrix_parse()
+
+=cut
+
+sub matrix_parse {
+	my $self = shift @@_ || return (undef);	
+	my ($cgiobj) = @@_;
+		
+	# Get a list of the parameters returned in the CGI object...
+	my @@parameters = grep {m/^check/} ($cgiobj->param());
+	
+	$self->{Log}->debug("Recieved:".join (',',@@parameters));
+	
+	my $hash = {};
+	
+	for my $next_trick ( @@parameters ) {
+		$next_trick =~ /^check(\d+)x(\d+)/;
+		$self->{SQL}->two_to_hash($hash,$1,$2);
+      	}
+	
+	return $hash;
+@
+
+
+1.26
+log
+@Fixed the autho line and the FUNCTIONS name in the POD.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d34 1
+a34 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d99 1
+a99 1
+    my $goto = '/Login' . ( $self->{parameters} ? '/'.(join '/', @@{$self->{parameters}}) : '' );
+d113 1
+a113 1
+	my $self = shift @@_;
+d123 1
+a123 1
+  	$evalvar    = $evalvar || "";                 # Completely gay error kludge to untaint
+@
+
+
+1.25
+log
+@End token for everything in POD as well as full docs for Display.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d25 1
+a25 1
+=head1 FUNCTIONS:
+d34 1
+a34 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d162 1
+a162 1
+=pod
+d164 2
+a165 1
+Documentation last edited 11/05/2001 by Phil
+@
+
+
+1.24
+log
+@Functions are now PODed
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d34 1
+a34 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d158 7
+@
+
+
+1.23
+log
+@Perldoc Flowerboxes.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d25 4
+d34 1
+a34 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d37 5
+d50 5
+d70 5
+d88 5
+d107 5
+d132 5
+@
+
+
+1.22
+log
+@Amazing Security Database updates
+@
+text
+@d2 22
+a23 18
+#*
+#* FILE:        Pages.pm
+#*
+#* DESCRIPTION: Core PerlServer Engine
+#*
+#* SYSTEM:      PerlServer Page Template Module
+#*
+#* SUBSYSTEM:   Web Pages
+#*
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+#*
+#* MODIFICATION HISTORY:
+#*
+#* VERSION    DATE          NAME      COMMENTS
+#*
+#* 1.00       09-21-1999    garyc     Initial Creation
+#*
+#*************************************************************************      
+d30 1
+a30 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+@
+
+
+1.21
+log
+@First pass security update manager, now needs to grab and send proper coding.
+@
+text
+@d102 1
+a102 2
+	my %hash = ();
+	
+d108 2
+d112 2
+a113 14
+		my ($col,$row) = ($1,$2);
+		
+		$self->{Log}->debug("Perm: $col   UserID: $row");
+		
+		my $arrref = undef;
+		
+		if (exists $hash{$col}) {
+			$arrref=$hash{$col};
+		} else {
+			$arrref=$hash{$col}=[];
+		}	
+		
+		push @@{$arrref},$row;	
+        }
+d115 1
+a115 1
+	return \%hash;
+@
+
+
+1.20
+log
+@Massive code paring down, and preparations to continue back on the Security
+code.  Modifications to have the Pages::_preparations for setup and initial
+functions.  Addition of /SessionDebug page to show data contained in Session.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d26 1
+a26 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d96 32
+@
+
+
+1.19
+log
+@Minor CVS var cleanups.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001 - $Date: 2002/04/20 19:09:38 $
+d26 1
+a26 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $';
+d77 19
+@
+
+
+1.18
+log
+@Well. I figured out how to import the our() routines of named pointers. Now to split stuff out to Widget and Utils.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2001
+a20 1
+# Basic Pragmas
+a24 1
+# Define Package Namespace
+d26 1
+a26 3
+
+# Set Versioning Information
+$PerlServer::Pages::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d64 1
+a64 2
+# Utilities functions
+
+@
+
+
+1.17
+log
+@A few updates for the version number to be automagically populated via
+rcs/cvs.
+@
+text
+@d30 1
+a30 1
+$PerlServer::Pages::VERSION='$Revision: 1.1 $'; # Sent out by Exporter
+d52 1
+a52 1
+  $self->{display} = $self->{pointers}->{display} = new PerlServer::Display ($self->{pointers});
+a64 1
+    delete $self->{pointers}->{display};
+@
+
+
+1.16
+log
+@
+omlette_du_fromage() is now execute()
+@
+text
+@d30 1
+a30 1
+$PerlServer::Pages::VERSION=1.0; # Sent out by Exporter
+@
+
+
+1.15
+log
+@Login check now implemented. Info.pm and Login.pm give example of how to override.
+@
+text
+@d71 1
+a71 1
+sub omlette_du_formage {
+@
+
+
+1.14
+log
+@New method of passing around parameters via 'our'
+@
+text
+@d71 12
+@
+
+
+1.13
+log
+@Now the display object is both instances and passed into pointers by pages.
+@
+text
+@d47 1
+a47 1
+      $self->{$next_trick} = $self->{pointers}->{$next_trick};
+@
+
+
+1.12
+log
+@Now, I know this violates some of the rules of nature.  Namely that I'm
+putting out a commit that doesn't fully work.  If you try to add a user
+with this one, it won't store it in the database... the rest of it works.
+
+That isn't important.
+
+What is important is that COST::User is now a child of COST::Table, and
+intelligently abstracts the concept of a displayable table and it's
+CGI forms into a unified form.  As it grows, all insert,update, and
+delete activity will be handled by COST::Table, so that the actual COST::*
+objects can worry about the more important aspects of business logic.
+
+There is also an XML based Form generator/validator scheme available as
+one of the extensions to CGI which handles multipage forms and the like.
+It's possible that this might actually prove a more clever interface
+between the CGI and the Objects, but that won't be until later.
+@
+text
+@d52 1
+a52 1
+  $self->{display}  = new PerlServer::Display ($self->{pointers});
+d65 1
+@
+
+
+1.11
+log
+@Addition of table abstraction
+@
+text
+@d23 1
+@
+
+
+1.10
+log
+@We now have a simple n-column table utility. Will clean later. It takes a reference to a hash which has options for column and data. It takes the data in chunks in an array and writes it right to left on row after row. Usage is as follows:
+
+my $foo = {
+     columns => 2,
+     data    => [ 'foo','bar','baz','biff','boff' ]
+};
+my $table = $self->{display}->table($foo);
+
+It takes the individual items in the data array and pumps them out, left to right, as it populates the table. It then fills out the last line with spaces.
+
+hopefully I will expand this to allow you to chuck preformatted rows at it, as well as headings.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 
+d34 1
+a34 1
+    my $self  = { };
+@
+
+
+1.9
+log
+@Resolved conflicts.
+@
+text
+@d51 1
+a51 1
+  $self->{display}  = new PerlServer::Display ();
+@
+
+
+1.8
+log
+@Now all pages instance the Display object.
+@
+text
+@d50 1
+d64 1
+@
+
+
+1.7
+log
+@Whoops! Didn't clear the named pointers correctly.
+@
+text
+@d22 1
+d50 1
+d60 3
+@
+
+
+1.6
+log
+@Centralized the passing of pointers to the local level. Now they can be referred to as named or unamed pointers. @@whee
+@
+text
+@d55 1
+a55 1
+    for my $next_trick (@@{$self->{variables}}) {
+a57 3
+    
+    # Nuke the list of variables last
+    delete $self->{variables};
+@
+
+
+1.5
+log
+@Again minor change.
+@
+text
+@d40 1
+a40 2
+  my $self = shift @@_;
+  # Store a copy of the current session object
+a41 1
+  $self->{variables} = ["SQL","Log","CGI","apache_ref","psession","current_page","parameters"];
+d44 1
+a44 1
+  for my $next_trick (@@{$self->{variables}}) {
+@
+
+
+1.4
+log
+@Okay, this is the working version, migrated to MySQL
+@
+text
+@d22 1
+a22 3
+use CGI;
+use PerlServer::SQL;
+use HTML::Template;
+d32 3
+a34 3
+    my $class=shift;
+    my $self ={};
+    bless ($self,$class);
+d40 1
+a40 1
+  my $self=shift;
+d42 2
+a43 2
+  $self->{pointers}  = shift;
+  $self->{variables} = ["SQL","Log","CGI","apache_ref","psession","colors","current_page","parameters"];
+d55 1
+a55 1
+    my $self=shift;
+@
+
+
+1.3
+log
+@Mass changes, addition of templates and start of insertion code
+@
+text
+@d23 1
+a23 1
+use PerlServer::Data;
+@
+
+
+1.2
+log
+@Clear up of merge conflict, improvements in page handling
+@
+text
+@d67 3
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d45 1
+a45 1
+  $self->{variables} = ["SQL","Log","CGI","apache_ref","psession","colors","current_page"];
+@
+
+
+1.1.1.1
+log
+@Initial import of repository
+@
+text
+@@

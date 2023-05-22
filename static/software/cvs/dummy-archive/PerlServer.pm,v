@@ -1,0 +1,1708 @@
+head	1.47;
+access;
+symbols
+	initial:1.1.1.1 DCI:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.47
+date	2002.03.20.17.48.50;	author bear;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2002.03.06.20.48.45;	author bennie;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2002.03.05.21.29.53;	author bennie;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2002.02.20.20.27.55;	author bennie;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2002.02.07.17.41.53;	author bennie;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2002.01.31.22.09.22;	author bennie;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2002.01.18.16.46.04;	author bennie;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2002.01.16.16.49.55;	author bennie;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2002.01.16.16.24.27;	author bennie;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2001.12.12.21.48.06;	author bear;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2001.12.12.21.26.07;	author bear;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2001.11.27.18.13.08;	author binky;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2001.11.13.19.43.28;	author bear;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2001.11.06.20.13.45;	author binky;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2001.11.05.21.28.51;	author binky;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2001.11.05.20.19.44;	author binky;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2001.11.05.17.43.02;	author binky;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.11.01.21.41.39;	author binky;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.10.31.21.15.54;	author bear;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.10.17.15.29.41;	author binky;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.10.02.16.41.48;	author bear;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2001.08.02.20.43.34;	author bear;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.07.23.17.08.53;	author binky;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.07.20.17.24.31;	author binky;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.07.20.17.00.46;	author binky;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.07.12.19.16.56;	author binky;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.07.12.16.27.10;	author binky;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.07.05.21.35.30;	author binky;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.06.27.20.01.25;	author binky;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.06.20.18.23.12;	author bear;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.06.19.20.40.34;	author binky;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.06.19.18.00.42;	author bear;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.06.19.17.24.35;	author binky;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.06.19.16.40.19;	author binky;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.06.19.13.56.32;	author bear;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.06.18.22.53.06;	author binky;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.06.18.19.34.39;	author binky;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.06.18.18.34.52;	author bear;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.06.18.17.06.16;	author bear;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.06.18.16.16.56;	author binky;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.06.18.01.13.08;	author bear;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.06.11.20.54.14;	author bear;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.06.11.17.12.07;	author bear;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.06.08.18.38.58;	author bear;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.06.07.18.06.38;	author bear;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.06.05.22.44.19;	author bear;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.31.13.16.41;	author bear;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.05.31.13.16.41;	author bear;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.47
+log
+@Adds the apropriate things to the pointers... yes, this should unscrew the pooch.
+@
+text
+@#*************************************************************************
+
+=head1 PerlServer.pm (PerlServer)
+
+=head1
+
+=head2 GENERAL INFO:
+
+Main PerlServer Engine
+
+  SYSTEM:      PerlServer core
+  SUBSYSTEM:   Web Pages
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+               Diversified Consulting, Inc.
+
+=cut
+
+#*************************************************************************
+
+package PerlServer;
+$PerlServer::VERSION = '$Revision: 1.1 $';
+
+use strict;
+
+# Infrequently changing modules
+use Apache;
+use Apache::DBI;
+use Apache::Constants qw(:common REDIRECT);
+use Apache::Session::MySQL;
+use CGI qw(-compile :all);;
+use COST::Security;
+use HTML::Template;
+use PerlServer::SQL;
+use PerlServer::Log;
+use Time::HiRes qw(gettimeofday tv_interval);
+use URI;
+
+=item handler()
+
+=over 
+
+Handler is the default method used by mod_perl to start the server. It is called 
+on each page load.
+
+Handler constructs the pointers structure, populates it, instances the requested 
+page, etc.
+
+In constructing the pointers structure, handler() inserts the code that is later
+evaluated for the namedump routines. If you're curious about that, you can find
+it lurking here.
+
+Aside from all that, refer to the actual code for step-by-step comments.
+
+=back
+
+=cut
+
+sub handler {
+
+HANDLESTART:
+
+  # Get initial time
+  my $start_time=[gettimeofday];
+
+  # Configure the initially used variables
+  my $r            = shift @@_;
+
+  my $status_code  = OK;
+  my $current_page = $r->uri;
+  my @@errors       = ();  # Currently no errors on page load, used for logging
+  my $errors       = "";  # Error text used for general logging
+  my %session;            # Persistent Session Data
+  my @@parameters   = ();  # Parameters to send into the Page Modules
+  my $s            = Apache->server;
+
+  ### Build the pointers
+
+  my $pointers = {
+		  apache_ref   => $r,
+		  debug        => 1,
+		  parameters   => \@@parameters,
+		  s            => $s
+		 };
+
+  # Named pointers are unpacked to references on most standard _init()s
+  $pointers->{names} = ["apache_ref","current_page","CGI","debug","Log",
+                        "parameters","psession","sid","SQL","Security"];
+  
+  $pointers->{name_dump} =
+    sub {
+      return '
+        our $pointers = $self->{pointers};
+        my $l = $pointers->{Log};
+        
+        for my $next_trick (@@{$pointers->{names}}) {
+          my $string = \'our $\'.lc($next_trick).\' = $pointers->{$next_trick}\';
+          eval $string;
+          $l->debug("OUR: $string (error:$@@)") if ($@@);
+        }
+
+        our @@parameters = $pointers->{parameters} ? @@{ $pointers->{parameters} } : ();
+        #$l->debug("OUR: our \@@parameters = \$pointers->{parameters} ? \@@{ \$pointers->{parameters} } : () (error: N/A)");
+
+        if ( $pointers->{display} ) {
+          our $display = $pointers->{display};
+          #$l->debug("OUR: our \$display = \$pointers->{display} (error: N/A)");
+          our $d       = $pointers->{display}->{display_vars};
+          #$l->debug("OUR: our \$d = \$pointers->{display}->{display_vars} (error: N/A)");
+          our $d_input = $pointers->{display}->{display_input};
+          #$l->debug("OUR: our \$d_input = \$pointers->{display}->{display_input} (error: N/A)");
+        }
+        
+        if ( $pointers->{cost_object_cache} ) {
+          our $cost = $pointers->{cost_object_cache};
+          $l->debug("OUR: our \$cost = \$pointers->{cost_object_cache} (error: N/A)");
+        }
+        ';
+    };
+    
+  # Build a session and other info  using the data above
+  my $cgi     = $pointers->{CGI}      = new CGI;
+  my $log     = $pointers->{Log}      = new PerlServer::Log ($pointers);
+  my $sql     = $pointers->{SQL}      = new PerlServer::SQL ($pointers);
+  my $secure  = $pointers->{Security} = new COST::Security  ($pointers);
+  my $sid     = $cgi->cookie('sid') || "";
+
+  ### Determine and instance the page
+
+  # Obtain an index of possible pages
+  my $module_index = {};
+  for my $module ( keys %$PerlServer::module_info ) {
+    $module_index->{lc($1)} = $1 if $module =~ /^PerlServer::Pages::(.*)/;
+  }
+
+  # Make an unadulterated copy of the page data
+  my $untouched_page = $pointers->{untouched} = $current_page;
+
+  $log->debug("Raw Page: \"$current_page\"");
+
+  # URL rewrites for special cases
+  $current_page = '/info/splash' if $current_page eq '/';
+  $current_page = "/Admin::$1"   if $current_page =~ /^\/admin\/(.+)/i;
+
+  # Strip down the URL 
+  $current_page =~ s/\/(.*)\??/$1/;
+
+  # Now, if there are additional slashed parameters, grab them
+  ($current_page,@@parameters) = split '/', $current_page;
+
+  # Remap casing through the index
+  if ( $module_index->{lc($current_page)} ) {
+    $log->debug("\"$current_page\" matched case check to \"" . $module_index->{lc($current_page)} . '"' );
+    $current_page = $module_index->{lc($current_page)};
+  } else {
+    $log->debug("NO CASE MATCH ON \"$current_page\"");
+  }
+
+  # We now have the actual page
+  $pointers->{current_page} = $current_page;
+      
+  # Now associate the session object with the tied variable for later use
+  eval {
+    tie %session,'Apache::Session::MySQL',$sid,{Handle=>$sql->get_handle(), LockHandle=>$sql->get_handle()};
+  };
+
+  if ($@@) { # Something bad happened with the session creation
+    push (@@errors,$@@); # record for final logging
+    # Now, attempt to build a new session object...
+    eval {
+      tie %session,'Apache::Session::MySQL',undef,{Handle=>$sql->get_handle(),LockHandle=>$sql->get_handle()};
+    };
+    push (@@errors,$@@);
+  }
+
+
+  # Update the $sid information
+  my $sesid = $sid = $session{_session_id};
+
+  # Build the URI to retrieve it from
+  my $content_location = new URI ("$untouched_page");
+
+  # Store session related things in the pointers array
+                 $pointers->{sid}      = $sid;
+                 $pointers->{sesid}    = $sesid;
+  my $psession = $pointers->{psession} = \%session;
+                 $pointers->{location} = $content_location;
+
+  # new page methodology ... whee
+
+  my $page   = {};
+  my $return = 0;
+
+  # Select which page to load
+  my $default = 'PerlServer::Pages::Info';
+  my $current = "PerlServer::Pages::$current_page";
+     $current =~ m/(.*)/;  # untaint
+  my $modname = $1;
+
+  $log->debug("Trying to parse $modname");
+
+  my @@file_data = stat( $PerlServer::module_info->{$modname}->{file} );
+  if ($PerlServer::module_info->{$modname}->{rawdate} != $file_data[9]) {
+  	$log->debug("$modname changed since the start.");
+  }
+
+  my $page_to_show = eval "require $1" ? $1 : $default;
+  push (@@errors,$@@) if $@@; # Bad voodoo - loaded page failed!
+  eval "require $page_to_show";
+  push (@@errors,$@@) if $@@; # Worse voodoo - Splash page failed!
+
+  $log->debug("Going with $page_to_show");
+
+  # Run it
+  eval {$pointers->{Page} = $page = new $page_to_show($pointers);};
+  push (@@errors,$@@) if $@@;
+  $page->{redirect} = ''; # Pre-clear redirect
+  eval {$return           = $page->execute();};
+  push (@@errors,$@@) if $@@;
+
+  if ( $return ) { $log->debug("Got a return value: $return"); }
+  
+  if ($page->{destroyedsession}) {
+      tied(%session)->delete;
+      $log->log("Deleted session: $sid");
+  }
+  
+  # Disconnect the session
+  $session{_saveme}++; # Force save the session (see Apache::Session)
+  untie %session;
+  undef %session;
+
+  # report everything to the logging subsystem
+  if (scalar @@errors) {
+    for my $error_list (@@errors) { # Report each error
+      $r->log_error($error_list);
+      $log->log($error_list);
+    }
+
+    # Put into a form which can be fed to the database
+    $errors = join(",",@@errors);
+  }
+
+  $sql->weblog(\%ENV,tv_interval($start_time,[gettimeofday]),$errors);
+
+  # Cleanup
+  undef $cgi;
+  undef $log;
+  undef $page;
+  $sql->finalize();
+  undef $sql;
+
+  undef $current;
+  undef $default;
+  undef $psession;
+  undef $return;
+  undef $sid;
+
+  undef @@errors;
+  undef $errors;
+  undef $pointers;
+
+  return $status_code;
+}
+
+1;
+
+__END__
+
+=head1 Documentation Author:
+
+ Phillip Pollard <binky@@bears.org>
+ Last edited 2/20/2002
+@
+
+
+1.46
+log
+@Fixed an oops in the non-case-sensative loader that mis-loaded the front page.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d21 1
+a21 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d74 1
+d81 2
+a82 1
+		  parameters   => \@@parameters
+@
+
+
+1.45
+log
+@Closing bug #18
+
+Now all module names are case insensitive ... parameters may or may not be depending on module.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d21 1
+a21 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d136 1
+a136 2
+  # Strip down the URL 
+  $current_page =~ s/\/(.*)\??/$1/;
+d140 4
+a143 1
+  $current_page = "Admin::$1"    if $current_page =~ /^admin\/(.+)\??/i;
+d152 2
+@
+
+
+1.44
+log
+@yadda yadda yadda screwed pooch yadda
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d21 1
+a21 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d75 1
+a75 11
+  # Make an unadulterated copy of the page data
+  my $untouched_page = $current_page;
+
+  # URL rewrites
+  if ( $current_page eq '/' ) { $current_page = '/Info/splash' }
+
+  # Strip down the URL 
+  $current_page =~ s/\/(.*)\??/$1/;
+
+  # Capture subs
+  if ( $current_page =~ /^Admin\/(.+)\??/ ) { $current_page = "Admin::$1"; }
+a76 4
+  # Now, if there are additional slashed parameters, grab them
+  ($current_page,@@parameters) = split '/', $current_page;
+
+  # Build the "All Module Passing" pointer.
+a78 2
+		  current_page => $current_page,
+		  untouched    => $untouched_page,
+d124 31
+a154 1
+    
+@
+
+
+1.43
+log
+@Now with the minty ObjectCache
+@
+text
+@d3 1
+a3 1
+=head1 PerlServer.pm
+d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+a15 6
+=head2 MODIFICATION HISTORY:
+
+  VERSION    DATE          NAME      COMMENTS
+  1.10       09-30-2000    ppollard  Adapted to new layout
+  1.00       08-27-2000    garyc     Initial Creation
+
+d20 2
+a21 3
+=head1 METHODS:
+
+=cut
+a22 1
+# Basic Pragmas
+a24 4
+# Package Definitions
+package PerlServer;
+$PerlServer::VERSION = '$Revision: 1.1 $';
+
+d38 1
+a38 1
+# Define the handler function
+d40 15
+a54 1
+=item handler()
+a244 1
+# The requisite true
+a246 1
+
+d252 1
+a252 1
+ Last edited 11/06/2001
+@
+
+
+1.42
+log
+@This alteration forces the session to save on EVERY pass.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d35 1
+a35 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d106 1
+a106 1
+
+d123 5
+@
+
+
+1.41
+log
+@display_input and display_vars have been moved from psession and $self (page) to exist in display. See bug #21 for more information.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d35 1
+a35 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d201 1
+@
+
+
+1.40
+log
+@Fixing the paramers in the name dump to include $d_input.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d35 1
+a35 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d119 4
+a122 10
+        }
+
+        if ( $pointers->{display_vars} ) {
+          our $d       = $pointers->{display_vars};
+          #$l->debug("OUR: our \$d = \$pointers->{display_vars} (error: N/A)");
+        }
+
+        if ( $pointers->{psession}->{display_input} ) {
+          our $d_input = $pointers->{psession}->{display_input};
+          #$l->debug("OUR: our \$d_input = \$pointers->{psession}->{display_input} (error: N/A)");
+@
+
+
+1.39
+log
+@Moving additional public parameters into the eval'ed name dump.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d35 1
+a35 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d114 1
+d124 5
+@
+
+
+1.38
+log
+@Updates for visibility
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d35 1
+a35 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d104 1
+a104 1
+        my $pointers = $self->{pointers};
+d112 2
+@
+
+
+1.37
+log
+@Security Updates
+@
+text
+@a127 1
+  $log->log("Params:".join(',',$cgi->param()));
+@
+
+
+1.36
+log
+@Now the Admin pages cleanly load and redirect.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d35 1
+a35 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d128 1
+d132 1
+a132 1
+
+@
+
+
+1.35
+log
+@Giving you some refactoring, and slowly moving SQL into SQL.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d35 1
+a35 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d83 1
+a83 1
+  if ( $current_page =~ /^Admin\/(.*)/ ) { $current_page = "Admin::$1"; }
+@
+
+
+1.34
+log
+@Fixed the autho line and the FUNCTIONS name in the POD.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d35 1
+a35 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+a96 7
+  # Build a session and other info  using the data above
+  my $cgi     = $pointers->{CGI}      = new CGI;
+  my $log     = $pointers->{Log}      = new PerlServer::Log ($pointers);
+  my $sql     = $pointers->{SQL}      = new PerlServer::SQL ($pointers);
+  my $secure  = $pointers->{Security} = new COST::Security  ($pointers);
+  my $sid     = $cgi->cookie('sid') || "";
+
+a97 1
+
+d100 1
+a100 1
+
+d124 7
+a210 1
+
+d213 1
+a213 19
+  # Now, dump everything into the database
+  my $total_bytes  = $r->bytes_sent;
+  my $user_agent   = $ENV{HTTP_USER_AGENT};
+  my $referer      = $ENV{HTTP_REFERER};
+  my $cgiquery     = $cgi->query_string;
+
+  # Report total processing time
+  my $interval     = tv_interval($start_time,[gettimeofday]);
+
+  my $remote_host  = $r->get_remote_host;
+  my $page_request = $r->the_request;
+
+  $log->log("Displayed $page_request ($current_page) for $remote_host [$sid] (time: $interval)");
+  $log->log("Errors:$errors") if ($errors);
+
+  my $query="INSERT INTO weblog (remote_addr,http_user_agent,referer,webpage,work_duration,errors,bytes_sent,query,sid) VALUES (?,?,?,?,?,?,?,?,?)";
+  my @@binds=($remote_host,$user_agent,$referer,$page_request,$interval,$errors,$total_bytes,$cgiquery,$sid);
+
+  $sql->do($query,@@binds);
+d219 1
+d229 1
+a229 1
+
+@
+
+
+1.33
+log
+@End token for everything in POD as well as full docs for Display.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d26 1
+a26 1
+=head1 FUNCTIONS:
+d35 1
+a35 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d260 1
+a260 1
+=pod
+d262 2
+a263 1
+Documentation last edited 11/05/2001 by Phil
+@
+
+
+1.32
+log
+@Functions are now PODed
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d35 1
+a35 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d256 7
+@
+
+
+1.31
+log
+@Perldoc Flowerboxes.
+@
+text
+@d13 1
+a13 1
+  COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d26 4
+d35 1
+a35 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+d51 5
+@
+
+
+1.30
+log
+@New test of Admin stuff.
+@
+text
+@d2 22
+a23 19
+#*
+#* FILE:        PerlServer.pm
+#*
+#* DESCRIPTION: Main PerlServer Engine
+#*
+#* SYSTEM:      PerlServer core
+#*
+#* SUBSYSTEM:   Web Pages
+#*
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+#*              Diversified Consulting, Inc.
+#*
+#* MODIFICATION HISTORY:
+#*
+#* VERSION    DATE          NAME      COMMENTS
+#*
+#* 1.10       09-30-2000    ppollard  Adapted to new layout
+#* 1.00       08-27-2000    garyc     Initial Creation
+#*
+d31 1
+a31 1
+$PerlServer::VERSION = '$Revision: 1.1 $';
+a63 3
+  # Make sure that if the page is / that it is /Main
+  $current_page="/Info/splash" if ($current_page eq '/');
+
+d67 5
+a71 2
+  # Strip down the uri
+  $current_page=~s/\/(.*)\??/$1/;
+@
+
+
+1.29
+log
+@A small collection of refactors
+@
+text
+@d11 2
+a12 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d28 1
+a28 1
+$PerlServer::VERSION='$Revision: 1.1 $';
+d70 3
+d74 1
+a74 2
+  ($current_page,@@parameters) = split '/',$current_page;
+
+@
+
+
+1.28
+log
+@Changes. Small. Unknown. Perfunctory.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d27 1
+a27 1
+$PerlServer::VERSION='$Revision: 1.1 $';
+d154 1
+d156 6
+a161 1
+  $log->debug("Trying to parse $1");
+d177 3
+a179 23
+  if ( $return ) { $log->debug("Got a return value!"); }
+
+  if ( $return =~ /^\d+$/ ) {
+
+    $log->debug("It's new school! (return val: $return)");
+
+  } elsif ( $return ) {
+
+    $log->debug("It is most definately old school");
+
+    if ($page->{redirect}) {
+      $log->debug("Page threw a redirect!");
+      $r->print($cgi->redirect(-location=>$page->{redirect}));
+      $status_code=REDIRECT;
+    } else {
+      my $hdr = $cgi->header(-type=>'text/html',
+                             -cookie=>$cgi->cookie(-name=>'sid',-value=>$sid),
+                             -pragma=>"no cache");
+      $r->print($hdr.$return);
+      $log->log("$page_to_show done the old way");
+    }
+
+    if ($page->{destroyedsession}) {
+a181 2
+    }
+
+d183 2
+a184 2
+
+  # Destroy the session
+@
+
+
+1.27
+log
+@Massive code paring down, and preparations to continue back on the Security
+code.  Modifications to have the Pages::_preparations for setup and initial
+functions.  Addition of /SessionDebug page to show data contained in Session.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d27 1
+a27 1
+$PerlServer::VERSION='$Revision: 1.1 $';
+a29 2
+use CGI;
+use URI;
+d34 2
+a38 1
+use COST::Security;
+d40 1
+@
+
+
+1.26
+log
+@Functional, but inaccurate security code... (ie, everyone is an admin)
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d27 1
+a27 1
+$PerlServer::VERSION='$Revision: 1.1 $';
+d147 2
+a148 2
+  my $page;
+  my $return;
+@
+
+
+1.25
+log
+@Minor CVS var cleanups.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d27 1
+a27 1
+$PerlServer::VERSION='$Revision: 1.1 $';
+d39 1
+d46 1
+a46 1
+    
+d54 1
+a54 1
+  my $current_page = $r->uri; 
+d72 1
+a72 1
+  
+d81 1
+a81 1
+  
+d86 1
+d90 1
+a90 1
+  
+d92 1
+a92 1
+                        "parameters","psession","sid","SQL"];
+d94 1
+a94 1
+  $pointers->{name_dump} = 
+d99 1
+a99 1
+        
+d103 1
+a103 1
+          $l->debug("OUR: $string (error:$@@)");
+d105 1
+a105 1
+    
+d108 1
+a108 1
+          $l->debug("OUR: our \$display = \$pointers->{display} (error: N/A)");
+d110 1
+a110 1
+        
+d113 1
+a113 1
+          $l->debug("OUR: our \$d = \$pointers->{display_vars} (error: N/A)");
+d117 1
+a117 1
+        
+d140 1
+a140 1
+                 $pointers->{sid}      = $sid;  
+d143 1
+a143 1
+                 $pointers->{location} = $content_location;  
+d149 1
+a149 1
+  
+d157 1
+a157 1
+  my $page_to_show = eval "require $1" ? $1 : $default;     
+d170 1
+a170 1
+  
+d172 1
+a172 1
+  
+d174 1
+a174 1
+  
+d176 1
+a176 1
+         
+d178 1
+a178 1
+  
+d182 1
+a182 1
+      $log->debug("Page threw a redirect!");   
+d199 1
+a199 1
+   
+d203 1
+a203 1
+  
+d210 1
+a210 1
+    
+d213 1
+a213 1
+    
+d215 1
+a215 1
+  
+d233 1
+a233 1
+  
+d235 1
+a235 1
+ 
+d249 1
+a249 1
+  
+d251 1
+a251 1
+  
+@
+
+
+1.24
+log
+@Test.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000 - $Date: 2002/04/20 19:09:38 $
+d27 1
+d50 1
+a50 1
+  my $r            = shift;
+@
+
+
+1.23
+log
+@Well. I figured out how to import the our() routines of named pointers. Now to split stuff out to Widget and Utils.
+@
+text
+@d11 1
+a11 1
+#* COPYRIGHT:   (C) 2000
+@
+
+
+1.22
+log
+@
+omlette_du_fromage() is now execute()
+@
+text
+@d91 24
+@
+
+
+1.21
+log
+@Login check now implemented. Info.pm and Login.pm give example of how to override.
+@
+text
+@d141 1
+a141 1
+  eval {$return           = $page->omlette_du_formage();};
+@
+
+
+1.20
+log
+@The splash page is now /Info/splash
+@
+text
+@d141 1
+a141 1
+  eval {$return           = $page->ShowPage();};
+@
+
+
+1.19
+log
+@The debug methodology now automatically check the named pointer debug to see if it should indeed output any information. This makes the clucnky logic checks ( $debug && do { $log->debug() } ). Now just call the debug routine and it will sort itself out.
+
+If you wish to have debug on globally, set it so in the definition of debug in PerlServer.pm. If you only wish it for an area, turn the pointer on and off around that area.
+
+Simple. Good. Likeable. Lickable.
+@
+text
+@d59 1
+a59 1
+  $current_page="/Splash" if ($current_page eq '/');
+d124 1
+a124 1
+  my $default = 'PerlServer::Pages::Splash';
+@
+
+
+1.18
+log
+@Complete update of how the Admin.pm page works.  The old method was a nightmare of ifs within ifs, this one uses ifs only to call subroutines.  And, all of the variables important to be shared are done through attributes of the object instead of global variables.  Amazing how one's designs interally change to deal with things.
+
+Also added a Display function for automating the creation of the anchor tables using Phil's new table method.  Changed the returns of some of the COST::* utilities methods as well
+@
+text
+@a43 1
+  my $debug = 1;
+d75 2
+a76 2
+                  untouched    => $untouched_page,
+		  debug        => 0,
+d89 1
+a89 1
+                        "parameters","psession","SQL"];
+d128 1
+a128 1
+  ($debug || $pointers->{debug}) && $log->debug("Trying to parse $1");
+d135 1
+a135 1
+  ($debug || $pointers->{debug}) && $log->debug("Going with $page_to_show");
+d144 1
+a144 1
+  if (($debug || $pointers->{debug}) && $return) { $log->debug("Got a return value!"); }
+d148 1
+a148 1
+    ($debug || $pointers->{debug}) && $log->debug("It's new school! (return val: $return)");
+d152 1
+a152 1
+    ($debug || $pointers->{debug}) && $log->debug("It is most definately old school");
+d155 1
+a155 1
+      ($debug || $pointers->{debug}) && $log->debug("Page threw a redirect!");   
+a215 1
+  undef $debug;
+@
+
+
+1.17
+log
+@Thanks to G the debug routine knows where it was called.
+@
+text
+@d20 1
+a20 1
+#*************************************************************************     
+d43 1
+d56 1
+a56 1
+  my %session;           # Persistent Session Data
+d65 1
+a65 1
+  # Strip down the uri   
+d76 1
+a76 1
+          untouched    => $untouched_page,
+a210 3
+
+  undef $pointers;
+
+d224 2
+@
+
+
+1.16
+log
+@Resolved conflicts.
+@
+text
+@d44 1
+a44 2
+  my $who   = 'PerlServer';
+  
+d75 1
+a75 1
+                  untouched    => $untouched_page,
+d128 1
+a128 1
+  ($debug || $pointers->{debug}) && $log->debug($who,"Trying to parse $1");
+d135 1
+a135 1
+  ($debug || $pointers->{debug}) && $log->debug($who,"Going with $page_to_show");
+d144 1
+a144 1
+  if (($debug || $pointers->{debug}) && $return) { $log->debug($who,"Got a return value!"); }
+d148 1
+a148 1
+    ($debug || $pointers->{debug}) && $log->debug($who,"It's new school! (return val: $return)");
+d152 1
+a152 1
+    ($debug || $pointers->{debug}) && $log->debug($who,"It is most definately old school");
+d155 1
+a155 1
+      ($debug || $pointers->{debug}) && $log->debug($who,"Page threw a redirect!");   
+@
+
+
+1.15
+log
+@Now all pages instance the Display object.
+@
+text
+@d76 1
+a77 1
+          untouched    => $untouched_page,
+d166 6
+@
+
+
+1.14
+log
+@Whoops! Didn't clear the named pointers correctly.
+@
+text
+@d205 5
+d211 5
+a215 1
+  undef $pointers;
+d217 1
+a217 1
+  undef $sql;
+d219 2
+@
+
+
+1.13
+log
+@Improved debugging in PerlServer.pm to catch errors in page creation (SQL/HTML::Template bugs / Runtime)
+@
+text
+@d76 1
+d89 2
+a90 1
+  $pointers->{names} = ["apache_ref","current_page","CGI","Log","parameters","psession","SQL"];
+d129 1
+a129 1
+  $debug && $log->debug($who,"Trying to parse $1");
+d136 1
+a136 1
+  $debug && $log->debug($who,"Going with $page_to_show");
+d145 1
+a145 1
+  if ($debug && $return ) { $log->debug($who,"Got a return value!"); }
+d149 1
+a149 1
+    $debug && $log->debug($who,"It's new school! (return val: $return)");
+d153 1
+a153 1
+    $debug && $log->debug($who,"It is most definately old school");
+d156 1
+a156 1
+      $debug && $log->debug($who,"Page threw a redirect!");   
+@
+
+
+1.12
+log
+@Centralized the passing of pointers to the local level. Now they can be referred to as named or unamed pointers. @@whee
+@
+text
+@d130 1
+d132 1
+a132 1
+  push (@@errors,$@@) if @@$; # Bad voodoo - Splash page failed!
+d137 2
+a138 1
+  $pointers->{Page} = $page = new $page_to_show($pointers);
+d140 2
+a141 1
+  $return           = $page->ShowPage();
+@
+
+
+1.11
+log
+@The first step in a migration is to be backwards compatible. East your heart out Microsoft. New page display method along with the old. Nothing should bear. Also the start of a debugger code. Durn I wished there was an easy $0 or ref($parent) I could put into it rather than naming debug manually.
+@
+text
+@d74 4
+a77 4
+		  current_page        => $current_page,
+		  apache_ref          => $r,
+                  untouched           => $untouched_page,
+		  parameters          => \@@parameters
+d82 1
+a82 1
+  my $log     = $pointers->{Log}      = new PerlServer::Log  ($pointers);
+d85 4
+@
+
+
+1.10
+log
+@Added pragma no-cache to the header output in PerlServer, and it seems to have fixed the behavior on all browsers but Conqueror...
+
+Additionally, Logout now works, by simply destroying the userid in the session... the session itself persists.
+@
+text
+@d43 3
+d51 1
+a51 1
+  my $outtext      = "";
+d113 11
+a123 2
+  #Get it ready
+  my $page=""; 
+d125 3
+a127 4
+  # Attempt to build the page
+  my $page_to_show="PerlServer::Pages::$current_page";
+  # Untaint
+  $page_to_show=~m/(.*)/;
+d129 14
+a142 7
+  # Can we use this page?
+  eval {
+    eval "require $1";
+    $pointers->{Page}=$page=new $page_to_show($pointers);
+    $page->{redirect}='';
+    $outtext = $page->ShowPage();
+  };
+d144 12
+a155 7
+  # No luck?  Give 'em the main page (should likely build an improved
+  # error page)
+  if ($@@) {
+    push (@@errors,$@@); # record for final logging
+    require PerlServer::Pages::Splash;
+    $page=new PerlServer::Pages::Splash($pointers);
+    $outtext = $page->ShowPage();
+a156 11
+  
+  # If a redirection was generated, send it
+  if ($page->{redirect}) {
+    $r->print($cgi->redirect(-location=>$page->{redirect}));
+    $status_code=REDIRECT;
+  } else { # Otherwise generate the normal page
+    my $hdr = $cgi->header(-type=>'text/html',
+                           -cookie=>$cgi->cookie(-name=>'sid',-value=>$sid),
+			   -pragma=>"no cache",
+			  );
+    $r->print($hdr.$outtext);
+d158 1
+a158 1
+  
+a162 1
+  
+a170 1
+    
+@
+
+
+1.9
+log
+@Logins actually affect the main page now, showing you who you are and your
+COST USER CODE... prepping to add logout and session demolition
+@
+text
+@d73 1
+a73 1
+          untouched           => $untouched_page,
+d141 2
+a142 1
+                           -cookie=>$cgi->cookie(-name=>'sid',-value=>$sid)
+@
+
+
+1.8
+log
+@Step 1 ... color information don't belong here.
+@
+text
+@d53 1
+a53 1
+  my %session;            # Persistent Session Data
+@
+
+
+1.7
+log
+@I'm totally nutty, I should be committed.
+@
+text
+@a55 8
+  # Default Color Set
+  my $colors = {
+    pageback => "#FFFFFF",     # The bacground color for the body tag
+    link     => "#000033",
+    vlink    => "#3399cc", 
+    text     => "#000033"
+  };
+
+d73 1
+a73 2
+		  colors              => $colors,
+                  untouched           => $untouched_page,
+a187 1
+  undef $colors;
+@
+
+
+1.6
+log
+@Okay, this is the working version, migrated to MySQL
+@
+text
+@d185 1
+a185 1
+  $log->log("Displayed $page_request ($current_page) for $remote_host [$sid - $sesid] (time: $interval)");
+@
+
+
+1.5
+log
+@THIS IS NOT A FUNCTIONAL COMMIT!!! DO NOT USE!
+@
+text
+@d94 1
+a94 1
+    tie %session,'Apache::Session::MySQL',$sid,{Handle=>$sql->get_handle(),Commit=>'1'};
+d101 1
+a101 1
+      tie %session,'Apache::Session::MySQL',undef,{Handle=>$sql->get_handle(),Commit=>'1'};
+d188 1
+a188 1
+  my $query="INSERT INTO web_log (remote_addr,http_user_agent,referer,webpage,work_duration,errors,bytes_sent,query,sid) VALUES (?,?,?,?,?,?,?,?,?)";
+d192 1
+a192 1
+
+@
+
+
+1.4
+log
+@Mass changes, addition of templates and start of insertion code
+@
+text
+@d34 1
+a34 1
+use Apache::Session::InterBase;
+d36 1
+a36 1
+use PerlServer::Data;
+d89 1
+a89 1
+  my $sql     = $pointers->{SQL}      = new PerlServer::Data ($pointers);
+d94 1
+a94 1
+    tie %session,'Apache::Session::InterBase',$sid,{Handle=>$sql->get_handle(),Commit=>'1'};
+d101 1
+a101 1
+      tie %session,'Apache::Session::InterBase',undef,{Handle=>$sql->get_handle(),Commit=>'1'};
+@
+
+
+1.3
+log
+@Initial ability to bring up Customer Addition screen
+@
+text
+@d186 2
+a187 1
+  
+@
+
+
+1.2
+log
+@Removed tick counter code, it was incomplete and buggy in the implementation, and unneeded for COST
+@
+text
+@d90 1
+a90 3
+
+
+  my $sid = $cgi->cookie('sid') || "";
+d94 1
+a94 1
+    tie %session,'Apache::Session::InterBase',$sid,{Handle=>$sql->get_handle(),Commit=>1};
+d97 10
+d108 2
+a109 2
+  my $sesid         = $session{_session_id};
+   
+d148 1
+a148 1
+  } else {
+d185 1
+a185 1
+  $log->log("Displayed $page_request ($current_page) for $remote_host [$sid] (time: $interval)");
+d191 1
+a191 1
+  
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a34 1
+use MIME::Base64;
+d92 1
+a92 9
+  # Do I make a new session?
+  my $build   = 0;  # Not by default
+
+  # Break off the tick counter and the session ID
+  my $sid     = $cgi->cookie('sid') || ""; # Get the sid
+  $sid=decode_base64($sid) if ($sid); # Unencode
+  $sid=~/(.*)m(\d+)/;
+  my $osid=my $sesid=$sid=$1 || 0;
+  my $ticks=$2 || 0;
+a98 18
+  $build = 1 if ($@@); # If there was an error, build a new session
+
+  # Set up the session click-counter
+  my $clicks = $session{clicks} || 0;
+
+  # Now, check to see if this is a duplicate session or if it's new
+  # If it's older than the current session, blank out the original
+  $build = 1 if (($ticks+1)<$clicks);
+
+  # If there is no session in the system or there is trouble with the database
+  # try to connect again, this time generating a new sid
+  if ($build) {
+    $osid=$sid=undef;
+    eval {
+#      tie %session,'Apache::Session::Postgres',$sid,{Handle=>$sql->get_handle(),Commit=>1};
+    };
+  }
+
+d100 1
+a100 1
+  $sesid         = $session{_session_id};
+a101 7
+  # Increment the session click-counter
+  $session{clicks}=$clicks+1;
+
+  #Build the tick counting version
+  #$sid=encode_base64($sesid."m".$clicks);
+  $sid=$sesid."m".$clicks;
+
+d142 1
+a142 1
+                           -cookie=>$cgi->cookie(-name=>'sid',-value=>encode_base64($sid))
+d177 1
+a177 1
+  $log->log("Displayed $page_request ($current_page) for $remote_host [$osid - $clicks] (time: $interval)");
+@
+
+
+1.1.1.1
+log
+@Initial import of repository
+@
+text
+@@

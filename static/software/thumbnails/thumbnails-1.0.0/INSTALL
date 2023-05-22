@@ -1,0 +1,129 @@
+Thumbnails Documentation 
+
+--> How to install <------------------------------------------------------------
+
+> You do need to have a few things installed before thumbnails will work:
+
+  Perl:
+
+    This script relies on the Perl intreperters existance. It also assumes
+    that perl is in the customary location of /usr/bin/perl. To check this
+    on most common unix systems type the command 'which perl' and it should
+    respond with perl's location if you have it installed. If your Perl is
+    not in /usr/bin/perl, edit the thumbnails.pl file and change the first
+    line (band path) to relfect the correct location.
+
+    Additionally this script is likely dependant on a Perl version 5.0 or
+    higher. If you have Perl installed, then type 'perl -v' and it will
+    dutifully report the version and install information.
+
+  Perl Modules:
+ 
+    This program uses the following Perl modules: CGI, Image::Magick,
+    Getopt::Std, Term::Query and strict.
+    
+    If you have perl installed, simply run the program (./thumbnails.pl) and
+    it will check for said modules and tell you which ones you need to
+    install.
+
+    Installing modules will likely require root access and possibly the
+    installation of external C libraries on your machine. Please refer to
+    the Perl and individual modules' documentation for more information.
+
+> Move the program to your favorite binary location
+
+    For example: 'mv thumbnails.pl /usr/local/bin/thumbnails'
+
+    You've now completed your install.
+
+
+--> How does I make it work? <--------------------------------------------------
+
+  Change directory to the images you wish to index:
+
+    $ cd /long/dir/chain/images/
+
+  Run the program:
+
+    $ thumbnails
+
+  Answer the questions. In my case I selected all defaults.
+  Here is a step-by-step explanation of each question:
+
+    Where are the directory of images: [.]
+
+      The directory of where the source images are. In this case it is the
+      current directory (.).
+
+    Where should I put the thumbnails? [thumbs]
+
+      This is where the program will put the thumbnail images. In this
+      case it is a subdirectory called thumbs. The thumbnail images
+      are named the same (usually) as the images they are thumbnails
+      of. Consequently do not put the thumbnails in the same directory (.)
+      or they will overwrite the images.
+
+    What is the max pixel width/height you prefer? [200]
+
+      This is the maximum height or width of the thumbnails, in pixels.
+
+    Where should I write the HTML? [images.html]
+
+      This is the file the HTML output is written too. It is not a
+      complete page, only the table that can be included into other pages.
+
+    Should I clear the thumnail directory of any old files? [yes]
+
+      If you are re-indexing a site, this helps to keep old thumbnails
+      from hanging around. Be warned, it issues a unix 'rm' on all files
+      in the directory.
+
+  For more documentation and examples, refer to the main web site:
+  http://www.crescendo.net/software/thumbnails/
+
+--> The basic 5 <---------------------------------------------------------------
+
+> Who?
+
+  Copyright (C) 1999-2001, Phillip Pollard
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by 
+  the Free Software Foundation, version 2.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+  Mr. Pollard may be written at 112 Roberts Ln, Lansdale, PA  19446 USA
+  or e-mailed at <phil@crescendo.net>.
+
+> What?
+
+  thumbnails is a program for the generate of thumbnails and core HTML to
+  visually index a directory of images.
+
+  Files in this distribution are:
+
+    gpl.txt       : GNU Public License
+    INSTALL       : This text.
+    thumbnails.pl : The program.
+
+> Where?
+
+  The main distribution point of thumbnails is:
+  http://www.crescendo.net/software/thumbnails/
+
+> When?
+
+  v 1.0.0 (4.11.2001)
+
+> Why?
+
+  Laziness and hubris.
+
