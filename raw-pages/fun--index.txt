@@ -1,0 +1,70 @@
+<div id="main"><div class="boxen">
+<div class="c1"><div class="c2"><div class="c3"><div class="c4">
+
+<p>These are just some fun things I have put together over the years:</p>
+
+<ul>
+<li> <p><b><a href="conbadge/">Conbadge Drinking Game</a></b> (Feb 2011)</p>
+<p>A meme generator based on the furry conbadge drinking game. Enter 
+your badge name and it tells you how many drinks you score.</p>
+
+<li> <p><b><a href="http://www.youtube.com/watch?v=v2F6ejSBgQU">Cross Country in 3 mins</a></b> (Feb 2010)</p>
+<p>A 2,850 mile drive time-lapsed in 3 minutes. Approximate visual speed of 
+57,000 MPH. Boiling Springs Lake, NC to San Jose, CA. See if you can spot the
+USS North Carolina or Donner Pass. From my drive cross country in 2006.</p>
+
+<li> <p><b><a href="http://www.youtube.com/watch?v=P8wiMgFdocw">The Move</a></b> (Feb 2010)</p>
+<p>Time lapsed video of the machine room move I helped with for HMS back on 2003. 
+The entire company's office and machine room was moved in a long weekend. I set
+up the camera to capture the action in the new machine room. The giant plush Tux 
+was mine as well. He accidentally became the star of the video: Without 
+any planning or coordination, we all ended up moving and posing tux for 
+the camera. It is also available in the older  <a 
+href="the-move/the-move.avi">AVI</a> and <a 
+href="the-move/the-move.rm">Real</a> formats.</p>
+
+<li> <p><b><a href="http://www.doemain.com/vinci/">The Vinci Doll</a></b> (Apr 2006)</p>
+<p>The surprise "talking Vinci doll" that we put together for Candy DeWalt, creator of
+<a href="http://www.vincifruit.com/">Vinci &amp; Arty</a>. It features a character
+from the strip saying a few interesting bits.</p>
+
+<li> <p><b><a href="images/milk.jpg">Forgot Milk?</a></b> (May 2005)</p>
+<p>So I had an odd impulse to make a quick parody ad when I found one of 
+these. Whee.</p>
+
+<li> <p><b><a href="basement">The Basement Tour</a></b> (Aug 2004)</p>
+
+<p>Triggur's tour was just too awesome. I had to have my own competeing 
+one. Tongue-firmly-in-cheek, of course.</p>
+
+<li> <p><b><a href="images/fitness.jpg">Serious Fanboy Fitness</a></b> (Jul 2003)</p>
+
+<p>A quick chuckle and gift for a friend who makes the <a 
+href="http://seriousfitness.griffinparkstudio.com/">Serious Fitness</a> 
+T-shirts.</p>
+
+<li> <p><b><a href="bingo/bingo.cgi">Triggur Bingo</a></b> (Mar 2003)</p>
+
+<p>Hang around Trig? Feel free to print one out and play along.</p>
+
+<li> <p><b><a href="/software/japh.html">A pile of JAPHs</a></b> (Jun - Dec 2002)</p>
+
+<p>Some friends and I were tossing JAPHs back and forth to each other. Here are some
+highlights.</p>
+
+<li> <p><b><a href="images/hunter.jpg">Hunter's &quot;Think Different&quot; 
+Ad</a></b> (Aug 2002)</p>
+
+<p>Hunter didn't let a small car wreck stop him. This is from the morning 
+after, reclaiming his wallet from the console. It made a nice ad 
+parody.</p>
+
+</ul>
+
+<!-- <li> <a href="desktops">Desktop images</a> (Jul 2003) -->
+<!-- <li> <a href="tired.jpg">I am so tired.</a> (Jun 2003) -->
+<!-- <li> <a href="geekmobile">The Geekmobile Project</a> (Aug 2002) -->
+<!-- <li> <a href="lynx">The New Academy of the Lynx</a>  (Aug 2002) -->
+
+
+</div></div></div></div></div></div>

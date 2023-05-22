@@ -1,5 +1,7 @@
 #!/usr/bin/env perl
 
+$| = 1;
+
 # Generic web-site generation engine.
 # (c) 2000-2021, Phillip Pollard <phil@crescendo.net>
 
@@ -14,7 +16,7 @@ my %title;
 $title{'index.txt'} = 'Crescendo.net';
 $title{'code--index.txt'} = 'Code';
 $title{'consulting.txt'} = 'Consulting';
-$title{'fun-stuff--index.txt'} = 'Fun Stuff';
+$title{'fun--index.txt'} = 'Fun Stuff';
 $title{'resume--index.txt'} = 'The Resume';
 $title{'software-cvs--example.txt'} = 'Software - CVS Utils - Example Output';
 $title{'software-cvs--history.txt'} = 'Software - CVS Utils - Project History';
