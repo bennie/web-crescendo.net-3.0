@@ -3,7 +3,9 @@
 $| = 1;
 
 # Generic web-site generation engine.
-# (c) 2000-2021, Phillip Pollard <phil@crescendo.net>
+# (c) 2000-2023, Phillip Pollard <phil@crescendo.net>
+
+# --force - force recreation of all files
 
 use HTML::Template;
 use strict;
@@ -36,10 +38,11 @@ my $html_prefix  = '/';
 
 ### Program
 
-print `rm -rfv www.crescendo.net` if -d $html_dir;
-mkdir($html_dir);
-print `cp -rv static/* www.crescendo.net/`;
-
+if ($force) {
+  print `rm -rfv www.crescendo.net` if -d $html_dir;
+  mkdir($html_dir);
+  print `cp -rv static/* www.crescendo.net/`;
+}
 
 opendir FILEDIR, $file_dir;
 my @files = sort { $a cmp $b } grep(/\.txt$/, readdir(FILEDIR));;
@@ -57,9 +60,11 @@ for my $next_trick (@files) {
 
   my $outfile  = $html_dir.'/'.$page.'.html';
   if ( $next_trick =~ /^(.+?)--/ ) {
-  	my $newdir = $html_dir .'/'. $1;
-	print " -->  mkdir($newdir) ";
-	mkdir($newdir);
+    my $newdir = $html_dir .'/'. $1;
+    if ( ! -d $newdir ) {
+      print " -->  mkdir($newdir)";
+      mkdir($newdir);
+    }
     $outfile  =~ s/--/\//g;
   }
 
@@ -114,4 +119,4 @@ for my $next_trick (@files) {
   print "--> done!\n";
 }
 
-print `rsync -av --exclude='.git/' --delete www.crescendo.net/ \${MY_WEBUSER}\@\${MY_WEBHOST}:/var/www/crescendo.net/www`;
+exec "rsync -av --exclude='.git/' --delete www.crescendo.net/ \${MY_WEBUSER}\@\${MY_WEBHOST}:/var/www/crescendo.net/www";
