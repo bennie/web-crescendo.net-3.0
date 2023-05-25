@@ -1,0 +1,29 @@
+<h1>Practice Parts</h1>
+
+<p>I play (and have played) in various community music ensembles over the years. 
+Sometimes I keep a part for extra study, or have to scan it to share with someone
+because it is out-of-print. In case this is useful for other folks, I've posted them
+here too:
+
+<h3>Orchestra</h3>
+
+<h3>Wind Ensemble</h3>
+
+<ul>
+<li> A Christmas Festival (Leroy Anderson) - <a href="/music/parts/wind-ensemble/A Christmas Festival/Bass Clarinet.pdf">Bass Clarinet</a></li>
+</ul>
+
+<h3>Wind Ensemble Marches</h3>
+
+<ul>
+<li> Barnum and Bailery's Favorite (King) - <a href="/music/parts/wind-ensemble-marches/Barnum and Bailery's Favorite/bass-clarinet.pdf">Bass Clarinet</a>
+<li> Boy Scouts of America (Sousa/Teague) - <a href="/music/parts/wind-ensemble-marches/Boy Scouts of America/bass-clarinet.pdf">Bass Clarinet</a>
+<li> Colonel Bogey March (Alford) - <a href="/music/parts/wind-ensemble-marches/Colonel Bogey March/contrabass.pdf">Bb Contrabass Clarinet</a>
+<li> Commando March (Barber) - <a href="/music/parts/wind-ensemble-marches/Commando March/bass-clarinet.pdf">Bass Clarinet</a>
+<li> March Ponderoso (King) - <a href="/music/parts/wind-ensemble-marches/March Ponderoso/bass-clarinet.pdf">Bass Clarinet</a>
+<li> National Emblem (Bagley/Fennell) - <a href="/music/parts/wind-ensemble-marches/National Emblem/contrabass.pdf">Bb Contrabass Clarinet</a>
+<li> Olympia Hippodrome March (Alexander) - <a href="/music/parts/wind-ensemble-marches/Olympia Hippodrome March/bass-clarinet.pdf">Bass Clarinet</a>
+<li> Our Director (Bigelow/Walters) - <a href="/music/parts/wind-ensemble-marches/Our Director/bass-clarinet.pdf">Bass Clarinet</a>
+<li> The Gallant Seventh (Sousa) - <a href="/music/parts/wind-ensemble-marches/The Gallant Seventh/bass-clarinet.pdf">Bass Clarinet</a>
+<li> Thunder and Blazes (Fucik/Seredy) - <a href="/music/parts/wind-ensemble-marches/Thunder and Blazes/bass-clarinet.pdf">Bass Clarinet</a>
+</ul>

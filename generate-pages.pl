@@ -19,6 +19,7 @@ $title{'index.txt'} = 'Crescendo.net';
 $title{'code--index.txt'} = 'Code';
 $title{'consulting.txt'} = 'Consulting';
 $title{'fun--index.txt'} = 'Fun Stuff';
+$title{'music.txt'} = 'Music Stuff';
 $title{'resume--index.txt'} = 'The Resume';
 $title{'software-cvs--example.txt'} = 'Software - CVS Utils - Example Output';
 $title{'software-cvs--history.txt'} = 'Software - CVS Utils - Project History';
