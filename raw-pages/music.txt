@@ -11,6 +11,11 @@ here too:
 
 <ul>
 <li> A Christmas Festival (Leroy Anderson) - <a href="/music/parts/wind-ensemble/A Christmas Festival/Bass Clarinet.pdf">Bass Clarinet</a></li>
+<li> Les Preludes (Liszt/Hindsley) - <a href="/music/parts/wind-ensemble/Les Preludes/les-preludes-bass-cl.pdf004.pdf">Bass Clarinet</a>,
+<a href="/music/parts/wind-ensemble/Les Preludes/les-preludes-cont-cl.pdf005.pdf">Eb Contralto Clarinet</a></li>
+<li> Nimrod (Elgar/Alfred Reed) - <a href="/music/parts/wind-ensemble/Nimrod/Bb Contra Bass.pdf">Bb Contrabass Clarinet</a></li>
+<li> Polka and Fugue (Weinberger/Bainum) - <a href="/music/parts/wind-ensemble/Polka and Fugue/Bass Clarinet.pdf">Bass Clarinet</a></li>
+
 </ul>
 
 <h3>Wind Ensemble Marches</h3>

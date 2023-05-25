@@ -42,8 +42,9 @@ my $html_prefix  = '/';
 if ($force) {
   print `rm -rfv www.crescendo.net` if -d $html_dir;
   mkdir($html_dir);
-  print `cp -rv static/* www.crescendo.net/`;
 }
+
+print `rsync -av --exclude='.git/' --exclude='.DS_Store' static/ www.crescendo.net`;
 
 opendir FILEDIR, $file_dir;
 my @files = sort { $a cmp $b } grep(/\.txt$/, readdir(FILEDIR));;
@@ -120,4 +121,4 @@ for my $next_trick (@files) {
   print "--> done!\n";
 }
 
-exec "rsync -av --exclude='.git/' --delete www.crescendo.net/ \${MY_WEBUSER}\@\${MY_WEBHOST}:/var/www/crescendo.net/www";
+exec "rsync -av --exclude='.git/' --exclude='.DS_Store' --delete www.crescendo.net/ \${MY_WEBUSER}\@\${MY_WEBHOST}:/var/www/crescendo.net/www";
