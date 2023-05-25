@@ -1,3 +1,9 @@
+<h1>Misc Useful Things</h1>
+
+<ul>
+<li> <a href="/music/klose-highnotes.pdf">Klose's "Just the High Notes"</a> - a single-page PDF fingering chart for the Clarinet's high-notes. Derived from the Klose book.</li>
+</ul>
+
 <h1>Practice Parts</h1>
 
 <p>I play (and have played) in various community music ensembles over the years. 
