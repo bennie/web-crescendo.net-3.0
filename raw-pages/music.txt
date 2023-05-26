@@ -2,6 +2,7 @@
 
 <ul>
 <li> <a href="/music/klose-highnotes.pdf">Klose's "Just the High Notes"</a> - a single-page PDF fingering chart for the Clarinet's high-notes. Derived from the Klose book.</li>
+<li> <a href="/music/stars-stripes-piccolo-solo-for-tuba.pdf">"Stars and Stripes" piccolo solo for tuba</a> - The stars and stripes piccolo solo written out for tuba. In both band and orchestra keys.</li>
 </ul>
 
 <h1>Practice Parts</h1>
