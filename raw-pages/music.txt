@@ -18,12 +18,21 @@ here too:
 
 <ul>
 <li> A Christmas Festival (Leroy Anderson) - <a href="/music/parts/wind-ensemble/A Christmas Festival/Bass Clarinet.pdf">Bass Clarinet</a></li>
+<li> Fantasy on American Sailing Songs (Grundman) - <a href="/music/parts/wind-ensemble/Fantasy on American Sailing Songs/sailing-songs-contra.pdf">Bb Contrabass Clarinet</a></li>
+<li> Galop (Shostakovich/Hunsberger) - <a href="/music/parts/wind-ensemble/Galop/galop-bass-and-contra.pdf">Combined Bass and Bb Contrabass Clarinet</a></li>
+<li> Hungarian Rhapsody No. 2 (Liszt/Oliver) - <a href="/music/parts/wind-ensemble/Hungarian Rhapsody No. 2/hungarian-bass.pdf">Bass Clarinet</a></li>
+<li> La Fiesta Mexicana (H. Reed) - <a href="/music/parts/wind-ensemble/La Fiesta Mexicana/la-fiesta-contra.pdf">Bb Contrabass Clarinet</a></li>
 <li> Les Preludes (Liszt/Hindsley) - <a href="/music/parts/wind-ensemble/Les Preludes/les-preludes-bass-cl.pdf004.pdf">Bass Clarinet</a>,
 <a href="/music/parts/wind-ensemble/Les Preludes/les-preludes-cont-cl.pdf005.pdf">Eb Contralto Clarinet</a></li>
 <li> Nimrod (Elgar/Alfred Reed) - <a href="/music/parts/wind-ensemble/Nimrod/Bb Contra Bass.pdf">Bb Contrabass Clarinet</a></li>
 <li> Polka and Fugue (Weinberger/Bainum) - <a href="/music/parts/wind-ensemble/Polka and Fugue/Bass Clarinet.pdf">Bass Clarinet</a></li>
 <li> Procession of the Nobles (Rimsky-Korsakov/Leidzen) - <a href="/music/parts/wind-ensemble/Procession of the Nobles/Bass Clarinet.pdf">Bass Clarinet</a></li>
+<li> The Ride of the Valkyries (Wagner/Patterson) - <a href="/music/parts/wind-ensemble/The Ride of the Valkyries/valkyries-contra.pdf">Bb Contrabass Clarinet</a></li>
+<li> Shenandoah's Simple Gifts (Larry Clark) - <a href="/music/parts/wind-ensemble/Shenandoah's Simple Gifts/shenandoah-bass.pdf">Bass Clarinet</a></li>
+<li> Toccata and Fugue in D Minor (Bach/Hunsberger) - <a href="/music/parts/wind-ensemble/Toccata and Fugue in D Minor/toccata-fugue-bass.pdf">Bass Clarinet</a>,
+<a href="/music/parts/wind-ensemble/Toccata and Fugue in D Minor/toccata-fugue-contra.pdf">Bb Contrabass Clarinet</a></li></li>
 <li> Toccata Marziale (Vaughan Williams) - <a href="/music/parts/wind-ensemble/Toccata Marziale/toccata-marziale.pdf001.pdf">Bass Clarinet</a></li>
+<li> Vesuvius (Ticheli) - <a href="/music/parts/wind-ensemble/Vesuvius/vesuvius-bass.pdf">Bass Clarinet</a></li>
 
 </ul>
 
