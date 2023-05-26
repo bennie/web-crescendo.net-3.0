@@ -3,6 +3,7 @@
 <ul>
 <li> <a href="/music/klose-highnotes.pdf">Klose's "Just the High Notes"</a> - a single-page PDF fingering chart for the Clarinet's high-notes. Derived from the Klose book.</li>
 <li> <a href="/music/stars-stripes-piccolo-solo-for-tuba.pdf">"Stars and Stripes" piccolo solo for tuba</a> - The stars and stripes piccolo solo written out for tuba. In both band and orchestra keys.</li>
+<li> <a href="/music/slava-eflat-as-bflat.pdf">"Slava!" Eb Clarinet Solo for Bb Clarinet</a> - The short E-flat clarinet solo transcribed as an insert for B-flat.</li>
 </ul>
 
 <h1>Practice Parts</h1>
@@ -33,7 +34,6 @@ here too:
 <a href="/music/parts/wind-ensemble/Toccata and Fugue in D Minor/toccata-fugue-contra.pdf">Bb Contrabass Clarinet</a></li></li>
 <li> Toccata Marziale (Vaughan Williams) - <a href="/music/parts/wind-ensemble/Toccata Marziale/toccata-marziale.pdf001.pdf">Bass Clarinet</a></li>
 <li> Vesuvius (Ticheli) - <a href="/music/parts/wind-ensemble/Vesuvius/vesuvius-bass.pdf">Bass Clarinet</a></li>
-
 </ul>
 
 <h3>Wind Ensemble Marches</h3>
