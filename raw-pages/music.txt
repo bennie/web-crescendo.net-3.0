@@ -1,3 +1,23 @@
+<h1>Clarinet Choir Arrangements for Sale</h3>
+
+<p>The following clarinet choir arrangements are available for sale and digital download
+from SheetMusicPlus.</p>
+
+<h3>Mixed Clarinet Quartet</h3>
+<small>3 sopranos, 1 bass</small>
+
+<ul>
+<li> <a href="https://www.sheetmusicplus.com/title/canon-in-d-for-mixed-clarinet-quartet-digital-sheet-music/19933970">Canon in D</a> (Johann Pachelbel)
+<li> <a href="https://www.sheetmusicplus.com/title/the-little-fugue-bwv-578-for-mixed-clarinet-quartet-digital-sheet-music/19933973">The "Little" Fugue (BWV 578)</a> (J.S. Bach)
+</ul>
+
+<h3>Clarinet Choir</h3>
+
+<ul>
+<li> <a href="https://www.sheetmusicplus.com/title/little-brown-jug-digital-sheet-music/21870405">Little Brown Jug</a> (Glenn Miller)
+<li> <a href="https://www.sheetmusicplus.com/title/moonlight-serenade-digital-sheet-music/21870438">Moonlight Serenade</a> (Glenn Miller)
+</ul>
+
 <h1>Misc Useful Things</h1>
 
 <ul>
