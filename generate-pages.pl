@@ -51,7 +51,7 @@ my @files = sort { $a cmp $b } grep(/\.txt$/, readdir(FILEDIR));;
 closedir FILEDIR;
 
 for my $next_trick (@files) {
-  my $template = 'index.tmpl';
+  my $template = 'boilerplate.tmpl';
 
   $next_trick =~ /(.+)\.txt$/;
   
