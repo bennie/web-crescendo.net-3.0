@@ -55,6 +55,8 @@ here too:
 <li> Polka and Fugue (Weinberger/Bainum) - <a href="/music/parts/wind-ensemble/Polka and Fugue/Bass Clarinet.pdf">Bass Clarinet</a></li>
 <li> Procession of the Nobles (Rimsky-Korsakov/Leidzen) - <a href="/music/parts/wind-ensemble/Procession of the Nobles/Bass Clarinet.pdf">Bass Clarinet</a></li>
 <li> The Ride of the Valkyries (Wagner/Patterson) - <a href="/music/parts/wind-ensemble/The Ride of the Valkyries/valkyries-contra.pdf">Bb Contrabass Clarinet</a></li>
+<li> Russian Christmas Music (Reed) - <a href="/music/parts/wind-ensemble/Russian Christmas Music/Bass Clarinet.pdf">Bass Clarinet</a>,
+<a href="/music/parts/wind-ensemble/Russian Christmas Music/Bb Contra Bass.pdf">Bb Contrabass Clarinet</a>
 <li> Shenandoah's Simple Gifts (Larry Clark) - <a href="/music/parts/wind-ensemble/Shenandoah's Simple Gifts/shenandoah-bass.pdf">Bass Clarinet</a></li>
 <li> Toccata and Fugue in D Minor (Bach/Hunsberger) - <a href="/music/parts/wind-ensemble/Toccata and Fugue in D Minor/toccata-fugue-bass.pdf">Bass Clarinet</a>,
 <a href="/music/parts/wind-ensemble/Toccata and Fugue in D Minor/toccata-fugue-contra.pdf">Bb Contrabass Clarinet</a></li></li>
