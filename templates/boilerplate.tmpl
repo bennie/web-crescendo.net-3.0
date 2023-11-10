@@ -20,28 +20,33 @@
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
-</head>
 
+  <style>
+    .boxcontainer{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 20px;
+      background-color: #000033;
+      padding: 40px;
+    }
+    .box{
+      width: 100%;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+    }
+  </style>
+
+</head>
 <body background="/images/music.jpg">
 
-  <!-- Add your site or application content here -->
-
-<a href="/"><img src="/images/logosm.gif" width=273 height=70 border=0 alt="Crescendo.Net" /></a>
-
-<ul>
-  <li>
-    <a href="/resume/">The R&eacute;sum&eacute;</a>
-  </li>
-  <li>
-    <a href="/code/">Code</a>
-  </li>
-  <li>
-    <a href="/music.html">Music</a>
-  </li>
-  <li>
-    <a href="/fun/">Fun Stuff</a>
-  </li>
-</ul>
+<div class="boxcontainer">
+  <div class="box"><a href="/"><img src="/images/logosm.gif" width=273 height=70 border=0 alt="Crescendo.Net" /></a></div>
+  <div class="box"><a href="/resume/">The R&eacute;sum&eacute;</a></div>
+  <div class="box"><a href="/code/">Code</a></div>
+  <div class="box"><a href="/music.html">Music</a></div>
+  <div class="box"><a href="/fun/">Fun Stuff</a></div>
+</div>
 
 <div style="border: 1px solid #000033; margin: 15px; background-color: lightgrey; padding: 10px;" >
 <tmpl_var name=body>
