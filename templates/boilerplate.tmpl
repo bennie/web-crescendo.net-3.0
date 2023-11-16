@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <title></title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <meta property="og:title" content="">
   <meta property="og:type" content="">
@@ -13,58 +15,49 @@
   <meta property="og:image" content="">
 
   <link rel="manifest" href="site.webmanifest">
+
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/hyde.css">
 
   <meta name="theme-color" content="#fafafa">
-
-  <style>
-    .boxcontainer{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      gap: 20px;
-      background-color: #000033;
-      padding: 40px;
-    }
-    .box{
-      width: 100%;
-      display: flex;
-      align-items: end;
-      justify-content: center;
-      a:link { color: #FFFFFF; }
-      a:visited { color: #FFFFFF; }
-      a:hover { color: #FFFFFF; }
-      a:active { color: #FFFFFF; }
-      font-size: 150%;
-    }
-  </style>
 
 </head>
 <body background="/images/music.jpg">
 
-<div class="boxcontainer">
-  <div class="box"><a href="/"><img src="/images/logosm.gif" width=273 height=70 border=0 alt="Crescendo.Net" /></a></div>
-  <div class="box"><a href="/resume/">R&eacute;sum&eacute;</a></div>
-  <div class="box"><a href="/code/">Code</a></div>
-  <div class="box"><a href="/music.html">Music</a></div>
-  <div class="box"><a href="/fun/">Fun Stuff</a></div>
+<div class="sidebar">
+
+    <div class="sidebar-about">
+      <a href="/"><img src="/images/logosm.gif" width=273 height=70 border=0 alt="Crescendo.Net" /></a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <h1>&nbsp;</h1>
+      <h1><a class="sidebar-nav-item" href="/resume/">R&eacute;sum&eacute;</a></h1>
+      <h1><a class="sidebar-nav-item" href="/code/">Code</a></h1>
+      <h1><a class="sidebar-nav-item" href="/music.html">Music</a></h1>
+      <h1><a class="sidebar-nav-item" href="/fun/">Fun Stuff</a></h1>
+    </nav>
+
+  <div class="container sidebar-sticky">
+    <p>&copy; 1997-2023, <a href="http://www.crescendo.net/madeby.html">Crescendo Communications</a><br />
+Last updated <tmpl_var name="time" /></p>
+  </div>
 </div>
+<div class="content container">
 
 <div style="border: 1px solid #000033; margin: 15px; background-color: lightgrey; padding: 10px;" >
 <tmpl_var name=body>
-</div>
-
-<div style="background-color: rgba(0, 0, 0, 0.2); text-align: center; padding: 10px;">
-&copy; 1997-2023, <a href="http://www.crescendo.net/madeby.html">Crescendo Communications</a><br />
-Last updated <tmpl_var name="time" />
 </div>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
+</div>
 </body>
 </html>

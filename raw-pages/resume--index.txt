@@ -1,19 +1,9 @@
 <h2>R&eacute;sum&eacute;</h2>
 <p>My resume as of Jun 2023 is available are below in PDF, Open Doc and D&#038;D format.</p>
 
-<table>
-<tr>
-  <td><a href="http://www.crescendo.net/resume/2023-06-ppollard.pdf"><img alt="[ resume ]" border="0" hspace="10" width=561 height=360 src="http://www.crescendo.net/resume/2023-06-ppollard.png" /></a></td>
-  <td><a href="http://www.crescendo.net/resume/2023-06-ppollard.odt"><img alt="[ resume ]" border="0" hspace="10" width=561 height=360 src="http://www.crescendo.net/resume/2023-06-ppollard.png" /></a></td>
-</tr>
-<tr>
-  <td align="center"><a href="http://www.crescendo.net/resume/2023-06-ppollard.pdf">PDF version</a></td>
-  <td align="center"><a href="http://www.crescendo.net/resume/2023-06-ppollard.odt">ODT version</a></td>
-</tr>
-<tr>
-  <td colspan=2 align="center"><a href="http://www.crescendo.net/resume/2012-09-ppollard.jpg"><img alt="[ char sheet resume ]" border="0" hspace="10" width="206" height="162" src="http://www.crescendo.net/resume/charsheet.gif" /></a></td>
-</tr>
-<tr>
-  <td colspan=2 align="center"><a href="http://www.crescendo.net/resume/2012-09-ppollard.jpg">D&amp;D Character Sheet version</a></td>
-</tr>
-</table>
+<p align="center"><a href="http://www.crescendo.net/resume/2023-06-ppollard.pdf"><img alt="[ resume ]" border="0" hspace="10" width=561 height=360 src="http://www.crescendo.net/resume/2023-06-ppollard.png" /></a><br />
+<a href="http://www.crescendo.net/resume/2023-06-ppollard.pdf">PDF version</a><br />
+<a href="http://www.crescendo.net/resume/2023-06-ppollard.odt">ODT version</a></p>
+
+<p align="center"><a href="http://www.crescendo.net/resume/2012-09-ppollard.jpg"><img alt="[ char sheet resume ]" border="0" hspace="10" width="206" height="162" src="http://www.crescendo.net/resume/charsheet.gif" /></a><br />
+<a href="http://www.crescendo.net/resume/2012-09-ppollard.jpg">D&amp;D Character Sheet version</a></p>
