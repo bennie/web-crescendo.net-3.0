@@ -4,6 +4,22 @@
 <p>These are just some fun things I have put together over the years:</p>
 
 <ul>
+<li> <p><b><a href="https://www.youtube.com/watch?v=VOFJQGPCGuA">Making Breb</a></b> (Dec 2022)</p>
+<p>Playing around. Made an AMSR-type of video about how to make bread.</p>
+
+<li> <p><b><a href="https://www.youtube.com/shorts/4-aRU5bU5QY">Otter Harmonica</a></b> (Feb 2020)</p>
+<p>A meme was going around with Careless Whisper poorly synced to this video of an otter.
+It looked more like the otter was playing a harmonic to me. So I found some audio that
+synced well: Max Geldray performing on the Goon Show.</p>
+
+<li> <p><b><a href="https://www.youtube.com/shorts/L6Z_-XO7oXc">A slice of Wilhelmslydale</a></b> (Jul 2019)</p>
+<p>Video of the fabled "screaming cheese."</p>
+
+<li> <p><b><a href="https://www.youtube.com/watch?v=Ayipu1hZFhA">Wooster, Ohio to San 
+Jose, California in 4 minutes.</a></b> (May 2018)</p>
+<p>2600 miles in 36 hours straight! (2 drivers) And taking a picture every 30 seconds.
+A reprise of the 2006 video.</p>
+
 <li> <p><b><a href="conbadge/">Conbadge Drinking Game</a></b> (Feb 2011)</p>
 <p>A meme generator based on the furry conbadge drinking game. Enter 
 your badge name and it tells you how many drinks you score.</p>
