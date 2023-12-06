@@ -3,6 +3,17 @@
 				<p><img src="/images/cake.jpg" alt="Mom" align="right" /><b><i>Software just like mom made</i></b></p>
 <p>The following pieces of software are created and/or maintained by Phillip Pollard. Unless specifically stated otherwise they are licensed under the <a href="/software/gnu.html">GNU public license</a> or the Artistic License 2.0.</p>
 <hr noshade />
+
+<h2>Github</h2>
+
+<p>More detailed over there: <a href="https://github.com/bennie/">https://github.com/bennie/</a></p>
+
+<ul>
+<li>
+<p> <a href="https://github.com/bennie/twitter-delete"><b>twitter-delete</b></a></p>
+<p>Delete everything out of a twitter account. Uses browser automation (Selenium & Python) -- no need for twitter API.</p>
+</ul>
+
 <h2>Perl Modules</h2>
 <p>General info: <br />
 <a href="http://cpants.cpanauthors.org/author/BENNIE">http://cpants.cpanauthors.org/author/BENNIE</a><br />
