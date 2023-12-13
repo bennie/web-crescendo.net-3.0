@@ -1,9 +1,9 @@
 <h2>R&eacute;sum&eacute;</h2>
 <p>My resume as of Jun 2023 is available are below in PDF, Open Doc and D&#038;D format.</p>
 
-<p align="center"><a href="http://www.crescendo.net/resume/2023-06-ppollard.pdf"><img alt="[ resume ]" border="0" hspace="10" width=561 height=360 src="http://www.crescendo.net/resume/2023-06-ppollard.png" /></a><br />
-<a href="http://www.crescendo.net/resume/2023-06-ppollard.pdf">PDF version</a><br />
-<a href="http://www.crescendo.net/resume/2023-06-ppollard.odt">ODT version</a></p>
+<p align="center"><a href="http://www.crescendo.net/resume/2023-12-ppollard.pdf"><img alt="[ resume ]" border="0" hspace="10" width=561 height=360 src="http://www.crescendo.net/resume/2023-06-ppollard.png" /></a><br />
+<a href="http://www.crescendo.net/resume/2023-12-ppollard.pdf">PDF version</a><br />
+<a href="http://www.crescendo.net/resume/2023-12-ppollard.odt">ODT version</a></p>
 
 <p align="center"><a href="http://www.crescendo.net/resume/2023-09-ppollard.jpg"><img alt="[ char sheet resume ]" border="0" hspace="10" width="550" height="425" src="http://www.crescendo.net/resume/2023-09-ppollard-sm.jpg" /></a><br />
 <a href="http://www.crescendo.net/resume/2023-09-ppollard.jpg">D&amp;D Character Sheet version</a></p>
