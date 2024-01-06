@@ -7,7 +7,6 @@ $| = 1;
 
 # --force - force recreation of all files
 
-use File::Slurp;
 use HTML::Template;
 use strict;
 
@@ -45,14 +44,6 @@ if ($force) {
 print `rsync -av --exclude='.git/' --exclude='.DS_Store' static/ www.crescendo.net`;
 
 # Update Jekyll and include it's output
-
-my $jekyll_layout = read_file('templates/' . $template);
-$jekyll_layout =~ s/<tmpl_var name="title" \/>/{{ title }}/;
-$jekyll_layout =~ s/<tmpl_var name="time" \/>/{{ site.time }}/;
-$jekyll_layout =~ s/<tmpl_var name="body" \/>/{{ content }}/;
-mkdir('jekyll/_layouts/') unless -d 'jekyll/_layouts/';
-#write_file('jekyll/_layouts/default.html', $jekyll_layout);
-
 `cd jekyll; jekyll build; cd ..`;
 print `rsync -av --exclude='.git/' --exclude='.DS_Store' jekyll/_site/ www.crescendo.net`;
 
