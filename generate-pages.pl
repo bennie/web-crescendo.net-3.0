@@ -16,11 +16,7 @@ my $force = $ARGV[0] ?1:0;
 ### Config
 
 my %title;
-$title{'index.txt'} = 'Crescendo.net';
-$title{'code--index.txt'} = 'Code';
 $title{'consulting.txt'} = 'Consulting';
-$title{'fun--index.txt'} = 'Fun Stuff';
-$title{'music.txt'} = 'Music Stuff';
 $title{'software-cvs--example.txt'} = 'Software - CVS Utils - Example Output';
 $title{'software-cvs--history.txt'} = 'Software - CVS Utils - Project History';
 $title{'software-cvs--index.txt'} = 'Software - CVS Utils';
