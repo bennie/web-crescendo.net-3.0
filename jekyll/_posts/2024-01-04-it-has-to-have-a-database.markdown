@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "It HAS to have a database!"
-date:   2024-01-04 16:28:30 -0500
 categories: compute_stories
+description: "When do you need a database? Apparently all the time. You can't complete this contract without one. How do you not know this?"
 ---
 
 It's the early 20-teens and I am on a contract to a department store known for its upscale clothing.
@@ -25,7 +25,7 @@ In the first "song and dance" meeting of "this is done, this is what you get" th
 
 I had never witnessed anything like this.
 
-Like some weird religious responsorial a mutter went around the table: "Yes. A database." "Of course. We need a database" "A database."
+Like some weird religious responsorial a mutter went around the table: "Yes. A database." "Of course. The database" "A database."
 
 Look, I watched my nephew gleefully yell the pokemon name at the "Which Pokemon is this?" screen. It had nothing on how Pavlovian this bizarre moment was.
 

@@ -21,7 +21,6 @@ $title{'code--index.txt'} = 'Code';
 $title{'consulting.txt'} = 'Consulting';
 $title{'fun--index.txt'} = 'Fun Stuff';
 $title{'music.txt'} = 'Music Stuff';
-$title{'resume--index.txt'} = 'The Resume';
 $title{'software-cvs--example.txt'} = 'Software - CVS Utils - Example Output';
 $title{'software-cvs--history.txt'} = 'Software - CVS Utils - Project History';
 $title{'software-cvs--index.txt'} = 'Software - CVS Utils';
@@ -56,10 +55,10 @@ $jekyll_layout =~ s/<tmpl_var name="title" \/>/{{ title }}/;
 $jekyll_layout =~ s/<tmpl_var name="time" \/>/{{ site.time }}/;
 $jekyll_layout =~ s/<tmpl_var name="body" \/>/{{ content }}/;
 mkdir('jekyll/_layouts/') unless -d 'jekyll/_layouts/';
-write_file('jekyll/_layouts/default.html', $jekyll_layout);
+#write_file('jekyll/_layouts/default.html', $jekyll_layout);
 
 `cd jekyll; jekyll build; cd ..`;
-print `rsync -av --exclude='.git/' --exclude='.DS_Store' jekyll/_site/ www.crescendo.net/posts`;
+print `rsync -av --exclude='.git/' --exclude='.DS_Store' jekyll/_site/ www.crescendo.net`;
 
 opendir FILEDIR, $file_dir;
 my @files = sort { $a cmp $b } grep(/\.txt$/, readdir(FILEDIR));;

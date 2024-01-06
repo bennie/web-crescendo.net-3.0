@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Home monitoring with Raspberry Pi"
-date:   2024-01-01 13:44:44 -0500
+description: "Setting up a single Raspberry Pi to monitor the house, the network and to use DNS to kill ads."
 categories: home_monitoring
 ---
 
