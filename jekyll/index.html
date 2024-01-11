@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 ---
 <p align="center"><font size="5">Crescendo Communications</font><br />
 <i>Why "Crescendo?" &mdash; Because even musicians can't spell it right.</i></p>
@@ -9,3 +9,15 @@ layout: home
 <br />
 <img hspace="5" vspace=5 width="574" height="51" alt="[ Construction ]" src="/images/construction.gif" />
 </center>
+
+<p><font size="4">Recent Posts:</font></p>
+<ul>
+  {% for post in site.posts limit:3 %}
+  <li>
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
+    <div>{{ post.description |truncatehtml}}</div>
+  </li>
+  {% endfor %}
+</ul>
+
