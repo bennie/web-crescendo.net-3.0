@@ -35,7 +35,10 @@
 {%- if page.image %}
   <meta content="{{ site.url }}/assets/img/posts/{{ page.image }}" property="og:image">
 {%- else %}
-  <meta content="{{ site.url }}/images/logosm.gif" property="og:image">
+  <meta content="{{ site.url }}/images/logo.jpg" property="og:image">
+  <meta content="487" property="og:image:width">
+  <meta content="125" property="og:image:height">
+  <meta content="image/jpeg" property="og:image:type">
 {%- endif %}
 {%- if page.categories %}
   {%- for category in page.categories limit:1 %}
