@@ -1,8 +1,9 @@
 ---
 layout: post
+category: posts
 title:  "It HAS to have a database!"
-categories: compute_stories
 description: "When do you need a database? Apparently all the time. You can't complete this contract without one. How do you not know this?"
+tags: compute_stories
 ---
 
 It's the early 20-teens and I am on a contract to a department store known for its upscale clothing.

@@ -1,8 +1,9 @@
 ---
 layout: post
+category: posts
 title:  "Home monitoring with Raspberry Pi"
 description: "Setting up a single Raspberry Pi to monitor the house, the network and to use DNS to kill ads."
-categories: home_monitoring
+tags: home_monitoring
 ---
 
 Recently, I have been updating the home network. I had an old raspberry PI lying around and wanted to try a few things.

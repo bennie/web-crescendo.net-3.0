@@ -1,8 +1,9 @@
 ---
 layout: post
+category: posts
 title:  Dear Composer
-categories: ['music', 'writings']
 description: "Dear composer... some requests about your work..."
+tags: ['music', 'writings']
 ---
 Dear composer
 

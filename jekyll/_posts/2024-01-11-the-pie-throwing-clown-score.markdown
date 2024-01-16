@@ -1,8 +1,9 @@
 ---
 layout: post
+category: posts
 title:  "The Pie Throwing Clown Score"
-categories: ['compute_stories', 'writings']
 description: "The PTC score is a valuable way of rating organizational health. And an efficient way of describing organizations to other people."
+tags: ['compute_stories', 'writings']
 ---
 
 "What do you think the PTC is here?"
