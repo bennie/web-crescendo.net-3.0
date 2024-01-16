@@ -2,10 +2,10 @@
 layout: post
 category: posts
 title:  Dear Composer
-description: "Dear composer... some requests about your work..."
-tags: ['music', 'writings']
+description: Dear composer... some requests about your work...
+tags: music writings
 ---
-Dear composer
+Dear Composer,
 
 - Give your bass instruments something to do. Mozart did not have modern percussion
 for rythmn. Consquently he had to put the "fire" in his music in supporting passages
