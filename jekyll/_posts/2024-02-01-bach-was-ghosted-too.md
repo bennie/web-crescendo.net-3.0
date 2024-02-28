@@ -11,6 +11,10 @@ So I did what anyone who wants to learn something does: I asked a friend who see
 
 Every single one of them suggested, as a starting CD to learn about classical music, a collection of Bach's Brandeburg Concertos.
 
+{:refdef: style="text-align: center;"}
+![The CD I bought](/posts/2024/images/cd.jpg)
+{: refdef}
+
 You have heard them. Even if you don't know classical music. They are there in the ethos of our media. Just go hit up youtube or spoitfy and search "Brandeburg Concertos." You'll hear something you've heard before.
 
 The concertos widely regiarded as some of the greatest orchestra compositions of the Baroque era. A jaw droppingly good collection of masterworks all by the pen of one person.
