@@ -3,7 +3,7 @@ layout: post
 category: posts
 title:  I’ll have an "Old Man Bishop."
 description: The "Old Man Bishop" may be the original Long-Island Iced Tea.
-tags: drinks
+tags: food_and_drinks
 ---
 So as with many drinks there is a competing claim to who invented the “Long Island Iced” tea. One of the oldest comes from the land of whiskey: Kentucky.
 
