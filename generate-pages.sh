@@ -2,6 +2,9 @@
 
 set -e
 
+# Remove the local build
+if [ -d www.crescendo.net ]; then rm -rfv www.crescendo.net; fi
+
 # Copy static data into the site layout
 rsync -av --exclude='.git/' --exclude='.DS_Store' static/ www.crescendo.net;
 

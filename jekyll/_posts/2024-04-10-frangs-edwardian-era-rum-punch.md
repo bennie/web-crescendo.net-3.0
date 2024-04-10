@@ -34,4 +34,4 @@ If storing the punch overnight, make sure to remove the lemon hulls as the rinds
 Vary the rum for your favorite flavor. Darker and sweet rums can work well in this.\
 Vary the citrus to use a mix including lime, or exclusively lime.\
 Spice the tea with mulling spices.\
-You can use purchased lemon juice, but I think the fresh lemons taste best.\
+You can use purchased lemon juice, but I think the fresh lemons taste best.
