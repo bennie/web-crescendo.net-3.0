@@ -17,6 +17,8 @@ She would occasionally clip a recipe and tuck it in the pages. But the recipe be
 
 Here's the recipe in a more readable text:
 
+<hr noshade />
+
 **Mrs Rhoads Chocolate Cake (circa 1900)**
 
 * 3/8 cup of Butter Substitute
