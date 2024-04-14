@@ -20,3 +20,11 @@ top.
 Mix all, put batter in standard pie pan
 
 Bake at 350 F for 30-40 min
+
+<hr noshade />
+
+**Notes:**
+
+Traditionally White Lily self-rising flour is a brand used in southern recipes like this.
+It has a lower protein and gluten content, which supposedly results in a lighter, fluffier
+baked good with a greater rise. 
