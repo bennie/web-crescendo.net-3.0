@@ -5,6 +5,7 @@ title:  Aunt Mary's Cobbler
 description: My great-aunt Mary and my Grandmother regularly made this easy-to-make cobbler.
 tags: food_and_drinks
 ---
+My great-aunt Mary and my grandmother regularly made this easy-to-make cobbler when company came by.
 
 {:refdef: style="text-align: center;"}
 ![The Recipe](/posts/2024/04/images/cobbler1.jpg){: width="325" }
@@ -34,9 +35,9 @@ Bake at 350 F for 30-40 min, until golden on top.
 **Notes**
 
 Traditionally White Lily self-rising flour is a brand used in southern recipes like this.
-It has a lower protein and gluten content, which supposedly results in a lighter, fluffier
-baked good with a greater rise. 
+It has a lower protein and gluten content, which results in a lighter, fluffier baked good
+with a greater rise.
 
-You can substitute the peaches with about any fruit. If you are using fresh fruits you may
-wish to maserate them a little to bring out the flavor, since there will be no syrup from
-the can to do that.
+You can substitute the peaches with about any fruit. (In the photo above, I've used fresh
+blueberries.) If you are using fresh fruits you may wish to maserate them to bring out the
+flavor, since there will be no syrup from the can to do that.

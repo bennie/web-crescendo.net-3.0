@@ -1,7 +1,7 @@
 ---
 layout: post
 category: posts
-title: How to die ike a Roman in Perl."
+title: How to die ike a Roman in Perl
 description: "A bit of mischief: how to die like a Roman in Perl"
 tags: perl mischief
 ---

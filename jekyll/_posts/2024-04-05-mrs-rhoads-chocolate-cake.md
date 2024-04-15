@@ -52,5 +52,6 @@ I believe "1 square of chocolate" refers to the Bakers' 1 ounce square.
 The recipe probably assumes a "medium oven" -- IE: 350F / 180C
 
 Traditionally White Lily self-rising flour is a brand used in southern recipes like this.
-It has a lower protein and gluten content, which supposedly results in a lighter, fluffier
-baked good with a greater rise. 
+It has a lower protein and gluten content, which results in a lighter, fluffier baked good
+with a greater rise.
+
