@@ -5,6 +5,13 @@ title:  Lucille's Coconut Pie
 description: One of the few clipped recipes my grandmother used. "Impossible Pie"
 tags: food_and_drinks
 ---
+
+{:refdef: style="text-align: center;"}
+![Pie](/posts/2024/04/images/coconut1.jpg){: width="200" }
+![Pie sliced](/posts/2024/04/images/coconut2.jpg){: width="200" }
+![Slice](/posts/2024/04/images/coconut3.jpg){: width="200" }
+{: refdef}
+
 My grandmother used cookbooks sparingly. But this one recipe was pinned to a kitchen
 cabinet for quick reference. It creates its own crust, has a creamy center, and a textured
 top.
