@@ -5,9 +5,9 @@ title:  Bach was ghosted on his resume, too.
 description: Did you know that J. S. Bach sent out his reusme? Do you think he heard back?
 tags: music tech
 ---
-When I was still in high school, and enjoying band, I figured I need to "learn" more about classical music. Sure I heard it on the radio, and in TV and movies, but I didn't know one composer or piece from the next. And I felt, if I was going to do more in music, I should learn more about it.
+When I was still in high school, and enjoying playing in band, I figured I need to "learn" more about classical music. Sure, I heard it on the radio, and in TV and movies, but I didn't know one composer or piece from the next. And I felt, if I was going to do more in music, I should learn more about it.
 
-So I did what anyone who wants to learn something does: I asked people who seemed to know such things. I was looking for a good starting point. Specifically, I asked "what CD should I buy?" to start learning all this classical music stuff.
+So I did what anyone who wants to learn does: I asked people who seemed to know such things. I was looking for a good starting point. Specifically, I asked "what CD should I buy?" to start learning all this classical music stuff.
 
 Every single one of them suggested, as a starting CD to learn about classical music, a collection of Bach's Brandeburg Concertos.
 
@@ -17,7 +17,7 @@ Every single one of them suggested, as a starting CD to learn about classical mu
 
 You have heard them. Even if you don't know classical music. They are there in the ethos of our media. Just go hit up youtube or spoitfy and search "Brandeburg Concertos." You'll hear something you've heard before.
 
-The concertos widely regiarded as some of the greatest orchestra compositions of the Baroque era. A jaw-droppingly good collection of masterworks all by the pen of one person.
+The concertos are widely regiarded as some of the greatest orchestra compositions of the Baroque era. It is a jaw-droppingly good collection of masterworks all by the pen of one person.
 
 I could spend some time going into detail on why this is, and how important Bach is as a person whose works basically cofidy how we hear western harmony today, but that's not the point of this essay. (Maybe go over to wikipedia if you're interested in that: [Brandeburg Concertos](https://en.wikipedia.org/wiki/Brandenburg_Concertos) & [J.S. Bach](https://en.wikipedia.org/wiki/Johann_Sebastian_Bach))
 
@@ -27,13 +27,13 @@ He had selected the 1st movement of the 2nd Brandenburg Concerto to be included.
 
 ---
 
-So it's an amazing collection of work. The thing I didn't know until years later was: it was a resume.
+So it's an amazing collection of work. The thing I didn't know until years later was: it was Bach's resume.
 
 You see, Bach had been working in at the musical equivalent of a small company where he was well paid, his work was liked, and he had a great boss. But after a few years the situation changed. The boss was bad, the pay was lousy, and the writing was on the wall that the gig might go away.
 
 So Bach was looking for work and sent out resumes.
 
-Ever run into someone at a conference who says the thing of "If you're ever looking? Let me know."
+Ever run into someone at a conference who says "If you're ever looking? Let me know."
 
 Bach had run into a possible employer at one point on business and remembered that contact.
 
